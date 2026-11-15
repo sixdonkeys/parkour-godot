@@ -22,7 +22,8 @@ extends Node3D
 ##   "fuzz": {"seed": 7, "respawn_every_s": 20, "seconds": 600},
 ##                               (the run ends after that much simulated time)
 ##   "metrics": {"only": ["flat", "gap"]},
-##   "camera": {"mode": "chase" | "first" | "side" | "top", "player": 0}
+##   "camera": {"mode": "chase" | "first" | "side" | "top", "player": 0},
+##   "light": {"shadows": true, "shadow_distance": 60}
 ## }
 
 const HarnessCamera := preload("res://movement/fixtures/harness_camera.gd")
@@ -43,7 +44,7 @@ func configure_fixture(cfg: Dictionary) -> void:
 	_cfg = cfg
 	mode = String(cfg.get("mode", "run"))
 	run_ticks = int(cfg.get("run_ticks", 0))
-	_make_sky()
+	_make_sky(cfg.get("light", {}))
 	course = MetricsCourse.new()
 	course.name = "Course"
 	add_child(course)
@@ -226,7 +227,7 @@ func _resolve(path: String) -> String:
 	return path
 
 
-func _make_sky() -> void:
+func _make_sky(light: Dictionary) -> void:
 	var env := Environment.new()
 	var sky := Sky.new()
 	sky.sky_material = ProceduralSkyMaterial.new()
@@ -239,5 +240,7 @@ func _make_sky() -> void:
 	add_child(we)
 	var sun := DirectionalLight3D.new()
 	sun.rotation_degrees = Vector3(-48, 32, 0)
-	sun.shadow_enabled = true
+	sun.shadow_enabled = bool(light.get("shadows", true))
+	# The course is watched from a few metres; shadows further off are not seen.
+	sun.directional_shadow_max_distance = float(light.get("shadow_distance", 60.0))
 	add_child(sun)
