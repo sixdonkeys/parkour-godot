@@ -5,7 +5,7 @@ extends RefCounted
 
 const BUDGET_P95_MS := 16.7
 const BUDGET_P99_MS := 22.0
-const PROXY_GPU_FACTOR := 2.5  # decision neo-proxy
+const PROXY_GPU_FACTOR := 2.3  # decision neo-proxy (calibrated 2026-11-15, CALIBRATION.md)
 
 var frame_ms: PackedFloat64Array = []
 var gpu_ms: PackedFloat64Array = []

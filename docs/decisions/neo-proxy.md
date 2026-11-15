@@ -7,7 +7,7 @@
 - **Sources:** `docs/survey/neo-proxy.md` — MacRumors first Neo benchmarks; MacMyths A18 Pro vs M1 Pro comparison; RenderingServer class reference 4.7.2; local `vulkaninfo`.
 - **Choice:** option 2. A proxy frame-time figure passes only if both hold:
   - (a) Wall-clock frame time on the development machine meets the raw budget: P95 ≤ 16.7 ms and P99 ≤ 22 ms.
-  - (b) GPU time × **2.5** meets the same budget: GPU P95 ≤ 6.68 ms and P99 ≤ 8.8 ms on the development machine.
+  - (b) GPU time × **2.3** meets the same budget: GPU P95 ≤ 7.26 ms and P99 ≤ 9.57 ms on the development machine. The factor was 2.5 until the first valid Neo run, which measured at most 2.24× (`docs/neo/2026-11-15-b0545da5a3c6/CALIBRATION.md`).
 
   Details:
   - Why 2.5: Geekbench Metal puts a 14-core M1 Pro near 2× the Neo's 5-core A18 Pro, and this 16-inch M1 Pro has the 16-core GPU, so about 2.2×. A further margin of about 15% covers the unknown gap between Honeykrisp/Vulkan here and Metal on the Neo, plus the Neo's fanless thermals.

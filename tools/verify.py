@@ -317,7 +317,23 @@ def prove_memory(rnd: int) -> dict:
     ok = (tex is not None and abs(tex - exp) <= 0.05 * exp and tex_back
           and mem.get("returns_within_5pct") is True and mem.get("grows_each_cycle") is False
           and log["orchestrator"]["error_count"] == 0)
+    # The leak flag both ways: quiet on a second texture size with many cycles
+    # (the critic's fixture), and raised on a fixture that leaks on purpose.
+    flag = {}
+    for name, want in (("critic-verify-memory-texture-2048-6cycles", False), ("verify-memory-leak", True)):
+        fp = FIX / f"{name}.json"
+        if not fp.exists():
+            flag[name] = {"error": "fixture missing"}
+            ok = False
+            continue
+        lo = run_preset(fp, evidence_dir("verify", rnd, "proofs", name))
+        got = lo.get("memory", {}).get("grows_each_cycle")
+        flag[name] = {"expected_grows_each_cycle": want, "got": got,
+                      "unload_series_mb": [round(x / 2 ** 20, 1) for x in lo.get("memory", {}).get("unload_series_bytes", [])],
+                      "pass": got is want and lo["orchestrator"]["error_count"] == 0}
+        ok = ok and flag[name]["pass"]
     return {"instrument": "memory", "fixture": str(p.relative_to(ROOT)), "expected_texture_delta_bytes": exp,
+            "leak_flag_proofs": flag,
             "measured_texture_delta_bytes": tex, "video_delta_bytes": mem.get("video_delta_load_bytes"),
             "unload_return_ratio_raw": mem.get("unload_return_ratio"),
             "warm_return_ratio": mem.get("warm_return_ratio"), "grows_each_cycle": mem.get("grows_each_cycle"),

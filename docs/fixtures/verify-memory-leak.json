@@ -1,0 +1,14 @@
+{
+  "id": "verify-memory-leak",
+  "module": "verify",
+  "purpose": "Known answer for the leak flag: a scene that keeps 16 MiB of heap and a 4 MiB texture alive on every load. Each cycle's after-unload memory must be higher than the last, so grows_each_cycle must be true.",
+  "scene": "res://verify/fixtures/leak.tscn",
+  "base_scene": "res://verify/fixtures/empty.tscn",
+  "profile": "neo",
+  "resolution": [2408, 1506],
+  "still": false,
+  "warmup_frames": 10,
+  "frames": 30,
+  "unload_frames": 60,
+  "precycles": 3
+}

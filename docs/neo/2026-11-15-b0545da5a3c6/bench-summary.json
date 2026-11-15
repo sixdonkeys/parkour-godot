@@ -1,0 +1,50 @@
+{
+  "commit": "b0545da5a3c692e46caacaaa51b357cce72634fc",
+  "presets": [
+    {
+      "preset": "core-empty-neo",
+      "errors": 0,
+      "frame_pass": true
+    },
+    {
+      "preset": "core-stress-path",
+      "errors": 0,
+      "frame_pass": false
+    },
+    {
+      "preset": "verify-empty-path",
+      "errors": 0,
+      "frame_pass": true
+    },
+    {
+      "preset": "verify-empty-still",
+      "errors": 0,
+      "frame_pass": true
+    },
+    {
+      "preset": "verify-showcase",
+      "errors": 0,
+      "frame_pass": true
+    }
+  ],
+  "machine": {
+    "os": "macOS",
+    "os_version": "27.2.1",
+    "cpu_cores": 6,
+    "engine": "4.7.2-stable (official)",
+    "adapter": "Apple A18 Pro (Apple9)",
+    "adapter_vendor": "Apple",
+    "adapter_api_version": "4.0",
+    "adapter_driver": [],
+    "rendering_method": "forward_plus",
+    "rendering_driver": "metal",
+    "rendering_device_name": "Apple A18 Pro (Apple9)",
+    "rendering_device_vendor": "Apple",
+    "display_server": "macOS",
+    "software_renderer": false,
+    "screen_size": "(2816, 1762)",
+    "screen_scale": 2.0,
+    "refresh_hz": 60.0,
+    "desktop": ""
+  }
+}

@@ -1,7 +1,6 @@
 {
   "void": true,
   "reasons": [
-    "another app was in front: ['Amphetamine', 'App Store', 'Ridgeline', 'Safari', 'System Settings', 'Terminal', 'loginwindow']",
     "a frame took 11254 ms: the display slept or the window was hidden"
   ],
   "unverifiable": [],

@@ -217,7 +217,13 @@ def judge_honesty(dest: Path) -> dict:
         reasons.append("screen was locked during the run")
     if any(s.get("display_awake") == "false" for s in samples):
         reasons.append("display was asleep during the run")
-    fronts = {s.get("front_app") for s in samples if s.get("front_app") not in (None, "", "unknown")}
+    # The game's window only exists a moment after launch, so samples before
+    # the game first reaches the front don't count (the Neo's second run had
+    # Finder in its launch-moment sample only). Any other app in front after
+    # that voids the run.
+    first = next((i for i, s in enumerate(samples) if "Ridgeline" in (s.get("front_app") or "")), None)
+    during = samples[first:] if first is not None else samples
+    fronts = {s.get("front_app") for s in during if s.get("front_app") not in (None, "", "unknown")}
     if fronts and not all("Ridgeline" in f for f in fronts):
         reasons.append(f"another app was in front: {sorted(fronts)}")
     # The game's own log says whether its window kept focus.
