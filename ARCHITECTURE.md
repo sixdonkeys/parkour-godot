@@ -215,10 +215,10 @@ Each record lives at `docs/decisions/<problem>.md` with its excerpts in `docs/su
 | multiplayer-readiness | core | decided — see `docs/decisions/multiplayer-readiness.md` |
 | lighting | look-slice | decided — see `docs/decisions/lighting.md` |
 | landforms | look-slice | decided — see `docs/decisions/landforms.md` (city sources undecided — chicago-course) |
-| player-body | movement | undecided — movement |
-| movement-numbers | movement | undecided — movement |
+| player-body | movement | decided — see `docs/decisions/player-body.md` |
+| movement-numbers | movement | decided — see `docs/decisions/movement-numbers.md` (starting values; fixed in `docs/metrics.json` when `traversal` closes) |
 | replay | movement | undecided — movement |
-| input-latency | movement | undecided — movement |
+| input-latency | movement | decided — see `docs/decisions/input-latency.md` |
 | cameras | camera | undecided — camera |
 | traversal-detection | traversal | undecided — traversal |
 | course-runs | kit | undecided — kit |
