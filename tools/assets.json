@@ -1,0 +1,10 @@
+{
+  "note": "Third-party assets fetched by tools/fetch_assets.py into game/assets/ (git-ignored). Checksums are pinned in tools/assets.lock.json on first fetch; later fetches must match. Licences are quoted in ASSETS.md.",
+  "polyhaven": {
+    "textures": {"resolution": "4k", "format": "jpg", "maps": ["Diffuse", "nor_gl", "Rough", "AO"],
+      "ids": ["gravelly_sand", "dry_ground_rocks", "cliff_side", "red_laterite_soil_stones"]},
+    "models": {"resolution": "2k", "format": "gltf",
+      "ids": ["namaqualand_boulder_02", "namaqualand_boulder_03", "namaqualand_boulder_04", "namaqualand_boulder_05",
+              "namaqualand_rocks_01", "namaqualand_stones_01", "shrub_02", "wild_rooibos_bush"]}
+  }
+}

@@ -19,3 +19,7 @@ docs/evidence/**/frames/
 __pycache__/
 game/.local/
 docs/*/**/strip/
+game/*/generated/chunks/
+game/*/generated/*.res
+game/*/generated/*.f32
+game/assets/polyhaven/

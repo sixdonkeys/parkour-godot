@@ -652,7 +652,7 @@ def main() -> int:
         d = json.loads(p.read_text())
         module = a.module or d.get("module", "verify")
         name = d.get("id", p.stem) + ("-normal" if a.normal else "") + (f"-{a.tag}" if a.tag else "")
-        out = Path(a.out) if a.out else evidence_dir(module, a.round, name)
+        out = Path(a.out).resolve() if a.out else evidence_dir(module, a.round, name)
         log = run_preset(p, out, test_mode=not a.normal, baseline=Path(a.baseline) if a.baseline else None,
                          engine_args=a.engine_arg)
         o = log["orchestrator"]

@@ -51,3 +51,14 @@ Credits owed are shown on the in-game credits screen.
 - **Use constraints (from the same metadata, followed here):**
   > Acknowledgement of the originating agencies would be appreciated in products derived from these data.  Any user who modifies the data is obligated to describe the types of modifications they perform.
 - **Changes:** cropped to lon −110.85 to −110.75, lat 32.28 to 32.37 (Sabino Canyon and the Santa Catalina front range); compressed horizontally ×0.1 and vertically ×0.18; resampled to 1 m with seeded fractal detail added; route ground shaped by hand; meshes and rocks placed on top. The game's world is invented, not a map of the real place. Credited to the USGS on the credits screen.
+
+## Poly Haven textures and models (CC0)
+
+- **Path:** `game/assets/polyhaven/` (fetched by `tools/fetch_assets.py`; every file's address and SHA-256 is pinned in `tools/assets.lock.json`)
+- **Source:** https://polyhaven.com/ via https://api.polyhaven.com/files/<id> — assets: `cliff_side`, `dry_ground_rocks`, `gravelly_sand`, `namaqualand_boulder_02`, `namaqualand_boulder_03`, `namaqualand_boulder_04`, `namaqualand_boulder_05`, `namaqualand_rocks_01`, `namaqualand_stones_01`, `red_laterite_soil_stones`, `shrub_02`, `wild_rooibos_bush`
+- **Author:** Poly Haven and its contributors (each asset's page names its author)
+- **Licence:** CC0 1.0
+- **Licence statement (from https://polyhaven.com/license):**
+  > Our assets are all licensed as CC0 , which is effectively Public Domain even in jurisdictions that do not support the Public Domain.
+  > You do not need to give credit or attribution when using them (although it is appreciated).
+- **Changes:** none to the files; import settings (VRAM compression, mipmaps) set by `tools/set_imports.py`. Credited on the credits screen anyway.
