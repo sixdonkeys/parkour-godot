@@ -1,0 +1,290 @@
+{
+  "preset": {
+    "id": "verify-window-ui-outside",
+    "module": "verify",
+    "purpose": "Known answer for the interface check: a fixture with one element placed outside the window must report exactly that element.",
+    "scene": "res://verify/fixtures/ui_outside.tscn",
+    "profile": "neo",
+    "resolution": "window",
+    "still": false,
+    "warmup_frames": 10.0,
+    "frames": 20.0
+  },
+  "commit": "673d84fc1f8fccdbd4755eb64b228c87aed25d96",
+  "test_mode": true,
+  "timing": "fixed (--fixed-fps)",
+  "started": "2026-11-15T21:00:55",
+  "machine": {
+    "os": "Linux",
+    "os_version": "44 (Workstation Edition)",
+    "cpu_cores": 10,
+    "engine": "4.7.2-stable (fedora)",
+    "adapter": "Apple M1 Pro (G13S C0)",
+    "adapter_vendor": "Unknown",
+    "adapter_api_version": "1.4.354",
+    "adapter_driver": [
+      "",
+      ""
+    ],
+    "rendering_method": "forward_plus",
+    "rendering_driver": "vulkan",
+    "display_server": "Wayland",
+    "software_renderer": false,
+    "screen_size": "(3456, 2160)",
+    "screen_scale": 2.0,
+    "refresh_hz": 120.0,
+    "desktop": "GNOME"
+  },
+  "proxy": true,
+  "scene_loaded": true,
+  "profile": {
+    "name": "neo",
+    "path": "res://profiles/neo.tres",
+    "loaded": true,
+    "render_scale": 0.670000016689301,
+    "settings": {
+      "profile_name": "neo",
+      "render_scale": 0.67,
+      "upscalers": [
+        "metalfx_temporal",
+        "fsr",
+        "bilinear"
+      ],
+      "msaa_3d": 0,
+      "use_taa": false,
+      "screen_space_aa": 2,
+      "mesh_lod_threshold": 1.0,
+      "scatter_density": 1.0,
+      "draw_distance": 1.0,
+      "directional_shadow_size": 4096,
+      "directional_shadow_splits": 2,
+      "directional_shadow_max_distance": 150.0,
+      "soft_shadow_quality": 2,
+      "positional_shadow_atlas_size": 2048,
+      "allow_sdfgi": false,
+      "sdfgi_ray_count": 2,
+      "gi_half_resolution": true,
+      "allow_ssao": true,
+      "ssao_quality": 1,
+      "allow_ssil": false,
+      "allow_ssr": false,
+      "ssr_max_steps": 32,
+      "allow_volumetric_fog": true,
+      "volumetric_fog_size": 64,
+      "volumetric_fog_depth": 64,
+      "allow_glow": true,
+      "texture_tier": "neo",
+      "chosen_upscaler": "fsr"
+    }
+  },
+  "wall_seconds": 0.25413,
+  "frame_time": {
+    "frames": 19,
+    "excluded_capture_frames": 0,
+    "vsync_mode": "enabled",
+    "frame_ms": {
+      "p50": 8.348,
+      "p95": 15.192,
+      "p99": 15.192,
+      "max": 15.192,
+      "share_within_16_7": 1.0,
+      "share_within_22": 1.0
+    },
+    "gpu_ms": {
+      "p50": 0.379000008106232,
+      "p95": 0.778999984264374,
+      "p99": 0.778999984264374
+    },
+    "cpu_render_ms": {
+      "p50": 0.0810000002384186,
+      "p95": 0.189999997615814
+    },
+    "histogram": {
+      "bucket_ms": 0.5,
+      "buckets": {
+        "7.5": 2,
+        "8.0": 8,
+        "8.5": 4,
+        "10.5": 1,
+        "5.5": 1,
+        "1.5": 1,
+        "15.0": 1,
+        "11.0": 1
+      },
+      "over_max": 0,
+      "max_ms": 50.0
+    },
+    "series_ms": [
+      7.969,
+      8.486,
+      8.532,
+      10.999,
+      5.546,
+      8.328,
+      1.724,
+      7.624,
+      8.22,
+      8.678,
+      8.841,
+      15.192,
+      8.225,
+      8.348,
+      8.471,
+      8.209,
+      8.338,
+      8.525,
+      11.337
+    ],
+    "draw_series_ms": [
+      7.866,
+      8.425,
+      8.437,
+      10.931,
+      5.215,
+      8.213,
+      1.619,
+      7.534,
+      8.127,
+      8.567,
+      8.719,
+      15.025,
+      8.094,
+      8.237,
+      8.372,
+      8.084,
+      8.22,
+      8.414,
+      11.195
+    ],
+    "draw_ms": {
+      "p50": 8.237,
+      "p95": 15.025
+    },
+    "capture_after_index": [],
+    "draw_calls": {
+      "mean": 1.0,
+      "max": 1
+    },
+    "primitives_max": 12,
+    "budget": {
+      "proxy": true,
+      "proxy_gpu_factor": 2.5,
+      "wall_clock_meets_budget": true,
+      "gpu_scaled_meets_budget": true,
+      "pass": true
+    }
+  },
+  "viewport_size": "(1280.0, 800.0)",
+  "window_size": "(2560, 1600)",
+  "interface_outside": [
+    {
+      "path": "/root/VerifyScene/UiOutside/Outside",
+      "rect": [
+        -400.0,
+        40.0,
+        200.0,
+        40.0
+      ]
+    }
+  ],
+  "focus_events": [
+    {
+      "event": "window_focus_in",
+      "frame": 0,
+      "usec": 384334
+    },
+    {
+      "event": "app_focus_in",
+      "frame": 0,
+      "usec": 384339
+    }
+  ],
+  "memory": {
+    "readings": [
+      {
+        "label": "before_load",
+        "process_rss_bytes": 263880704,
+        "video_bytes": 22297088,
+        "texture_bytes": 19047552,
+        "buffer_bytes": 1934476,
+        "static_bytes": 83244235,
+        "total_bytes": 286177792,
+        "usec": 448460
+      },
+      {
+        "label": "after_load",
+        "process_rss_bytes": 266731520,
+        "video_bytes": 31621632,
+        "texture_bytes": 19197056,
+        "buffer_bytes": 6128780,
+        "static_bytes": 84434035,
+        "total_bytes": 298353152,
+        "usec": 711073
+      },
+      {
+        "label": "after_unload",
+        "process_rss_bytes": 266797056,
+        "video_bytes": 31621632,
+        "texture_bytes": 19197056,
+        "buffer_bytes": 6128780,
+        "static_bytes": 84392459,
+        "total_bytes": 298418688,
+        "usec": 955309
+      }
+    ],
+    "loaded_total_bytes": 298353152,
+    "within_4gb": true,
+    "unload_return_ratio": 1.04277374535058,
+    "returns_within_5pct": true,
+    "video_delta_load_bytes": 9324544,
+    "texture_delta_load_bytes": 149504
+  },
+  "engine": {
+    "errors": [],
+    "warnings": [
+      {
+        "type": "warning",
+        "message": "The requested V-Sync mode Disabled is not available. Falling back to V-Sync mode Enabled.",
+        "code": "The requested V-Sync mode Disabled is not available. Falling back to V-Sync mode Enabled.",
+        "where": "drivers/vulkan/rendering_device_driver_vulkan.cpp:3767 (swap_chain_resize)",
+        "usec": 390753
+      }
+    ]
+  },
+  "finished": "2026-11-15T21:00:56",
+  "orchestrator": {
+    "command": [
+      "godot",
+      "--path",
+      "/home/nick/src/parkour-godot/game",
+      "--disable-vsync",
+      "--fixed-fps",
+      "60",
+      "--",
+      "--preset",
+      "/home/nick/src/parkour-godot/docs/fixtures/verify-window-ui-outside.json",
+      "--out",
+      "/home/nick/src/parkour-godot/docs/evidence/verify/critic-round-1/proofs/window/ui-outside",
+      "--commit",
+      "673d84fc1f8fccdbd4755eb64b228c87aed25d96",
+      "--repo-root",
+      "/home/nick/src/parkour-godot",
+      "--test-mode"
+    ],
+    "exit_code": -9,
+    "started": "2026-11-15T15:00:55.523051",
+    "shutdown_hang": null,
+    "self_terminated": true,
+    "seconds": 1.509111,
+    "output_errors": [],
+    "output_warnings": [
+      "WARNING: Can't obtain the XDG decoration manager. Libdecor will be used for drawing CSDs, if available. | at: init (platform/linuxbsd/wayland/wayland_thread.cpp:5635)",
+      "WARNING: xdg-toplevel-icon protocol not found! Cannot set window icon. | at: init (platform/linuxbsd/wayland/wayland_thread.cpp:5642)",
+      "WARNING: The requested V-Sync mode Disabled is not available. Falling back to V-Sync mode Enabled. | at: swap_chain_resize (drivers/vulkan/rendering_device_driver_vulkan.cpp:3767)",
+      "WARNING: The requested V-Sync mode Disabled is not available. Falling back to V-Sync mode Enabled. | at: swap_chain_resize (drivers/vulkan/rendering_device_driver_vulkan.cpp:3767)"
+    ],
+    "error_count": 0,
+    "verify_tool_commit": "673d84fc1f8fccdbd4755eb64b228c87aed25d96",
+    "frame_numbers_count": true
+  }
+}

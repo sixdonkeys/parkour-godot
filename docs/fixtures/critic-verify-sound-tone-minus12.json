@@ -1,0 +1,19 @@
+{
+  "id": "critic-verify-sound-tone-minus12",
+  "module": "verify",
+  "purpose": "Critic's own known answer (verify round 1): 1000 Hz sine at amplitude 0.25 peaks at -12.04 dBFS, RMS -15.05 dBFS, no clipping.",
+  "scene": "res://verify/fixtures/tone.tscn",
+  "fixture": {
+    "amplitude": 0.25,
+    "frequency": 1000.0
+  },
+  "profile": "neo",
+  "resolution": [
+    2408,
+    1506
+  ],
+  "sound": true,
+  "still": false,
+  "warmup_frames": 30,
+  "frames": 180
+}

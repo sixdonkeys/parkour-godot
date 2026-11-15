@@ -1,0 +1,14 @@
+{
+  "id": "critic-verify-missing-scene",
+  "module": "verify",
+  "purpose": "Critic's own check (verify round 1): a preset naming a scene that does not exist must be reported as an error by the orchestrator although the engine exits 0.",
+  "scene": "res://verify/fixtures/does_not_exist.tscn",
+  "profile": "neo",
+  "resolution": [
+    2408,
+    1506
+  ],
+  "warmup_frames": 5,
+  "frames": 10,
+  "still": false
+}

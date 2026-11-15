@@ -1,0 +1,1277 @@
+{
+  "builder_proof_image": {
+    "instrument": "image numbers",
+    "cases": {
+      "self_ssim": {
+        "expected": 1.0,
+        "got": 1.0,
+        "pass": true
+      },
+      "self_hist": {
+        "expected": 0.0,
+        "got": {
+          "luma_tv": 0.0,
+          "rgb_tv": 0.0
+        },
+        "pass": true
+      },
+      "grey_offset_ssim": {
+        "expected": 0.9836109249983688,
+        "got": 0.9836109249983689,
+        "pass": true
+      },
+      "quarter_black_hist": {
+        "expected": 0.25,
+        "got": {
+          "luma_tv": 0.25,
+          "rgb_tv": 0.25
+        },
+        "pass": true
+      }
+    },
+    "pass": true,
+    "seconds": 0.0
+  },
+  "builder_proof_frametime": {
+    "instrument": "frame time",
+    "fixture": "docs/fixtures/verify-frametime-limiter-30.json",
+    "expected_p50_ms": 33.333,
+    "tolerance_ms": 1.5,
+    "measured_p50_ms": 33.353,
+    "measured": {
+      "p50": 33.353,
+      "p95": 35.733,
+      "p99": 37.377,
+      "max": 40.967,
+      "share_within_16_7": 0.0,
+      "share_within_22": 0.0
+    },
+    "pass": true,
+    "log": "docs/evidence/verify/critic-round-1/proofs/frametime/log.json",
+    "seconds": 10.7
+  },
+  "builder_proof_memory": {
+    "instrument": "memory",
+    "fixture": "docs/fixtures/verify-memory-known-texture.json",
+    "expected_texture_delta_bytes": 67108864,
+    "measured_texture_delta_bytes": 67633152,
+    "video_delta_bytes": 134480128,
+    "unload_return_ratio_raw": 1.17599342796592,
+    "warm_return_ratio": 1.00278483895852,
+    "grows_each_cycle": false,
+    "texture_returns_exactly": true,
+    "readings": [
+      {
+        "label": "before_load",
+        "process_rss_bytes": 265027584,
+        "video_bytes": 141329408,
+        "texture_bytes": 116172160,
+        "buffer_bytes": 22400220,
+        "static_bytes": 83922093,
+        "total_bytes": 406356992,
+        "usec": 496439
+      },
+      {
+        "label": "after_load",
+        "process_rss_bytes": 269697024,
+        "video_bytes": 275809536,
+        "texture_bytes": 183805312,
+        "buffer_bytes": 22400472,
+        "static_bytes": 87144386,
+        "total_bytes": 545506560,
+        "usec": 2218835
+      },
+      {
+        "label": "after_unload",
+        "process_rss_bytes": 269697024,
+        "video_bytes": 208176128,
+        "texture_bytes": 116172160,
+        "buffer_bytes": 22400220,
+        "static_bytes": 87013104,
+        "total_bytes": 477873152,
+        "usec": 2701569
+      }
+    ],
+    "pass": true,
+    "log": "docs/evidence/verify/critic-round-1/proofs/memory/log.json",
+    "seconds": 4.8
+  },
+  "builder_proof_sound": {
+    "instrument": "sound",
+    "cases": [
+      {
+        "fixture": "docs/fixtures/verify-sound-tone-minus6.json",
+        "amplitude": 0.5,
+        "expected_peak_dbfs": -6.021,
+        "measured_peak_dbfs": -6.02060198415734,
+        "file_peak_dbfs": -6.020601984157336,
+        "clipped_samples": 0,
+        "seconds": 1.84598639455782,
+        "driver": "PulseAudio",
+        "log": "docs/evidence/verify/critic-round-1/proofs/verify-sound-tone-minus6/log.json",
+        "steady_rms_dbfs": -9.030212149310339,
+        "expected_rms_dbfs": -9.031,
+        "pass": true
+      },
+      {
+        "fixture": "docs/fixtures/verify-sound-tone-clipping.json",
+        "amplitude": 1.25,
+        "expected_peak_dbfs": 1.938,
+        "measured_peak_dbfs": 1.93819777510781,
+        "file_peak_dbfs": 1.9381977751078139,
+        "clipped_samples": 32996,
+        "seconds": 1.2887074829932,
+        "driver": "PulseAudio",
+        "log": "docs/evidence/verify/critic-round-1/proofs/verify-sound-tone-clipping/log.json",
+        "steady_rms_dbfs": -1.3870407082224383,
+        "expected_rms_dbfs": -1.072,
+        "pass": true
+      }
+    ],
+    "pass": true,
+    "seconds": 9.0
+  },
+  "builder_proof_build": {
+    "instrument": "build size and packed-file list",
+    "export": {
+      "preset": "Linux arm64",
+      "path": "builds/fixture-buildcheck/linux-arm64/buildcheck.arm64",
+      "exit_code": 0,
+      "errors": [],
+      "warnings": [],
+      "exists": true,
+      "ok": true
+    },
+    "expected_known_size": 10485760,
+    "found_known": [
+      {
+        "path": "data/known_size.bin",
+        "size": 10485760,
+        "source": "data/known_size.bin"
+      }
+    ],
+    "unlisted": [
+      "assets/planted.bin"
+    ],
+    "planted_flagged": true,
+    "pass": true,
+    "seconds": 1.7
+  },
+  "builder_proof_window": {
+    "instrument": "window",
+    "wm": "GNOME",
+    "steps": [
+      {
+        "frame": 0,
+        "action": "resize_frac",
+        "observe_at": 20,
+        "requested": "(1151, 2160)",
+        "observed": {
+          "root_size": "(1152, 2160)",
+          "content_scale_factor": 1.0,
+          "content_scale_size": "(1280, 800)",
+          "screen_scale": 2.0,
+          "scaling_3d_scale": 0.670000016689301,
+          "window_size": "(1152, 2160)",
+          "window_mode": 0,
+          "viewport_size": "(1280.0, 2399.0)",
+          "mouse_mode": 0,
+          "pointer_released": true,
+          "paused": false,
+          "interface_outside": [],
+          "frame_pixels": "(1152, 2160)",
+          "render_3d_pixels": "(771.84, 1447.2)",
+          "aspect_window": 0.533333333333333,
+          "aspect_visible": 0.533555648186745,
+          "fills_without_stretch": true,
+          "run_state": {
+            "run_state": "MENU",
+            "paused": false,
+            "focused": true,
+            "pointer_captured": false,
+            "level": "",
+            "players": 0,
+            "quality": "neo",
+            "menu_open": false,
+            "super_bindings": []
+          }
+        }
+      },
+      {
+        "frame": 60,
+        "action": "resize_frac",
+        "observe_at": 80,
+        "requested": "(1728, 2160)",
+        "observed": {
+          "root_size": "(1728, 2160)",
+          "content_scale_factor": 1.0,
+          "content_scale_size": "(1280, 800)",
+          "screen_scale": 2.0,
+          "scaling_3d_scale": 0.670000016689301,
+          "window_size": "(1728, 2160)",
+          "window_mode": 0,
+          "viewport_size": "(1280.0, 1600.0)",
+          "mouse_mode": 0,
+          "pointer_released": true,
+          "paused": false,
+          "interface_outside": [],
+          "frame_pixels": "(1728, 2160)",
+          "render_3d_pixels": "(1157.76, 1447.2)",
+          "aspect_window": 0.8,
+          "aspect_visible": 0.8,
+          "fills_without_stretch": true,
+          "run_state": {
+            "run_state": "MENU",
+            "paused": false,
+            "focused": true,
+            "pointer_captured": false,
+            "level": "",
+            "players": 0,
+            "quality": "neo",
+            "menu_open": false,
+            "super_bindings": []
+          }
+        }
+      },
+      {
+        "frame": 120,
+        "action": "resize_frac",
+        "observe_at": 140,
+        "requested": "(3456, 719)",
+        "observed": {
+          "root_size": "(3456, 720)",
+          "content_scale_factor": 1.0,
+          "content_scale_size": "(1280, 800)",
+          "screen_scale": 2.0,
+          "scaling_3d_scale": 0.670000016689301,
+          "window_size": "(3456, 720)",
+          "window_mode": 0,
+          "viewport_size": "(3840.0, 800.0)",
+          "mouse_mode": 0,
+          "pointer_released": true,
+          "paused": false,
+          "interface_outside": [],
+          "frame_pixels": "(3456, 720)",
+          "render_3d_pixels": "(2315.52, 482.4)",
+          "aspect_window": 4.8,
+          "aspect_visible": 4.8,
+          "fills_without_stretch": true,
+          "run_state": {
+            "run_state": "MENU",
+            "paused": false,
+            "focused": true,
+            "pointer_captured": false,
+            "level": "",
+            "players": 0,
+            "quality": "neo",
+            "menu_open": false,
+            "super_bindings": []
+          }
+        }
+      },
+      {
+        "frame": 180,
+        "action": "fullscreen_toggle",
+        "observe_at": 200,
+        "observed": {
+          "root_size": "(3456, 2160)",
+          "content_scale_factor": 1.0,
+          "content_scale_size": "(1280, 800)",
+          "screen_scale": 2.0,
+          "scaling_3d_scale": 0.670000016689301,
+          "window_size": "(3456, 2160)",
+          "window_mode": 3,
+          "viewport_size": "(1280.0, 800.0)",
+          "mouse_mode": 0,
+          "pointer_released": true,
+          "paused": false,
+          "interface_outside": [],
+          "frame_pixels": "(3456, 2160)",
+          "render_3d_pixels": "(2315.52, 1447.2)",
+          "aspect_window": 1.6,
+          "aspect_visible": 1.6,
+          "fills_without_stretch": true,
+          "run_state": {
+            "run_state": "MENU",
+            "paused": false,
+            "focused": true,
+            "pointer_captured": false,
+            "level": "",
+            "players": 0,
+            "quality": "neo",
+            "menu_open": false,
+            "super_bindings": []
+          }
+        }
+      },
+      {
+        "frame": 240,
+        "action": "focus_out",
+        "observe_at": 260,
+        "synthetic": true,
+        "observed": {
+          "root_size": "(3456, 2160)",
+          "content_scale_factor": 1.0,
+          "content_scale_size": "(1280, 800)",
+          "screen_scale": 2.0,
+          "scaling_3d_scale": 0.670000016689301,
+          "window_size": "(3456, 2160)",
+          "window_mode": 3,
+          "viewport_size": "(1280.0, 800.0)",
+          "mouse_mode": 0,
+          "pointer_released": true,
+          "paused": false,
+          "interface_outside": [],
+          "frame_pixels": "(3456, 2160)",
+          "render_3d_pixels": "(2315.52, 1447.2)",
+          "aspect_window": 1.6,
+          "aspect_visible": 1.6,
+          "fills_without_stretch": true,
+          "run_state": {
+            "run_state": "MENU",
+            "paused": false,
+            "focused": false,
+            "pointer_captured": false,
+            "level": "",
+            "players": 0,
+            "quality": "neo",
+            "menu_open": false,
+            "super_bindings": []
+          }
+        }
+      },
+      {
+        "frame": 300,
+        "action": "focus_in",
+        "observe_at": 320,
+        "synthetic": true,
+        "observed": {
+          "root_size": "(3456, 2160)",
+          "content_scale_factor": 1.0,
+          "content_scale_size": "(1280, 800)",
+          "screen_scale": 2.0,
+          "scaling_3d_scale": 0.670000016689301,
+          "window_size": "(3456, 2160)",
+          "window_mode": 3,
+          "viewport_size": "(1280.0, 800.0)",
+          "mouse_mode": 0,
+          "pointer_released": true,
+          "paused": false,
+          "interface_outside": [],
+          "frame_pixels": "(3456, 2160)",
+          "render_3d_pixels": "(2315.52, 1447.2)",
+          "aspect_window": 1.6,
+          "aspect_visible": 1.6,
+          "fills_without_stretch": true,
+          "run_state": {
+            "run_state": "MENU",
+            "paused": false,
+            "focused": true,
+            "pointer_captured": false,
+            "level": "",
+            "players": 0,
+            "quality": "neo",
+            "menu_open": false,
+            "super_bindings": []
+          }
+        }
+      },
+      {
+        "frame": 330,
+        "action": "fullscreen_toggle",
+        "observe_at": 350,
+        "observed": {
+          "root_size": "(3456, 720)",
+          "content_scale_factor": 1.0,
+          "content_scale_size": "(1280, 800)",
+          "screen_scale": 2.0,
+          "scaling_3d_scale": 0.670000016689301,
+          "window_size": "(3456, 720)",
+          "window_mode": 0,
+          "viewport_size": "(3840.0, 800.0)",
+          "mouse_mode": 0,
+          "pointer_released": true,
+          "paused": false,
+          "interface_outside": [],
+          "frame_pixels": "(3456, 720)",
+          "render_3d_pixels": "(2315.52, 482.4)",
+          "aspect_window": 4.8,
+          "aspect_visible": 4.8,
+          "fills_without_stretch": true,
+          "run_state": {
+            "run_state": "MENU",
+            "paused": false,
+            "focused": true,
+            "pointer_captured": false,
+            "level": "",
+            "players": 0,
+            "quality": "neo",
+            "menu_open": false,
+            "super_bindings": []
+          }
+        }
+      }
+    ],
+    "zero_errors": true,
+    "fills_without_stretch": true,
+    "ui_outside_fixture": {
+      "expected": 1,
+      "found": [
+        {
+          "path": "/root/VerifyScene/UiOutside/Outside",
+          "rect": [
+            -400.0,
+            40.0,
+            200.0,
+            40.0
+          ]
+        }
+      ],
+      "pass": true
+    },
+    "note": "GNOME: the harness resizes the window itself and sends synthetic focus events; see decision windowing",
+    "pass": true,
+    "seconds": 9.9
+  },
+  "own_frametime_20": {
+    "expected_p50": 50.0,
+    "measured": {
+      "p50": 49.995,
+      "p95": 52.136,
+      "p99": 52.976,
+      "max": 53.236,
+      "share_within_16_7": 0.0,
+      "share_within_22": 0.0
+    },
+    "errors": 0,
+    "pass": true
+  },
+  "own_memory_2048": {
+    "expected_texture_delta": 16777216,
+    "measured_texture_delta": 16908288,
+    "video_delta": 33423616,
+    "raw_return_ratio": 1.11880918593426,
+    "raw_within_5pct": false,
+    "warm_return_ratio": 1.0261891826284,
+    "warm_within_5pct": true,
+    "grows_each_cycle": true,
+    "unload_series": [
+      425542656,
+      442926080,
+      454525952
+    ],
+    "texture_back": true,
+    "errors": 0,
+    "pass": true
+  },
+  "own_sound_minus12": {
+    "expected_peak": -12.041,
+    "measured_peak": -6.02060198415734,
+    "clipped": 0,
+    "expected_rms": -15.051,
+    "steady_rms": -15.050896556674145,
+    "sounds": [],
+    "errors": 0,
+    "pass": "False"
+  },
+  "own_window_shapes": {
+    "steps": [
+      {
+        "action": "resize_frac",
+        "requested": "(864, 2160)",
+        "window_size": "(864, 2160)",
+        "frame_pixels": "(864, 2160)",
+        "window_mode": 0,
+        "fills_without_stretch": true,
+        "interface_outside": [],
+        "pointer_released": true
+      },
+      {
+        "action": "resize_frac",
+        "requested": "(3456, 432)",
+        "window_size": "(3456, 432)",
+        "frame_pixels": "(3456, 432)",
+        "window_mode": 0,
+        "fills_without_stretch": true,
+        "interface_outside": [],
+        "pointer_released": true
+      },
+      {
+        "action": "resize_frac",
+        "requested": "(2592, 1296)",
+        "window_size": "(2592, 1296)",
+        "frame_pixels": "(2592, 1296)",
+        "window_mode": 0,
+        "fills_without_stretch": true,
+        "interface_outside": [],
+        "pointer_released": true
+      },
+      {
+        "action": "fullscreen_toggle",
+        "requested": null,
+        "window_size": "(3456, 2160)",
+        "frame_pixels": "(3456, 2160)",
+        "window_mode": 3,
+        "fills_without_stretch": true,
+        "interface_outside": [],
+        "pointer_released": true
+      },
+      {
+        "action": "focus_out",
+        "requested": null,
+        "window_size": "(3456, 2160)",
+        "frame_pixels": "(3456, 2160)",
+        "window_mode": 3,
+        "fills_without_stretch": true,
+        "interface_outside": [],
+        "pointer_released": true
+      },
+      {
+        "action": "focus_in",
+        "requested": null,
+        "window_size": "(3456, 2160)",
+        "frame_pixels": "(3456, 2160)",
+        "window_mode": 3,
+        "fills_without_stretch": true,
+        "interface_outside": [],
+        "pointer_released": true
+      },
+      {
+        "action": "fullscreen_toggle",
+        "requested": null,
+        "window_size": "(2592, 1296)",
+        "frame_pixels": "(2592, 1296)",
+        "window_mode": 0,
+        "fills_without_stretch": true,
+        "interface_outside": [],
+        "pointer_released": true
+      }
+    ],
+    "focus_events": [
+      {
+        "event": "window_focus_in",
+        "frame": 0,
+        "usec": 413756
+      },
+      {
+        "event": "app_focus_in",
+        "frame": 0,
+        "usec": 413762
+      },
+      {
+        "event": "app_focus_out",
+        "frame": 240,
+        "usec": 2919331
+      },
+      {
+        "event": "window_focus_out",
+        "frame": 240,
+        "usec": 2919384
+      },
+      {
+        "event": "window_focus_in",
+        "frame": 280,
+        "usec": 3308075
+      },
+      {
+        "event": "app_focus_in",
+        "frame": 280,
+        "usec": 3308112
+      }
+    ],
+    "wm": "GNOME",
+    "errors": 0,
+    "pass": true
+  },
+  "own_missing_scene": {
+    "engine_exit": -9,
+    "errors": 8,
+    "in_game_errors": [
+      {
+        "type": "error",
+        "message": "Cannot open file 'res://verify/fixtures/does_not_exist.tscn'.",
+        "code": "Condition \"err != OK\" is true. Returning: Ref<Resource>()",
+        "where": "scene/resources/resource_format_text.cpp:1442 (load)",
+        "usec": 487029
+      },
+      {
+        "type": "error",
+        "message": "Failed loading resource: res://verify/fixtures/does_not_exist.tscn.",
+        "code": "Condition \"found\" is true. Returning: Ref<Resource>()",
+        "where": "core/io/resource_loader.cpp:317 (_load)",
+        "usec": 487118
+      },
+      {
+        "type": "error",
+        "message": "Error loading resource: 'res://verify/fixtures/does_not_exist.tscn'.",
+        "code": "Condition \"err != OK\" is true. Returning: ret",
+        "where": "core/core_bind.cpp:82 (load)",
+        "usec": 487149
+      }
+    ],
+    "pass": true
+  },
+  "own_image": {
+    "still_self_ssim": 1.0,
+    "still_self_hist": {
+      "luma_tv": 0.0,
+      "rgb_tv": 0.0
+    },
+    "half_white_hist_expected": 0.5,
+    "half_white_hist": {
+      "luma_tv": 0.5,
+      "rgb_tv": 0.5
+    },
+    "pass": true
+  },
+  "own_build": {
+    "export": {
+      "preset": "Linux arm64",
+      "path": "builds/critic-buildcheck/linux-arm64/cb.arm64",
+      "exit_code": 0,
+      "errors": [],
+      "warnings": [],
+      "exists": true,
+      "ok": true
+    },
+    "found_known": [
+      {
+        "path": "data/known_3000001.bin",
+        "size": 3000001,
+        "source": "data/known_3000001.bin"
+      }
+    ],
+    "unlisted": [
+      "thirdparty/sneaky/planted.txt"
+    ],
+    "listed": [
+      "assets/listed/ok.bin"
+    ],
+    "pass": true
+  },
+  "preset_verify-empty-still": {
+    "errors": 0,
+    "frame_ms": {
+      "p50": 8.332,
+      "p95": 13.35,
+      "p99": 16.061,
+      "max": 32.642,
+      "share_within_16_7": 0.996655518394649,
+      "share_within_22": 0.998327759197324
+    },
+    "gpu_ms": {
+      "p50": 4.16699981689453,
+      "p95": 5.73299980163574,
+      "p99": 6.27500009536743
+    },
+    "budget": {
+      "proxy": true,
+      "proxy_gpu_factor": 2.5,
+      "wall_clock_meets_budget": true,
+      "gpu_scaled_meets_budget": true,
+      "pass": true
+    },
+    "vsync": "enabled",
+    "machine": {
+      "os": "Linux",
+      "os_version": "44 (Workstation Edition)",
+      "cpu_cores": 10,
+      "engine": "4.7.2-stable (fedora)",
+      "adapter": "Apple M1 Pro (G13S C0)",
+      "adapter_vendor": "Unknown",
+      "adapter_api_version": "1.4.354",
+      "adapter_driver": [
+        "",
+        ""
+      ],
+      "rendering_method": "forward_plus",
+      "rendering_driver": "vulkan",
+      "display_server": "Wayland",
+      "software_renderer": false,
+      "screen_size": "(3456, 2160)",
+      "screen_scale": 2.0,
+      "refresh_hz": 120.0,
+      "desktop": "GNOME"
+    },
+    "memory_total": 406946816,
+    "image": {
+      "size": [
+        2408,
+        1506
+      ],
+      "ssim_vs_baseline": 1.0,
+      "baseline": "docs/evidence/verify/round-1/verify-empty-still/still.png"
+    },
+    "profile": {
+      "name": "neo",
+      "path": "res://profiles/neo.tres",
+      "loaded": true,
+      "render_scale": 0.670000016689301,
+      "settings": {
+        "profile_name": "neo",
+        "render_scale": 0.67,
+        "upscalers": [
+          "metalfx_temporal",
+          "fsr",
+          "bilinear"
+        ],
+        "msaa_3d": 0,
+        "use_taa": false,
+        "screen_space_aa": 2,
+        "mesh_lod_threshold": 1.0,
+        "scatter_density": 1.0,
+        "draw_distance": 1.0,
+        "directional_shadow_size": 4096,
+        "directional_shadow_splits": 2,
+        "directional_shadow_max_distance": 150.0,
+        "soft_shadow_quality": 2,
+        "positional_shadow_atlas_size": 2048,
+        "allow_sdfgi": false,
+        "sdfgi_ray_count": 2,
+        "gi_half_resolution": true,
+        "allow_ssao": true,
+        "ssao_quality": 1,
+        "allow_ssil": false,
+        "allow_ssr": false,
+        "ssr_max_steps": 32,
+        "allow_volumetric_fog": true,
+        "volumetric_fog_size": 64,
+        "volumetric_fog_depth": 64,
+        "allow_glow": true,
+        "texture_tier": "neo",
+        "chosen_upscaler": "fsr"
+      }
+    },
+    "hang": false
+  },
+  "preset_verify-empty-still-normal": {
+    "errors": 0,
+    "frame_ms": {
+      "p50": 8.34,
+      "p95": 12.928,
+      "p99": 16.847,
+      "max": 34.366,
+      "share_within_16_7": 0.989966555183946,
+      "share_within_22": 0.993311036789298
+    },
+    "gpu_ms": {
+      "p50": 4.18599987030029,
+      "p95": 5.79300022125244,
+      "p99": 6.26200008392334
+    },
+    "budget": {
+      "proxy": true,
+      "proxy_gpu_factor": 2.5,
+      "wall_clock_meets_budget": true,
+      "gpu_scaled_meets_budget": true,
+      "pass": true
+    },
+    "vsync": "enabled",
+    "machine": {
+      "os": "Linux",
+      "os_version": "44 (Workstation Edition)",
+      "cpu_cores": 10,
+      "engine": "4.7.2-stable (fedora)",
+      "adapter": "Apple M1 Pro (G13S C0)",
+      "adapter_vendor": "Unknown",
+      "adapter_api_version": "1.4.354",
+      "adapter_driver": [
+        "",
+        ""
+      ],
+      "rendering_method": "forward_plus",
+      "rendering_driver": "vulkan",
+      "display_server": "Wayland",
+      "software_renderer": false,
+      "screen_size": "(3456, 2160)",
+      "screen_scale": 2.0,
+      "refresh_hz": 120.0,
+      "desktop": "GNOME"
+    },
+    "memory_total": 407012352,
+    "image": {
+      "size": [
+        2408,
+        1506
+      ],
+      "ssim_vs_baseline": 1.0,
+      "baseline": "docs/evidence/verify/round-1/verify-empty-still/still.png"
+    },
+    "profile": {
+      "name": "neo",
+      "path": "res://profiles/neo.tres",
+      "loaded": true,
+      "render_scale": 0.670000016689301,
+      "settings": {
+        "profile_name": "neo",
+        "render_scale": 0.67,
+        "upscalers": [
+          "metalfx_temporal",
+          "fsr",
+          "bilinear"
+        ],
+        "msaa_3d": 0,
+        "use_taa": false,
+        "screen_space_aa": 2,
+        "mesh_lod_threshold": 1.0,
+        "scatter_density": 1.0,
+        "draw_distance": 1.0,
+        "directional_shadow_size": 4096,
+        "directional_shadow_splits": 2,
+        "directional_shadow_max_distance": 150.0,
+        "soft_shadow_quality": 2,
+        "positional_shadow_atlas_size": 2048,
+        "allow_sdfgi": false,
+        "sdfgi_ray_count": 2,
+        "gi_half_resolution": true,
+        "allow_ssao": true,
+        "ssao_quality": 1,
+        "allow_ssil": false,
+        "allow_ssr": false,
+        "ssr_max_steps": 32,
+        "allow_volumetric_fog": true,
+        "volumetric_fog_size": 64,
+        "volumetric_fog_depth": 64,
+        "allow_glow": true,
+        "texture_tier": "neo",
+        "chosen_upscaler": "fsr"
+      }
+    },
+    "hang": false
+  },
+  "preset_critic-verify-empty-still-low": {
+    "errors": 0,
+    "frame_ms": {
+      "p50": 8.319,
+      "p95": 12.681,
+      "p99": 16.711,
+      "max": 41.6,
+      "share_within_16_7": 0.989966555183946,
+      "share_within_22": 0.998327759197324
+    },
+    "gpu_ms": {
+      "p50": 4.09000015258789,
+      "p95": 5.7350001335144,
+      "p99": 6.18800020217896
+    },
+    "budget": {
+      "proxy": true,
+      "proxy_gpu_factor": 2.5,
+      "wall_clock_meets_budget": true,
+      "gpu_scaled_meets_budget": true,
+      "pass": true
+    },
+    "vsync": "enabled",
+    "machine": {
+      "os": "Linux",
+      "os_version": "44 (Workstation Edition)",
+      "cpu_cores": 10,
+      "engine": "4.7.2-stable (fedora)",
+      "adapter": "Apple M1 Pro (G13S C0)",
+      "adapter_vendor": "Unknown",
+      "adapter_api_version": "1.4.354",
+      "adapter_driver": [
+        "",
+        ""
+      ],
+      "rendering_method": "forward_plus",
+      "rendering_driver": "vulkan",
+      "display_server": "Wayland",
+      "software_renderer": false,
+      "screen_size": "(3456, 2160)",
+      "screen_scale": 2.0,
+      "refresh_hz": 120.0,
+      "desktop": "GNOME"
+    },
+    "memory_total": 407094272,
+    "image": {
+      "size": [
+        2408,
+        1506
+      ],
+      "ssim_vs_baseline": null,
+      "ssim_note": "no earlier round of this preset"
+    },
+    "profile": {
+      "name": "neo",
+      "path": "res://profiles/neo.tres",
+      "loaded": true,
+      "render_scale": 0.670000016689301,
+      "settings": {
+        "profile_name": "neo",
+        "render_scale": 0.67,
+        "upscalers": [
+          "metalfx_temporal",
+          "fsr",
+          "bilinear"
+        ],
+        "msaa_3d": 0,
+        "use_taa": false,
+        "screen_space_aa": 2,
+        "mesh_lod_threshold": 1.0,
+        "scatter_density": 1.0,
+        "draw_distance": 1.0,
+        "directional_shadow_size": 4096,
+        "directional_shadow_splits": 2,
+        "directional_shadow_max_distance": 150.0,
+        "soft_shadow_quality": 2,
+        "positional_shadow_atlas_size": 2048,
+        "allow_sdfgi": false,
+        "sdfgi_ray_count": 2,
+        "gi_half_resolution": true,
+        "allow_ssao": true,
+        "ssao_quality": 1,
+        "allow_ssil": false,
+        "allow_ssr": false,
+        "ssr_max_steps": 32,
+        "allow_volumetric_fog": true,
+        "volumetric_fog_size": 64,
+        "volumetric_fog_depth": 64,
+        "allow_glow": true,
+        "texture_tier": "neo",
+        "chosen_upscaler": "fsr"
+      }
+    },
+    "hang": false
+  },
+  "preset_critic-verify-empty-still-low-normal": {
+    "errors": 0,
+    "frame_ms": {
+      "p50": 8.349,
+      "p95": 14.282,
+      "p99": 22.447,
+      "max": 30.158,
+      "share_within_16_7": 0.978260869565217,
+      "share_within_22": 0.989966555183946
+    },
+    "gpu_ms": {
+      "p50": 4.12799978256226,
+      "p95": 5.74499988555908,
+      "p99": 6.20100021362305
+    },
+    "budget": {
+      "proxy": true,
+      "proxy_gpu_factor": 2.5,
+      "wall_clock_meets_budget": false,
+      "gpu_scaled_meets_budget": true,
+      "pass": false
+    },
+    "vsync": "enabled",
+    "machine": {
+      "os": "Linux",
+      "os_version": "44 (Workstation Edition)",
+      "cpu_cores": 10,
+      "engine": "4.7.2-stable (fedora)",
+      "adapter": "Apple M1 Pro (G13S C0)",
+      "adapter_vendor": "Unknown",
+      "adapter_api_version": "1.4.354",
+      "adapter_driver": [
+        "",
+        ""
+      ],
+      "rendering_method": "forward_plus",
+      "rendering_driver": "vulkan",
+      "display_server": "Wayland",
+      "software_renderer": false,
+      "screen_size": "(3456, 2160)",
+      "screen_scale": 2.0,
+      "refresh_hz": 120.0,
+      "desktop": "GNOME"
+    },
+    "memory_total": 407094272,
+    "image": {
+      "size": [
+        2408,
+        1506
+      ],
+      "ssim_vs_baseline": null,
+      "ssim_note": "no earlier round of this preset"
+    },
+    "profile": {
+      "name": "neo",
+      "path": "res://profiles/neo.tres",
+      "loaded": true,
+      "render_scale": 0.670000016689301,
+      "settings": {
+        "profile_name": "neo",
+        "render_scale": 0.67,
+        "upscalers": [
+          "metalfx_temporal",
+          "fsr",
+          "bilinear"
+        ],
+        "msaa_3d": 0,
+        "use_taa": false,
+        "screen_space_aa": 2,
+        "mesh_lod_threshold": 1.0,
+        "scatter_density": 1.0,
+        "draw_distance": 1.0,
+        "directional_shadow_size": 4096,
+        "directional_shadow_splits": 2,
+        "directional_shadow_max_distance": 150.0,
+        "soft_shadow_quality": 2,
+        "positional_shadow_atlas_size": 2048,
+        "allow_sdfgi": false,
+        "sdfgi_ray_count": 2,
+        "gi_half_resolution": true,
+        "allow_ssao": true,
+        "ssao_quality": 1,
+        "allow_ssil": false,
+        "allow_ssr": false,
+        "ssr_max_steps": 32,
+        "allow_volumetric_fog": true,
+        "volumetric_fog_size": 64,
+        "volumetric_fog_depth": 64,
+        "allow_glow": true,
+        "texture_tier": "neo",
+        "chosen_upscaler": "fsr"
+      }
+    },
+    "hang": false
+  },
+  "preset_verify-empty-path": {
+    "errors": 0,
+    "frame_ms": {
+      "p50": 8.337,
+      "p95": 12.482,
+      "p99": 15.983,
+      "max": 20.403,
+      "share_within_16_7": 0.997840172786177,
+      "share_within_22": 1.0
+    },
+    "gpu_ms": {
+      "p50": 3.58599996566772,
+      "p95": 5.51800012588501,
+      "p99": 6.14099979400635
+    },
+    "budget": {
+      "proxy": true,
+      "proxy_gpu_factor": 2.5,
+      "wall_clock_meets_budget": true,
+      "gpu_scaled_meets_budget": true,
+      "pass": true
+    },
+    "vsync": "enabled",
+    "machine": {
+      "os": "Linux",
+      "os_version": "44 (Workstation Edition)",
+      "cpu_cores": 10,
+      "engine": "4.7.2-stable (fedora)",
+      "adapter": "Apple M1 Pro (G13S C0)",
+      "adapter_vendor": "Unknown",
+      "adapter_api_version": "1.4.354",
+      "adapter_driver": [
+        "",
+        ""
+      ],
+      "rendering_method": "forward_plus",
+      "rendering_driver": "vulkan",
+      "display_server": "Wayland",
+      "software_renderer": false,
+      "screen_size": "(3456, 2160)",
+      "screen_scale": 2.0,
+      "refresh_hz": 120.0,
+      "desktop": "GNOME"
+    },
+    "memory_total": 432063488,
+    "image": {
+      "size": [
+        2408,
+        1506
+      ],
+      "ssim_vs_baseline": 1.0,
+      "baseline": "docs/evidence/verify/round-1/verify-empty-path/still.png"
+    },
+    "profile": {
+      "name": "neo",
+      "path": "res://profiles/neo.tres",
+      "loaded": true,
+      "render_scale": 0.670000016689301,
+      "settings": {
+        "profile_name": "neo",
+        "render_scale": 0.67,
+        "upscalers": [
+          "metalfx_temporal",
+          "fsr",
+          "bilinear"
+        ],
+        "msaa_3d": 0,
+        "use_taa": false,
+        "screen_space_aa": 2,
+        "mesh_lod_threshold": 1.0,
+        "scatter_density": 1.0,
+        "draw_distance": 1.0,
+        "directional_shadow_size": 4096,
+        "directional_shadow_splits": 2,
+        "directional_shadow_max_distance": 150.0,
+        "soft_shadow_quality": 2,
+        "positional_shadow_atlas_size": 2048,
+        "allow_sdfgi": false,
+        "sdfgi_ray_count": 2,
+        "gi_half_resolution": true,
+        "allow_ssao": true,
+        "ssao_quality": 1,
+        "allow_ssil": false,
+        "allow_ssr": false,
+        "ssr_max_steps": 32,
+        "allow_volumetric_fog": true,
+        "volumetric_fog_size": 64,
+        "volumetric_fog_depth": 64,
+        "allow_glow": true,
+        "texture_tier": "neo",
+        "chosen_upscaler": "fsr"
+      }
+    },
+    "hang": false
+  },
+  "pair_verify-empty-still": {
+    "ssim": 1.0,
+    "luma_tv": 0.0,
+    "rgb_tv": 0.0
+  },
+  "pair_critic-verify-empty-still-low": {
+    "ssim": 1.0,
+    "luma_tv": 0.0,
+    "rgb_tv": 0.0
+  },
+  "own_memory_2048_6cycles": {
+    "unload_series_bytes": [
+      425559040,
+      442991616,
+      443597824,
+      444040192,
+      444204032,
+      444466176,
+      455574528
+    ],
+    "unload_return_ratio": 1.12134501818512,
+    "warm_return_ratio": 1.0249925699633,
+    "returns_within_5pct": true,
+    "raw_returns_within_5pct": false,
+    "grows_each_cycle": true,
+    "texture_delta_load_bytes": 16908288,
+    "rss_series": [
+      267714560,
+      285147136,
+      285753344,
+      286195712,
+      286359552,
+      286621696,
+      297730048
+    ],
+    "video_series": [
+      157844480,
+      157844480,
+      157844480,
+      157844480,
+      157844480,
+      157844480,
+      157844480
+    ]
+  },
+  "preset_stress_still_test": {
+    "errors": 0,
+    "frame_ms": {
+      "p50": 11.626,
+      "p95": 39.764,
+      "p99": 41.348,
+      "max": 42.999,
+      "share_within_16_7": 0.5,
+      "share_within_22": 0.5
+    },
+    "gpu_ms": {
+      "p50": 18.757999420166,
+      "p95": 19.5179996490479,
+      "p99": 20.6550006866455
+    },
+    "budget": {
+      "proxy": true,
+      "proxy_gpu_factor": 2.5,
+      "wall_clock_meets_budget": false,
+      "gpu_scaled_meets_budget": false,
+      "pass": false
+    }
+  },
+  "preset_stress_still_normal": {
+    "errors": 0,
+    "frame_ms": {
+      "p50": 19.687,
+      "p95": 40.284,
+      "p99": 42.845,
+      "max": 54.864,
+      "share_within_16_7": 0.496644295302013,
+      "share_within_22": 0.5
+    },
+    "gpu_ms": {
+      "p50": 18.9039993286133,
+      "p95": 19.488000869751,
+      "p99": 20.1189994812012
+    },
+    "budget": {
+      "proxy": true,
+      "proxy_gpu_factor": 2.5,
+      "wall_clock_meets_budget": false,
+      "gpu_scaled_meets_budget": false,
+      "pass": false
+    }
+  },
+  "pair_stress_still": {
+    "ssim": 1.0,
+    "luma_tv": 0.0,
+    "rgb_tv": 0.0,
+    "max_abs_diff": 0.0,
+    "share_pixels_differ": 0.0
+  },
+  "bench_linux_arm64": {
+    "exit": -9,
+    "seconds": 63.1,
+    "hang": null,
+    "summary": {
+      "commit": "c33a1ab8106d549f0ebcdda99a17ec1fe93a1b86",
+      "presets": [
+        {
+          "preset": "core-empty-neo",
+          "errors": 0,
+          "frame_pass": false
+        },
+        {
+          "preset": "core-stress-path",
+          "errors": 0,
+          "frame_pass": false
+        },
+        {
+          "preset": "verify-empty-path",
+          "errors": 0,
+          "frame_pass": false
+        },
+        {
+          "preset": "verify-empty-still",
+          "errors": 0,
+          "frame_pass": false
+        }
+      ],
+      "machine": {
+        "os": "Linux",
+        "os_version": "44 (Workstation Edition)",
+        "cpu_cores": 10,
+        "engine": "4.7.2-stable (official)",
+        "adapter": "Apple M1 Pro (G13S C0)",
+        "adapter_vendor": "Unknown",
+        "adapter_api_version": "1.4.354",
+        "adapter_driver": [
+          "",
+          ""
+        ],
+        "rendering_method": "forward_plus",
+        "rendering_driver": "vulkan",
+        "display_server": "Wayland",
+        "software_renderer": false,
+        "screen_size": "(3456, 2160)",
+        "screen_scale": 2.0,
+        "refresh_hz": 120.0,
+        "desktop": "GNOME"
+      }
+    },
+    "output_errors": []
+  }
+}

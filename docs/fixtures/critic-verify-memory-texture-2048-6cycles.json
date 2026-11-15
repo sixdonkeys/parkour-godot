@@ -1,0 +1,16 @@
+{
+  "id": "critic-verify-memory-texture-2048-6cycles",
+  "module": "verify",
+  "purpose": "Critic's own check (verify round 1): the 2048x2048 texture fixture with six pre-cycles, to tell heap settling from growth.",
+  "scene": "res://verify/fixtures/critic_texture_2048.tscn",
+  "profile": "neo",
+  "resolution": [
+    2408,
+    1506
+  ],
+  "warmup_frames": 10,
+  "frames": 30,
+  "unload_frames": 60,
+  "base_scene": "res://verify/fixtures/empty.tscn",
+  "precycles": 6
+}

@@ -1,0 +1,482 @@
+{
+  "preset": {
+    "id": "critic-verify-memory-texture-2048-6cycles",
+    "module": "verify",
+    "purpose": "Critic's own check (verify round 1): the 2048x2048 texture fixture with six pre-cycles, to tell heap settling from growth.",
+    "scene": "res://verify/fixtures/critic_texture_2048.tscn",
+    "profile": "neo",
+    "resolution": [
+      2408.0,
+      1506.0
+    ],
+    "warmup_frames": 10.0,
+    "frames": 30.0,
+    "unload_frames": 60.0,
+    "base_scene": "res://verify/fixtures/empty.tscn",
+    "precycles": 6.0
+  },
+  "commit": "673d84fc1f8fccdbd4755eb64b228c87aed25d96",
+  "test_mode": true,
+  "timing": "fixed (--fixed-fps)",
+  "started": "2026-11-15T21:03:42",
+  "machine": {
+    "os": "Linux",
+    "os_version": "44 (Workstation Edition)",
+    "cpu_cores": 10,
+    "engine": "4.7.2-stable (fedora)",
+    "adapter": "Apple M1 Pro (G13S C0)",
+    "adapter_vendor": "Unknown",
+    "adapter_api_version": "1.4.354",
+    "adapter_driver": [
+      "",
+      ""
+    ],
+    "rendering_method": "forward_plus",
+    "rendering_driver": "vulkan",
+    "display_server": "Wayland",
+    "software_renderer": false,
+    "screen_size": "(3456, 2160)",
+    "screen_scale": 2.0,
+    "refresh_hz": 120.0,
+    "desktop": "GNOME"
+  },
+  "proxy": true,
+  "scene_loaded": true,
+  "profile": {
+    "name": "neo",
+    "path": "res://profiles/neo.tres",
+    "loaded": true,
+    "render_scale": 0.670000016689301,
+    "settings": {
+      "profile_name": "neo",
+      "render_scale": 0.67,
+      "upscalers": [
+        "metalfx_temporal",
+        "fsr",
+        "bilinear"
+      ],
+      "msaa_3d": 0,
+      "use_taa": false,
+      "screen_space_aa": 2,
+      "mesh_lod_threshold": 1.0,
+      "scatter_density": 1.0,
+      "draw_distance": 1.0,
+      "directional_shadow_size": 4096,
+      "directional_shadow_splits": 2,
+      "directional_shadow_max_distance": 150.0,
+      "soft_shadow_quality": 2,
+      "positional_shadow_atlas_size": 2048,
+      "allow_sdfgi": false,
+      "sdfgi_ray_count": 2,
+      "gi_half_resolution": true,
+      "allow_ssao": true,
+      "ssao_quality": 1,
+      "allow_ssil": false,
+      "allow_ssr": false,
+      "ssr_max_steps": 32,
+      "allow_volumetric_fog": true,
+      "volumetric_fog_size": 64,
+      "volumetric_fog_depth": 64,
+      "allow_glow": true,
+      "texture_tier": "neo",
+      "chosen_upscaler": "fsr"
+    }
+  },
+  "wall_seconds": 0.651474,
+  "frame_time": {
+    "frames": 29,
+    "excluded_capture_frames": 0,
+    "vsync_mode": "enabled",
+    "frame_ms": {
+      "p50": 6.746,
+      "p95": 28.054,
+      "p99": 28.135,
+      "max": 28.135,
+      "share_within_16_7": 0.551724137931034,
+      "share_within_22": 0.551724137931034
+    },
+    "gpu_ms": {
+      "p50": 9.78999996185303,
+      "p95": 17.9479999542236,
+      "p99": 18.3250007629395
+    },
+    "cpu_render_ms": {
+      "p50": 0.224000006914139,
+      "p95": 0.374000012874603
+    },
+    "histogram": {
+      "bucket_ms": 0.5,
+      "buckets": {
+        "22.5": 3,
+        "3.5": 3,
+        "27.0": 1,
+        "1.5": 4,
+        "2.5": 2,
+        "23.5": 1,
+        "28.0": 2,
+        "7.5": 1,
+        "2.0": 1,
+        "1.0": 3,
+        "25.0": 1,
+        "27.5": 2,
+        "24.0": 1,
+        "26.5": 1,
+        "4.0": 1,
+        "23.0": 1,
+        "6.5": 1
+      },
+      "over_max": 0,
+      "max_ms": 50.0
+    },
+    "series_ms": [
+      22.836,
+      3.843,
+      27.255,
+      1.531,
+      22.615,
+      2.916,
+      23.974,
+      1.677,
+      28.054,
+      1.791,
+      7.698,
+      2.287,
+      28.135,
+      1.712,
+      22.715,
+      1.498,
+      25.06,
+      2.666,
+      27.585,
+      3.977,
+      24.444,
+      3.832,
+      26.984,
+      4.492,
+      27.837,
+      1.196,
+      23.404,
+      6.746,
+      1.374
+    ],
+    "draw_series_ms": [
+      22.786,
+      3.675,
+      27.173,
+      1.359,
+      22.554,
+      2.81,
+      23.834,
+      1.497,
+      27.964,
+      1.622,
+      7.601,
+      2.142,
+      28.069,
+      1.543,
+      22.65,
+      1.42,
+      24.913,
+      2.433,
+      27.522,
+      3.898,
+      24.294,
+      3.666,
+      26.912,
+      4.356,
+      27.643,
+      1.109,
+      23.333,
+      6.144,
+      1.228
+    ],
+    "draw_ms": {
+      "p50": 6.144,
+      "p95": 27.964
+    },
+    "capture_after_index": [
+      29
+    ],
+    "draw_calls": {
+      "mean": 1.0,
+      "max": 1
+    },
+    "primitives_max": 2,
+    "budget": {
+      "proxy": true,
+      "proxy_gpu_factor": 2.5,
+      "wall_clock_meets_budget": false,
+      "gpu_scaled_meets_budget": false,
+      "pass": false
+    }
+  },
+  "viewport_size": "(2408.0, 1506.0)",
+  "window_size": "(3456, 2160)",
+  "interface_outside": [],
+  "focus_events": [
+    {
+      "event": "window_focus_in",
+      "frame": 0,
+      "usec": 414267
+    },
+    {
+      "event": "app_focus_in",
+      "frame": 0,
+      "usec": 414274
+    },
+    {
+      "event": "window_focus_out",
+      "frame": 0,
+      "usec": 2702828
+    },
+    {
+      "event": "app_focus_out",
+      "frame": 0,
+      "usec": 2702881
+    }
+  ],
+  "memory": {
+    "readings": [
+      {
+        "label": "before_load",
+        "process_rss_bytes": 264945664,
+        "video_bytes": 141329408,
+        "texture_bytes": 116172160,
+        "buffer_bytes": 22400220,
+        "static_bytes": 83921657,
+        "total_bytes": 406275072,
+        "usec": 507961
+      },
+      {
+        "label": "after_load",
+        "process_rss_bytes": 297730048,
+        "video_bytes": 174753024,
+        "texture_bytes": 133080448,
+        "buffer_bytes": 22400472,
+        "static_bytes": 87155486,
+        "total_bytes": 472483072,
+        "usec": 4843465
+      },
+      {
+        "label": "after_unload",
+        "process_rss_bytes": 297730048,
+        "video_bytes": 157844480,
+        "texture_bytes": 116172160,
+        "buffer_bytes": 22400220,
+        "static_bytes": 87024156,
+        "total_bytes": 455574528,
+        "usec": 5469065
+      }
+    ],
+    "loaded_total_bytes": 472483072,
+    "within_4gb": true,
+    "unload_return_ratio": 1.12134501818512,
+    "returns_within_5pct": true,
+    "video_delta_load_bytes": 33423616,
+    "texture_delta_load_bytes": 16908288,
+    "precycles": [
+      [
+        {
+          "label": "precycle_0_loaded",
+          "process_rss_bytes": 267583488,
+          "video_bytes": 174753024,
+          "texture_bytes": 133080448,
+          "buffer_bytes": 22400472,
+          "static_bytes": 87120766,
+          "total_bytes": 442336512,
+          "usec": 591687
+        },
+        {
+          "label": "precycle_0_unloaded",
+          "process_rss_bytes": 267714560,
+          "video_bytes": 157844480,
+          "texture_bytes": 116172160,
+          "buffer_bytes": 22400220,
+          "static_bytes": 86990080,
+          "total_bytes": 425559040,
+          "usec": 1090330
+        }
+      ],
+      [
+        {
+          "label": "precycle_1_loaded",
+          "process_rss_bytes": 285147136,
+          "video_bytes": 174753024,
+          "texture_bytes": 133080448,
+          "buffer_bytes": 22400472,
+          "static_bytes": 87123770,
+          "total_bytes": 459900160,
+          "usec": 1181203
+        },
+        {
+          "label": "precycle_1_unloaded",
+          "process_rss_bytes": 285147136,
+          "video_bytes": 157844480,
+          "texture_bytes": 116172160,
+          "buffer_bytes": 22400220,
+          "static_bytes": 86992716,
+          "total_bytes": 442991616,
+          "usec": 1688711
+        }
+      ],
+      [
+        {
+          "label": "precycle_2_loaded",
+          "process_rss_bytes": 285753344,
+          "video_bytes": 174753024,
+          "texture_bytes": 133080448,
+          "buffer_bytes": 22400472,
+          "static_bytes": 87126326,
+          "total_bytes": 460506368,
+          "usec": 1779157
+        },
+        {
+          "label": "precycle_2_unloaded",
+          "process_rss_bytes": 285753344,
+          "video_bytes": 157844480,
+          "texture_bytes": 116172160,
+          "buffer_bytes": 22400220,
+          "static_bytes": 86995272,
+          "total_bytes": 443597824,
+          "usec": 2276999
+        }
+      ],
+      [
+        {
+          "label": "precycle_3_loaded",
+          "process_rss_bytes": 286195712,
+          "video_bytes": 174753024,
+          "texture_bytes": 133080448,
+          "buffer_bytes": 22400472,
+          "static_bytes": 87128794,
+          "total_bytes": 460948736,
+          "usec": 2372192
+        },
+        {
+          "label": "precycle_3_unloaded",
+          "process_rss_bytes": 286195712,
+          "video_bytes": 157844480,
+          "texture_bytes": 116172160,
+          "buffer_bytes": 22400220,
+          "static_bytes": 86999004,
+          "total_bytes": 444040192,
+          "usec": 2905269
+        }
+      ],
+      [
+        {
+          "label": "precycle_4_loaded",
+          "process_rss_bytes": 286359552,
+          "video_bytes": 174753024,
+          "texture_bytes": 133080448,
+          "buffer_bytes": 22400472,
+          "static_bytes": 87132446,
+          "total_bytes": 461112576,
+          "usec": 2997090
+        },
+        {
+          "label": "precycle_4_unloaded",
+          "process_rss_bytes": 286359552,
+          "video_bytes": 157844480,
+          "texture_bytes": 116172160,
+          "buffer_bytes": 22400220,
+          "static_bytes": 87001384,
+          "total_bytes": 444204032,
+          "usec": 3505309
+        }
+      ],
+      [
+        {
+          "label": "precycle_5_loaded",
+          "process_rss_bytes": 286621696,
+          "video_bytes": 174753024,
+          "texture_bytes": 133080448,
+          "buffer_bytes": 22400472,
+          "static_bytes": 87134778,
+          "total_bytes": 461374720,
+          "usec": 3595855
+        },
+        {
+          "label": "precycle_5_unloaded",
+          "process_rss_bytes": 286621696,
+          "video_bytes": 157844480,
+          "texture_bytes": 116172160,
+          "buffer_bytes": 22400220,
+          "static_bytes": 87003716,
+          "total_bytes": 444466176,
+          "usec": 4159395
+        }
+      ]
+    ],
+    "raw_returns_within_5pct": false,
+    "warm_baseline_bytes": 444466176,
+    "warm_return_ratio": 1.0249925699633,
+    "unload_series_bytes": [
+      425559040,
+      442991616,
+      443597824,
+      444040192,
+      444204032,
+      444466176,
+      455574528
+    ],
+    "grows_each_cycle": true
+  },
+  "engine": {
+    "errors": [],
+    "warnings": [
+      {
+        "type": "warning",
+        "message": "The requested V-Sync mode Disabled is not available. Falling back to V-Sync mode Enabled.",
+        "code": "The requested V-Sync mode Disabled is not available. Falling back to V-Sync mode Enabled.",
+        "where": "drivers/vulkan/rendering_device_driver_vulkan.cpp:3767 (swap_chain_resize)",
+        "usec": 439993
+      }
+    ]
+  },
+  "finished": "2026-11-15T21:03:47",
+  "orchestrator": {
+    "command": [
+      "godot",
+      "--path",
+      "/home/nick/src/parkour-godot/game",
+      "--disable-vsync",
+      "--fixed-fps",
+      "60",
+      "--",
+      "--preset",
+      "/home/nick/src/parkour-godot/docs/fixtures/critic-verify-memory-texture-2048-6cycles.json",
+      "--out",
+      "/home/nick/src/parkour-godot/docs/evidence/verify/critic-round-1/own/memory-2048-6cycles",
+      "--commit",
+      "673d84fc1f8fccdbd4755eb64b228c87aed25d96",
+      "--repo-root",
+      "/home/nick/src/parkour-godot",
+      "--test-mode",
+      "--bench-fullscreen"
+    ],
+    "exit_code": -9,
+    "started": "2026-11-15T15:03:41.639917",
+    "shutdown_hang": null,
+    "self_terminated": true,
+    "seconds": 6.012089,
+    "output_errors": [],
+    "output_warnings": [
+      "WARNING: Can't obtain the XDG decoration manager. Libdecor will be used for drawing CSDs, if available. | at: init (platform/linuxbsd/wayland/wayland_thread.cpp:5635)",
+      "WARNING: xdg-toplevel-icon protocol not found! Cannot set window icon. | at: init (platform/linuxbsd/wayland/wayland_thread.cpp:5642)",
+      "WARNING: The requested V-Sync mode Disabled is not available. Falling back to V-Sync mode Enabled. | at: swap_chain_resize (drivers/vulkan/rendering_device_driver_vulkan.cpp:3767)",
+      "WARNING: The requested V-Sync mode Disabled is not available. Falling back to V-Sync mode Enabled. | at: swap_chain_resize (drivers/vulkan/rendering_device_driver_vulkan.cpp:3767)"
+    ],
+    "error_count": 0,
+    "verify_tool_commit": "673d84fc1f8fccdbd4755eb64b228c87aed25d96",
+    "frame_numbers_count": true
+  },
+  "image": {
+    "size": [
+      2408,
+      1506
+    ],
+    "ssim_vs_baseline": null,
+    "ssim_note": "no earlier round of this preset"
+  }
+}

@@ -1,0 +1,395 @@
+{
+  "preset": {
+    "id": "critic-verify-memory-texture-2048",
+    "module": "verify",
+    "purpose": "Critic's own known answer (verify round 1): one 2048x2048 RGBA8 texture without mipmaps = 16,777,216 bytes; returns after unload.",
+    "scene": "res://verify/fixtures/critic_texture_2048.tscn",
+    "profile": "neo",
+    "resolution": [
+      2408.0,
+      1506.0
+    ],
+    "warmup_frames": 10.0,
+    "frames": 30.0,
+    "unload_frames": 60.0,
+    "base_scene": "res://verify/fixtures/empty.tscn",
+    "precycles": 2.0
+  },
+  "commit": "673d84fc1f8fccdbd4755eb64b228c87aed25d96",
+  "test_mode": true,
+  "timing": "fixed (--fixed-fps)",
+  "started": "2026-11-15T21:01:12",
+  "machine": {
+    "os": "Linux",
+    "os_version": "44 (Workstation Edition)",
+    "cpu_cores": 10,
+    "engine": "4.7.2-stable (fedora)",
+    "adapter": "Apple M1 Pro (G13S C0)",
+    "adapter_vendor": "Unknown",
+    "adapter_api_version": "1.4.354",
+    "adapter_driver": [
+      "",
+      ""
+    ],
+    "rendering_method": "forward_plus",
+    "rendering_driver": "vulkan",
+    "display_server": "Wayland",
+    "software_renderer": false,
+    "screen_size": "(3456, 2160)",
+    "screen_scale": 2.0,
+    "refresh_hz": 120.0,
+    "desktop": "GNOME"
+  },
+  "proxy": true,
+  "scene_loaded": true,
+  "profile": {
+    "name": "neo",
+    "path": "res://profiles/neo.tres",
+    "loaded": true,
+    "render_scale": 0.670000016689301,
+    "settings": {
+      "profile_name": "neo",
+      "render_scale": 0.67,
+      "upscalers": [
+        "metalfx_temporal",
+        "fsr",
+        "bilinear"
+      ],
+      "msaa_3d": 0,
+      "use_taa": false,
+      "screen_space_aa": 2,
+      "mesh_lod_threshold": 1.0,
+      "scatter_density": 1.0,
+      "draw_distance": 1.0,
+      "directional_shadow_size": 4096,
+      "directional_shadow_splits": 2,
+      "directional_shadow_max_distance": 150.0,
+      "soft_shadow_quality": 2,
+      "positional_shadow_atlas_size": 2048,
+      "allow_sdfgi": false,
+      "sdfgi_ray_count": 2,
+      "gi_half_resolution": true,
+      "allow_ssao": true,
+      "ssao_quality": 1,
+      "allow_ssil": false,
+      "allow_ssr": false,
+      "ssr_max_steps": 32,
+      "allow_volumetric_fog": true,
+      "volumetric_fog_size": 64,
+      "volumetric_fog_depth": 64,
+      "allow_glow": true,
+      "texture_tier": "neo",
+      "chosen_upscaler": "fsr"
+    }
+  },
+  "wall_seconds": 0.431481,
+  "frame_time": {
+    "frames": 29,
+    "excluded_capture_frames": 0,
+    "vsync_mode": "enabled",
+    "frame_ms": {
+      "p50": 8.792,
+      "p95": 17.766,
+      "p99": 18.195,
+      "max": 18.195,
+      "share_within_16_7": 0.931034482758621,
+      "share_within_22": 1.0
+    },
+    "gpu_ms": {
+      "p50": 3.89000010490417,
+      "p95": 6.05000019073486,
+      "p99": 6.36899995803833
+    },
+    "cpu_render_ms": {
+      "p50": 0.223000004887581,
+      "p95": 0.407000005245209
+    },
+    "histogram": {
+      "bucket_ms": 0.5,
+      "buckets": {
+        "1.0": 3,
+        "5.5": 1,
+        "18.0": 1,
+        "11.5": 1,
+        "0.5": 1,
+        "7.0": 2,
+        "2.5": 1,
+        "8.0": 2,
+        "16.0": 1,
+        "13.0": 1,
+        "10.0": 2,
+        "10.5": 2,
+        "14.5": 1,
+        "4.0": 1,
+        "3.5": 1,
+        "7.5": 1,
+        "8.5": 2,
+        "11.0": 1,
+        "17.5": 1,
+        "9.0": 1,
+        "14.0": 1,
+        "6.0": 1
+      },
+      "over_max": 0,
+      "max_ms": 50.0
+    },
+    "series_ms": [
+      1.057,
+      5.677,
+      18.195,
+      11.568,
+      0.926,
+      7.204,
+      2.785,
+      8.372,
+      16.344,
+      8.318,
+      13.39,
+      10.017,
+      10.724,
+      14.77,
+      1.266,
+      10.827,
+      4.034,
+      3.669,
+      7.896,
+      8.792,
+      7.236,
+      11.246,
+      17.766,
+      9.325,
+      1.428,
+      8.828,
+      14.404,
+      10.221,
+      6.149
+    ],
+    "draw_series_ms": [
+      0.951,
+      5.631,
+      18.079,
+      11.434,
+      0.815,
+      7.174,
+      2.705,
+      8.318,
+      16.294,
+      8.125,
+      13.335,
+      9.862,
+      10.608,
+      14.641,
+      1.136,
+      10.761,
+      3.853,
+      3.514,
+      7.743,
+      8.696,
+      7.125,
+      11.126,
+      17.635,
+      9.187,
+      1.298,
+      8.779,
+      14.275,
+      10.106,
+      6.006
+    ],
+    "draw_ms": {
+      "p50": 8.696,
+      "p95": 17.635
+    },
+    "capture_after_index": [
+      29
+    ],
+    "draw_calls": {
+      "mean": 1.0,
+      "max": 1
+    },
+    "primitives_max": 2,
+    "budget": {
+      "proxy": true,
+      "proxy_gpu_factor": 2.5,
+      "wall_clock_meets_budget": false,
+      "gpu_scaled_meets_budget": true,
+      "pass": false
+    }
+  },
+  "viewport_size": "(2408.0, 1506.0)",
+  "window_size": "(3456, 2160)",
+  "interface_outside": [],
+  "focus_events": [
+    {
+      "event": "window_focus_in",
+      "frame": 0,
+      "usec": 381840
+    },
+    {
+      "event": "app_focus_in",
+      "frame": 0,
+      "usec": 381846
+    },
+    {
+      "event": "window_focus_out",
+      "frame": 0,
+      "usec": 1784977
+    },
+    {
+      "event": "app_focus_out",
+      "frame": 0,
+      "usec": 1785011
+    }
+  ],
+  "memory": {
+    "readings": [
+      {
+        "label": "before_load",
+        "process_rss_bytes": 264929280,
+        "video_bytes": 141329408,
+        "texture_bytes": 116172160,
+        "buffer_bytes": 22400220,
+        "static_bytes": 83921509,
+        "total_bytes": 406258688,
+        "usec": 482632
+      },
+      {
+        "label": "after_load",
+        "process_rss_bytes": 296681472,
+        "video_bytes": 174753024,
+        "texture_bytes": 133080448,
+        "buffer_bytes": 22400472,
+        "static_bytes": 87146554,
+        "total_bytes": 471434496,
+        "usec": 2129537
+      },
+      {
+        "label": "after_unload",
+        "process_rss_bytes": 296681472,
+        "video_bytes": 157844480,
+        "texture_bytes": 116172160,
+        "buffer_bytes": 22400220,
+        "static_bytes": 87015228,
+        "total_bytes": 454525952,
+        "usec": 2545576
+      }
+    ],
+    "loaded_total_bytes": 471434496,
+    "within_4gb": true,
+    "unload_return_ratio": 1.11880918593426,
+    "returns_within_5pct": true,
+    "video_delta_load_bytes": 33423616,
+    "texture_delta_load_bytes": 16908288,
+    "precycles": [
+      [
+        {
+          "label": "precycle_0_loaded",
+          "process_rss_bytes": 267567104,
+          "video_bytes": 174753024,
+          "texture_bytes": 133080448,
+          "buffer_bytes": 22400472,
+          "static_bytes": 87120602,
+          "total_bytes": 442320128,
+          "usec": 572074
+        },
+        {
+          "label": "precycle_0_unloaded",
+          "process_rss_bytes": 267698176,
+          "video_bytes": 157844480,
+          "texture_bytes": 116172160,
+          "buffer_bytes": 22400220,
+          "static_bytes": 86989916,
+          "total_bytes": 425542656,
+          "usec": 1080526
+        }
+      ],
+      [
+        {
+          "label": "precycle_1_loaded",
+          "process_rss_bytes": 285081600,
+          "video_bytes": 174753024,
+          "texture_bytes": 133080448,
+          "buffer_bytes": 22400472,
+          "static_bytes": 87123606,
+          "total_bytes": 459834624,
+          "usec": 1168649
+        },
+        {
+          "label": "precycle_1_unloaded",
+          "process_rss_bytes": 285081600,
+          "video_bytes": 157844480,
+          "texture_bytes": 116172160,
+          "buffer_bytes": 22400220,
+          "static_bytes": 86992552,
+          "total_bytes": 442926080,
+          "usec": 1685733
+        }
+      ]
+    ],
+    "raw_returns_within_5pct": false,
+    "warm_baseline_bytes": 442926080,
+    "warm_return_ratio": 1.0261891826284,
+    "unload_series_bytes": [
+      425542656,
+      442926080,
+      454525952
+    ],
+    "grows_each_cycle": true
+  },
+  "engine": {
+    "errors": [],
+    "warnings": [
+      {
+        "type": "warning",
+        "message": "The requested V-Sync mode Disabled is not available. Falling back to V-Sync mode Enabled.",
+        "code": "The requested V-Sync mode Disabled is not available. Falling back to V-Sync mode Enabled.",
+        "where": "drivers/vulkan/rendering_device_driver_vulkan.cpp:3767 (swap_chain_resize)",
+        "usec": 405114
+      }
+    ]
+  },
+  "finished": "2026-11-15T21:01:14",
+  "orchestrator": {
+    "command": [
+      "godot",
+      "--path",
+      "/home/nick/src/parkour-godot/game",
+      "--disable-vsync",
+      "--fixed-fps",
+      "60",
+      "--",
+      "--preset",
+      "/home/nick/src/parkour-godot/docs/fixtures/critic-verify-memory-texture-2048.json",
+      "--out",
+      "/home/nick/src/parkour-godot/docs/evidence/verify/critic-round-1/own/memory-2048",
+      "--commit",
+      "673d84fc1f8fccdbd4755eb64b228c87aed25d96",
+      "--repo-root",
+      "/home/nick/src/parkour-godot",
+      "--test-mode",
+      "--bench-fullscreen"
+    ],
+    "exit_code": -9,
+    "started": "2026-11-15T15:01:11.899671",
+    "shutdown_hang": null,
+    "self_terminated": true,
+    "seconds": 3.014956,
+    "output_errors": [],
+    "output_warnings": [
+      "WARNING: Can't obtain the XDG decoration manager. Libdecor will be used for drawing CSDs, if available. | at: init (platform/linuxbsd/wayland/wayland_thread.cpp:5635)",
+      "WARNING: xdg-toplevel-icon protocol not found! Cannot set window icon. | at: init (platform/linuxbsd/wayland/wayland_thread.cpp:5642)",
+      "WARNING: The requested V-Sync mode Disabled is not available. Falling back to V-Sync mode Enabled. | at: swap_chain_resize (drivers/vulkan/rendering_device_driver_vulkan.cpp:3767)",
+      "WARNING: The requested V-Sync mode Disabled is not available. Falling back to V-Sync mode Enabled. | at: swap_chain_resize (drivers/vulkan/rendering_device_driver_vulkan.cpp:3767)"
+    ],
+    "error_count": 0,
+    "verify_tool_commit": "673d84fc1f8fccdbd4755eb64b228c87aed25d96",
+    "frame_numbers_count": true
+  },
+  "image": {
+    "size": [
+      2408,
+      1506
+    ],
+    "ssim_vs_baseline": null,
+    "ssim_note": "no earlier round of this preset"
+  }
+}

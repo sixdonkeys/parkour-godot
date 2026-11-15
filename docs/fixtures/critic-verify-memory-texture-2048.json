@@ -1,0 +1,16 @@
+{
+  "id": "critic-verify-memory-texture-2048",
+  "module": "verify",
+  "purpose": "Critic's own known answer (verify round 1): one 2048x2048 RGBA8 texture without mipmaps = 16,777,216 bytes; returns after unload.",
+  "scene": "res://verify/fixtures/critic_texture_2048.tscn",
+  "profile": "neo",
+  "resolution": [
+    2408,
+    1506
+  ],
+  "warmup_frames": 10,
+  "frames": 30,
+  "unload_frames": 60,
+  "base_scene": "res://verify/fixtures/empty.tscn",
+  "precycles": 2
+}

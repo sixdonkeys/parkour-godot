@@ -5,7 +5,19 @@
       "round": 1,
       "gate": false,
       "score": null,
-      "open_issues": [],
+      "open_issues": [
+        "neo-unverified: the Neo does not answer (remote neo check: hostname not resolved); all numbers proxy",
+        "1 BLOCKER: exported builds load the neo profile with the script-default upscalers (fsr2), not neo.tres's (fsr); benchmark mode measures a different profile and every bench preset fails the frame budget in the export but passes in the tool; build step needs a profile-fidelity check (docs/critic/verify-round-1.md #1)",
+        "2 BLOCKER: memory instrument passes only with 'pre-load' redefined as after a warm cycle (raw return 1.176 / 1.12), which loosens the budget without Nick; leak flag gives a false positive on a 2048^2 fixture (pre-cycles flat, measured cycle not like for like) (#2)",
+        "3: sound tone fixture plays ~0.4 s at default amplitude before configure_fixture applies; critic's -12 dBFS fixture read -6.02 dBFS peak; the clipping fixture's RMS miss is this same defect (#3)",
+        "4: verify showcase and test-vs-normal pair are blank frames (flat RGB 76,76,76); pair proves nothing; log reports no noise figure (#4)",
+        "5: reference set short in mountain/closeup/lowsun (1 of 2); federal photo libraries not searched before parking on Nick (#5)",
+        "6: logs do not record the graphics driver (adapter_driver empty) (#6)",
+        "7: remote honesty passes runs whose display/front-app state was unverifiable (#7)",
+        "8: Neo status inconsistent between harness addendum, NOTES, WAITING and ARCHITECTURE; record Nick's instruction verbatim (#8)",
+        "9: neo-proxy record: vsync-off claim wrong on Honeykrisp; 2.5x factor vs ~3.3x bandwidth gap needs reasoning (#9)",
+        "10-11 minor: asset-pipeline names nonexistent tools/build.py; SETUP/README gaps; proofs from dirty trees; ~300 MB unused look_slice textures in every export (#10, #11)"
+      ],
       "evidence": [
         "docs/evidence/verify/round-1/proofs/ (image, frametime, memory, sound, build, window: known-answer proofs)",
         "docs/evidence/verify/round-1/verify-empty-still/ (showcase: still + frame time + memory, same run)",
@@ -217,5 +229,5 @@
     "final"
   ],
   "stage": 1,
-  "updated_by": "builder"
+  "updated_by": "critic"
 }

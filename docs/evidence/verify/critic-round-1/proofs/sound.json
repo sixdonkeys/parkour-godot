@@ -1,0 +1,35 @@
+{
+  "instrument": "sound",
+  "cases": [
+    {
+      "fixture": "docs/fixtures/verify-sound-tone-minus6.json",
+      "amplitude": 0.5,
+      "expected_peak_dbfs": -6.021,
+      "measured_peak_dbfs": -6.02060198415734,
+      "file_peak_dbfs": -6.020601984157336,
+      "clipped_samples": 0,
+      "seconds": 1.84598639455782,
+      "driver": "PulseAudio",
+      "log": "docs/evidence/verify/critic-round-1/proofs/verify-sound-tone-minus6/log.json",
+      "steady_rms_dbfs": -9.030212149310339,
+      "expected_rms_dbfs": -9.031,
+      "pass": true
+    },
+    {
+      "fixture": "docs/fixtures/verify-sound-tone-clipping.json",
+      "amplitude": 1.25,
+      "expected_peak_dbfs": 1.938,
+      "measured_peak_dbfs": 1.93819777510781,
+      "file_peak_dbfs": 1.9381977751078139,
+      "clipped_samples": 32996,
+      "seconds": 1.2887074829932,
+      "driver": "PulseAudio",
+      "log": "docs/evidence/verify/critic-round-1/proofs/verify-sound-tone-clipping/log.json",
+      "steady_rms_dbfs": -1.3870407082224383,
+      "expected_rms_dbfs": -1.072,
+      "pass": true
+    }
+  ],
+  "pass": true,
+  "seconds": 9.0
+}

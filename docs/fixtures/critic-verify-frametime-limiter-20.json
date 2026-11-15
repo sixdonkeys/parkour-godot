@@ -1,0 +1,15 @@
+{
+  "id": "critic-verify-frametime-limiter-20",
+  "module": "verify",
+  "purpose": "Critic's own known answer (verify round 1): frame limiter at 20 fps gives 50.0 ms frames.",
+  "scene": "res://verify/fixtures/empty.tscn",
+  "profile": "neo",
+  "resolution": [
+    2408,
+    1506
+  ],
+  "max_fps": 20,
+  "warmup_frames": 20,
+  "frames": 160,
+  "still": false
+}

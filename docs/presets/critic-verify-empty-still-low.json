@@ -1,0 +1,28 @@
+{
+  "id": "critic-verify-empty-still-low",
+  "module": "verify",
+  "kind": "still",
+  "purpose": "Critic-added preset (verify round 1): the empty scene from a low, wide camera, still and frame time from the same run, neo profile at the Neo's resolution.",
+  "scene": "res://verify/fixtures/empty.tscn",
+  "camera": {
+    "position": [
+      3,
+      0.4,
+      4
+    ],
+    "look_at": [
+      0,
+      1.5,
+      -2
+    ],
+    "fov": 90
+  },
+  "profile": "neo",
+  "resolution": [
+    2408,
+    1506
+  ],
+  "warmup_frames": 60,
+  "frames": 600,
+  "still_frame": 200
+}

@@ -1,0 +1,293 @@
+{
+  "preset": {
+    "id": "critic-verify-missing-scene",
+    "module": "verify",
+    "purpose": "Critic's own check (verify round 1): a preset naming a scene that does not exist must be reported as an error by the orchestrator although the engine exits 0.",
+    "scene": "res://verify/fixtures/does_not_exist.tscn",
+    "profile": "neo",
+    "resolution": [
+      2408.0,
+      1506.0
+    ],
+    "warmup_frames": 5.0,
+    "frames": 10.0,
+    "still": false
+  },
+  "commit": "673d84fc1f8fccdbd4755eb64b228c87aed25d96",
+  "test_mode": true,
+  "timing": "fixed (--fixed-fps)",
+  "started": "2026-11-15T21:01:28",
+  "machine": {
+    "os": "Linux",
+    "os_version": "44 (Workstation Edition)",
+    "cpu_cores": 10,
+    "engine": "4.7.2-stable (fedora)",
+    "adapter": "Apple M1 Pro (G13S C0)",
+    "adapter_vendor": "Unknown",
+    "adapter_api_version": "1.4.354",
+    "adapter_driver": [
+      "",
+      ""
+    ],
+    "rendering_method": "forward_plus",
+    "rendering_driver": "vulkan",
+    "display_server": "Wayland",
+    "software_renderer": false,
+    "screen_size": "(3456, 2160)",
+    "screen_scale": 2.0,
+    "refresh_hz": 120.0,
+    "desktop": "GNOME"
+  },
+  "proxy": true,
+  "scene_loaded": false,
+  "profile": {
+    "name": "neo",
+    "path": "res://profiles/neo.tres",
+    "loaded": true,
+    "render_scale": 0.670000016689301,
+    "settings": {
+      "profile_name": "neo",
+      "render_scale": 0.67,
+      "upscalers": [
+        "metalfx_temporal",
+        "fsr",
+        "bilinear"
+      ],
+      "msaa_3d": 0,
+      "use_taa": false,
+      "screen_space_aa": 2,
+      "mesh_lod_threshold": 1.0,
+      "scatter_density": 1.0,
+      "draw_distance": 1.0,
+      "directional_shadow_size": 4096,
+      "directional_shadow_splits": 2,
+      "directional_shadow_max_distance": 150.0,
+      "soft_shadow_quality": 2,
+      "positional_shadow_atlas_size": 2048,
+      "allow_sdfgi": false,
+      "sdfgi_ray_count": 2,
+      "gi_half_resolution": true,
+      "allow_ssao": true,
+      "ssao_quality": 1,
+      "allow_ssil": false,
+      "allow_ssr": false,
+      "ssr_max_steps": 32,
+      "allow_volumetric_fog": true,
+      "volumetric_fog_size": 64,
+      "volumetric_fog_depth": 64,
+      "allow_glow": true,
+      "texture_tier": "neo",
+      "chosen_upscaler": "fsr"
+    }
+  },
+  "wall_seconds": 0.130398,
+  "frame_time": {
+    "frames": 9,
+    "excluded_capture_frames": 0,
+    "vsync_mode": "enabled",
+    "frame_ms": {
+      "p50": 8.326,
+      "p95": 9.659,
+      "p99": 9.659,
+      "max": 9.659,
+      "share_within_16_7": 1.0,
+      "share_within_22": 1.0
+    },
+    "gpu_ms": {
+      "p50": 0.215000003576279,
+      "p95": 0.30799999833107,
+      "p99": 0.30799999833107
+    },
+    "cpu_render_ms": {
+      "p50": 0.0329999998211861,
+      "p95": 0.0500000007450581
+    },
+    "histogram": {
+      "bucket_ms": 0.5,
+      "buckets": {
+        "8.0": 7,
+        "9.5": 1,
+        "7.0": 1
+      },
+      "over_max": 0,
+      "max_ms": 50.0
+    },
+    "series_ms": [
+      8.305,
+      8.326,
+      8.259,
+      9.659,
+      7.138,
+      8.403,
+      8.238,
+      8.339,
+      8.356
+    ],
+    "draw_series_ms": [
+      8.201,
+      8.229,
+      8.189,
+      9.593,
+      7.018,
+      8.338,
+      8.119,
+      8.227,
+      8.274
+    ],
+    "draw_ms": {
+      "p50": 8.227,
+      "p95": 9.593
+    },
+    "capture_after_index": [],
+    "draw_calls": {
+      "mean": 0.0,
+      "max": 0
+    },
+    "primitives_max": 0,
+    "budget": {
+      "proxy": true,
+      "proxy_gpu_factor": 2.5,
+      "wall_clock_meets_budget": true,
+      "gpu_scaled_meets_budget": true,
+      "pass": true
+    }
+  },
+  "viewport_size": "(2408.0, 1506.0)",
+  "window_size": "(3456, 2160)",
+  "interface_outside": [],
+  "focus_events": [
+    {
+      "event": "window_focus_in",
+      "frame": 0,
+      "usec": 412013
+    },
+    {
+      "event": "app_focus_in",
+      "frame": 0,
+      "usec": 412019
+    }
+  ],
+  "memory": {
+    "readings": [
+      {
+        "label": "before_load",
+        "process_rss_bytes": 264110080,
+        "video_bytes": 20855296,
+        "texture_bytes": 17605760,
+        "buffer_bytes": 1934476,
+        "static_bytes": 83244879,
+        "total_bytes": 284965376,
+        "usec": 486901
+      },
+      {
+        "label": "after_load",
+        "process_rss_bytes": 264306688,
+        "video_bytes": 20855296,
+        "texture_bytes": 17605760,
+        "buffer_bytes": 1934476,
+        "static_bytes": 83269559,
+        "total_bytes": 285161984,
+        "usec": 619710
+      },
+      {
+        "label": "after_unload",
+        "process_rss_bytes": 264306688,
+        "video_bytes": 20855296,
+        "texture_bytes": 17605760,
+        "buffer_bytes": 1934476,
+        "static_bytes": 83270475,
+        "total_bytes": 285161984,
+        "usec": 871207
+      }
+    ],
+    "loaded_total_bytes": 285161984,
+    "within_4gb": true,
+    "unload_return_ratio": 1.00068993645038,
+    "returns_within_5pct": true,
+    "video_delta_load_bytes": 0,
+    "texture_delta_load_bytes": 0
+  },
+  "engine": {
+    "errors": [
+      {
+        "type": "error",
+        "message": "Cannot open file 'res://verify/fixtures/does_not_exist.tscn'.",
+        "code": "Condition \"err != OK\" is true. Returning: Ref<Resource>()",
+        "where": "scene/resources/resource_format_text.cpp:1442 (load)",
+        "usec": 487029
+      },
+      {
+        "type": "error",
+        "message": "Failed loading resource: res://verify/fixtures/does_not_exist.tscn.",
+        "code": "Condition \"found\" is true. Returning: Ref<Resource>()",
+        "where": "core/io/resource_loader.cpp:317 (_load)",
+        "usec": 487118
+      },
+      {
+        "type": "error",
+        "message": "Error loading resource: 'res://verify/fixtures/does_not_exist.tscn'.",
+        "code": "Condition \"err != OK\" is true. Returning: ret",
+        "where": "core/core_bind.cpp:82 (load)",
+        "usec": 487149
+      },
+      {
+        "type": "error",
+        "message": "verify: cannot load scene res://verify/fixtures/does_not_exist.tscn",
+        "code": "verify: cannot load scene res://verify/fixtures/does_not_exist.tscn",
+        "where": "core/variant/variant_utility.cpp:1023 (push_error)",
+        "usec": 487188
+      }
+    ],
+    "warnings": [
+      {
+        "type": "warning",
+        "message": "The requested V-Sync mode Disabled is not available. Falling back to V-Sync mode Enabled.",
+        "code": "The requested V-Sync mode Disabled is not available. Falling back to V-Sync mode Enabled.",
+        "where": "drivers/vulkan/rendering_device_driver_vulkan.cpp:3767 (swap_chain_resize)",
+        "usec": 422215
+      }
+    ]
+  },
+  "finished": "2026-11-15T21:01:28",
+  "orchestrator": {
+    "command": [
+      "godot",
+      "--path",
+      "/home/nick/src/parkour-godot/game",
+      "--disable-vsync",
+      "--fixed-fps",
+      "60",
+      "--",
+      "--preset",
+      "/home/nick/src/parkour-godot/docs/fixtures/critic-verify-missing-scene.json",
+      "--out",
+      "/home/nick/src/parkour-godot/docs/evidence/verify/critic-round-1/own/missing-scene",
+      "--commit",
+      "673d84fc1f8fccdbd4755eb64b228c87aed25d96",
+      "--repo-root",
+      "/home/nick/src/parkour-godot",
+      "--test-mode",
+      "--bench-fullscreen"
+    ],
+    "exit_code": -9,
+    "started": "2026-11-15T15:01:28.030021",
+    "shutdown_hang": null,
+    "self_terminated": true,
+    "seconds": 1.016383,
+    "output_errors": [
+      "ERROR: Cannot open file 'res://verify/fixtures/does_not_exist.tscn'. | at: load (scene/resources/resource_format_text.cpp:1442)",
+      "ERROR: Failed loading resource: res://verify/fixtures/does_not_exist.tscn. | at: _load (core/io/resource_loader.cpp:317)",
+      "ERROR: Error loading resource: 'res://verify/fixtures/does_not_exist.tscn'. | at: load (core/core_bind.cpp:82)",
+      "ERROR: verify: cannot load scene res://verify/fixtures/does_not_exist.tscn | at: push_error (core/variant/variant_utility.cpp:1023)"
+    ],
+    "output_warnings": [
+      "WARNING: Can't obtain the XDG decoration manager. Libdecor will be used for drawing CSDs, if available. | at: init (platform/linuxbsd/wayland/wayland_thread.cpp:5635)",
+      "WARNING: xdg-toplevel-icon protocol not found! Cannot set window icon. | at: init (platform/linuxbsd/wayland/wayland_thread.cpp:5642)",
+      "WARNING: The requested V-Sync mode Disabled is not available. Falling back to V-Sync mode Enabled. | at: swap_chain_resize (drivers/vulkan/rendering_device_driver_vulkan.cpp:3767)",
+      "WARNING: The requested V-Sync mode Disabled is not available. Falling back to V-Sync mode Enabled. | at: swap_chain_resize (drivers/vulkan/rendering_device_driver_vulkan.cpp:3767)"
+    ],
+    "error_count": 8,
+    "verify_tool_commit": "673d84fc1f8fccdbd4755eb64b228c87aed25d96",
+    "frame_numbers_count": true
+  }
+}

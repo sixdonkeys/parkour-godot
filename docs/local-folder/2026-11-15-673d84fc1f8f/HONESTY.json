@@ -1,0 +1,18 @@
+{
+  "void": true,
+  "reasons": [
+    "game lost focus during core-empty-neo"
+  ],
+  "unverifiable": [
+    "front_app",
+    "display_awake"
+  ],
+  "power": [
+    "unknown"
+  ],
+  "low_power": [
+    "unknown"
+  ],
+  "samples": 13,
+  "note": "void runs are kept and count for nothing (BUILD-BRIEF item 2)"
+}

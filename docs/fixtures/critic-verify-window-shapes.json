@@ -1,0 +1,53 @@
+{
+  "id": "critic-verify-window-shapes",
+  "module": "verify",
+  "purpose": "Critic's own window fixture (verify round 1): a quarter-width column, a fifth-height strip, a 0.75x0.6 box, fullscreen on and off, a focus loss. Every shape must fill without stretching, zero errors.",
+  "scene": "res://verify/fixtures/empty.tscn",
+  "profile": "neo",
+  "resolution": "window",
+  "still": false,
+  "warmup_frames": 30,
+  "frames": 400,
+  "window_sequence": [
+    {
+      "frame": 0,
+      "action": "resize_frac",
+      "frac": [
+        0.25,
+        1.0
+      ]
+    },
+    {
+      "frame": 60,
+      "action": "resize_frac",
+      "frac": [
+        1.0,
+        0.2
+      ]
+    },
+    {
+      "frame": 120,
+      "action": "resize_frac",
+      "frac": [
+        0.75,
+        0.6
+      ]
+    },
+    {
+      "frame": 180,
+      "action": "fullscreen_toggle"
+    },
+    {
+      "frame": 240,
+      "action": "focus_out"
+    },
+    {
+      "frame": 280,
+      "action": "focus_in"
+    },
+    {
+      "frame": 320,
+      "action": "fullscreen_toggle"
+    }
+  ]
+}

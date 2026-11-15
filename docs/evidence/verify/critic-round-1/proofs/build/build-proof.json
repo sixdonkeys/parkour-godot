@@ -1,0 +1,25 @@
+{
+  "instrument": "build size and packed-file list",
+  "export": {
+    "preset": "Linux arm64",
+    "path": "builds/fixture-buildcheck/linux-arm64/buildcheck.arm64",
+    "exit_code": 0,
+    "errors": [],
+    "warnings": [],
+    "exists": true,
+    "ok": true
+  },
+  "expected_known_size": 10485760,
+  "found_known": [
+    {
+      "path": "data/known_size.bin",
+      "size": 10485760,
+      "source": "data/known_size.bin"
+    }
+  ],
+  "unlisted": [
+    "assets/planted.bin"
+  ],
+  "planted_flagged": true,
+  "pass": true
+}
