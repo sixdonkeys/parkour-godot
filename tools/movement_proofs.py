@@ -14,9 +14,13 @@ def _rel(v, p: Path) -> str:
 
 def prove_input_motion(v, rnd: int) -> dict:
     """A fixed synthetic delay. A block moves 100 ms (then 40 ms) after the
-    engine delivers the key press, by the wall clock. Every reading from
-    `_input` must lie between the delay and the delay plus two frames, and
-    the two medians must differ by 60 ms within one frame."""
+    engine delivers the key press, by the wall clock, and is drawn by the end
+    of the frame after that. So a reading from `_input` is the delay plus
+    between zero and two frames:
+    - no reading is under the delay;
+    - no reading is over the delay plus two of the longest frame in the run;
+    - the median is the delay plus between half a frame and two frames;
+    - the two medians differ by 60 ms, within one frame."""
     cases = []
     ok = True
     medians = {}
@@ -27,19 +31,22 @@ def prove_input_motion(v, rnd: int) -> dict:
         log = v.run_preset(p, out, test_mode=False)
         itm = log.get("input_to_motion", {})
         series = itm.get("input_to_first_motion_ms", {}).get("series_ms", [])
-        frame_p95 = itm.get("frame_ms", {}).get("p95") or 0.0
-        frame = itm.get("frame_ms", {}).get("p50") or frame
-        lo, hi = delay, delay + 2.0 * frame_p95 + 1.0
+        fm = itm.get("frame_ms", {})
+        frame = fm.get("p50") or frame
+        frame_max = fm.get("max") or 0.0
+        lo, hi = delay, delay + 2.0 * frame_max + 1.0
         inside = [lo - 0.05 <= s <= hi for s in series]
-        c_ok = (len(series) >= 50 and all(inside) and itm.get("failed_trials") == 0
-                and log["orchestrator"]["error_count"] == 0 and not log.get("test_mode", True))
         med = statistics.median(series) if series else None
         medians[delay] = med
+        med_range = [delay + 0.5 * (frame or 0.0), delay + 2.0 * (frame or 0.0)]
+        c_ok = (len(series) >= 50 and all(inside) and itm.get("failed_trials") == 0
+                and med is not None and med_range[0] <= med <= med_range[1]
+                and log["orchestrator"]["error_count"] == 0 and not log.get("test_mode", True))
         cases.append({"fixture": _rel(v, p), "synthetic_delay_ms": delay, "trials": len(series),
                       "allowed_ms": [lo, round(hi, 2)], "measured_min_ms": min(series) if series else None,
-                      "measured_median_ms": med, "measured_max_ms": max(series) if series else None,
-                      "outside": inside.count(False), "frame_ms_p50": itm.get("frame_ms", {}).get("p50"),
-                      "frame_ms_p95": frame_p95, "inject_to_input_ms": itm.get("inject_to_input_ms"),
+                      "measured_median_ms": med, "allowed_median_ms": [round(x, 2) for x in med_range],
+                      "measured_max_ms": max(series) if series else None,
+                      "outside": inside.count(False), "frame_ms": fm, "inject_to_input_ms": itm.get("inject_to_input_ms"),
                       "errors": log["orchestrator"]["error_count"], "pass": bool(c_ok),
                       "log": _rel(v, out / "log.json")})
         ok = ok and c_ok

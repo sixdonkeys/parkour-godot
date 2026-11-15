@@ -230,7 +230,8 @@ func report() -> Dictionary:
 	return {
 		"instrument": "input to motion", "device": _params.get("device", "key"), "event": _press,
 		"trials": trials.size(), "trials_wanted": _want, "failed_trials": failed, "complete": finished,
-		"frame_ms": {"p50": FrameStats.percentile(_frame_usec, 50), "p95": FrameStats.percentile(_frame_usec, 95)},
+		"frame_ms": {"p50": FrameStats.percentile(_frame_usec, 50), "p95": FrameStats.percentile(_frame_usec, 95),
+			"p99": FrameStats.percentile(_frame_usec, 99), "max": FrameStats.percentile(_frame_usec, 100)},
 		"refresh_hz": DisplayServer.screen_get_refresh_rate(),
 		"vsync_mode": ["disabled", "enabled", "adaptive", "mailbox"][DisplayServer.window_get_vsync_mode()],
 		"max_fps": Engine.max_fps, "physics_ticks_per_second": Engine.physics_ticks_per_second,
