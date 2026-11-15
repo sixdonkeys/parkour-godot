@@ -1,7 +1,7 @@
 {
   "modules": {
     "verify": {
-      "state": "building",
+      "state": "in_critic",
       "round": 1,
       "gate": false,
       "score": null,
@@ -14,7 +14,11 @@
         "docs/evidence/verify/round-1/window-niri/window-test.json",
         "docs/evidence/verify/round-1/window-umbriel/window-test.json",
         "docs/evidence/verify/round-1/build/build.json (four exports, sizes, packed-file lists)",
-        "docs/evidence/verify/round-1/bench-linux-arm64/ (benchmark mode of the exported Linux arm64 build)"
+        "docs/evidence/verify/round-1/bench-linux-arm64/ (benchmark mode of the exported Linux arm64 build)",
+        "docs/evidence/verify/round-1/build/build.json (rebuilt at the critic commit)",
+        "reference/ + reference/LEDGER.md (71 photographs)",
+        "docs/targets/ + docs/local-folder/ (remote loop proof)",
+        "docs/survey/remote-test.md (unreachable-host proof output)"
       ],
       "notes": "Reopened for the remote loop (built 2026-11-15, proved on local-folder/unreachable targets). waiting: Neo one-time setup (docs/WAITING.md). Reference set still being gathered."
     },

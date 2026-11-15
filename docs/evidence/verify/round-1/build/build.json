@@ -1,7 +1,9 @@
 {
   "label": "verify-r1",
-  "commit": "e0c212fab8bdf30b2feafc29d7f6819599cc855b-dirty",
+  "commit": "c33a1ab8106d549f0ebcdda99a17ec1fe93a1b86",
   "bench_presets": [
+    "core-empty-neo.json",
+    "core-stress-path.json",
     "verify-empty-path.json",
     "verify-empty-still.json"
   ],
@@ -14,8 +16,8 @@
       "warnings": [],
       "exists": true,
       "ok": true,
-      "size_bytes": 61821524,
-      "packed_files": 33,
+      "size_bytes": 330223871,
+      "packed_files": 176,
       "unlisted": [],
       "within_4gb": true
     },
@@ -27,8 +29,8 @@
       "warnings": [],
       "exists": true,
       "ok": true,
-      "size_bytes": 67120100,
-      "packed_files": 33,
+      "size_bytes": 396201108,
+      "packed_files": 176,
       "unlisted": []
     },
     {
@@ -39,8 +41,8 @@
       "warnings": [],
       "exists": true,
       "ok": true,
-      "size_bytes": 73560084,
-      "packed_files": 33,
+      "size_bytes": 402641092,
+      "packed_files": 176,
       "unlisted": []
     },
     {
@@ -51,8 +53,8 @@
       "warnings": [],
       "exists": true,
       "ok": true,
-      "size_bytes": 109309148,
-      "packed_files": 33,
+      "size_bytes": 438390156,
+      "packed_files": 176,
       "unlisted": []
     }
   ],
