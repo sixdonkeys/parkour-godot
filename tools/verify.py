@@ -114,6 +114,10 @@ def run_preset(preset: Path, out: Path, test_mode=True, baseline: Path | None = 
         # Benchmarks run fullscreen unless the preset is about the window itself.
         fullscreen = json.loads(preset.read_text()).get("resolution", "window") != "window"
     out.mkdir(parents=True, exist_ok=True)
+    if json.loads(preset.read_text()).get("real_time"):
+        # Added with `movement`: a preset that measures against the wall clock
+        # (input to motion) is always a normal launch, never --fixed-fps.
+        test_mode = False
     ensure_imported()
     commit = git_commit()
     cmd = [GODOT, "--path", str(GAME), "--disable-vsync"] + (engine_args or [])
@@ -490,6 +494,13 @@ def window_test(wm: str, rnd: int) -> dict:
 PROOFS = {"image": prove_image, "frametime": prove_frametime, "memory": prove_memory,
           "sound": prove_sound, "build": prove_build, "window": prove_window}
 
+# --- proofs that arrive with `movement` (tools/movement_proofs.py) ---------------
+import movement_proofs  # noqa: E402
+
+PROOF_MODULE = {name: "movement" for name in movement_proofs.PROOFS}
+for _name, _fn in movement_proofs.PROOFS.items():
+    PROOFS[_name] = (lambda rnd, _fn=_fn: _fn(sys.modules[__name__], rnd))
+
 
 # --- build step ----------------------------------------------------------------
 
@@ -596,6 +607,15 @@ def stage_bench_presets() -> list[str]:
                 (dest / "paths").mkdir(exist_ok=True)
                 (dest / "paths" / cp.name).write_text(cp.read_text())
                 d["camera_path"] = f"res://verify/bench_presets/paths/{cp.name}"
+            # Added with `movement`: a course file or an input script the preset
+            # points at travels with it, in the same folder the camera paths use.
+            for holder, key in ((d.get("fixture", {}), "course"), (d, "input_script")):
+                ref = holder.get(key)
+                if isinstance(ref, str) and ref and not ref.startswith("res://"):
+                    src = ROOT / ref
+                    (dest / "paths").mkdir(exist_ok=True)
+                    (dest / "paths" / src.name).write_text(src.read_text())
+                    holder[key] = f"res://verify/bench_presets/paths/{src.name}"
             (dest / p.name).write_text(json.dumps(d, indent=2))
             staged.append(p.name)
     # The runner reads only what this index lists, so a stale file left in the
@@ -711,10 +731,21 @@ def main() -> int:
                          engine_args=a.engine_arg)
         o = log["orchestrator"]
         ft = log.get("frame_time", {})
-        print(json.dumps({"out": str(out.relative_to(ROOT)), "errors": o["error_count"],
-                          "frame_ms": ft.get("frame_ms"), "gpu_ms": ft.get("gpu_ms"),
-                          "budget": ft.get("budget"), "image": {k: v for k, v in log.get("image", {}).items() if k != "reference_distance"}},
-                          indent=1, default=_json_default))
+        summary = {"out": str(out.relative_to(ROOT)), "errors": o["error_count"],
+                   "frame_ms": ft.get("frame_ms"), "gpu_ms": ft.get("gpu_ms"),
+                   "budget": ft.get("budget"), "image": {k: v for k, v in log.get("image", {}).items() if k != "reference_distance"}}
+        # Added with `movement`: the instruments' own verdicts.
+        if "input_to_motion" in log:
+            itm = log["input_to_motion"]
+            summary["input_to_motion"] = {"trials": itm.get("trials"), "failed": itm.get("failed_trials"), "budget": itm.get("budget")}
+        fr = log.get("fixture_result", {})
+        if "fuzz" in fr:
+            summary["fuzz"] = {k: fr["fuzz"].get(k) for k in ("seconds", "falls_through_world", "stuck_states", "non_finite", "three_zeros")}
+        if "metrics" in fr:
+            summary["metrics"] = fr["metrics"].get("numbers", {"pass": fr["metrics"].get("pass")})
+        if "end_state" in fr:
+            summary["end_state_hash"] = fr["end_state"].get("hash")
+        print(json.dumps(summary, indent=1, default=_json_default))
         return 1 if o["error_count"] else 0
     if a.cmd == "prove":
         names = list(PROOFS) if a.which == "all" else [a.which]
@@ -723,7 +754,7 @@ def main() -> int:
             res = PROOFS[n](a.round)
             res["commit"] = git_commit()
             res["date"] = dt.datetime.now().isoformat(timespec="seconds")
-            write_json(evidence_dir("verify", a.round, "proofs") / f"{n}.json", res)
+            write_json(evidence_dir(PROOF_MODULE.get(n, "verify"), a.round, "proofs") / f"{n}.json", res)
             print(f"{n}: {'PASS' if res['pass'] else 'FAIL'}")
             allok = allok and res["pass"]
         return 0 if allok else 1
