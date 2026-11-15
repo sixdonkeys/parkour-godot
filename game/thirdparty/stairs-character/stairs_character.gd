@@ -4,6 +4,10 @@ class_name StairsCharacter
 @export_category("Stair Stepping")
 ## The max height the character can step up or down
 @export var _step_height : float = 0.33
+## How far onto a step the character is tested, at least. When the wall is first
+## touched at the very end of a frame's motion the remaining motion is a sliver,
+## and a shape set down with a sliver of overlap meets the step's edge, not its top.
+@export var _min_step_depth : float = 0.1
 
 # Private variables
 
@@ -109,7 +113,9 @@ func stair_step_up() -> void:
 	motion_transform = motion_transform.translated(result.get_travel())
 	var step_up_distance = result.get_travel().length()
 
-	# Move forward remaining distance
+	# Move forward remaining distance, but far enough to find the step's top
+	if remainder.length() < _min_step_depth:
+		remainder = distance.normalized() * _min_step_depth
 	parameters.from = motion_transform
 	parameters.motion = remainder
 	PhysicsServer3D.body_test_motion(get_rid(), parameters, result)
