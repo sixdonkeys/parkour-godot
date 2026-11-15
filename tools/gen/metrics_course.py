@@ -12,6 +12,8 @@ Output (format `metrics-course/1`, read by game/movement/fixtures/metrics_course
                                                nothing under it
   docs/fixtures/movement-fuzz-solid-course.json the same floor with the hole filled
                                                (the fuzz proof's control)
+  docs/fixtures/movement-fuzz-cell-course.json a closed cell a body cannot move in
+                                               (the stuck detector's known answer)
 
 Metres, +Y up. Ground top is y = 0. Measurement lanes run toward -Z.
 Everything is arithmetic; no randomness.
@@ -282,4 +284,30 @@ solid["hole"] = None
 solid["pieces"] = pieces
 out = ROOT / "docs" / "fixtures" / "movement-fuzz-solid-course.json"
 out.write_text(json.dumps(solid, indent=1) + "\n")
+print(f"{out.relative_to(ROOT)}: {len(pieces)} pieces")
+
+# --- the cell: a body (0.6 m across) shut in a space 0.604 m across ------------------
+pieces, lanes, spawns, regions = [], [], [], []
+INNER = 0.302          # half the cell's inside width; the body's radius is 0.3
+box("floor", -3, 3, -0.5, 0, 3, -3, "ground")
+box("cell-west", -INNER - 0.5, -INNER, 0, 2.2, INNER + 0.5, -INNER - 0.5, "wall")
+box("cell-east", INNER, INNER + 0.5, 0, 2.2, INNER + 0.5, -INNER - 0.5, "wall")
+box("cell-north", -INNER, INNER, 0, 2.2, INNER + 0.5, INNER, "wall")
+box("cell-south", -INNER, INNER, 0, 2.2, -INNER, -INNER - 0.5, "wall")
+box("cell-lid", -INNER - 0.5, INNER + 0.5, 1.86, 2.2, INNER + 0.5, -INNER - 0.5, "wall")
+spawn("cell", 0, 0, 0, 0.0)
+region("cell", -1, 1, 1, -1)
+cell = {
+    "format": "metrics-course/1", "id": "movement-fuzz-cell-course",
+    "units": "metres; +Y up; floor top at y = 0", "generator": "tools/gen/metrics_course.py",
+    "purpose": "Known answer for the fuzz instrument's stuck detector: a body 0.6 m across shut in a cell 0.604 m "
+               "across with a lid 6 cm above its head. Whatever the input asks, it cannot move a centimetre "
+               "sideways; the instrument must report stuck states.",
+    "kill_plane_y": KILL_Y, "pit_floor_y": None, "expected_fall_below_y": None,
+    "cell": {"inside_width_m": 2 * INNER, "lid_y": 1.86},
+    "bounds": {"min": [-3, KILL_Y, -3], "max": [3, 4.0, 3]},
+    "pieces": pieces, "lanes": lanes, "spawns": spawns, "regions": regions,
+}
+out = ROOT / "docs" / "fixtures" / "movement-fuzz-cell-course.json"
+out.write_text(json.dumps(cell, indent=1) + "\n")
 print(f"{out.relative_to(ROOT)}: {len(pieces)} pieces")

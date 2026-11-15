@@ -15,6 +15,9 @@ extends Node3D
 ##                               (mode run: put a body somewhere at a tick, to show
 ##                                several pieces of the course in one run)
 ##   "jump_proof": {"gravity_m_s2": 10, "cases": [...]},   (the known answers)
+##   "poison": {"tick": 600, "player": 0},   (mode fuzz: put a NaN in a body's
+##                               velocity after its move at that tick; the known
+##                               answer for the non-finite check)
 ##   "tuning": {"jump_height": 1.25, ...},
 ##   "fuzz": {"seed": 7, "respawn_every_s": 20, "seconds": 600},
 ##                               (the run ends after that much simulated time)
@@ -90,6 +93,14 @@ func configure_fixture(cfg: Dictionary) -> void:
 			fuzz.setup(course, bodies, int(f.get("seed", 1)),
 				int(float(f.get("respawn_every_s", 0.0)) * Engine.physics_ticks_per_second))
 			add_child(fuzz)
+			if cfg.has("poison"):
+				# After the bodies' move and before the probe looks, so the bad
+				# value is seen and never reaches the physics engine.
+				var poison := Poison.new()
+				poison.body = bodies[clampi(int(cfg["poison"].get("player", 0)), 0, bodies.size() - 1)]
+				poison.at_tick = int(cfg["poison"].get("tick", 600))
+				poison.clock = course.clock
+				add_child(poison)
 		"metrics", "jump_proof":
 			if manual == null or bodies.is_empty():
 				push_error("movement fixture: mode %s needs a player with input \"manual\"" % mode)
@@ -192,6 +203,20 @@ func _state() -> Dictionary:
 		raw.append([b.global_position, b.velocity, b.yaw, b.pitch, b.tick, b.state])
 	return {"world_tick": course.clock.tick, "bodies": list,
 		"hash": var_to_bytes(raw).hex_encode().sha256_text()}
+
+
+class Poison:
+	extends Node
+	var body: PlayerBody
+	var clock: WorldClock
+	var at_tick := 600
+
+	func _init() -> void:
+		process_physics_priority = 500
+
+	func _physics_process(_delta: float) -> void:
+		if clock.tick == at_tick:
+			body.velocity = Vector3(NAN, 0.0, 0.0)
 
 
 func _resolve(path: String) -> String:

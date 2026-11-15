@@ -74,21 +74,29 @@ def prove_input_motion(v, rnd: int) -> dict:
 
 
 def prove_fuzz(v, rnd: int) -> dict:
-    """A floor with a deliberate hole and nothing under it: the instrument
-    must report a fall through the world. The same floor without the hole:
-    it must report none."""
+    """One known answer for each thing the instrument counts, and a control:
+    - a floor with a deliberate hole and nothing under it: falls through the
+      world, and nothing else;
+    - the same floor with the hole filled: nothing at all;
+    - a body shut in a cell it cannot move in: stuck states, and nothing else;
+    - a NaN put in a body's velocity at one tick: exactly one non-finite
+      value, and nothing else."""
     res = {"instrument": "fuzz", "cases": []}
     ok = True
-    for name, want_fall in (("movement-fuzz-hole", True), ("movement-fuzz-solid", False)):
+    for name, want in (("movement-fuzz-hole", {"falls": True, "stuck": False, "nan": 0}),
+                       ("movement-fuzz-solid", {"falls": False, "stuck": False, "nan": 0}),
+                       ("movement-fuzz-cell", {"falls": False, "stuck": True, "nan": 0}),
+                       ("movement-fuzz-nan", {"falls": False, "stuck": False, "nan": 1})):
         p = v.FIX / f"{name}.json"
         out = v.evidence_dir("movement", rnd, "proofs", name)
         log = v.run_preset(p, out)
         f = log.get("fixture_result", {}).get("fuzz", {})
         falls = f.get("falls_through_world")
-        c_ok = (falls is not None and (falls >= 1) == want_fall and f.get("stuck_states") == 0
-                and f.get("non_finite") == 0 and log["orchestrator"]["error_count"] == 0
+        c_ok = (falls is not None and (falls >= 1) == want["falls"]
+                and (f.get("stuck_states", 0) >= 1) == want["stuck"]
+                and f.get("non_finite") == want["nan"] and log["orchestrator"]["error_count"] == 0
                 and f.get("seconds", 0) >= 59.0)
-        res["cases"].append({"fixture": _rel(v, p), "expect_fall_through_world": want_fall,
+        res["cases"].append({"fixture": _rel(v, p), "expect": want,
                              "falls_through_world": falls, "below_kill_plane": f.get("below_kill_plane"),
                              "embedded_in_static": f.get("embedded_in_static"), "stuck_states": f.get("stuck_states"),
                              "non_finite": f.get("non_finite"), "seconds": f.get("seconds"),
