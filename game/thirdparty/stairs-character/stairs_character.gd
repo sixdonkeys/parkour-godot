@@ -15,6 +15,10 @@ class_name StairsCharacter
 # Collider margin should be as low as you can get it without snagging on edges.
 var _collider_margin : float
 
+# Reused by every motion test, so stepping allocates nothing per frame
+var _test_result := PhysicsTestMotionResult3D.new()
+var _test_parameters := PhysicsTestMotionParameters3D.new()
+
 # We don't want to take the player's vertical speed into account, usually
 const _horizontal : Vector3 = Vector3(1,0,1)
 
@@ -61,8 +65,8 @@ func stair_step_down() -> void:
 	# Don't step down if we weren't on the ground last physics frame
 	if was_grounded == false || velocity.y >= 0: return
 	
-	var result = PhysicsTestMotionResult3D.new()
-	var parameters = PhysicsTestMotionParameters3D.new()
+	var result = _test_result
+	var parameters = _test_parameters
 	
 	parameters.from = global_transform
 	parameters.motion = Vector3.DOWN * _step_height
@@ -84,8 +88,8 @@ func stair_step_up() -> void:
 	# Not moving or attempting to move, skip stair check
 	if testing_velocity == Vector3.ZERO: return
 	
-	var result = PhysicsTestMotionResult3D.new()
-	var parameters = PhysicsTestMotionParameters3D.new()
+	var result = _test_result
+	var parameters = _test_parameters
 	parameters.margin = _collider_margin
 	
 	# This variable gets reused for all the following checks
