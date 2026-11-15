@@ -1,0 +1,19 @@
+# Engine settings, caches, saved data, export templates (development only)
+/.local/
+game/.godot/
+*.import.tmp
+# Exported builds
+/builds/**/*.zip
+/builds/**/*.app/
+/builds/**/*.x86_64
+/builds/**/*.arm64
+/builds/**/*.exe
+/builds/**/*.pck
+/builds/**/*.dmg
+# Frame strips, WAVs and other heavy evidence stay on the machine that made them
+docs/evidence/**/strip/
+docs/evidence/**/*.wav
+docs/evidence/**/frames/
+# Large source data fetched by tools from addresses in ASSETS.md
+/tools/cache/
+__pycache__/

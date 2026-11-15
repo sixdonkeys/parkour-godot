@@ -1,0 +1,198 @@
+{
+  "modules": {
+    "verify": {
+      "state": "building",
+      "round": 0,
+      "gate": false,
+      "score": null,
+      "open_issues": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "core": {
+      "state": "not_started",
+      "round": 0,
+      "gate": false,
+      "score": null,
+      "open_issues": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "look-slice": {
+      "state": "not_started",
+      "round": 0,
+      "gate": false,
+      "score": null,
+      "open_issues": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "movement": {
+      "state": "not_started",
+      "round": 0,
+      "gate": false,
+      "score": null,
+      "open_issues": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "camera": {
+      "state": "not_started",
+      "round": 0,
+      "gate": false,
+      "score": null,
+      "open_issues": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "traversal": {
+      "state": "not_started",
+      "round": 0,
+      "gate": false,
+      "score": null,
+      "open_issues": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "kit": {
+      "state": "not_started",
+      "round": 0,
+      "gate": false,
+      "score": null,
+      "open_issues": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "rules": {
+      "state": "not_started",
+      "round": 0,
+      "gate": false,
+      "score": null,
+      "open_issues": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "interface": {
+      "state": "not_started",
+      "round": 0,
+      "gate": false,
+      "score": null,
+      "open_issues": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "desert-course": {
+      "state": "not_started",
+      "round": 0,
+      "gate": false,
+      "score": null,
+      "open_issues": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "character": {
+      "state": "not_started",
+      "round": 0,
+      "gate": false,
+      "score": null,
+      "open_issues": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "mountain-course": {
+      "state": "not_started",
+      "round": 0,
+      "gate": false,
+      "score": null,
+      "open_issues": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "chicago-course": {
+      "state": "not_started",
+      "round": 0,
+      "gate": false,
+      "score": null,
+      "open_issues": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "newyork-course": {
+      "state": "not_started",
+      "round": 0,
+      "gate": false,
+      "score": null,
+      "open_issues": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "desert-dress": {
+      "state": "not_started",
+      "round": 0,
+      "gate": false,
+      "score": null,
+      "open_issues": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "mountain-dress": {
+      "state": "not_started",
+      "round": 0,
+      "gate": false,
+      "score": null,
+      "open_issues": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "chicago-dress": {
+      "state": "not_started",
+      "round": 0,
+      "gate": false,
+      "score": null,
+      "open_issues": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "newyork-dress": {
+      "state": "not_started",
+      "round": 0,
+      "gate": false,
+      "score": null,
+      "open_issues": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "final": {
+      "state": "not_started",
+      "round": 0,
+      "gate": false,
+      "score": null,
+      "open_issues": [],
+      "evidence": [],
+      "notes": ""
+    }
+  },
+  "wave_order": [
+    "verify",
+    "core",
+    "look-slice",
+    "movement",
+    "camera",
+    "traversal",
+    "kit",
+    "rules",
+    "interface",
+    "desert-course",
+    "character",
+    "mountain-course",
+    "chicago-course",
+    "newyork-course",
+    "desert-dress",
+    "mountain-dress",
+    "chicago-dress",
+    "newyork-dress",
+    "final"
+  ],
+  "stage": 1,
+  "updated_by": "builder"
+}
