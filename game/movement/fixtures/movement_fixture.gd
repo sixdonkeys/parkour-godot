@@ -16,7 +16,8 @@ extends Node3D
 ##                                several pieces of the course in one run)
 ##   "jump_proof": {"gravity_m_s2": 10, "cases": [...]},   (the known answers)
 ##   "tuning": {"jump_height": 1.25, ...},
-##   "fuzz": {"seed": 7, "respawn_every_s": 20},
+##   "fuzz": {"seed": 7, "respawn_every_s": 20, "seconds": 600},
+##                               (the run ends after that much simulated time)
 ##   "metrics": {"only": ["flat", "gap"]},
 ##   "camera": {"mode": "chase" | "first" | "side" | "top", "player": 0}
 ## }
@@ -156,6 +157,9 @@ func verify_finished() -> bool:
 			return metrics != null and metrics.finished
 		"run":
 			return run_ticks > 0 and not _end_state.is_empty()
+		"fuzz":
+			var want := float(_cfg.get("fuzz", {}).get("seconds", 0.0))
+			return fuzz != null and want > 0.0 and fuzz.ticks >= int(want * Engine.physics_ticks_per_second)
 	return false
 
 
