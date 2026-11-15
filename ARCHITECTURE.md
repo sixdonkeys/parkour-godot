@@ -188,6 +188,7 @@ Once this file exists, the budget numbers, the course rules and the window rules
 - Shipped assets public domain, CC0, or under a licence that asks for nothing beyond credit (CC BY and the like), with every credit owed shown on a credits screen in the game. Share-alike and non-commercial licences stay out of what ships.
 - Every dependency and asset recorded in `ASSETS.md` with its source address, author, licence and the licence statement quoted from the source.
 - Every setting that trades looks for speed (render scale, lighting method, shadows, texture and mesh detail, effects) lives in a quality profile, one file per profile in `game/profiles/`; the game ships one profile, `neo`. Source art is kept at the best quality obtained and reduced per profile.
+- **Nick, 2026-11-15:** the game ships several profiles (at least `neo`, plus higher tiers for stronger machines), with a quality picker in the settings screen; `neo` is the default on the Neo. Levels are authored at the highest quality; a profile only clamps down, so a cut for the Neo never removes detail from a level.
 - Adopted code lives in `game/thirdparty/<project>/` with its licence notice and upstream commit; improvements worth giving back are listed in `docs/upstream/<project>.md`.
 
 ## Failure isolation
