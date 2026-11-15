@@ -21,7 +21,9 @@ func _ready() -> void:
 	stream = gen
 	play()
 	_playback = get_stream_playback()
-	_fill()
+	# No fill here: the preset's amplitude arrives through configure_fixture()
+	# right after _ready, and the first fill must already use it (critic
+	# round 1 found 0.4 s at the default level).
 
 
 func _process(_delta: float) -> void:

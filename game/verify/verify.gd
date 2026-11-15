@@ -356,10 +356,12 @@ func _run_preset(p: Dictionary, out_dir: String) -> Dictionary:
 		# upload staging buffer) is told apart from a leak that grows each time.
 		var warm: int = cycles[-1][1]["total_bytes"]
 		var after_t: int = mem[2]["total_bytes"]
-		m["raw_returns_within_5pct"] = m["returns_within_5pct"]
+		# The budget is judged on the literal pre-load figure (returns_within_5pct
+		# from _memory_report). The warm-cycle figure is reported beside it for
+		# the case in docs/WAITING.md; it decides nothing.
 		m["warm_baseline_bytes"] = warm
 		m["warm_return_ratio"] = (float(after_t) / warm) if warm > 0 else null
-		m["returns_within_5pct"] = warm > 0 and absf(float(after_t) / warm - 1.0) <= 0.05
+		m["warm_returns_within_5pct"] = warm > 0 and absf(float(after_t) / warm - 1.0) <= 0.05
 		# A leak keeps growing; a cache or heap settles. Compare the last two
 		# unloads (the last pre-cycle and the measured one): more than 1% up
 		# means still growing. The full series stays in the log.
@@ -368,7 +370,14 @@ func _run_preset(p: Dictionary, out_dir: String) -> Dictionary:
 			last_unloads.append(c[1]["total_bytes"])
 		last_unloads.append(after_t)
 		m["unload_series_bytes"] = last_unloads
-		m["grows_each_cycle"] = last_unloads.size() >= 2 and last_unloads[-1] > last_unloads[-2] * 1.01
+		# Like for like: each cycle's unload against the cycle before it; growth
+		# in every step means a leak (critic round 1: comparing only the measured
+		# cycle with a warm-up cycle gave a false alarm).
+		var grows := last_unloads.size() >= 3
+		for i in range(1, last_unloads.size()):
+			if last_unloads[i] <= last_unloads[i - 1] * 1.01:
+				grows = false
+		m["grows_each_cycle"] = grows
 	Engine.max_fps = 0
 	root.content_scale_mode = Window.CONTENT_SCALE_MODE_CANVAS_ITEMS
 	root.content_scale_aspect = Window.CONTENT_SCALE_ASPECT_EXPAND

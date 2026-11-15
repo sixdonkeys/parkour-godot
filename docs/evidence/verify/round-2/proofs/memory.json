@@ -1,0 +1,49 @@
+{
+  "instrument": "memory",
+  "fixture": "docs/fixtures/verify-memory-known-texture.json",
+  "expected_texture_delta_bytes": 67108864,
+  "measured_texture_delta_bytes": 67633152,
+  "video_delta_bytes": 134480128,
+  "unload_return_ratio_raw": 1.17489775708141,
+  "warm_return_ratio": 1.00192538695765,
+  "grows_each_cycle": false,
+  "returns_within_5pct_literal": false,
+  "note": "The proof checks the instrument (known texture delta, texture memory back exactly, no growth); the 5% budget line is judged per level on the literal figure.",
+  "texture_returns_exactly": true,
+  "readings": [
+    {
+      "label": "before_load",
+      "process_rss_bytes": 265043968,
+      "video_bytes": 141329408,
+      "texture_bytes": 116172160,
+      "buffer_bytes": 22400220,
+      "static_bytes": 83923985,
+      "total_bytes": 406373376,
+      "usec": 496162
+    },
+    {
+      "label": "after_load",
+      "process_rss_bytes": 269271040,
+      "video_bytes": 275809536,
+      "texture_bytes": 183805312,
+      "buffer_bytes": 22400472,
+      "static_bytes": 87146614,
+      "total_bytes": 545080576,
+      "usec": 2253028
+    },
+    {
+      "label": "after_unload",
+      "process_rss_bytes": 269271040,
+      "video_bytes": 208176128,
+      "texture_bytes": 116172160,
+      "buffer_bytes": 22400220,
+      "static_bytes": 87015332,
+      "total_bytes": 477447168,
+      "usec": 2778769
+    }
+  ],
+  "pass": true,
+  "log": "docs/evidence/verify/round-2/proofs/memory/log.json",
+  "commit": "549cfcb71dfb82f7d40504e7fa8678ffff51f511-dirty",
+  "date": "2026-11-15T15:13:15"
+}

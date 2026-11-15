@@ -224,11 +224,35 @@ def judge_honesty(dest: Path) -> dict:
             continue
         if any(e.get("event") == "app_focus_out" for e in log.get("focus_events", [])):
             reasons.append(f"game lost focus during {lp.parent.name}")
-    unknown = [k for k in ("locked", "front_app", "display_awake")
+    # Display awake: when no probe can read it, the game's own frames prove it.
+    # A sleeping or hidden display stops frame callbacks, which shows as gaps.
+    max_gap = 0.0
+    refresh = set()
+    for lp in dest.glob("*/log.json"):
+        try:
+            log = json.loads(lp.read_text())
+        except json.JSONDecodeError:
+            continue
+        series = log.get("frame_time", {}).get("series_ms", [])
+        if series:
+            max_gap = max(max_gap, max(series))
+        if log.get("machine", {}).get("refresh_hz"):
+            refresh.add(log["machine"]["refresh_hz"])
+    display_by_frames = max_gap < 1000.0 if max_gap else None
+    if display_by_frames is False:
+        reasons.append(f"a frame took {max_gap:.0f} ms: the display slept or the window was hidden")
+    unknown = [k for k in ("locked", "front_app")
                if samples and all(s.get(k) in (None, "", "unknown") for s in samples)]
+    if all(s.get("display_awake") in (None, "", "unknown") for s in samples) and display_by_frames is None:
+        unknown.append("display_awake")
+    # Nothing unverifiable may pass: an unread check makes the run void.
+    for k in unknown:
+        reasons.append(f"could not verify {k}")
     return {
         "void": bool(reasons), "reasons": reasons,
         "unverifiable": unknown,
+        "display_awake_from_frames": display_by_frames, "max_frame_ms": max_gap,
+        "refresh_hz_game": sorted(refresh),
         "power": sorted({s.get("power") for s in samples if s.get("power")}),
         "low_power": sorted({s.get("low_power") for s in samples if s.get("low_power")}),
         "samples": len(samples),

@@ -1,0 +1,376 @@
+{
+  "preset": {
+    "id": "verify-memory-known-texture",
+    "module": "verify",
+    "purpose": "Known answer for the memory instrument: one 4096x4096 RGBA8 texture, no mipmaps = 67,108,864 bytes; memory returns after unload. The base scene (empty.tscn, with a camera) is loaded before the baseline so the viewport's 3D buffers are not counted.",
+    "scene": "res://verify/fixtures/known_texture.tscn",
+    "profile": "neo",
+    "resolution": [
+      2408.0,
+      1506.0
+    ],
+    "warmup_frames": 10.0,
+    "frames": 30.0,
+    "unload_frames": 60.0,
+    "base_scene": "res://verify/fixtures/empty.tscn",
+    "precycles": 2.0
+  },
+  "commit": "549cfcb71dfb82f7d40504e7fa8678ffff51f511-dirty",
+  "test_mode": true,
+  "timing": "fixed (--fixed-fps)",
+  "started": "2026-11-15T21:13:13",
+  "machine": {
+    "os": "Linux",
+    "os_version": "44 (Workstation Edition)",
+    "cpu_cores": 10,
+    "engine": "4.7.2-stable (fedora)",
+    "adapter": "Apple M1 Pro (G13S C0)",
+    "adapter_vendor": "Unknown",
+    "adapter_api_version": "1.4.354",
+    "adapter_driver": [
+      "",
+      ""
+    ],
+    "rendering_method": "forward_plus",
+    "rendering_driver": "vulkan",
+    "display_server": "Wayland",
+    "software_renderer": false,
+    "screen_size": "(3456, 2160)",
+    "screen_scale": 2.0,
+    "refresh_hz": 120.0,
+    "desktop": "GNOME"
+  },
+  "proxy": true,
+  "scene_loaded": true,
+  "profile": {
+    "name": "neo",
+    "path": "res://profiles/neo.tres",
+    "loaded": true,
+    "render_scale": 0.670000016689301,
+    "settings": {
+      "profile_name": "neo",
+      "render_scale": 0.67,
+      "upscalers": [
+        "metalfx_temporal",
+        "fsr",
+        "bilinear"
+      ],
+      "msaa_3d": 0,
+      "use_taa": false,
+      "screen_space_aa": 2,
+      "mesh_lod_threshold": 1.0,
+      "scatter_density": 1.0,
+      "draw_distance": 1.0,
+      "directional_shadow_size": 4096,
+      "directional_shadow_splits": 2,
+      "directional_shadow_max_distance": 150.0,
+      "soft_shadow_quality": 2,
+      "positional_shadow_atlas_size": 2048,
+      "allow_sdfgi": false,
+      "sdfgi_ray_count": 2,
+      "gi_half_resolution": true,
+      "allow_ssao": true,
+      "ssao_quality": 1,
+      "allow_ssil": false,
+      "allow_ssr": false,
+      "ssr_max_steps": 32,
+      "allow_volumetric_fog": true,
+      "volumetric_fog_size": 64,
+      "volumetric_fog_depth": 64,
+      "allow_glow": true,
+      "texture_tier": "neo",
+      "chosen_upscaler": "fsr"
+    }
+  },
+  "wall_seconds": 0.445551,
+  "frame_time": {
+    "frames": 29,
+    "excluded_capture_frames": 0,
+    "vsync_mode": "enabled",
+    "frame_ms": {
+      "p50": 8.2,
+      "p95": 16.171,
+      "p99": 16.357,
+      "max": 16.357,
+      "share_within_16_7": 1.0,
+      "share_within_22": 1.0
+    },
+    "gpu_ms": {
+      "p50": 4.6399998664856,
+      "p95": 5.61999988555908,
+      "p99": 6.55700016021729
+    },
+    "cpu_render_ms": {
+      "p50": 0.296999990940094,
+      "p95": 0.518999993801117
+    },
+    "histogram": {
+      "bucket_ms": 0.5,
+      "buckets": {
+        "8.5": 2,
+        "7.5": 3,
+        "16.0": 2,
+        "8.0": 11,
+        "9.0": 1,
+        "13.5": 2,
+        "3.5": 1,
+        "11.0": 1,
+        "5.5": 1,
+        "9.5": 1,
+        "7.0": 2,
+        "1.0": 1,
+        "6.5": 1
+      },
+      "over_max": 0,
+      "max_ms": 50.0
+    },
+    "series_ms": [
+      8.656,
+      7.96,
+      16.171,
+      8.521,
+      8.274,
+      8.061,
+      9.307,
+      7.818,
+      8.016,
+      8.098,
+      8.351,
+      8.337,
+      8.419,
+      8.117,
+      13.516,
+      3.842,
+      7.671,
+      11.399,
+      5.623,
+      8.06,
+      8.2,
+      9.995,
+      7.281,
+      8.405,
+      16.357,
+      13.992,
+      1.343,
+      6.675,
+      7.314
+    ],
+    "draw_series_ms": [
+      8.528,
+      7.789,
+      16.016,
+      8.338,
+      8.097,
+      7.868,
+      9.184,
+      7.643,
+      7.838,
+      7.98,
+      8.232,
+      8.201,
+      8.298,
+      8.001,
+      13.401,
+      3.705,
+      7.355,
+      11.291,
+      5.491,
+      7.842,
+      8.033,
+      9.89,
+      7.093,
+      8.25,
+      16.136,
+      13.85,
+      1.203,
+      6.625,
+      7.183
+    ],
+    "draw_ms": {
+      "p50": 8.033,
+      "p95": 16.016
+    },
+    "capture_after_index": [
+      29
+    ],
+    "draw_calls": {
+      "mean": 1.0,
+      "max": 1
+    },
+    "primitives_max": 2,
+    "budget": {
+      "proxy": true,
+      "proxy_gpu_factor": 2.5,
+      "wall_clock_meets_budget": true,
+      "gpu_scaled_meets_budget": true,
+      "pass": true
+    }
+  },
+  "viewport_size": "(2408.0, 1506.0)",
+  "window_size": "(3456, 2160)",
+  "interface_outside": [],
+  "focus_events": [
+    {
+      "event": "window_focus_in",
+      "frame": 0,
+      "usec": 391502
+    },
+    {
+      "event": "app_focus_in",
+      "frame": 0,
+      "usec": 391509
+    }
+  ],
+  "memory": {
+    "readings": [
+      {
+        "label": "before_load",
+        "process_rss_bytes": 265043968,
+        "video_bytes": 141329408,
+        "texture_bytes": 116172160,
+        "buffer_bytes": 22400220,
+        "static_bytes": 83923985,
+        "total_bytes": 406373376,
+        "usec": 496162
+      },
+      {
+        "label": "after_load",
+        "process_rss_bytes": 269271040,
+        "video_bytes": 275809536,
+        "texture_bytes": 183805312,
+        "buffer_bytes": 22400472,
+        "static_bytes": 87146614,
+        "total_bytes": 545080576,
+        "usec": 2253028
+      },
+      {
+        "label": "after_unload",
+        "process_rss_bytes": 269271040,
+        "video_bytes": 208176128,
+        "texture_bytes": 116172160,
+        "buffer_bytes": 22400220,
+        "static_bytes": 87015332,
+        "total_bytes": 477447168,
+        "usec": 2778769
+      }
+    ],
+    "loaded_total_bytes": 545080576,
+    "within_4gb": true,
+    "unload_return_ratio": 1.17489775708141,
+    "returns_within_5pct": false,
+    "video_delta_load_bytes": 134480128,
+    "texture_delta_load_bytes": 67633152,
+    "precycles": [
+      [
+        {
+          "label": "precycle_0_loaded",
+          "process_rss_bytes": 267845632,
+          "video_bytes": 275809536,
+          "texture_bytes": 183805312,
+          "buffer_bytes": 22400472,
+          "static_bytes": 87123570,
+          "total_bytes": 543655168,
+          "usec": 610556
+        },
+        {
+          "label": "precycle_0_unloaded",
+          "process_rss_bytes": 267976704,
+          "video_bytes": 208176128,
+          "texture_bytes": 116172160,
+          "buffer_bytes": 22400220,
+          "static_bytes": 86992884,
+          "total_bytes": 476152832,
+          "usec": 1123916
+        }
+      ],
+      [
+        {
+          "label": "precycle_1_loaded",
+          "process_rss_bytes": 268353536,
+          "video_bytes": 275809536,
+          "texture_bytes": 183805312,
+          "buffer_bytes": 22400472,
+          "static_bytes": 87126462,
+          "total_bytes": 544163072,
+          "usec": 1247813
+        },
+        {
+          "label": "precycle_1_unloaded",
+          "process_rss_bytes": 268353536,
+          "video_bytes": 208176128,
+          "texture_bytes": 116172160,
+          "buffer_bytes": 22400220,
+          "static_bytes": 86995408,
+          "total_bytes": 476529664,
+          "usec": 1753784
+        }
+      ]
+    ],
+    "warm_baseline_bytes": 476529664,
+    "warm_return_ratio": 1.00192538695765,
+    "warm_returns_within_5pct": true,
+    "unload_series_bytes": [
+      476152832,
+      476529664,
+      477447168
+    ],
+    "grows_each_cycle": false
+  },
+  "engine": {
+    "errors": [],
+    "warnings": [
+      {
+        "type": "warning",
+        "message": "The requested V-Sync mode Disabled is not available. Falling back to V-Sync mode Enabled.",
+        "code": "The requested V-Sync mode Disabled is not available. Falling back to V-Sync mode Enabled.",
+        "where": "drivers/vulkan/rendering_device_driver_vulkan.cpp:3767 (swap_chain_resize)",
+        "usec": 414898
+      }
+    ]
+  },
+  "finished": "2026-11-15T21:13:15",
+  "orchestrator": {
+    "command": [
+      "godot",
+      "--path",
+      "/home/nick/src/parkour-godot/game",
+      "--disable-vsync",
+      "--fixed-fps",
+      "60",
+      "--",
+      "--preset",
+      "/home/nick/src/parkour-godot/docs/fixtures/verify-memory-known-texture.json",
+      "--out",
+      "/home/nick/src/parkour-godot/docs/evidence/verify/round-2/proofs/memory",
+      "--commit",
+      "549cfcb71dfb82f7d40504e7fa8678ffff51f511-dirty",
+      "--repo-root",
+      "/home/nick/src/parkour-godot",
+      "--test-mode",
+      "--bench-fullscreen"
+    ],
+    "exit_code": -9,
+    "started": "2026-11-15T15:13:12.788437",
+    "shutdown_hang": null,
+    "self_terminated": true,
+    "seconds": 3.00587,
+    "output_errors": [],
+    "output_warnings": [
+      "WARNING: Can't obtain the XDG decoration manager. Libdecor will be used for drawing CSDs, if available. | at: init (platform/linuxbsd/wayland/wayland_thread.cpp:5635)",
+      "WARNING: xdg-toplevel-icon protocol not found! Cannot set window icon. | at: init (platform/linuxbsd/wayland/wayland_thread.cpp:5642)",
+      "WARNING: The requested V-Sync mode Disabled is not available. Falling back to V-Sync mode Enabled. | at: swap_chain_resize (drivers/vulkan/rendering_device_driver_vulkan.cpp:3767)",
+      "WARNING: The requested V-Sync mode Disabled is not available. Falling back to V-Sync mode Enabled. | at: swap_chain_resize (drivers/vulkan/rendering_device_driver_vulkan.cpp:3767)"
+    ],
+    "error_count": 0,
+    "verify_tool_commit": "549cfcb71dfb82f7d40504e7fa8678ffff51f511-dirty",
+    "frame_numbers_count": true
+  },
+  "image": {
+    "size": [
+      2408,
+      1506
+    ],
+    "ssim_vs_baseline": null,
+    "ssim_note": "no earlier round of this preset"
+  }
+}

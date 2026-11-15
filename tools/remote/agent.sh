@@ -66,12 +66,14 @@ low_power() {
   fi
 }
 front_app() {
-  if [ "$OS" = Darwin ]; then lsappinfo info -only name "$(lsappinfo front 2>/dev/null)" 2>/dev/null | sed -n 's/.*"LSDisplayName"="\(.*\)".*/\1/p'
+  # macOS 27 prints the front app as: "Terminal" ASN:0x0-0x...: (in front)
+  if [ "$OS" = Darwin ]; then lsappinfo info -only name "$(lsappinfo front 2>/dev/null)" 2>/dev/null | sed -n '1s/^"\([^"]*\)".*/\1/p'
   else echo unknown; fi
 }
 refresh_hz() {
-  if [ "$OS" = Darwin ]; then system_profiler SPDisplaysDataType 2>/dev/null | awk -F'@ ' '/Resolution|UI Looks like/ && /Hz/ {sub(/Hz.*/,"",$2); print $2; exit}'
-  else echo unknown; fi
+  # system_profiler on macOS 27 doesn't list it for the built-in panel; the
+  # game logs DisplayServer.screen_get_refresh_rate() itself.
+  echo game-reported
 }
 case "$VERB" in
 probe)
