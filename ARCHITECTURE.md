@@ -2,6 +2,12 @@
 
 This is the design of an original 3D parkour game (working title **Ridgeline**) built in Godot from `BUILD-BRIEF.md`. The brief is the contract; this file carries every rule and number the brief fixes, unchanged, plus the choices the brief leaves to the builder. It is kept current: a hard problem's choice lands here in the same commit that completes its decision record.
 
+## Goal
+
+**Nick, 2026-11-15:** "i want this to look and feel like a AAA title. within the boundaries we have set on performance and hardware requirements."
+
+So the target is AAA look and feel inside the `neo` profile's performance budget and the 8 GB Neo. This sits alongside the brief's quality floor (any paused frame passes for a photograph; every move responds at once and fails only when the player erred) and doesn't loosen any number. When a choice trades effort for polish (animation quality, camera feel, sound, materials, lighting), the default is the AAA option that fits the budget, not the first one that works.
+
 ## Stack
 
 - Engine: **Godot 4.7.2** (`4.7.2.stable`), the same version on every machine, with export templates of that exact version. Moving to a newer one is a decision with its own record, made on every machine at once.
@@ -148,7 +154,7 @@ The game is tied to no window manager. It must sit as well in tiling ones such a
 - The pointer is held only during play in a focused window. Pausing, opening a menu or losing focus lets it go at once, and losing focus pauses a run.
 - The window manager's shortcuts always get through: nothing is bound to the Super key and the keyboard is never grabbed.
 
-Application ID and title: `ridgeline` / `Ridgeline` (decision `windowing`).
+Application ID and title: both `Ridgeline` (Godot uses `application/config/name` as the Wayland app ID; decision `windowing`).
 
 ## Performance budget
 
@@ -197,13 +203,13 @@ Each record lives at `docs/decisions/<problem>.md` with its excerpts in `docs/su
 
 | Problem | First module | Status / choice |
 |---|---|---|
-| verification-rendering | verify | undecided — verify |
-| tick-and-frame | verify | undecided — verify |
-| windowing | verify | undecided — verify |
-| mac-delivery | verify | undecided — verify |
-| asset-pipeline | verify | undecided — verify |
-| sound | verify | undecided — verify |
-| neo-proxy | verify | undecided — verify |
+| verification-rendering | verify | decided — see `docs/decisions/verification-rendering.md` |
+| tick-and-frame | verify | decided — see `docs/decisions/tick-and-frame.md` |
+| windowing | verify | decided — see `docs/decisions/windowing.md` |
+| mac-delivery | verify | decided — see `docs/decisions/mac-delivery.md` |
+| asset-pipeline | verify | decided — see `docs/decisions/asset-pipeline.md` |
+| sound | verify | decided — see `docs/decisions/sound.md` |
+| neo-proxy | verify | decided — see `docs/decisions/neo-proxy.md` |
 | renderer | core | undecided — core |
 | quality-profiles | core | undecided — core |
 | multiplayer-readiness | core | undecided — core |
