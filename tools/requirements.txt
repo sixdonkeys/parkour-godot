@@ -1,0 +1,2 @@
+tifffile==2026.10.15
+imagecodecs==2026.10.10

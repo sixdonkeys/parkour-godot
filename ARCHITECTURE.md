@@ -213,8 +213,8 @@ Each record lives at `docs/decisions/<problem>.md` with its excerpts in `docs/su
 | renderer | core | decided — see `docs/decisions/renderer.md` |
 | quality-profiles | core | decided — see `docs/decisions/quality-profiles.md` |
 | multiplayer-readiness | core | decided — see `docs/decisions/multiplayer-readiness.md` |
-| lighting | look-slice | undecided — look-slice |
-| landforms | look-slice | undecided — look-slice |
+| lighting | look-slice | decided — see `docs/decisions/lighting.md` |
+| landforms | look-slice | decided — see `docs/decisions/landforms.md` (city sources undecided — chicago-course) |
 | player-body | movement | undecided — movement |
 | movement-numbers | movement | undecided — movement |
 | replay | movement | undecided — movement |

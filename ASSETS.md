@@ -39,3 +39,15 @@ Credits owed are shown on the in-game credits screen.
 - **Source:** Fedora packages `python3`, `python3-numpy`, `python3-pillow`.
 - **Licence:** PSF-2.0 (Python), BSD-3-Clause (numpy), MIT-CMU (Pillow).
 - Not packed into any build; recorded for completeness.
+
+## USGS 3DEP 1/3 arc-second elevation, tile n33w111 (desert level terrain)
+
+- **Path:** (source data in `tools/cache/usgs/`, not in git; terrain generated from it lives under `game/desert_dress/generated/` and `game/look_slice/generated/`) `look_slice/generated/` `desert_dress/generated/`
+- **Source:** https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/13/TIFF/historical/n33w111/USGS_13_n33w111_20261027.tif (metadata `…_20261027.xml` beside it), listed by The National Map API. SHA-256 `bdf3a0751fbc9d31c20b472498d7a6bf87146364b2f8de09787b9be96571505a`.
+- **Author:** U.S. Geological Survey, 3D Elevation Program
+- **Licence:** public domain
+- **Licence statement (from the tile's metadata):**
+  > All 3DEP products are public domain.
+- **Use constraints (from the same metadata, followed here):**
+  > Acknowledgement of the originating agencies would be appreciated in products derived from these data.  Any user who modifies the data is obligated to describe the types of modifications they perform.
+- **Changes:** cropped to lon −110.85 to −110.75, lat 32.28 to 32.37 (Sabino Canyon and the Santa Catalina front range); compressed horizontally ×0.1 and vertically ×0.18; resampled to 1 m with seeded fractal detail added; route ground shaped by hand; meshes and rocks placed on top. The game's world is invented, not a map of the real place. Credited to the USGS on the credits screen.
