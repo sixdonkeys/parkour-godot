@@ -23,7 +23,12 @@ var data: Dictionary = {}
 var clock: WorldClock
 var world: StaticBody3D
 var movers: Dictionary = {}
+## Draw the one-metre grid on the blocks. Its lines are edges the
+## anti-aliasing pass has to work on (about a quarter of a millisecond of GPU
+## at the Neo's resolution), so a frame-budget run can turn it off.
+var grid := true
 var _materials: Dictionary = {}
+var _grid: ImageTexture
 
 
 static func load_data(path: String) -> Dictionary:
@@ -96,8 +101,28 @@ func _material(tag: String) -> StandardMaterial3D:
 		var m := StandardMaterial3D.new()
 		m.albedo_color = TAG_COLORS.get(tag, Color(0.6, 0.6, 0.6))
 		m.roughness = 0.85
+		# A one-metre grid, so a frame shows sizes and speed. The meshes carry
+		# texture coordinates in metres (cheaper to draw than triplanar mapping).
+		if grid:
+			m.albedo_texture = _grid_texture()
+			m.uv1_scale = Vector3(0.5, 0.5, 0.5)
 		_materials[tag] = m
 	return _materials[tag]
+
+
+func _grid_texture() -> ImageTexture:
+	if _grid == null:
+		var n := 128
+		var img := Image.create_empty(n, n, true, Image.FORMAT_RGBA8)
+		for y in n:
+			for x in n:
+				var line := x < 3 or y < 3
+				var tile := ((x * 2 / n) + (y * 2 / n)) % 2 == 0
+				var v := 0.62 if line else (1.0 if tile else 0.9)
+				img.set_pixel(x, y, Color(v, v, v))
+		img.generate_mipmaps()
+		_grid = ImageTexture.create_from_image(img)
+	return _grid
 
 
 func _piece_transform(p: Dictionary) -> Transform3D:
@@ -119,12 +144,36 @@ func _add_box(body: Node3D, p: Dictionary, local := false) -> void:
 	body.add_child(cs)
 	var mi := MeshInstance3D.new()
 	mi.name = String(p["id"]) + "-mesh"
-	var mesh := BoxMesh.new()
-	mesh.size = size
-	mi.mesh = mesh
+	# Unturned boxes take their grid from world space, so it runs unbroken
+	# from one block to the next.
+	var turned: bool = local or p.has("rot_deg")
+	mi.mesh = _box_mesh(size, Vector3.ZERO if turned else xf.origin)
 	mi.material_override = _material(String(p.get("tag", "ground")))
 	mi.transform = xf
 	body.add_child(mi)
+
+
+## A box whose texture coordinates are metres along each face.
+func _box_mesh(size: Vector3, world_offset: Vector3) -> ArrayMesh:
+	var st := SurfaceTool.new()
+	st.begin(Mesh.PRIMITIVE_TRIANGLES)
+	var h := size * 0.5
+	# Each face: its normal and the two axes that span it.
+	for f in [[Vector3.UP, Vector3.RIGHT, Vector3.BACK], [Vector3.DOWN, Vector3.RIGHT, Vector3.FORWARD],
+			[Vector3.BACK, Vector3.RIGHT, Vector3.DOWN], [Vector3.FORWARD, Vector3.LEFT, Vector3.DOWN],
+			[Vector3.RIGHT, Vector3.FORWARD, Vector3.DOWN], [Vector3.LEFT, Vector3.BACK, Vector3.DOWN]]:
+		var n: Vector3 = f[0]
+		var u: Vector3 = f[1]
+		var v: Vector3 = f[2]
+		var c := n * h
+		var corners := [c - u * h - v * h, c + u * h - v * h, c + u * h + v * h, c - u * h + v * h]
+		for i in [0, 1, 2, 0, 2, 3]:
+			var at: Vector3 = corners[i]
+			var w := at + world_offset
+			st.set_normal(n)
+			st.set_uv(Vector2(w.dot(u.abs()), w.dot(v.abs())))
+			st.add_vertex(at)
+	return st.commit()
 
 
 func _add_mover(p: Dictionary) -> void:
@@ -169,6 +218,7 @@ func _add_heightfield(p: Dictionary) -> void:
 			var c := Vector3(x0 + i * cell, heights[(j + 1) * nx + i], z0 + (j + 1) * cell)
 			var d := Vector3(x0 + (i + 1) * cell, heights[(j + 1) * nx + i + 1], z0 + (j + 1) * cell)
 			for v in [a, b, c, b, d, c]:
+				st.set_uv(Vector2(v.x, v.z))
 				st.add_vertex(v)
 	st.generate_normals()
 	var mi := MeshInstance3D.new()

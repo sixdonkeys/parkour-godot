@@ -23,7 +23,7 @@ extends Node3D
 ##                               (the run ends after that much simulated time)
 ##   "metrics": {"only": ["flat", "gap"]},
 ##   "camera": {"mode": "chase" | "first" | "side" | "top", "player": 0},
-##   "light": {"shadows": true, "shadow_distance": 60}
+##   "light": {"shadows": true, "shadow_distance": 60, "grid": true}
 ## }
 
 const HarnessCamera := preload("res://movement/fixtures/harness_camera.gd")
@@ -47,6 +47,7 @@ func configure_fixture(cfg: Dictionary) -> void:
 	_make_sky(cfg.get("light", {}))
 	course = MetricsCourse.new()
 	course.name = "Course"
+	course.grid = bool(cfg.get("light", {}).get("grid", true))
 	add_child(course)
 	course.build(MetricsCourse.load_data(_resolve(String(cfg.get("course", "")))))
 	var tuning := MovementTuning.new()

@@ -341,6 +341,14 @@ func _make_placeholder() -> Node3D:
 	visor.mesh = box
 	visor.position = Vector3(0, tuning.eye_height, -tuning.radius * 0.8)
 	root.add_child(visor)
+	# A pack on the back, so the facing reads from behind as well.
+	var pack := MeshInstance3D.new()
+	pack.name = "Pack"
+	var pack_box := BoxMesh.new()
+	pack_box.size = Vector3(tuning.radius * 1.1, 0.5, 0.16)
+	pack.mesh = pack_box
+	pack.position = Vector3(0, tuning.height * 0.68, tuning.radius * 0.95)
+	root.add_child(pack)
 	return root
 
 
@@ -360,3 +368,7 @@ func _tint(slot: PlayerSlot) -> void:
 	v.albedo_color = Color(0.08, 0.08, 0.1)
 	v.roughness = 0.2
 	(_visual.get_node("Visor") as MeshInstance3D).material_override = v
+	var pk := StandardMaterial3D.new()
+	pk.albedo_color = c.darkened(0.55)
+	pk.roughness = 0.7
+	(_visual.get_node("Pack") as MeshInstance3D).material_override = pk
