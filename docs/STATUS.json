@@ -2,12 +2,21 @@
   "modules": {
     "verify": {
       "state": "building",
-      "round": 0,
+      "round": 1,
       "gate": false,
       "score": null,
       "open_issues": [],
-      "evidence": [],
-      "notes": ""
+      "evidence": [
+        "docs/evidence/verify/round-1/proofs/ (image, frametime, memory, sound, build, window: known-answer proofs)",
+        "docs/evidence/verify/round-1/verify-empty-still/ (showcase: still + frame time + memory, same run)",
+        "docs/evidence/verify/round-1/verify-empty-path/ (camera path preset, strip git-ignored; remake: tools/verify.py run docs/presets/verify-empty-path.json)",
+        "docs/evidence/verify/round-1/test-vs-normal-pair.json",
+        "docs/evidence/verify/round-1/window-niri/window-test.json",
+        "docs/evidence/verify/round-1/window-umbriel/window-test.json",
+        "docs/evidence/verify/round-1/build/build.json (four exports, sizes, packed-file lists)",
+        "docs/evidence/verify/round-1/bench-linux-arm64/ (benchmark mode of the exported Linux arm64 build)"
+      ],
+      "notes": "Remote loop not built (harness addendum: Neo out of the loop). Reference set being gathered."
     },
     "core": {
       "state": "not_started",

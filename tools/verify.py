@@ -539,6 +539,9 @@ def stage_bench_presets() -> list[str]:
                 d["camera_path"] = f"res://verify/bench_presets/paths/{cp.name}"
             (dest / p.name).write_text(json.dumps(d, indent=2))
             staged.append(p.name)
+    # The runner reads only what this index lists, so a stale file left in the
+    # folder by an earlier build is never run.
+    (dest / "index.json").write_text(json.dumps({"presets": staged}, indent=2))
     return staged
 
 

@@ -99,10 +99,11 @@ func _run_all() -> void:
 	var presets: Array[String] = []
 	var out_root: String = _args.get("out", "")
 	if _args.has("bench"):
-		for f in DirAccess.get_files_at(BENCH_DIR):
-			if f.ends_with(".json"):
-				presets.append(BENCH_DIR.path_join(f))
-		presets.sort()
+		var index := _load_json(BENCH_DIR.path_join("index.json"))
+		for f in index.get("presets", []):
+			presets.append(BENCH_DIR.path_join(String(f)))
+		if presets.is_empty():
+			push_error("verify: no benchmark presets bundled (missing %s/index.json)" % BENCH_DIR)
 		if out_root.is_empty():
 			out_root = _args.get("bench", "")
 		if out_root.is_empty():

@@ -1,0 +1,370 @@
+{
+  "preset": {
+    "id": "empty-orbit",
+    "format": "camera-path/1",
+    "duration_s": 8.0,
+    "far": 4000.0,
+    "keys": [
+      {
+        "t": 0.0,
+        "pos": [
+          0.0,
+          1.7,
+          6.0
+        ],
+        "look_at": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "fov": 70.0
+      },
+      {
+        "t": 2.0,
+        "pos": [
+          6.0,
+          2.5,
+          0.0
+        ],
+        "look_at": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "fov": 70.0
+      },
+      {
+        "t": 4.0,
+        "pos": [
+          0.0,
+          4.0,
+          -6.0
+        ],
+        "look_at": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "fov": 75.0
+      },
+      {
+        "t": 6.0,
+        "pos": [
+          -6.0,
+          2.5,
+          0.0
+        ],
+        "look_at": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "fov": 70.0
+      },
+      {
+        "t": 8.0,
+        "pos": [
+          0.0,
+          1.7,
+          6.0
+        ],
+        "look_at": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "fov": 70.0
+      }
+    ]
+  },
+  "commit": "e0c212fab8bdf30b2feafc29d7f6819599cc855b",
+  "test_mode": false,
+  "timing": "real time",
+  "started": "2026-11-15T19:43:19",
+  "machine": {
+    "os": "Linux",
+    "os_version": "44 (Workstation Edition)",
+    "cpu_cores": 10,
+    "engine": "4.7.2-stable (official)",
+    "adapter": "Apple M1 Pro (G13S C0)",
+    "adapter_vendor": "Unknown",
+    "adapter_api_version": "1.4.354",
+    "adapter_driver": [
+      "",
+      ""
+    ],
+    "rendering_method": "forward_plus",
+    "rendering_driver": "vulkan",
+    "display_server": "Wayland",
+    "software_renderer": false,
+    "screen_size": "(3456, 2160)",
+    "screen_scale": 2.0,
+    "refresh_hz": 120.0,
+    "desktop": "GNOME"
+  },
+  "proxy": true,
+  "scene_loaded": false,
+  "profile": {
+    "name": "neo",
+    "path": "res://profiles/neo.tres",
+    "loaded": false,
+    "render_scale": 1.0
+  },
+  "wall_seconds": 1.478382,
+  "frame_time": {
+    "frames": 119,
+    "excluded_capture_frames": 0,
+    "vsync_mode": "enabled",
+    "frame_ms": {
+      "p50": 8.334,
+      "p95": 12.468,
+      "p99": 16.919,
+      "max": 17.996,
+      "share_within_16_7": 0.983193277310924,
+      "share_within_22": 1.0
+    },
+    "gpu_ms": {
+      "p50": 0.374000012874603,
+      "p95": 0.572000026702881,
+      "p99": 0.967999994754791
+    },
+    "cpu_render_ms": {
+      "p50": 0.0419999994337559,
+      "p95": 0.0570000000298023
+    },
+    "histogram": {
+      "bucket_ms": 0.5,
+      "buckets": {
+        "9.0": 7,
+        "8.0": 41,
+        "7.5": 11,
+        "16.5": 1,
+        "8.5": 21,
+        "11.0": 1,
+        "4.5": 4,
+        "7.0": 5,
+        "9.5": 3,
+        "6.5": 5,
+        "10.5": 3,
+        "5.0": 2,
+        "11.5": 1,
+        "16.0": 1,
+        "4.0": 1,
+        "12.0": 2,
+        "5.5": 2,
+        "3.0": 3,
+        "10.0": 1,
+        "15.5": 1,
+        "13.0": 1,
+        "3.5": 1,
+        "17.5": 1
+      },
+      "over_max": 0,
+      "max_ms": 50.0
+    },
+    "series_ms": [
+      9.076,
+      8.122,
+      7.505,
+      16.919,
+      7.731,
+      8.912,
+      7.822,
+      8.889,
+      8.504,
+      9.108,
+      8.118,
+      11.238,
+      4.767,
+      8.62,
+      7.16,
+      9.687,
+      8.161,
+      8.408,
+      8.201,
+      8.431,
+      8.187,
+      8.752,
+      9.118,
+      7.657,
+      8.302,
+      8.849,
+      8.997,
+      8.522,
+      6.64,
+      7.424,
+      9.481,
+      8.003,
+      8.292,
+      8.479,
+      8.335,
+      8.191,
+      8.284,
+      8.617,
+      10.839,
+      5.47,
+      8.734,
+      8.313,
+      7.102,
+      8.537,
+      9.173,
+      11.779,
+      6.963,
+      6.572,
+      10.942,
+      4.918,
+      8.476,
+      7.352,
+      8.672,
+      8.439,
+      8.557,
+      8.223,
+      8.165,
+      8.203,
+      8.328,
+      8.401,
+      8.244,
+      8.334,
+      8.339,
+      8.272,
+      8.756,
+      8.45,
+      7.937,
+      8.775,
+      7.825,
+      8.337,
+      8.295,
+      8.424,
+      8.35,
+      8.873,
+      9.277,
+      8.699,
+      6.524,
+      8.737,
+      7.904,
+      8.497,
+      8.377,
+      10.786,
+      5.492,
+      8.51,
+      8.352,
+      8.215,
+      9.905,
+      7.466,
+      16.052,
+      4.013,
+      4.989,
+      12.468,
+      5.542,
+      3.184,
+      7.581,
+      8.201,
+      9.518,
+      8.021,
+      7.917,
+      10.175,
+      6.62,
+      15.891,
+      8.994,
+      8.128,
+      8.088,
+      8.826,
+      8.027,
+      8.135,
+      9.271,
+      7.873,
+      7.832,
+      13.052,
+      3.765,
+      17.996,
+      4.647,
+      3.034,
+      12.431,
+      3.218,
+      5.596
+    ],
+    "capture_after_index": [
+      119
+    ],
+    "draw_calls": {
+      "mean": 0.0,
+      "max": 0
+    },
+    "primitives_max": 0,
+    "budget": {
+      "proxy": true,
+      "proxy_gpu_factor": 2.5,
+      "wall_clock_meets_budget": true,
+      "gpu_scaled_meets_budget": true,
+      "pass": true
+    }
+  },
+  "viewport_size": "(1280.0, 800.0)",
+  "window_size": "(3456, 2160)",
+  "interface_outside": [],
+  "focus_events": [
+    {
+      "event": "window_focus_in",
+      "frame": 0,
+      "usec": 399073
+    },
+    {
+      "event": "app_focus_in",
+      "frame": 0,
+      "usec": 399084
+    }
+  ],
+  "memory": {
+    "readings": [
+      {
+        "label": "before_load",
+        "process_rss_bytes": 228524032,
+        "video_bytes": 35990016,
+        "texture_bytes": 32744576,
+        "buffer_bytes": 1934476,
+        "static_bytes": 0,
+        "total_bytes": 264514048,
+        "usec": 477751
+      },
+      {
+        "label": "after_load",
+        "process_rss_bytes": 228802560,
+        "video_bytes": 35990016,
+        "texture_bytes": 32744576,
+        "buffer_bytes": 1934476,
+        "static_bytes": 0,
+        "total_bytes": 264792576,
+        "usec": 1957792
+      },
+      {
+        "label": "after_unload",
+        "process_rss_bytes": 228802560,
+        "video_bytes": 35990016,
+        "texture_bytes": 32744576,
+        "buffer_bytes": 1934476,
+        "static_bytes": 0,
+        "total_bytes": 264792576,
+        "usec": 2185935
+      }
+    ],
+    "loaded_total_bytes": 264792576,
+    "within_4gb": true,
+    "unload_return_ratio": 1.00105297999144,
+    "returns_within_5pct": true,
+    "video_delta_load_bytes": 0,
+    "texture_delta_load_bytes": 0
+  },
+  "engine": {
+    "errors": [],
+    "warnings": [
+      {
+        "type": "warning",
+        "message": "The requested V-Sync mode Disabled is not available. Falling back to V-Sync mode Enabled.",
+        "code": "The requested V-Sync mode Disabled is not available. Falling back to V-Sync mode Enabled.",
+        "where": "drivers/vulkan/rendering_device_driver_vulkan.cpp:3767 (swap_chain_resize)",
+        "usec": 407650
+      }
+    ]
+  },
+  "finished": "2026-11-15T19:43:21"
+}
