@@ -176,7 +176,7 @@ Each number with the first module at which its instrument has something to measu
 
 The Neo (MacBook Neo, Apple A18 Pro, 8 GB shared, 2408×1506) is the machine these numbers are for. A number measured on a development machine stands in only under the `neo-proxy` decision, is labelled proxy in the log, is never judged more leniently than the budget itself, and gives way to the Neo's own number as soon as a result folder from it exists. The ThinkPad T14 must meet the same numbers on the same profile at its own display resolution; where the two pull in different directions the Neo wins and the conflict goes into `docs/WAITING.md`.
 
-For now (harness addendum) the Neo is out of the loop: every number is measured on the Fedora laptop under `neo-proxy`, labelled proxy, and modules close with `neo-unverified`.
+**The Neo is back (Nick, 2026-11-15).** It is reached through the remote loop (`python3 tools/verify.py remote neo …`, decision `remote-test`). A proxy number from the Fedora laptop stands only until a non-void Neo result folder exists for that build. Modules close with `neo-unverified` until then.
 
 Once this file exists, the budget numbers, the course rules and the window rules are the contract. Tightening one is a decision with its own record; loosening one is Nick's call through `docs/WAITING.md`. The leeway, flow and input-rate numbers are starting values Nick may move after a playtest.
 

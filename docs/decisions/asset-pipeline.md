@@ -16,7 +16,7 @@
     - Meshes: LODs generated on import.
   - **Texture detail per profile:** set by the profile's limits (see `quality-profiles`), never by re-importing at a lower size. Source art stays at full resolution.
   - **Build size:** measured on the exported macOS `.zip` and `.app`.
-  - **Packed-file list:** `tools/pcklist.py` reads the exported `.pck` (format v2–v4: header, then directory entries of path, offset, size, md5 and flags) and writes every path and size. `tools/build.py` checks that list against `ASSETS.md`:
+  - **Packed-file list:** `tools/pcklist.py` reads the exported `.pck` (format v2–v4: header, then directory entries of path, offset, size, md5 and flags) and writes every path and size. `tools/verify.py build` checks that list against `ASSETS.md`:
     - Every packed path under `game/assets/` or `game/thirdparty/` must match an `ASSETS.md` entry by path or path prefix.
     - Everything else must be this build's own work (scripts, scenes, profiles, generated data) under a module folder.
   - **Licence records:** `ASSETS.md`, one entry per dependency or asset (or folder of one asset pack): source address, author, licence, the licence statement quoted from the source, SHA-256 of the fetched source, and what was changed.
