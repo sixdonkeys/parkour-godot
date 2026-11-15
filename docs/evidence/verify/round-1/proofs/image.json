@@ -1,0 +1,34 @@
+{
+  "instrument": "image numbers",
+  "cases": {
+    "self_ssim": {
+      "expected": 1.0,
+      "got": 1.0,
+      "pass": true
+    },
+    "self_hist": {
+      "expected": 0.0,
+      "got": {
+        "luma_tv": 0.0,
+        "rgb_tv": 0.0
+      },
+      "pass": true
+    },
+    "grey_offset_ssim": {
+      "expected": 0.9836109249983688,
+      "got": 0.9836109249983689,
+      "pass": true
+    },
+    "quarter_black_hist": {
+      "expected": 0.25,
+      "got": {
+        "luma_tv": 0.25,
+        "rgb_tv": 0.25
+      },
+      "pass": true
+    }
+  },
+  "pass": true,
+  "commit": "d00885bd2b01a9df8904e273938b085e9b9ccac1",
+  "date": "2026-11-15T13:37:10"
+}

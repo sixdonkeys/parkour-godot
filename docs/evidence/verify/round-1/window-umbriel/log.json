@@ -1,0 +1,427 @@
+{
+  "preset": {
+    "id": "verify-window-sequence-umbriel",
+    "module": "verify",
+    "kind": "window",
+    "window_wm": "Umbriel (nested)",
+    "purpose": "The window sequence under Umbriel, a tiling window manager, run nested in a window: Umbriel itself sets a column a third wide, a half, a short wide strip, full screen, then takes focus away (workspace switch) and gives it back, then leaves fullscreen. The game only observes.",
+    "scene": "res://verify/fixtures/empty.tscn",
+    "profile": "neo",
+    "resolution": "window",
+    "still": false,
+    "warmup_frames": 30.0,
+    "frames": 480.0,
+    "window_sequence": [
+      {
+        "frame": 0.0,
+        "action": "mark",
+        "name": "column",
+        "settle_frames": 40.0
+      },
+      {
+        "frame": 60.0,
+        "action": "mark",
+        "name": "half",
+        "settle_frames": 40.0
+      },
+      {
+        "frame": 120.0,
+        "action": "mark",
+        "name": "strip",
+        "settle_frames": 40.0
+      },
+      {
+        "frame": 180.0,
+        "action": "mark",
+        "name": "fullscreen",
+        "settle_frames": 40.0
+      },
+      {
+        "frame": 240.0,
+        "action": "mark",
+        "name": "focus_out",
+        "settle_frames": 40.0
+      },
+      {
+        "frame": 300.0,
+        "action": "mark",
+        "name": "focus_in",
+        "settle_frames": 40.0
+      },
+      {
+        "frame": 360.0,
+        "action": "mark",
+        "name": "fullscreen_off",
+        "settle_frames": 40.0
+      }
+    ]
+  },
+  "commit": "d00885bd2b01a9df8904e273938b085e9b9ccac1",
+  "test_mode": true,
+  "timing": "fixed (--fixed-fps)",
+  "started": "2026-11-15T19:35:17",
+  "machine": {
+    "os": "Linux",
+    "os_version": "44 (Workstation Edition)",
+    "cpu_cores": 10,
+    "engine": "4.7.2-stable (fedora)",
+    "adapter": "Apple M1 Pro (G13S C0)",
+    "adapter_vendor": "Unknown",
+    "adapter_api_version": "1.4.354",
+    "adapter_driver": [
+      "",
+      ""
+    ],
+    "rendering_method": "forward_plus",
+    "rendering_driver": "vulkan",
+    "display_server": "Wayland",
+    "software_renderer": false,
+    "screen_size": "(1280, 720)",
+    "screen_scale": 1.0,
+    "refresh_hz": -1.0,
+    "desktop": "umbriel"
+  },
+  "proxy": true,
+  "scene_loaded": true,
+  "profile": {
+    "name": "neo",
+    "path": "res://profiles/neo.tres",
+    "loaded": false,
+    "render_scale": 1.0
+  },
+  "wall_seconds": 0.461051,
+  "frame_time": {
+    "frames": 479,
+    "excluded_capture_frames": 0,
+    "vsync_mode": "disabled",
+    "frame_ms": {
+      "p50": 0.736,
+      "p95": 1.971,
+      "p99": 4.88,
+      "max": 10.842,
+      "share_within_16_7": 1.0,
+      "share_within_22": 1.0
+    },
+    "gpu_ms": {
+      "p50": 0.230000004172325,
+      "p95": 0.398999989032745,
+      "p99": 0.768999993801117
+    },
+    "cpu_render_ms": {
+      "p50": 0.0520000010728836,
+      "p95": 0.0949999988079071
+    },
+    "histogram": {
+      "bucket_ms": 0.5,
+      "buckets": {
+        "1.0": 115,
+        "0.0": 200,
+        "1.5": 28,
+        "9.0": 1,
+        "0.5": 114,
+        "4.0": 2,
+        "3.5": 2,
+        "2.0": 8,
+        "4.5": 2,
+        "10.5": 1,
+        "2.5": 4,
+        "6.5": 1,
+        "5.0": 1
+      },
+      "over_max": 0,
+      "max_ms": 50.0
+    },
+    "draw_calls": {
+      "mean": 0.0,
+      "max": 0
+    },
+    "primitives_max": 0,
+    "budget": {
+      "proxy": true,
+      "proxy_gpu_factor": 2.5,
+      "wall_clock_meets_budget": true,
+      "gpu_scaled_meets_budget": true,
+      "pass": true
+    }
+  },
+  "viewport_size": "(4326.0, 800.0)",
+  "window_size": "(1260, 233)",
+  "window_sequence": [
+    {
+      "frame": 0,
+      "action": "mark",
+      "observe_at": 40,
+      "name": "column",
+      "observed": {
+        "root_size": "(412, 700)",
+        "content_scale_factor": 1.0,
+        "content_scale_size": "(1280, 800)",
+        "screen_scale": 1.0,
+        "scaling_3d_scale": 1.0,
+        "window_size": "(412, 700)",
+        "window_mode": 0,
+        "viewport_size": "(1280.0, 2174.0)",
+        "mouse_mode": 0,
+        "pointer_released": true,
+        "paused": false,
+        "interface_outside": [],
+        "frame_pixels": "(412, 700)",
+        "render_3d_pixels": "(412.0, 700.0)",
+        "aspect_window": 0.588571428571429,
+        "aspect_visible": 0.588776448942042,
+        "fills_without_stretch": true
+      }
+    },
+    {
+      "frame": 60,
+      "action": "mark",
+      "observe_at": 100,
+      "name": "half",
+      "observed": {
+        "root_size": "(624, 700)",
+        "content_scale_factor": 1.0,
+        "content_scale_size": "(1280, 800)",
+        "screen_scale": 1.0,
+        "scaling_3d_scale": 1.0,
+        "window_size": "(624, 700)",
+        "window_mode": 0,
+        "viewport_size": "(1280.0, 1435.0)",
+        "mouse_mode": 0,
+        "pointer_released": true,
+        "paused": false,
+        "interface_outside": [],
+        "frame_pixels": "(624, 700)",
+        "render_3d_pixels": "(624.0, 700.0)",
+        "aspect_window": 0.891428571428571,
+        "aspect_visible": 0.89198606271777,
+        "fills_without_stretch": true
+      }
+    },
+    {
+      "frame": 120,
+      "action": "mark",
+      "observe_at": 160,
+      "name": "strip",
+      "observed": {
+        "root_size": "(1260, 233)",
+        "content_scale_factor": 1.0,
+        "content_scale_size": "(1280, 800)",
+        "screen_scale": 1.0,
+        "scaling_3d_scale": 1.0,
+        "window_size": "(1260, 233)",
+        "window_mode": 0,
+        "viewport_size": "(4326.0, 800.0)",
+        "mouse_mode": 0,
+        "pointer_released": true,
+        "paused": false,
+        "interface_outside": [],
+        "frame_pixels": "(1260, 233)",
+        "render_3d_pixels": "(1260.0, 233.0)",
+        "aspect_window": 5.40772532188841,
+        "aspect_visible": 5.4075,
+        "fills_without_stretch": true
+      }
+    },
+    {
+      "frame": 180,
+      "action": "mark",
+      "observe_at": 220,
+      "name": "fullscreen",
+      "observed": {
+        "root_size": "(1260, 233)",
+        "content_scale_factor": 1.0,
+        "content_scale_size": "(1280, 800)",
+        "screen_scale": 1.0,
+        "scaling_3d_scale": 1.0,
+        "window_size": "(1260, 233)",
+        "window_mode": 3,
+        "viewport_size": "(4326.0, 800.0)",
+        "mouse_mode": 0,
+        "pointer_released": true,
+        "paused": false,
+        "interface_outside": [],
+        "frame_pixels": "(1260, 233)",
+        "render_3d_pixels": "(1260.0, 233.0)",
+        "aspect_window": 5.40772532188841,
+        "aspect_visible": 5.4075,
+        "fills_without_stretch": true
+      }
+    },
+    {
+      "frame": 240,
+      "action": "mark",
+      "observe_at": 280,
+      "name": "focus_out",
+      "observed": {
+        "root_size": "(1280, 720)",
+        "content_scale_factor": 1.0,
+        "content_scale_size": "(1280, 800)",
+        "screen_scale": 1.0,
+        "scaling_3d_scale": 1.0,
+        "window_size": "(1280, 720)",
+        "window_mode": 3,
+        "viewport_size": "(1422.0, 800.0)",
+        "mouse_mode": 0,
+        "pointer_released": true,
+        "paused": false,
+        "interface_outside": [],
+        "frame_pixels": "(1280, 720)",
+        "render_3d_pixels": "(1280.0, 720.0)",
+        "aspect_window": 1.77777777777778,
+        "aspect_visible": 1.7775,
+        "fills_without_stretch": true
+      }
+    },
+    {
+      "frame": 300,
+      "action": "mark",
+      "observe_at": 340,
+      "name": "focus_in",
+      "observed": {
+        "root_size": "(1280, 720)",
+        "content_scale_factor": 1.0,
+        "content_scale_size": "(1280, 800)",
+        "screen_scale": 1.0,
+        "scaling_3d_scale": 1.0,
+        "window_size": "(1280, 720)",
+        "window_mode": 3,
+        "viewport_size": "(1422.0, 800.0)",
+        "mouse_mode": 0,
+        "pointer_released": true,
+        "paused": false,
+        "interface_outside": [],
+        "frame_pixels": "(1280, 720)",
+        "render_3d_pixels": "(1280.0, 720.0)",
+        "aspect_window": 1.77777777777778,
+        "aspect_visible": 1.7775,
+        "fills_without_stretch": true
+      }
+    },
+    {
+      "frame": 360,
+      "action": "mark",
+      "observe_at": 400,
+      "name": "fullscreen_off",
+      "observed": {
+        "root_size": "(1260, 233)",
+        "content_scale_factor": 1.0,
+        "content_scale_size": "(1280, 800)",
+        "screen_scale": 1.0,
+        "scaling_3d_scale": 1.0,
+        "window_size": "(1260, 233)",
+        "window_mode": 0,
+        "viewport_size": "(4326.0, 800.0)",
+        "mouse_mode": 0,
+        "pointer_released": true,
+        "paused": false,
+        "interface_outside": [],
+        "frame_pixels": "(1260, 233)",
+        "render_3d_pixels": "(1260.0, 233.0)",
+        "aspect_window": 5.40772532188841,
+        "aspect_visible": 5.4075,
+        "fills_without_stretch": true
+      }
+    }
+  ],
+  "window_wm": "Umbriel (nested)",
+  "interface_outside": [],
+  "focus_events": [
+    {
+      "event": "window_focus_in",
+      "frame": 0,
+      "usec": 363439
+    },
+    {
+      "event": "app_focus_in",
+      "frame": 0,
+      "usec": 363444
+    },
+    {
+      "event": "window_focus_out",
+      "frame": 267,
+      "usec": 644522
+    },
+    {
+      "event": "app_focus_out",
+      "frame": 267,
+      "usec": 644534
+    },
+    {
+      "event": "window_focus_in",
+      "frame": 314,
+      "usec": 691197
+    },
+    {
+      "event": "app_focus_in",
+      "frame": 314,
+      "usec": 691210
+    }
+  ],
+  "memory": {
+    "readings": [
+      {
+        "label": "before_load",
+        "process_rss_bytes": 241172480,
+        "video_bytes": 9517568,
+        "texture_bytes": 6268032,
+        "buffer_bytes": 1934476,
+        "static_bytes": 82789265,
+        "total_bytes": 250690048,
+        "usec": 375082
+      },
+      {
+        "label": "after_load",
+        "process_rss_bytes": 248414208,
+        "video_bytes": 18441216,
+        "texture_bytes": 8398208,
+        "buffer_bytes": 7285980,
+        "static_bytes": 83494285,
+        "total_bytes": 266855424,
+        "usec": 839091
+      },
+      {
+        "label": "after_unload",
+        "process_rss_bytes": 248479744,
+        "video_bytes": 18441216,
+        "texture_bytes": 8398208,
+        "buffer_bytes": 7285980,
+        "static_bytes": 83490397,
+        "total_bytes": 266920960,
+        "usec": 855759
+      }
+    ],
+    "loaded_total_bytes": 266855424,
+    "within_4gb": true,
+    "unload_return_ratio": 1.06474493953585,
+    "returns_within_5pct": false,
+    "video_delta_load_bytes": 8923648,
+    "texture_delta_load_bytes": 2130176
+  },
+  "engine": {
+    "errors": [],
+    "warnings": []
+  },
+  "finished": "2026-11-15T19:35:18",
+  "orchestrator": {
+    "command": [
+      "umbriel",
+      "-c",
+      "/home/nick/src/parkour-godot/tools/wm/umbriel-test.toml",
+      "-s",
+      "/usr/bin/python3 /home/nick/src/parkour-godot/tools/wm/drive_umbriel.py godot --path /home/nick/src/parkour-godot/game --disable-vsync --fixed-fps 60 -- --preset /home/nick/src/parkour-godot/docs/presets/verify-window-sequence-umbriel.json --out /home/nick/src/parkour-godot/docs/evidence/verify/round-1/window-umbriel --commit d00885bd2b01a9df8904e273938b085e9b9ccac1 --test-mode"
+    ],
+    "exit_code": 0,
+    "started": "2026-11-15T13:35:17.369900",
+    "shutdown_hang": null,
+    "self_terminated": true,
+    "seconds": 1.501518,
+    "output_errors": [],
+    "output_warnings": [
+      "WARNING: xdg-toplevel-icon protocol not found! Cannot set window icon. | at: init (platform/linuxbsd/wayland/wayland_thread.cpp:5642)",
+      "WARNING: FIFO protocol not found! Frame pacing will be degraded. | at: init (platform/linuxbsd/wayland/wayland_thread.cpp:5657)"
+    ],
+    "error_count": 0,
+    "verify_tool_commit": "d00885bd2b01a9df8904e273938b085e9b9ccac1",
+    "frame_numbers_count": true
+  }
+}

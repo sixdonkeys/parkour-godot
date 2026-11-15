@@ -1,0 +1,21 @@
+{
+  "id": "verify-window-sequence",
+  "module": "verify",
+  "kind": "window",
+  "purpose": "The window sequence across the four window shapes (a narrow column a third of the display's width, a half, a short wide strip, full screen), a focus loss and a fullscreen toggle, on an empty scene. Under GNOME the harness resizes the window itself; under niri the orchestrator drives niri.",
+  "scene": "res://verify/fixtures/empty.tscn",
+  "profile": "neo",
+  "resolution": "window",
+  "still": false,
+  "warmup_frames": 30,
+  "frames": 420,
+  "window_sequence": [
+    {"frame": 0, "action": "resize_frac", "frac": [0.3333, 1.0]},
+    {"frame": 60, "action": "resize_frac", "frac": [0.5, 1.0]},
+    {"frame": 120, "action": "resize_frac", "frac": [1.0, 0.3333]},
+    {"frame": 180, "action": "fullscreen_toggle"},
+    {"frame": 240, "action": "focus_out"},
+    {"frame": 300, "action": "focus_in"},
+    {"frame": 330, "action": "fullscreen_toggle"}
+  ]
+}

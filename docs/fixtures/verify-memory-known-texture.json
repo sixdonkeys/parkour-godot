@@ -1,0 +1,16 @@
+{
+  "id": "verify-memory-known-texture",
+  "module": "verify",
+  "purpose": "Known answer for the memory instrument: one 4096x4096 RGBA8 texture, no mipmaps = 67,108,864 bytes; memory returns after unload. The base scene (empty.tscn, with a camera) is loaded before the baseline so the viewport's 3D buffers are not counted.",
+  "scene": "res://verify/fixtures/known_texture.tscn",
+  "profile": "neo",
+  "resolution": [
+    2408,
+    1506
+  ],
+  "warmup_frames": 10,
+  "frames": 30,
+  "unload_frames": 60,
+  "base_scene": "res://verify/fixtures/empty.tscn",
+  "precycles": 2
+}

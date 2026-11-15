@@ -1,0 +1,15 @@
+{
+  "id": "verify-empty-still",
+  "module": "verify",
+  "kind": "still",
+  "showcase": true,
+  "bench": true,
+  "purpose": "Showcase for verify: a still and frame-time numbers from the same run, on the neo profile at the Neo's display resolution, empty scene.",
+  "scene": "res://verify/fixtures/empty.tscn",
+  "camera": {"position": [0, 1.7, 6], "look_at": [0, 1, 0], "fov": 70},
+  "profile": "neo",
+  "resolution": [2408, 1506],
+  "warmup_frames": 60,
+  "frames": 600,
+  "still_frame": 300
+}

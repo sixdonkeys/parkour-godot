@@ -40,3 +40,27 @@
 > Usage: umbriel [-s <command>] [-c <config>]   run the compositor
 >   windows                        list windows (app id and title)
 >   focused-window                 print the focused window (app id and title)
+
+## Godot issue #123059, "hang on exit while joining event thread (wayland)" — https://github.com/godotengine/godot/issues/123059 (open, read 2026-11-15)
+
+> Shutdown hangs with the wayland backend if the following occurs:
+>
+> 1. main thread sets `thread_done`
+> 2. main thread calls `wl_display_roundtrip`
+> 3. main thread processes the sync reply instead of waking the event thread as intended
+> 4. main thread blocks on `events_thread.wait_to_finish()` forever
+> 5. event thread enters `poll` with no timeout
+
+## Godot PR #123760, "Wayland: Fix occasional hang on exit" — https://github.com/godotengine/godot/pull/123760 (closed, not merged)
+
+> With the Wayland display server, the process sometimes never exits after quitting.
+
+## Godot 4.7.2 source — https://raw.githubusercontent.com/godotengine/godot/4.7.2-stable/platform/linuxbsd/wayland/wayland_thread.cpp
+
+> 		thread_data.thread_done.set();
+>
+> 		// By sending a roundtrip message we're unblocking the polling thread so that
+> 		// it can realize that it's done and also handle every event that's left.
+> 		wl_display_roundtrip(wl_display);
+>
+> 		events_thread.wait_to_finish();

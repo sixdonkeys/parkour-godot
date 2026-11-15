@@ -1,0 +1,9 @@
+{
+  "preset": "verify-empty-still",
+  "test_mode": "docs/evidence/verify/round-1/verify-empty-still/",
+  "normal_launch": "docs/evidence/verify/round-1/verify-empty-still-normal/",
+  "ssim": 1.0,
+  "luma_tv": 0.0,
+  "rgb_tv": 0.0,
+  "match": true
+}

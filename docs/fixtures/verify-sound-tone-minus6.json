@@ -1,0 +1,13 @@
+{
+  "id": "verify-sound-tone-minus6",
+  "module": "verify",
+  "purpose": "Known answer for the sound instrument: a 440 Hz sine at amplitude 0.5 peaks at -6.02 dBFS with RMS -9.03 dBFS and no clipping.",
+  "scene": "res://verify/fixtures/tone.tscn",
+  "fixture": {"amplitude": 0.5, "frequency": 440.0},
+  "profile": "neo",
+  "resolution": [2408, 1506],
+  "sound": true,
+  "still": false,
+  "warmup_frames": 30,
+  "frames": 180
+}

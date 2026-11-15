@@ -1,0 +1,200 @@
+{
+  "instrument": "window",
+  "wm": "GNOME",
+  "steps": [
+    {
+      "frame": 0,
+      "action": "resize_frac",
+      "observe_at": 20,
+      "requested": "(1151, 2160)",
+      "observed": {
+        "root_size": "(1152, 2160)",
+        "content_scale_factor": 1.0,
+        "content_scale_size": "(1280, 800)",
+        "screen_scale": 2.0,
+        "scaling_3d_scale": 1.0,
+        "window_size": "(1152, 2160)",
+        "window_mode": 0,
+        "viewport_size": "(1280.0, 2399.0)",
+        "mouse_mode": 0,
+        "pointer_released": true,
+        "paused": false,
+        "interface_outside": [],
+        "frame_pixels": "(1152, 2160)",
+        "render_3d_pixels": "(1152.0, 2160.0)",
+        "aspect_window": 0.533333333333333,
+        "aspect_visible": 0.533555648186745,
+        "fills_without_stretch": true
+      }
+    },
+    {
+      "frame": 60,
+      "action": "resize_frac",
+      "observe_at": 80,
+      "requested": "(1728, 2160)",
+      "observed": {
+        "root_size": "(1728, 2160)",
+        "content_scale_factor": 1.0,
+        "content_scale_size": "(1280, 800)",
+        "screen_scale": 2.0,
+        "scaling_3d_scale": 1.0,
+        "window_size": "(1728, 2160)",
+        "window_mode": 0,
+        "viewport_size": "(1280.0, 1600.0)",
+        "mouse_mode": 0,
+        "pointer_released": true,
+        "paused": false,
+        "interface_outside": [],
+        "frame_pixels": "(1728, 2160)",
+        "render_3d_pixels": "(1728.0, 2160.0)",
+        "aspect_window": 0.8,
+        "aspect_visible": 0.8,
+        "fills_without_stretch": true
+      }
+    },
+    {
+      "frame": 120,
+      "action": "resize_frac",
+      "observe_at": 140,
+      "requested": "(3456, 719)",
+      "observed": {
+        "root_size": "(3456, 720)",
+        "content_scale_factor": 1.0,
+        "content_scale_size": "(1280, 800)",
+        "screen_scale": 2.0,
+        "scaling_3d_scale": 1.0,
+        "window_size": "(3456, 720)",
+        "window_mode": 0,
+        "viewport_size": "(3840.0, 800.0)",
+        "mouse_mode": 0,
+        "pointer_released": true,
+        "paused": false,
+        "interface_outside": [],
+        "frame_pixels": "(3456, 720)",
+        "render_3d_pixels": "(3456.0, 720.0)",
+        "aspect_window": 4.8,
+        "aspect_visible": 4.8,
+        "fills_without_stretch": true
+      }
+    },
+    {
+      "frame": 180,
+      "action": "fullscreen_toggle",
+      "observe_at": 200,
+      "observed": {
+        "root_size": "(3456, 2160)",
+        "content_scale_factor": 1.0,
+        "content_scale_size": "(1280, 800)",
+        "screen_scale": 2.0,
+        "scaling_3d_scale": 1.0,
+        "window_size": "(3456, 2160)",
+        "window_mode": 3,
+        "viewport_size": "(1280.0, 800.0)",
+        "mouse_mode": 0,
+        "pointer_released": true,
+        "paused": false,
+        "interface_outside": [],
+        "frame_pixels": "(3456, 2160)",
+        "render_3d_pixels": "(3456.0, 2160.0)",
+        "aspect_window": 1.6,
+        "aspect_visible": 1.6,
+        "fills_without_stretch": true
+      }
+    },
+    {
+      "frame": 240,
+      "action": "focus_out",
+      "observe_at": 260,
+      "synthetic": true,
+      "observed": {
+        "root_size": "(3456, 2160)",
+        "content_scale_factor": 1.0,
+        "content_scale_size": "(1280, 800)",
+        "screen_scale": 2.0,
+        "scaling_3d_scale": 1.0,
+        "window_size": "(3456, 2160)",
+        "window_mode": 3,
+        "viewport_size": "(1280.0, 800.0)",
+        "mouse_mode": 0,
+        "pointer_released": true,
+        "paused": false,
+        "interface_outside": [],
+        "frame_pixels": "(3456, 2160)",
+        "render_3d_pixels": "(3456.0, 2160.0)",
+        "aspect_window": 1.6,
+        "aspect_visible": 1.6,
+        "fills_without_stretch": true
+      }
+    },
+    {
+      "frame": 300,
+      "action": "focus_in",
+      "observe_at": 320,
+      "synthetic": true,
+      "observed": {
+        "root_size": "(3456, 2160)",
+        "content_scale_factor": 1.0,
+        "content_scale_size": "(1280, 800)",
+        "screen_scale": 2.0,
+        "scaling_3d_scale": 1.0,
+        "window_size": "(3456, 2160)",
+        "window_mode": 3,
+        "viewport_size": "(1280.0, 800.0)",
+        "mouse_mode": 0,
+        "pointer_released": true,
+        "paused": false,
+        "interface_outside": [],
+        "frame_pixels": "(3456, 2160)",
+        "render_3d_pixels": "(3456.0, 2160.0)",
+        "aspect_window": 1.6,
+        "aspect_visible": 1.6,
+        "fills_without_stretch": true
+      }
+    },
+    {
+      "frame": 330,
+      "action": "fullscreen_toggle",
+      "observe_at": 350,
+      "observed": {
+        "root_size": "(3456, 720)",
+        "content_scale_factor": 1.0,
+        "content_scale_size": "(1280, 800)",
+        "screen_scale": 2.0,
+        "scaling_3d_scale": 1.0,
+        "window_size": "(3456, 720)",
+        "window_mode": 0,
+        "viewport_size": "(3840.0, 800.0)",
+        "mouse_mode": 0,
+        "pointer_released": true,
+        "paused": false,
+        "interface_outside": [],
+        "frame_pixels": "(3456, 720)",
+        "render_3d_pixels": "(3456.0, 720.0)",
+        "aspect_window": 4.8,
+        "aspect_visible": 4.8,
+        "fills_without_stretch": true
+      }
+    }
+  ],
+  "zero_errors": true,
+  "fills_without_stretch": true,
+  "ui_outside_fixture": {
+    "expected": 1,
+    "found": [
+      {
+        "path": "/root/VerifyScene/UiOutside/Outside",
+        "rect": [
+          -400.0,
+          40.0,
+          200.0,
+          40.0
+        ]
+      }
+    ],
+    "pass": true
+  },
+  "note": "GNOME: the harness resizes the window itself and sends synthetic focus events; see decision windowing",
+  "pass": true,
+  "commit": "d00885bd2b01a9df8904e273938b085e9b9ccac1-dirty",
+  "date": "2026-11-15T13:42:54"
+}

@@ -1,0 +1,6 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://verify/fixtures/known_texture.gd" id="1"]
+
+[node name="KnownTexture" type="Node3D"]
+script = ExtResource("1")

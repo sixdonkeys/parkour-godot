@@ -1,0 +1,196 @@
+{
+  "pack_version": 4,
+  "engine": "4.7.2",
+  "files": [
+    {
+      "path": ".godot/exported/133200997/export-0172f79e09fa1711adbf9f7399f9d011-ui_outside.scn",
+      "size": 1142,
+      "source": ".godot/exported/133200997/export-0172f79e09fa1711adbf9f7399f9d011-ui_outside.scn"
+    },
+    {
+      "path": ".godot/exported/133200997/export-0185cca36e5a56cc1a1ca0f208312ade-tone.scn",
+      "size": 696,
+      "source": ".godot/exported/133200997/export-0185cca36e5a56cc1a1ca0f208312ade-tone.scn"
+    },
+    {
+      "path": ".godot/exported/133200997/export-7db604b9e565a8d3f3475ed37402480b-boot.scn",
+      "size": 599,
+      "source": ".godot/exported/133200997/export-7db604b9e565a8d3f3475ed37402480b-boot.scn"
+    },
+    {
+      "path": ".godot/exported/133200997/export-ca924f20eab48584d36cbd4715ab1a53-known_texture.scn",
+      "size": 702,
+      "source": ".godot/exported/133200997/export-ca924f20eab48584d36cbd4715ab1a53-known_texture.scn"
+    },
+    {
+      "path": ".godot/exported/133200997/export-dd94ef18c3ade3901eaec22eb944f1ff-empty.scn",
+      "size": 732,
+      "source": ".godot/exported/133200997/export-dd94ef18c3ade3901eaec22eb944f1ff-empty.scn"
+    },
+    {
+      "path": ".godot/global_script_class_cache.cfg",
+      "size": 8,
+      "source": ".godot/global_script_class_cache.cfg"
+    },
+    {
+      "path": ".godot/uid_cache.bin",
+      "size": 282,
+      "source": ".godot/uid_cache.bin"
+    },
+    {
+      "path": "main/boot.tscn.remap",
+      "size": 97,
+      "source": "main/boot.tscn"
+    },
+    {
+      "path": "project.binary",
+      "size": 1167,
+      "source": "project.binary"
+    },
+    {
+      "path": "verify/audio_tap.gd.remap",
+      "size": 43,
+      "source": "verify/audio_tap.gd"
+    },
+    {
+      "path": "verify/audio_tap.gdc",
+      "size": 2733,
+      "source": "verify/audio_tap.gdc"
+    },
+    {
+      "path": "verify/bench_presets/empty-orbit.json",
+      "size": 456,
+      "source": "verify/bench_presets/empty-orbit.json"
+    },
+    {
+      "path": "verify/bench_presets/verify-empty-path.json",
+      "size": 444,
+      "source": "verify/bench_presets/verify-empty-path.json"
+    },
+    {
+      "path": "verify/bench_presets/verify-empty-still.json",
+      "size": 569,
+      "source": "verify/bench_presets/verify-empty-still.json"
+    },
+    {
+      "path": "verify/build_info.json",
+      "size": 124,
+      "source": "verify/build_info.json"
+    },
+    {
+      "path": "verify/error_logger.gd.remap",
+      "size": 46,
+      "source": "verify/error_logger.gd"
+    },
+    {
+      "path": "verify/error_logger.gdc",
+      "size": 1460,
+      "source": "verify/error_logger.gdc"
+    },
+    {
+      "path": "verify/fixtures/empty.tscn.remap",
+      "size": 98,
+      "source": "verify/fixtures/empty.tscn"
+    },
+    {
+      "path": "verify/fixtures/known_texture.gd.remap",
+      "size": 56,
+      "source": "verify/fixtures/known_texture.gd"
+    },
+    {
+      "path": "verify/fixtures/known_texture.gdc",
+      "size": 869,
+      "source": "verify/fixtures/known_texture.gdc"
+    },
+    {
+      "path": "verify/fixtures/known_texture.tscn.remap",
+      "size": 106,
+      "source": "verify/fixtures/known_texture.tscn"
+    },
+    {
+      "path": "verify/fixtures/tone.gd.remap",
+      "size": 47,
+      "source": "verify/fixtures/tone.gd"
+    },
+    {
+      "path": "verify/fixtures/tone.gdc",
+      "size": 1243,
+      "source": "verify/fixtures/tone.gdc"
+    },
+    {
+      "path": "verify/fixtures/tone.tscn.remap",
+      "size": 97,
+      "source": "verify/fixtures/tone.tscn"
+    },
+    {
+      "path": "verify/fixtures/ui_outside.tscn.remap",
+      "size": 103,
+      "source": "verify/fixtures/ui_outside.tscn"
+    },
+    {
+      "path": "verify/frame_stats.gd.remap",
+      "size": 45,
+      "source": "verify/frame_stats.gd"
+    },
+    {
+      "path": "verify/frame_stats.gdc",
+      "size": 3121,
+      "source": "verify/frame_stats.gdc"
+    },
+    {
+      "path": "verify/mem_probe.gd.remap",
+      "size": 43,
+      "source": "verify/mem_probe.gd"
+    },
+    {
+      "path": "verify/mem_probe.gdc",
+      "size": 1875,
+      "source": "verify/mem_probe.gdc"
+    },
+    {
+      "path": "verify/verify.gd.remap",
+      "size": 40,
+      "source": "verify/verify.gd"
+    },
+    {
+      "path": "verify/verify.gdc",
+      "size": 16239,
+      "source": "verify/verify.gdc"
+    }
+  ],
+  "own_work": [
+    ".godot/exported/133200997/export-0172f79e09fa1711adbf9f7399f9d011-ui_outside.scn",
+    ".godot/exported/133200997/export-0185cca36e5a56cc1a1ca0f208312ade-tone.scn",
+    ".godot/exported/133200997/export-7db604b9e565a8d3f3475ed37402480b-boot.scn",
+    ".godot/exported/133200997/export-ca924f20eab48584d36cbd4715ab1a53-known_texture.scn",
+    ".godot/exported/133200997/export-dd94ef18c3ade3901eaec22eb944f1ff-empty.scn",
+    ".godot/global_script_class_cache.cfg",
+    ".godot/uid_cache.bin",
+    "main/boot.tscn",
+    "project.binary",
+    "verify/audio_tap.gd",
+    "verify/audio_tap.gdc",
+    "verify/bench_presets/empty-orbit.json",
+    "verify/bench_presets/verify-empty-path.json",
+    "verify/bench_presets/verify-empty-still.json",
+    "verify/build_info.json",
+    "verify/error_logger.gd",
+    "verify/error_logger.gdc",
+    "verify/fixtures/empty.tscn",
+    "verify/fixtures/known_texture.gd",
+    "verify/fixtures/known_texture.gdc",
+    "verify/fixtures/known_texture.tscn",
+    "verify/fixtures/tone.gd",
+    "verify/fixtures/tone.gdc",
+    "verify/fixtures/tone.tscn",
+    "verify/fixtures/ui_outside.tscn",
+    "verify/frame_stats.gd",
+    "verify/frame_stats.gdc",
+    "verify/mem_probe.gd",
+    "verify/mem_probe.gdc",
+    "verify/verify.gd",
+    "verify/verify.gdc"
+  ],
+  "listed_third_party": [],
+  "unlisted": []
+}

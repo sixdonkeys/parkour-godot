@@ -1,0 +1,22 @@
+{
+  "id": "verify-window-sequence-niri",
+  "module": "verify",
+  "kind": "window",
+  "window_wm": "niri (nested)",
+  "purpose": "The window sequence under niri, a tiling window manager, run nested in a window: niri itself sets a column a third wide, a half, a short wide strip, full screen, then takes focus away (workspace switch) and gives it back, then leaves fullscreen. The game only observes.",
+  "scene": "res://verify/fixtures/empty.tscn",
+  "profile": "neo",
+  "resolution": "window",
+  "still": false,
+  "warmup_frames": 30,
+  "frames": 480,
+  "window_sequence": [
+    {"frame": 0, "action": "mark", "name": "column", "settle_frames": 40},
+    {"frame": 60, "action": "mark", "name": "half", "settle_frames": 40},
+    {"frame": 120, "action": "mark", "name": "strip", "settle_frames": 40},
+    {"frame": 180, "action": "mark", "name": "fullscreen", "settle_frames": 40},
+    {"frame": 240, "action": "mark", "name": "focus_out", "settle_frames": 40},
+    {"frame": 300, "action": "mark", "name": "focus_in", "settle_frames": 40},
+    {"frame": 360, "action": "mark", "name": "fullscreen_off", "settle_frames": 40}
+  ]
+}

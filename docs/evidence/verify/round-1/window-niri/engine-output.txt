@@ -1,0 +1,8 @@
+[2m2026-11-15T19:38:08.639415Z[0m [32m INFO[0m [2mniri[0m[2m:[0m starting version 26.04
+[2m2026-11-15T19:38:08.639721Z[0m [34mDEBUG[0m [2mniri_config[0m[2m:[0m loaded config from "/home/nick/src/parkour-godot/tools/wm/niri-test.kdl"
+[2m2026-11-15T19:38:08.727558Z[0m [34mDEBUG[0m [2mniri::niri[0m[2m:[0m putting output winit at x=0 y=0
+[2m2026-11-15T19:38:08.727591Z[0m [32m INFO[0m [2mniri[0m[2m:[0m listening on Wayland socket: wayland-1
+[2m2026-11-15T19:38:08.727596Z[0m [32m INFO[0m [2mniri[0m[2m:[0m IPC listening on: /run/user/1000/niri.wayland-1.102807.sock
+[2m2026-11-15T19:38:08.729721Z[0m [32m INFO[0m [2mniri[0m[2m:[0m listening on X11 socket: :3
+[2m2026-11-15T19:39:11.996229Z[0m [32m INFO[0m [2mniri::input[0m[2m:[0m quitting as requested
+[2m2026-11-15T19:39:12.006640Z[0m [34mDEBUG[0m [2mniri::utils::watcher[0m[2m:[0m exiting watcher thread for Explicit("/home/nick/src/parkour-godot/tools/wm/niri-test.kdl")

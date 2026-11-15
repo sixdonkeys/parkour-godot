@@ -1,0 +1,47 @@
+{
+  "instrument": "memory",
+  "fixture": "docs/fixtures/verify-memory-known-texture.json",
+  "expected_texture_delta_bytes": 67108864,
+  "measured_texture_delta_bytes": 67633152,
+  "video_delta_bytes": 134480128,
+  "unload_return_ratio_raw": 1.19437729744037,
+  "warm_return_ratio": 1.00754605210695,
+  "grows_each_cycle": false,
+  "texture_returns_exactly": true,
+  "readings": [
+    {
+      "label": "before_load",
+      "process_rss_bytes": 263929856,
+      "video_bytes": 115205120,
+      "texture_bytes": 66823552,
+      "buffer_bytes": 45624540,
+      "static_bytes": 83431123,
+      "total_bytes": 379134976,
+      "usec": 467981
+    },
+    {
+      "label": "after_load",
+      "process_rss_bytes": 270778368,
+      "video_bytes": 249685248,
+      "texture_bytes": 134456704,
+      "buffer_bytes": 45624792,
+      "static_bytes": 86648484,
+      "total_bytes": 520463616,
+      "usec": 2238522
+    },
+    {
+      "label": "after_unload",
+      "process_rss_bytes": 270778368,
+      "video_bytes": 182051840,
+      "texture_bytes": 66823552,
+      "buffer_bytes": 45624540,
+      "static_bytes": 86517202,
+      "total_bytes": 452830208,
+      "usec": 2727827
+    }
+  ],
+  "pass": true,
+  "log": "docs/evidence/verify/round-1/proofs/memory/log.json",
+  "commit": "d00885bd2b01a9df8904e273938b085e9b9ccac1",
+  "date": "2026-11-15T13:37:22"
+}

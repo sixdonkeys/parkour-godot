@@ -1,0 +1,231 @@
+{
+  "preset": {
+    "id": "verify-window-ui-outside",
+    "module": "verify",
+    "purpose": "Known answer for the interface check: a fixture with one element placed outside the window must report exactly that element.",
+    "scene": "res://verify/fixtures/ui_outside.tscn",
+    "profile": "neo",
+    "resolution": "window",
+    "still": false,
+    "warmup_frames": 10.0,
+    "frames": 20.0
+  },
+  "commit": "d00885bd2b01a9df8904e273938b085e9b9ccac1-dirty",
+  "test_mode": true,
+  "timing": "fixed (--fixed-fps)",
+  "started": "2026-11-15T19:42:53",
+  "machine": {
+    "os": "Linux",
+    "os_version": "44 (Workstation Edition)",
+    "cpu_cores": 10,
+    "engine": "4.7.2-stable (fedora)",
+    "adapter": "Apple M1 Pro (G13S C0)",
+    "adapter_vendor": "Unknown",
+    "adapter_api_version": "1.4.354",
+    "adapter_driver": [
+      "",
+      ""
+    ],
+    "rendering_method": "forward_plus",
+    "rendering_driver": "vulkan",
+    "display_server": "Wayland",
+    "software_renderer": false,
+    "screen_size": "(3456, 2160)",
+    "screen_scale": 2.0,
+    "refresh_hz": 120.0,
+    "desktop": "GNOME"
+  },
+  "proxy": true,
+  "scene_loaded": true,
+  "profile": {
+    "name": "neo",
+    "path": "res://profiles/neo.tres",
+    "loaded": false,
+    "render_scale": 1.0
+  },
+  "wall_seconds": 0.239938,
+  "frame_time": {
+    "frames": 19,
+    "excluded_capture_frames": 0,
+    "vsync_mode": "enabled",
+    "frame_ms": {
+      "p50": 8.264,
+      "p95": 11.794,
+      "p99": 11.794,
+      "max": 11.794,
+      "share_within_16_7": 1.0,
+      "share_within_22": 1.0
+    },
+    "gpu_ms": {
+      "p50": 0.360000014305115,
+      "p95": 1.0809999704361,
+      "p99": 1.0809999704361
+    },
+    "cpu_render_ms": {
+      "p50": 0.0900000035762787,
+      "p95": 0.545000016689301
+    },
+    "histogram": {
+      "bucket_ms": 0.5,
+      "buckets": {
+        "8.0": 9,
+        "8.5": 2,
+        "11.5": 1,
+        "5.5": 2,
+        "7.0": 1,
+        "7.5": 2,
+        "9.5": 1,
+        "6.5": 1
+      },
+      "over_max": 0,
+      "max_ms": 50.0
+    },
+    "series_ms": [
+      8.199,
+      8.357,
+      8.342,
+      8.264,
+      8.208,
+      8.814,
+      8.293,
+      8.117,
+      8.297,
+      11.794,
+      5.524,
+      5.784,
+      7.153,
+      8.344,
+      7.914,
+      8.501,
+      9.991,
+      6.835,
+      7.85
+    ],
+    "capture_after_index": [],
+    "draw_calls": {
+      "mean": 1.0,
+      "max": 1
+    },
+    "primitives_max": 12,
+    "budget": {
+      "proxy": true,
+      "proxy_gpu_factor": 2.5,
+      "wall_clock_meets_budget": true,
+      "gpu_scaled_meets_budget": true,
+      "pass": true
+    }
+  },
+  "viewport_size": "(1280.0, 800.0)",
+  "window_size": "(2560, 1600)",
+  "interface_outside": [
+    {
+      "path": "/root/VerifyScene/UiOutside/Outside",
+      "rect": [
+        -400.0,
+        40.0,
+        200.0,
+        40.0
+      ]
+    }
+  ],
+  "focus_events": [
+    {
+      "event": "window_focus_in",
+      "frame": 0,
+      "usec": 376180
+    },
+    {
+      "event": "app_focus_in",
+      "frame": 0,
+      "usec": 376186
+    }
+  ],
+  "memory": {
+    "readings": [
+      {
+        "label": "before_load",
+        "process_rss_bytes": 263585792,
+        "video_bytes": 22297088,
+        "texture_bytes": 19047552,
+        "buffer_bytes": 1934476,
+        "static_bytes": 82791935,
+        "total_bytes": 285882880,
+        "usec": 448938
+      },
+      {
+        "label": "after_load",
+        "process_rss_bytes": 266452992,
+        "video_bytes": 31621632,
+        "texture_bytes": 19197056,
+        "buffer_bytes": 6128780,
+        "static_bytes": 83977531,
+        "total_bytes": 298074624,
+        "usec": 697105
+      },
+      {
+        "label": "after_unload",
+        "process_rss_bytes": 266518528,
+        "video_bytes": 31621632,
+        "texture_bytes": 19197056,
+        "buffer_bytes": 6128780,
+        "static_bytes": 83935955,
+        "total_bytes": 298140160,
+        "usec": 946458
+      }
+    ],
+    "loaded_total_bytes": 298074624,
+    "within_4gb": true,
+    "unload_return_ratio": 1.04287518021366,
+    "returns_within_5pct": true,
+    "video_delta_load_bytes": 9324544,
+    "texture_delta_load_bytes": 149504
+  },
+  "engine": {
+    "errors": [],
+    "warnings": [
+      {
+        "type": "warning",
+        "message": "The requested V-Sync mode Disabled is not available. Falling back to V-Sync mode Enabled.",
+        "code": "The requested V-Sync mode Disabled is not available. Falling back to V-Sync mode Enabled.",
+        "where": "drivers/vulkan/rendering_device_driver_vulkan.cpp:3767 (swap_chain_resize)",
+        "usec": 381377
+      }
+    ]
+  },
+  "finished": "2026-11-15T19:42:53",
+  "orchestrator": {
+    "command": [
+      "godot",
+      "--path",
+      "/home/nick/src/parkour-godot/game",
+      "--disable-vsync",
+      "--fixed-fps",
+      "60",
+      "--",
+      "--preset",
+      "/home/nick/src/parkour-godot/docs/fixtures/verify-window-ui-outside.json",
+      "--out",
+      "/home/nick/src/parkour-godot/docs/evidence/verify/round-1/proofs/window/ui-outside",
+      "--commit",
+      "d00885bd2b01a9df8904e273938b085e9b9ccac1-dirty",
+      "--repo-root",
+      "/home/nick/src/parkour-godot",
+      "--test-mode"
+    ],
+    "exit_code": -9,
+    "started": "2026-11-15T13:42:52.876934",
+    "shutdown_hang": null,
+    "self_terminated": true,
+    "seconds": 1.502739,
+    "output_errors": [],
+    "output_warnings": [
+      "WARNING: Can't obtain the XDG decoration manager. Libdecor will be used for drawing CSDs, if available. | at: init (platform/linuxbsd/wayland/wayland_thread.cpp:5635)",
+      "WARNING: xdg-toplevel-icon protocol not found! Cannot set window icon. | at: init (platform/linuxbsd/wayland/wayland_thread.cpp:5642)",
+      "WARNING: The requested V-Sync mode Disabled is not available. Falling back to V-Sync mode Enabled. | at: swap_chain_resize (drivers/vulkan/rendering_device_driver_vulkan.cpp:3767)",
+      "WARNING: The requested V-Sync mode Disabled is not available. Falling back to V-Sync mode Enabled. | at: swap_chain_resize (drivers/vulkan/rendering_device_driver_vulkan.cpp:3767)"
+    ],
+    "error_count": 0,
+    "verify_tool_commit": "d00885bd2b01a9df8904e273938b085e9b9ccac1-dirty",
+    "frame_numbers_count": true
+  }
+}

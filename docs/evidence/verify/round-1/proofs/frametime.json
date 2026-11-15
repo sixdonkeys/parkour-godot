@@ -1,0 +1,19 @@
+{
+  "instrument": "frame time",
+  "fixture": "docs/fixtures/verify-frametime-limiter-30.json",
+  "expected_p50_ms": 33.333,
+  "tolerance_ms": 1.5,
+  "measured_p50_ms": 33.344,
+  "measured": {
+    "p50": 33.344,
+    "p95": 36.208,
+    "p99": 39.367,
+    "max": 64.709,
+    "share_within_16_7": 0.00558659217877095,
+    "share_within_22": 0.00558659217877095
+  },
+  "pass": true,
+  "log": "docs/evidence/verify/round-1/proofs/frametime/log.json",
+  "commit": "d00885bd2b01a9df8904e273938b085e9b9ccac1",
+  "date": "2026-11-15T13:37:19"
+}

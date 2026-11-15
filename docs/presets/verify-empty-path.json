@@ -1,0 +1,14 @@
+{
+  "id": "verify-empty-path",
+  "module": "verify",
+  "kind": "camera_path",
+  "bench": true,
+  "purpose": "Benchmark camera path on an empty scene, with a strip of frames; exercises the camera-path format.",
+  "scene": "res://verify/fixtures/empty.tscn",
+  "camera_path": "docs/fixtures/paths/empty-orbit.json",
+  "profile": "neo",
+  "resolution": [2408, 1506],
+  "warmup_frames": 30,
+  "frames": 480,
+  "strip_every": 30
+}

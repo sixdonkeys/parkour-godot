@@ -1,0 +1,11 @@
+{
+  "id": "verify-window-ui-outside",
+  "module": "verify",
+  "purpose": "Known answer for the interface check: a fixture with one element placed outside the window must report exactly that element.",
+  "scene": "res://verify/fixtures/ui_outside.tscn",
+  "profile": "neo",
+  "resolution": "window",
+  "still": false,
+  "warmup_frames": 10,
+  "frames": 20
+}

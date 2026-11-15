@@ -1,0 +1,121 @@
+{
+  "wm": "niri",
+  "driver_lines": [
+    "DRIVER niri version: Compositor version: 26.04",
+    "DRIVER niri column: set-column-width 33.333% -> 0 ",
+    "DRIVER niri column: set-window-height 100% -> 0 ",
+    "DRIVER niri half: set-column-width 50% -> 0 ",
+    "DRIVER niri half: set-window-height 100% -> 0 ",
+    "DRIVER niri strip: set-column-width 100% -> 0 ",
+    "DRIVER niri strip: set-window-height 33.333% -> 0 ",
+    "DRIVER niri fullscreen: fullscreen-window -> 0 ",
+    "DRIVER niri focus_out: focus-workspace-down -> 0 ",
+    "DRIVER niri focus_in: focus-workspace-up -> 0 ",
+    "DRIVER niri fullscreen_off: fullscreen-window -> 0 ",
+    "DRIVER game exited -9"
+  ],
+  "steps": [
+    {
+      "name": "column",
+      "window_size": "(853, 1600)",
+      "window_mode": 0,
+      "frame_pixels": "(853, 1600)",
+      "fills_without_stretch": true,
+      "pointer_released": true,
+      "paused": false
+    },
+    {
+      "name": "half",
+      "window_size": "(1280, 1600)",
+      "window_mode": 0,
+      "frame_pixels": "(1280, 1600)",
+      "fills_without_stretch": true,
+      "pointer_released": true,
+      "paused": false
+    },
+    {
+      "name": "strip",
+      "window_size": "(2560, 533)",
+      "window_mode": 0,
+      "frame_pixels": "(2560, 533)",
+      "fills_without_stretch": true,
+      "pointer_released": true,
+      "paused": false
+    },
+    {
+      "name": "fullscreen",
+      "window_size": "(2560, 1600)",
+      "window_mode": 3,
+      "frame_pixels": "(2560, 1600)",
+      "fills_without_stretch": true,
+      "pointer_released": true,
+      "paused": false
+    },
+    {
+      "name": "focus_out",
+      "window_size": "(2560, 1600)",
+      "window_mode": 3,
+      "frame_pixels": "(2560, 1600)",
+      "fills_without_stretch": true,
+      "pointer_released": true,
+      "paused": false
+    },
+    {
+      "name": "focus_in",
+      "window_size": "(2560, 1600)",
+      "window_mode": 3,
+      "frame_pixels": "(2560, 1600)",
+      "fills_without_stretch": true,
+      "pointer_released": true,
+      "paused": false
+    },
+    {
+      "name": "fullscreen_off",
+      "window_size": "(2560, 533)",
+      "window_mode": 0,
+      "frame_pixels": "(2560, 533)",
+      "fills_without_stretch": true,
+      "pointer_released": true,
+      "paused": false
+    }
+  ],
+  "focus_events": [
+    {
+      "event": "window_focus_in",
+      "frame": 0,
+      "usec": 364802
+    },
+    {
+      "event": "app_focus_in",
+      "frame": 0,
+      "usec": 364806
+    },
+    {
+      "event": "window_focus_out",
+      "frame": 243,
+      "usec": 3920533
+    },
+    {
+      "event": "app_focus_out",
+      "frame": 243,
+      "usec": 3920560
+    },
+    {
+      "event": "window_focus_in",
+      "frame": 301,
+      "usec": 60942349
+    },
+    {
+      "event": "app_focus_in",
+      "frame": 301,
+      "usec": 60942373
+    }
+  ],
+  "zero_errors": true,
+  "fills_without_stretch": true,
+  "driver_commands_ok": true,
+  "shapes_distinct": true,
+  "focus_lost_and_regained": true,
+  "pass": true,
+  "commit": "d00885bd2b01a9df8904e273938b085e9b9ccac1"
+}

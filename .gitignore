@@ -17,3 +17,4 @@ docs/evidence/**/frames/
 # Large source data fetched by tools from addresses in ASSETS.md
 /tools/cache/
 __pycache__/
+game/.local/

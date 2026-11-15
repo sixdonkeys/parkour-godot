@@ -1,0 +1,12 @@
+{
+  "id": "verify-frametime-limiter-30",
+  "module": "verify",
+  "purpose": "Known answer for the frame-time instrument: a frame limiter at 30 fps gives 33.33 ms frames.",
+  "scene": "res://verify/fixtures/empty.tscn",
+  "profile": "neo",
+  "resolution": [2408, 1506],
+  "max_fps": 30,
+  "warmup_frames": 30,
+  "frames": 180,
+  "still": false
+}

@@ -1,0 +1,44 @@
+; Engine configuration file.
+; Settings follow docs/decisions/*.md; see ARCHITECTURE.md.
+
+config_version=5
+
+[application]
+
+config/name="Ridgeline"
+config/description="An original 3D parkour racing game."
+run/main_scene="res://main/boot.tscn"
+config/features=PackedStringArray("4.7", "Forward Plus")
+boot_splash/show_image=false
+boot_splash/bg_color=Color(0.05, 0.05, 0.06, 1)
+
+[autoload]
+
+Verify="*res://verify/verify.gd"
+
+[debug]
+
+file_logging/enable_file_logging=true
+
+[display]
+
+display_server/driver.linuxbsd="wayland"
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+window/size/viewport_width=1280
+window/size/viewport_height=800
+window/dpi/allow_hidpi=true
+window/subwindows/embed_subwindows=true
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+common/physics_ticks_per_second=120
+common/max_physics_steps_per_frame=16
+common/physics_jitter_fix=0.0
+common/physics_interpolation=true
+
+[rendering]
+
+textures/vram_compression/import_s3tc_bptc=true
+textures/vram_compression/import_etc2_astc=true

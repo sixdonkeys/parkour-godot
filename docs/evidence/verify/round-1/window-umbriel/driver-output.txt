@@ -1,0 +1,27 @@
+DRIVER umbriel version: umbriel 0.1.0
+Godot Engine v4.7.2.stable.fedora.ed1daf0bf - https://godotengine.org
+WARNING: xdg-toplevel-icon protocol not found! Cannot set window icon.
+     at: init (platform/linuxbsd/wayland/wayland_thread.cpp:5642)
+WARNING: FIFO protocol not found! Frame pacing will be degraded.
+     at: init (platform/linuxbsd/wayland/wayland_thread.cpp:5657)
+Vulkan 1.4.354 - Forward+ - Using Device #0: Unknown - Apple M1 Pro (G13S C0)
+
+VERIFY out=/home/nick/src/parkour-godot/docs/evidence/verify/round-1/window-umbriel
+VERIFY mark column
+DRIVER umbriel column: window-modify-primary-extent -0.667 -> 0 
+VERIFY mark half
+DRIVER umbriel half: window-modify-primary-extent +0.167 -> 0 
+VERIFY mark strip
+DRIVER umbriel strip: window-modify-primary-extent +0.5 -> 0 
+DRIVER umbriel strip: window-modify-secondary-extent -0.667 -> 0 
+VERIFY mark fullscreen
+DRIVER umbriel fullscreen: window-toggle-fullscreen -> 0 
+VERIFY mark focus_out
+DRIVER umbriel focus_out: window-focus-or-workspace-down -> 0 
+VERIFY mark focus_in
+DRIVER umbriel focus_in: window-focus-or-workspace-up -> 0 
+VERIFY mark fullscreen_off
+DRIVER umbriel fullscreen_off: window-toggle-fullscreen -> 0 
+VERIFY done
+VERIFY exit: self-terminated after flush (godot#123059)
+DRIVER game exited -9

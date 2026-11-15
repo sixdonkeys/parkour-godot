@@ -1,0 +1,13 @@
+{
+  "id": "verify-sound-tone-clipping",
+  "module": "verify",
+  "purpose": "Known answer for clipping: a sine at amplitude 1.25 (+1.94 dBFS) must be reported as clipping.",
+  "scene": "res://verify/fixtures/tone.tscn",
+  "fixture": {"amplitude": 1.25, "frequency": 440.0},
+  "profile": "neo",
+  "resolution": [2408, 1506],
+  "sound": true,
+  "still": false,
+  "warmup_frames": 30,
+  "frames": 120
+}

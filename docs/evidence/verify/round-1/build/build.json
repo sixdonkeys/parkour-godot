@@ -1,0 +1,60 @@
+{
+  "label": "verify-r1",
+  "commit": "d00885bd2b01a9df8904e273938b085e9b9ccac1",
+  "bench_presets": [
+    "verify-empty-path.json",
+    "verify-empty-still.json"
+  ],
+  "exports": [
+    {
+      "preset": "macOS",
+      "path": "builds/verify-r1/macos/Ridgeline.zip",
+      "exit_code": 0,
+      "errors": [],
+      "warnings": [],
+      "exists": true,
+      "ok": true,
+      "size_bytes": 61819537,
+      "packed_files": 31,
+      "unlisted": [],
+      "within_4gb": true
+    },
+    {
+      "preset": "Linux arm64",
+      "path": "builds/verify-r1/linux-arm64/Ridgeline.arm64",
+      "exit_code": 0,
+      "errors": [],
+      "warnings": [],
+      "exists": true,
+      "ok": true,
+      "size_bytes": 67079432,
+      "packed_files": 31,
+      "unlisted": []
+    },
+    {
+      "preset": "Linux x86_64",
+      "path": "builds/verify-r1/linux-x86_64/Ridgeline.x86_64",
+      "exit_code": 0,
+      "errors": [],
+      "warnings": [],
+      "exists": true,
+      "ok": true,
+      "size_bytes": 73519416,
+      "packed_files": 31,
+      "unlisted": []
+    },
+    {
+      "preset": "Windows x86_64",
+      "path": "builds/verify-r1/windows-x86_64/Ridgeline.exe",
+      "exit_code": 0,
+      "errors": [],
+      "warnings": [],
+      "exists": true,
+      "ok": true,
+      "size_bytes": 109268480,
+      "packed_files": 31,
+      "unlisted": []
+    }
+  ],
+  "pass": true
+}

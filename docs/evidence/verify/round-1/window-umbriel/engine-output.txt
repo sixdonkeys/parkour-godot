@@ -1,0 +1,59 @@
+13:35:17.379 [[32mINF[0m] [[34mfdlimit[0m] RLIMIT_NOFILE already at hard limit (524288)
+13:35:17.379 [[32mINF[0m] [[34mmain[0m] starting umbriel version=0.1.0 commit=unknown
+13:35:17.379 [[32mINF[0m] [[34mwlr[0m] [backend/wayland/backend.c:591] Creating wayland backend
+13:35:17.380 [[32mINF[0m] [[34mwlr[0m] [backend/headless/backend.c:60] Creating headless backend
+13:35:17.391 [[32mINF[0m] [[34mwlr[0m] [render/egl.c:208] Supported EGL client extensions: EGL_EXT_device_base EGL_EXT_device_enumeration EGL_EXT_device_query EGL_EXT_platform_base EGL_KHR_client_get_all_proc_addresses EGL_EXT_client_extensions EGL_KHR_debug EGL_EXT_platform_device EGL_EXT_explicit_device EGL_EXT_platform_wayland EGL_KHR_platform_wayland EGL_EXT_platform_x11 EGL_KHR_platform_x11 EGL_EXT_platform_xcb EGL_MESA_platform_gbm EGL_KHR_platform_gbm EGL_MESA_platform_surfaceless
+13:35:17.399 [[32mINF[0m] [[34mwlr[0m] [render/egl.c:367] Using EGL 1.5
+13:35:17.399 [[32mINF[0m] [[34mwlr[0m] [render/egl.c:368] Supported EGL display extensions: EGL_ANDROID_blob_cache EGL_ANDROID_native_fence_sync EGL_EXT_config_select_group EGL_EXT_create_context_robustness EGL_EXT_image_dma_buf_import EGL_EXT_image_dma_buf_import_modifiers EGL_EXT_query_reset_notification_strategy EGL_EXT_surface_compression EGL_IMG_context_priority EGL_KHR_cl_event2 EGL_KHR_config_attribs EGL_KHR_context_flush_control EGL_KHR_create_context EGL_KHR_create_context_no_error EGL_KHR_fence_sync EGL_KHR_get_all_proc_addresses EGL_KHR_gl_colorspace EGL_KHR_gl_renderbuffer_image EGL_KHR_gl_texture_2D_image EGL_KHR_gl_texture_3D_image EGL_KHR_gl_texture_cubemap_image EGL_KHR_image_base EGL_KHR_no_config_context EGL_KHR_reusable_sync EGL_KHR_surfaceless_context EGL_EXT_pixel_format_float EGL_KHR_wait_sync EGL_MESA_configless_context EGL_MESA_gl_interop EGL_MESA_image_dma_buf_export EGL_MESA_query_driver EGL_MESA_x11_native_visual_id EGL_NV_context_priority_realtime 
+13:35:17.399 [[32mINF[0m] [[34mwlr[0m] [render/egl.c:370] Supported EGL device extensions: EGL_EXT_device_drm EGL_EXT_device_drm_render_node EGL_EXT_device_query_name EGL_EXT_device_persistent_id
+13:35:17.399 [[32mINF[0m] [[34mwlr[0m] [render/egl.c:373] EGL vendor: Mesa Project
+13:35:17.399 [[32mINF[0m] [[34mwlr[0m] [render/egl.c:376] EGL driver name: asahi
+13:35:17.401 [[32mINF[0m] [[34mwlr[0m] [render/fx_renderer/fx_renderer.c:609] Creating umbrielfx renderer
+13:35:17.401 [[32mINF[0m] [[34mwlr[0m] [render/fx_renderer/fx_renderer.c:611] Using OpenGL ES 3.2 Mesa 26.2.6
+13:35:17.401 [[32mINF[0m] [[34mwlr[0m] [render/fx_renderer/fx_renderer.c:616] GL vendor: Mesa
+13:35:17.401 [[32mINF[0m] [[34mwlr[0m] [render/fx_renderer/fx_renderer.c:617] GL renderer: Apple M1 Pro (G13S C0)
+13:35:17.401 [[32mINF[0m] [[34mwlr[0m] [render/fx_renderer/fx_renderer.c:618] Supported FX extensions: GL_EXT_blend_minmax GL_EXT_multi_draw_arrays GL_EXT_texture_filter_anisotropic GL_EXT_texture_compression_s3tc GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_format_BGRA8888 GL_OES_compressed_ETC1_RGB8_texture GL_OES_depth24 GL_OES_element_index_uint GL_OES_fbo_render_mipmap GL_OES_mapbuffer GL_OES_rgb8_rgba8 GL_OES_standard_derivatives GL_OES_stencil8 GL_OES_texture_3D GL_OES_texture_float GL_OES_texture_float_linear GL_OES_texture_half_float GL_OES_texture_half_float_linear GL_OES_texture_npot GL_OES_vertex_half_float GL_EXT_draw_instanced GL_EXT_texture_sRGB_decode GL_OES_EGL_image GL_OES_depth_texture GL_OES_packed_depth_stencil GL_EXT_texture_type_2_10_10_10_REV GL_NV_conditional_render GL_OES_get_program_binary GL_APPLE_texture_max_level GL_EXT_discard_framebuffer GL_EXT_read_format_bgra GL_EXT_texture_storage GL_NV_pack_subimage GL_NV_texture_barrier GL_EXT_frag_depth GL_NV_fbo_color_attachments GL_OES_EGL_
+13:35:17.462 [[32mINF[0m] [[34mwlr[0m] [render/fx_renderer/fx_renderer.c:717] FX RENDERER: Shaders Initialized Successfully
+13:35:17.462 [[32mINF[0m] [[34mserver[0m] explicit synchronization enabled
+13:35:17.465 [[32mINF[0m] [[34mwlr[0m] [render/fx_renderer/effect_shader.c:403] Compiling animation shader: animation.builtin_fade
+13:35:17.466 [[32mINF[0m] [[34mwlr[0m] [../src/server/server.cpp:896] mod key: Alt (nested session)
+13:35:17.466 [[32mINF[0m] [[34mserver[0m] mod key: Alt (nested session)
+13:35:17.466 [[32mINF[0m] [[34mwlr[0m] [wayland] unable to lock lockfile /run/user/1000/wayland-0.lock, maybe another compositor is running
+13:35:17.468 [[32mINF[0m] [[34mserver[0m] using the systemd-localed keymap: layout='us' variant='' options='terminate:ctrl_alt_bksp' model='pc105+inet'
+13:35:17.468 [[32mINF[0m] [[34mwlr[0m] [backend/wayland/backend.c:450] Starting Wayland backend
+13:35:17.486 [[32mINF[0m] [[34moutput[0m] output 'WL-1': applied mode=1280x720@0mHz scale=1 transform=0
+13:35:17.486 [[32mINF[0m] [[34mworkspace[0m] workspace group for WL-1 with 1 workspaces
+13:35:17.486 [[32mINF[0m] [[34mwlr[0m] [backend/headless/backend.c:17] Starting headless backend
+13:35:17.486 [[32mINF[0m] [[34mserver[0m] running on WAYLAND_DISPLAY=wayland-1
+13:35:17.486 [[32mINF[0m] [[34mipc[0m] IPC listening on /run/user/1000/umbriel-wayland-1.sock
+13:35:17.490 [[32mINF[0m] [[34mxwayland[0m] Xwayland listening on DISPLAY=:2
+13:35:17.502 [[32mINF[0m] [[34mwlr[0m] [../src/server/server.cpp:1630] spawned '/usr/bin/python3 /home/nick/src/parkour-godot/tools/wm/drive_umbriel.py godot --path /home/nick/src/parkour-godot/game --disable-vsync --fixed-fps 60 -- --preset /home/nick/src/parkour-godot/docs/presets/verify-window-sequence-umbriel.json --out /home/nick/src/parkour-godot/docs/evidence/verify/round-1/window-umbriel --commit d00885bd2b01a9df8904e273938b085e9b9ccac1 --test-mode' on WAYLAND_DISPLAY=wayland-1
+13:35:17.502 [[32mINF[0m] [[34mmain[0m] jemalloc: narenas=2 dirty_decay_ms=1000ms
+DRIVER umbriel version: umbriel 0.1.0
+Godot Engine v4.7.2.stable.fedora.ed1daf0bf - https://godotengine.org
+WARNING: xdg-toplevel-icon protocol not found! Cannot set window icon.
+     at: init (platform/linuxbsd/wayland/wayland_thread.cpp:5642)
+WARNING: FIFO protocol not found! Frame pacing will be degraded.
+     at: init (platform/linuxbsd/wayland/wayland_thread.cpp:5657)
+Vulkan 1.4.354 - Forward+ - Using Device #0: Unknown - Apple M1 Pro (G13S C0)
+
+VERIFY out=/home/nick/src/parkour-godot/docs/evidence/verify/round-1/window-umbriel
+VERIFY mark column
+DRIVER umbriel column: window-modify-primary-extent -0.667 -> 0 
+VERIFY mark half
+DRIVER umbriel half: window-modify-primary-extent +0.167 -> 0 
+VERIFY mark strip
+DRIVER umbriel strip: window-modify-primary-extent +0.5 -> 0 
+DRIVER umbriel strip: window-modify-secondary-extent -0.667 -> 0 
+VERIFY mark fullscreen
+DRIVER umbriel fullscreen: window-toggle-fullscreen -> 0 
+VERIFY mark focus_out
+DRIVER umbriel focus_out: window-focus-or-workspace-down -> 0 
+VERIFY mark focus_in
+DRIVER umbriel focus_in: window-focus-or-workspace-up -> 0 
+VERIFY mark fullscreen_off
+DRIVER umbriel fullscreen_off: window-toggle-fullscreen -> 0 
+VERIFY done
+VERIFY exit: self-terminated after flush (godot#123059)
+DRIVER game exited -9
+13:35:18.459 [[32mINF[0m] [[34mmain[0m] shutting down

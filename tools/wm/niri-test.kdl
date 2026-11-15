@@ -1,0 +1,20 @@
+// Throwaway niri config for window tests (nested in a window). Not Nick's config.
+input {
+    keyboard {
+        xkb {
+        }
+    }
+}
+layout {
+    gaps 0
+    default-column-width { proportion 0.5; }
+    focus-ring { off; }
+    border { off; }
+}
+prefer-no-csd
+hotkey-overlay {
+    skip-at-startup
+}
+animations {
+    off
+}

@@ -13,5 +13,11 @@
   - Registers an `OS.add_logger` Logger, so every engine error and warning goes into the JSON log. The orchestrator also scans stdout/stderr for `ERROR:` and `SCRIPT ERROR:`. It sets its own exit code from these rather than trusting the engine's, which is 0 even after errors.
   - Reads process memory from `/proc/self/statm` on Linux and `ps -o rss= -p <pid>` on macOS. Windows has a `tasklist` fallback; if none answers, it logs `-1`, never a guess. Video memory is `Performance.RENDER_VIDEO_MEM_USED`.
   - Movie Maker (option 2) is kept only to check determinism where no timing is read.
+  - **Vsync and window state for benchmarks** (measured 2026-11-15; `docs/NOTES.md`):
+    - Honeykrisp refuses vsync off and mailbox, so frames are paced by the 120 Hz display. A missed refresh reads as 16.67 ms, on the budget's edge.
+    - In a GNOME window, the compositor's own pacing added waves of 25–35 ms frames: empty-scene p95 ranged 16–46 ms over runs whose render CPU was 0.25 ms and GPU 1.6 ms.
+    - So presets with a pinned resolution run with the harness making the window fullscreen (`--bench-fullscreen`), which GNOME scans out directly. p95 then held at 14.4–15.0 ms over three runs.
+    - The game itself never asks for fullscreen. Window presets (`"resolution": "window"`) never get the flag. The test-mode and normal-launch pair are both launched this way, so they still differ only in timing.
+    - Each log's `frame_time` carries the full per-frame series (`series_ms`), the vsync mode in use, and the frames excluded after a PNG save (`excluded_capture_frames`, `capture_after_index`). Only the frame right after a save is excluded; its main-thread PNG encode is the instrument's cost.
 - **Reason:** only option 3 gives a picture and its frame-time numbers from the same run on the real chip. Pinning the root viewport's size answers "capture at a preset's resolution when the window manager decides the window's size" without the game ever asking for a window size. The Logger closes the exit-0 gap.
 - **Licence:** Godot engine, MIT (Expat). Python 3 (PSF licence), numpy (BSD-3-Clause) and Pillow (MIT-CMU) are used by the orchestrator only and never shipped.

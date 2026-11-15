@@ -1,0 +1,36 @@
+{
+  "instrument": "sound",
+  "cases": [
+    {
+      "fixture": "docs/fixtures/verify-sound-tone-minus6.json",
+      "amplitude": 0.5,
+      "expected_peak_dbfs": -6.021,
+      "measured_peak_dbfs": -6.02060198415734,
+      "file_peak_dbfs": -6.020601984157336,
+      "clipped_samples": 0,
+      "seconds": 1.77632653061224,
+      "driver": "PulseAudio",
+      "log": "docs/evidence/verify/round-1/proofs/verify-sound-tone-minus6/log.json",
+      "steady_rms_dbfs": -9.031402494094781,
+      "expected_rms_dbfs": -9.031,
+      "pass": true
+    },
+    {
+      "fixture": "docs/fixtures/verify-sound-tone-clipping.json",
+      "amplitude": 1.25,
+      "expected_peak_dbfs": 1.938,
+      "measured_peak_dbfs": 1.93819777510781,
+      "file_peak_dbfs": 1.9381977751078139,
+      "clipped_samples": 33416,
+      "seconds": 1.2887074829932,
+      "driver": "PulseAudio",
+      "log": "docs/evidence/verify/round-1/proofs/verify-sound-tone-clipping/log.json",
+      "steady_rms_dbfs": -1.317192089280958,
+      "expected_rms_dbfs": -1.072,
+      "pass": true
+    }
+  ],
+  "pass": true,
+  "commit": "d00885bd2b01a9df8904e273938b085e9b9ccac1",
+  "date": "2026-11-15T13:37:27"
+}

@@ -1,0 +1,242 @@
+{
+  "preset": {
+    "id": "verify-sound-tone-minus6",
+    "module": "verify",
+    "purpose": "Known answer for the sound instrument: a 440 Hz sine at amplitude 0.5 peaks at -6.02 dBFS with RMS -9.03 dBFS and no clipping.",
+    "scene": "res://verify/fixtures/tone.tscn",
+    "fixture": {
+      "amplitude": 0.5,
+      "frequency": 440.0
+    },
+    "profile": "neo",
+    "resolution": [
+      2408.0,
+      1506.0
+    ],
+    "sound": true,
+    "still": false,
+    "warmup_frames": 30.0,
+    "frames": 180.0
+  },
+  "commit": "d00885bd2b01a9df8904e273938b085e9b9ccac1",
+  "test_mode": true,
+  "timing": "fixed (--fixed-fps)",
+  "started": "2026-11-15T19:37:22",
+  "machine": {
+    "os": "Linux",
+    "os_version": "44 (Workstation Edition)",
+    "cpu_cores": 10,
+    "engine": "4.7.2-stable (fedora)",
+    "adapter": "Apple M1 Pro (G13S C0)",
+    "adapter_vendor": "Unknown",
+    "adapter_api_version": "1.4.354",
+    "adapter_driver": [
+      "",
+      ""
+    ],
+    "rendering_method": "forward_plus",
+    "rendering_driver": "vulkan",
+    "display_server": "Wayland",
+    "software_renderer": false,
+    "screen_size": "(3456, 2160)",
+    "screen_scale": 2.0,
+    "refresh_hz": 120.0,
+    "desktop": "GNOME"
+  },
+  "proxy": true,
+  "scene_loaded": true,
+  "profile": {
+    "name": "neo",
+    "path": "res://profiles/neo.tres",
+    "loaded": false,
+    "render_scale": 1.0
+  },
+  "wall_seconds": 1.764365,
+  "frame_time": {
+    "frames": 179,
+    "excluded_capture_frames": 0,
+    "vsync_mode": "enabled",
+    "frame_ms": {
+      "p50": 8.305,
+      "p95": 13.168,
+      "p99": 17.125,
+      "max": 19.054,
+      "share_within_16_7": 0.977653631284916,
+      "share_within_22": 1.0
+    },
+    "gpu_ms": {
+      "p50": 0.204999998211861,
+      "p95": 0.507000029087067,
+      "p99": 1.32599997520447
+    },
+    "cpu_render_ms": {
+      "p50": 0.068000003695488,
+      "p95": 0.104000002145767
+    },
+    "histogram": {
+      "bucket_ms": 0.5,
+      "buckets": {
+        "8.0": 98,
+        "8.5": 15,
+        "7.0": 12,
+        "16.5": 1,
+        "2.0": 4,
+        "7.5": 15,
+        "11.0": 1,
+        "3.0": 2,
+        "15.0": 1,
+        "10.0": 4,
+        "9.0": 4,
+        "6.5": 2,
+        "13.5": 1,
+        "9.5": 3,
+        "5.5": 2,
+        "17.0": 2,
+        "11.5": 2,
+        "6.0": 1,
+        "19.0": 1,
+        "14.0": 1,
+        "1.5": 1,
+        "15.5": 1,
+        "10.5": 1,
+        "1.0": 1,
+        "13.0": 1,
+        "4.0": 1,
+        "4.5": 1
+      },
+      "over_max": 0,
+      "max_ms": 50.0
+    },
+    "draw_calls": {
+      "mean": 0.0,
+      "max": 0
+    },
+    "primitives_max": 0,
+    "budget": {
+      "proxy": true,
+      "proxy_gpu_factor": 2.5,
+      "wall_clock_meets_budget": true,
+      "gpu_scaled_meets_budget": true,
+      "pass": true
+    }
+  },
+  "viewport_size": "(2408.0, 1506.0)",
+  "window_size": "(2560, 1600)",
+  "interface_outside": [],
+  "focus_events": [
+    {
+      "event": "window_focus_in",
+      "frame": 0,
+      "usec": 402959
+    },
+    {
+      "event": "app_focus_in",
+      "frame": 0,
+      "usec": 402968
+    }
+  ],
+  "sound": {
+    "mix_rate": 44100.0,
+    "frames": 78336,
+    "seconds": 1.77632653061224,
+    "peak_dbfs": -6.02060198415734,
+    "rms_dbfs": -9.04212853769552,
+    "clipped_samples": 0,
+    "driver": "PulseAudio",
+    "sounds": []
+  },
+  "memory": {
+    "readings": [
+      {
+        "label": "before_load",
+        "process_rss_bytes": 263847936,
+        "video_bytes": 20855296,
+        "texture_bytes": 17605760,
+        "buffer_bytes": 1934476,
+        "static_bytes": 82784301,
+        "total_bytes": 284703232,
+        "usec": 473867
+      },
+      {
+        "label": "after_load",
+        "process_rss_bytes": 265601024,
+        "video_bytes": 20855296,
+        "texture_bytes": 17605760,
+        "buffer_bytes": 1934476,
+        "static_bytes": 84742659,
+        "total_bytes": 286456320,
+        "usec": 2245770
+      },
+      {
+        "label": "after_unload",
+        "process_rss_bytes": 265191424,
+        "video_bytes": 20855296,
+        "texture_bytes": 17605760,
+        "buffer_bytes": 1934476,
+        "static_bytes": 82839635,
+        "total_bytes": 286046720,
+        "usec": 2539670
+      }
+    ],
+    "loaded_total_bytes": 286456320,
+    "within_4gb": true,
+    "unload_return_ratio": 1.00471890673865,
+    "returns_within_5pct": true,
+    "video_delta_load_bytes": 0,
+    "texture_delta_load_bytes": 0
+  },
+  "engine": {
+    "errors": [],
+    "warnings": [
+      {
+        "type": "warning",
+        "message": "The requested V-Sync mode Disabled is not available. Falling back to V-Sync mode Enabled.",
+        "code": "The requested V-Sync mode Disabled is not available. Falling back to V-Sync mode Enabled.",
+        "where": "drivers/vulkan/rendering_device_driver_vulkan.cpp:3767 (swap_chain_resize)",
+        "usec": 414814
+      }
+    ]
+  },
+  "finished": "2026-11-15T19:37:24",
+  "orchestrator": {
+    "command": [
+      "godot",
+      "--path",
+      "/home/nick/src/parkour-godot/game",
+      "--disable-vsync",
+      "--fixed-fps",
+      "60",
+      "--",
+      "--preset",
+      "/home/nick/src/parkour-godot/docs/fixtures/verify-sound-tone-minus6.json",
+      "--out",
+      "/home/nick/src/parkour-godot/docs/evidence/verify/round-1/proofs/verify-sound-tone-minus6",
+      "--commit",
+      "d00885bd2b01a9df8904e273938b085e9b9ccac1",
+      "--test-mode"
+    ],
+    "exit_code": -9,
+    "started": "2026-11-15T13:37:22.355366",
+    "shutdown_hang": null,
+    "self_terminated": true,
+    "seconds": 3.003159,
+    "output_errors": [],
+    "output_warnings": [
+      "WARNING: Can't obtain the XDG decoration manager. Libdecor will be used for drawing CSDs, if available. | at: init (platform/linuxbsd/wayland/wayland_thread.cpp:5635)",
+      "WARNING: xdg-toplevel-icon protocol not found! Cannot set window icon. | at: init (platform/linuxbsd/wayland/wayland_thread.cpp:5642)",
+      "WARNING: The requested V-Sync mode Disabled is not available. Falling back to V-Sync mode Enabled. | at: swap_chain_resize (drivers/vulkan/rendering_device_driver_vulkan.cpp:3767)",
+      "WARNING: The requested V-Sync mode Disabled is not available. Falling back to V-Sync mode Enabled. | at: swap_chain_resize (drivers/vulkan/rendering_device_driver_vulkan.cpp:3767)"
+    ],
+    "error_count": 0,
+    "verify_tool_commit": "d00885bd2b01a9df8904e273938b085e9b9ccac1",
+    "frame_numbers_count": true
+  },
+  "sound_file_check": {
+    "rate": 44100,
+    "frames": 78336,
+    "seconds": 1.7763265306122449,
+    "peak_dbfs": -6.020601984157336,
+    "rms_dbfs": -9.042128537695742,
+    "clipped_samples": 0
+  }
+}
