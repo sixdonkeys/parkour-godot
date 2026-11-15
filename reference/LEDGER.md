@@ -501,3 +501,192 @@ Every file under `reference/`, with its source, licence and checksum. Licence te
 - Licence statement (verbatim): LicenseShortName: "CC BY-SA 4.0"; UsageTerms: "Creative Commons Attribution-Share Alike 4.0"; LicenseUrl: "https://creativecommons.org/licenses/by-sa/4.0"
 - Processing: downloaded at 3840x2560, downscaled locally to long edge 2560 px (ImageMagick, JPEG quality 92); no other change
 - sha256: `3bc6cc1b624e19a1da4760a3b947a40f1cd2dcf4a64bfe16f1074be6d01d24dc`
+
+### `newyork/closeup/lowsun/nyc-fire-escapes-lowsun-01.jpg`
+- Source page: https://commons.wikimedia.org/wiki/File:Fire_Escapes_Bright_and_Dark_(51313224129).jpg
+- Download URL: https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Fire_Escapes_Bright_and_Dark_%2851313224129%29.jpg/1920px-Fire_Escapes_Bright_and_Dark_%2851313224129%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail
+- Author: Eden, Janine and Jim from New York City
+- Licence: CC BY 2.0
+- Date taken: 2021-07-14 18:28
+- Licence statement (verbatim): LicenseShortName: "CC BY 2.0"; UsageTerms: "Creative Commons Attribution 2.0"; LicenseUrl: "https://creativecommons.org/licenses/by/2.0"
+- sha256: `abe62200ad03ff9775529e233fe8a114bf8729ec7c205ad7e851d7ecd5144441`
+
+### `newyork/closeup/lowsun/queens-brick-fire-escape-lowsun-01.jpg`
+- Source page: https://commons.wikimedia.org/wiki/File:MTA_Union_Tpke_Parsons_Bl_10_-_Parsons_Manor.jpg
+- Download URL: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/MTA_Union_Tpke_Parsons_Bl_10_-_Parsons_Manor.jpg/1920px-MTA_Union_Tpke_Parsons_Bl_10_-_Parsons_Manor.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail
+- Author: Tdorante10
+- Licence: CC BY-SA 4.0
+- Date taken: Taken on 25 March 2018, 18:31:40
+- Licence statement (verbatim): LicenseShortName: "CC BY-SA 4.0"; UsageTerms: "Creative Commons Attribution-Share Alike 4.0"; LicenseUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+- sha256: `8ada735096da420c6474726f1eea1103b97a24fdccd2fed46a94640ac967ebbe`
+
+### `newyork/closeup/lowsun/nyc-tenement-facade-lowsun-01.jpg`
+- Source page: https://commons.wikimedia.org/wiki/File:City_and_Suburban_Homes,_entrance_on_E_78_St.jpg
+- Download URL: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/City_and_Suburban_Homes%2C_entrance_on_E_78_St.jpg/1920px-City_and_Suburban_Homes%2C_entrance_on_E_78_St.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail
+- Author: RobertCornelius
+- Licence: CC BY-SA 4.0
+- Date taken: 2019-06-21 17:56:03
+- Licence statement (verbatim): LicenseShortName: "CC BY-SA 4.0"; UsageTerms: "Creative Commons Attribution-Share Alike 4.0"; LicenseUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+- Processing: downloaded at 1920x3475, downscaled locally to long edge 2560 px (ImageMagick, JPEG quality 92); no other change
+- sha256: `f4e40e94915e853ffabbe9240740ffa4996b125d205c5bc5ad15ef54ea60cc4c`
+
+### `newyork/closeup/midday/queens-brick-fire-escape-midday-01.jpg`
+- Source page: https://commons.wikimedia.org/wiki/File:Long_Island_City_February_2023_097.jpg
+- Download URL: https://upload.wikimedia.org/wikipedia/commons/2/28/Long_Island_City_February_2023_097.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+- Author: Kidfly182
+- Licence: CC BY-SA 4.0
+- Date taken: 2023-02-20 13:54:05
+- Licence statement (verbatim): LicenseShortName: "CC BY-SA 4.0"; UsageTerms: "Creative Commons Attribution-Share Alike 4.0"; LicenseUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+- sha256: `5b0347d4e15eab7079c45f7b1f958acf6ac6e02307ec5cb0973049ffc5b33737`
+
+### `newyork/closeup/midday/tribeca-fire-escape-midday-01.jpg`
+- Source page: https://commons.wikimedia.org/wiki/File:Tribeca_Manhattan_July_2022_038.jpg
+- Download URL: https://upload.wikimedia.org/wikipedia/commons/4/44/Tribeca_Manhattan_July_2022_038.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+- Author: Kidfly182
+- Licence: CC BY-SA 4.0
+- Date taken: 2022-07-30 12:36:31
+- Licence statement (verbatim): LicenseShortName: "CC BY-SA 4.0"; UsageTerms: "Creative Commons Attribution-Share Alike 4.0"; LicenseUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+- sha256: `15ff0743084f1f6d761644047f30f0ac61c02e1ca315ef4210a287bb45c7edda`
+
+### `newyork/closeup/midday/nyc-water-tower-brick-midday-01.jpg`
+- Source page: https://commons.wikimedia.org/wiki/File:High_Line_May_2022_027.jpg
+- Download URL: https://upload.wikimedia.org/wikipedia/commons/8/8f/High_Line_May_2022_027.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+- Author: Kidfly182
+- Licence: CC BY-SA 4.0
+- Date taken: 2022-05-12 14:15:43
+- Licence statement (verbatim): LicenseShortName: "CC BY-SA 4.0"; UsageTerms: "Creative Commons Attribution-Share Alike 4.0"; LicenseUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+- sha256: `54330b66a2f0319cf6e4f644d406c061b39934176726370013220ee2e39e33c9`
+
+### `newyork/route/lowsun/nyc-pier57-rooftop-lowsun-01.jpg`
+- Source page: https://commons.wikimedia.org/wiki/File:Chelsea_Manhattan_Apr_2026_151.jpg
+- Download URL: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Chelsea_Manhattan_Apr_2026_151.jpg/3840px-Chelsea_Manhattan_Apr_2026_151.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail
+- Author: Epicgenius
+- Licence: CC BY-SA 4.0
+- Date taken: 2026-04-16 18:04:13
+- Licence statement (verbatim): LicenseShortName: "CC BY-SA 4.0"; UsageTerms: "Creative Commons Attribution-Share Alike 4.0"; LicenseUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+- Processing: downloaded at 3840x2880, downscaled locally to long edge 2560 px (ImageMagick, JPEG quality 92); no other change
+- sha256: `b231e95ff71a4d7640c3c498e6089f9d9e27ebe306b3cceebd908935cc10bc46`
+
+### `newyork/route/lowsun/nyc-pier57-rooftop-lowsun-02.jpg`
+- Source page: https://commons.wikimedia.org/wiki/File:Chelsea_Manhattan_Apr_2026_152.jpg
+- Download URL: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Chelsea_Manhattan_Apr_2026_152.jpg/3840px-Chelsea_Manhattan_Apr_2026_152.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail
+- Author: Epicgenius
+- Licence: CC BY-SA 4.0
+- Date taken: 2026-04-16 18:04:21
+- Licence statement (verbatim): LicenseShortName: "CC BY-SA 4.0"; UsageTerms: "Creative Commons Attribution-Share Alike 4.0"; LicenseUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+- Processing: downloaded at 3840x2880, downscaled locally to long edge 2560 px (ImageMagick, JPEG quality 92); no other change
+- sha256: `f65a2c1fcbbf73e89ed1ad79c2340f0129a23b9db694b38778a243f9532b06b9`
+
+### `character/parkour-vault-01.jpg`
+- Source page: https://commons.wikimedia.org/wiki/File:Parkour_Reims_1524504.jpg
+- Download URL: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Parkour_Reims_1524504.jpg/3840px-Parkour_Reims_1524504.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail
+- Author: Gérald Garitan
+- Licence: CC BY-SA 4.0
+- Date taken: 2024-06-16 15:23:37
+- Licence statement (verbatim): LicenseShortName: "CC BY-SA 4.0"; UsageTerms: "Creative Commons Attribution-Share Alike 4.0"; LicenseUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+- Processing: downloaded at 3840x2932, downscaled locally to long edge 2560 px (ImageMagick, JPEG quality 92); no other change
+- sha256: `852dcb23fdda712310a95e7ac854ce7b588a1bf0193932f1f034965e38070039`
+
+### `character/parkour-vault-02.jpg`
+- Source page: https://commons.wikimedia.org/wiki/File:Parkour_Reims_1524510.jpg
+- Download URL: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Parkour_Reims_1524510.jpg/3840px-Parkour_Reims_1524510.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail
+- Author: Gérald Garitan
+- Licence: CC BY-SA 4.0
+- Date taken: 2024-06-16 15:23:37
+- Licence statement (verbatim): LicenseShortName: "CC BY-SA 4.0"; UsageTerms: "Creative Commons Attribution-Share Alike 4.0"; LicenseUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+- Processing: downloaded at 3840x3182, downscaled locally to long edge 2560 px (ImageMagick, JPEG quality 92); no other change
+- sha256: `f6987aa738ef986485fce3a216409edbc506b081a316cca59993bf74ec9a651d`
+
+### `character/parkour-vault-park-01.jpg`
+- Source page: https://commons.wikimedia.org/wiki/File:Julien_Do_parkour_in_park.jpg
+- Download URL: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Julien_Do_parkour_in_park.jpg/3840px-Julien_Do_parkour_in_park.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail
+- Author: Gwangrung
+- Licence: CC BY-SA 4.0
+- Date taken: 2016-06-05
+- Licence statement (verbatim): LicenseShortName: "CC BY-SA 4.0"; UsageTerms: "Creative Commons Attribution-Share Alike 4.0"; LicenseUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+- Processing: downloaded at 3840x2560, downscaled locally to long edge 2560 px (ImageMagick, JPEG quality 92); no other change
+- sha256: `4165d4e38af24fad9e299a9c97d1cb4def58b2e57cba0ed2c324e7723c5b908a`
+
+### `character/parkour-wall-climb-01.jpg`
+- Source page: https://commons.wikimedia.org/wiki/File:Parkour_in_Vauxhall,_London_-_52650483233.jpg
+- Download URL: https://upload.wikimedia.org/wikipedia/commons/a/af/Parkour_in_Vauxhall%2C_London_-_52650483233.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+- Author: RuthieGledhill
+- Licence: CC0
+- Date taken: 2023-01-26 04:29:20
+- Licence statement (verbatim): LicenseShortName: "CC0"; UsageTerms: "Creative Commons Zero, Public Domain Dedication"; LicenseUrl: "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+- sha256: `7182bcf42f55d28d866d92daaf89b72387d79e7631ee8b4b9c3c0337b4d9365a`
+
+### `character/trail-runner-01.jpg`
+- Source page: https://commons.wikimedia.org/wiki/File:Runner-1-.jpg
+- Download URL: https://upload.wikimedia.org/wikipedia/commons/0/01/Runner-1-.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+- Author: Robeter at English Wikipedia
+- Licence: Public domain
+- Date taken: 21 April 2008 (original upload date)
+- Licence statement (verbatim): LicenseShortName: "Public domain"; UsageTerms: "Public domain"; LicenseUrl: ""
+- sha256: `cc0eca066e9639f062481ccc0b7180b5cc420bde84d7b85e9806317351028e5b`
+
+### `character/trail-runner-02.jpg`
+- Source page: https://commons.wikimedia.org/wiki/File:Ullswater_Trail_Race_2011.jpg
+- Download URL: https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Ullswater_Trail_Race_2011.jpg/3840px-Ullswater_Trail_Race_2011.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail
+- Author: Robin McConnell
+- Licence: CC BY 2.0
+- Date taken: 2011-11-06 13:11:08
+- Licence statement (verbatim): LicenseShortName: "CC BY 2.0"; UsageTerms: "Creative Commons Attribution 2.0"; LicenseUrl: "https://creativecommons.org/licenses/by/2.0"
+- Processing: downloaded at 3840x2550, downscaled locally to long edge 2560 px (ImageMagick, JPEG quality 92); no other change
+- sha256: `b471c904d5053318dd6fc737ab2ef222b969b48d43eadc04087a1fb3cf9be118`
+
+### `character/runner-stride-01.jpg`
+- Source page: https://commons.wikimedia.org/wiki/File:Robert_Cheseret_wins_2010_Army_Ten-Miler.jpg
+- Download URL: https://upload.wikimedia.org/wikipedia/commons/a/a0/Robert_Cheseret_wins_2010_Army_Ten-Miler.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+- Author: U.S. Army
+- Licence: CC BY 2.0
+- Date taken: 2011-02-11 15:43
+- Licence statement (verbatim): LicenseShortName: "CC BY 2.0"; UsageTerms: "Creative Commons Attribution 2.0"; LicenseUrl: "https://creativecommons.org/licenses/by/2.0"
+- sha256: `ed4cf3d9d19755eff338a0ed52a80c8e908a564b333aae386520f6709e7f59df`
+
+### `character/climber-granite-01.jpg`
+- Source page: https://commons.wikimedia.org/wiki/File:Climber_steward_placing_gear_at_Gunsmoke_(51133045279).jpg
+- Download URL: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Climber_steward_placing_gear_at_Gunsmoke_%2851133045279%29.jpg/3840px-Climber_steward_placing_gear_at_Gunsmoke_%2851133045279%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail
+- Author: Joshua Tree National Park
+- Licence: Public domain
+- Date taken: Taken on 6 February 2021, 11:04:55
+- Licence statement (verbatim): LicenseShortName: "Public domain"; UsageTerms: "Public domain"; LicenseUrl: ""
+- Processing: downloaded at 3840x2560, downscaled locally to long edge 2560 px (ImageMagick, JPEG quality 92); no other change
+- sha256: `855794b9e340e6d7d07e049eec755d6c70f11dc4784ee9631164dd321ffbcd28`
+
+### `character/boulderer-overhang-01.jpg`
+- Source page: https://commons.wikimedia.org/wiki/File:Bouldering_in_Corme,_Galicia_(Spain).jpg
+- Download URL: https://upload.wikimedia.org/wikipedia/commons/2/2f/Bouldering_in_Corme%2C_Galicia_%28Spain%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+- Author: luis vilanova
+- Licence: CC BY 2.0
+- Date taken: Taken on 9 January 2007, 20:19:18
+- Licence statement (verbatim): LicenseShortName: "CC BY 2.0"; UsageTerms: "Creative Commons Attribution 2.0"; LicenseUrl: "https://creativecommons.org/licenses/by/2.0"
+- sha256: `e13a3c83ebf60674bf1a231cce5481a73db873ceeb33bafcc532d659d31bd485`
+
+### `character/parkour-landing-drop-01.jpg`
+- Source page: https://commons.wikimedia.org/wiki/File:Parkour_in_Richmond_-_52671558552.jpg
+- Download URL: https://upload.wikimedia.org/wikipedia/commons/5/5f/Parkour_in_Richmond_-_52671558552.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+- Author: RuthieGledhill
+- Licence: CC0
+- Date taken: 2023-02-05 23:56:47
+- Licence statement (verbatim): LicenseShortName: "CC0"; UsageTerms: "Creative Commons Zero, Public Domain Dedication"; LicenseUrl: "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+- sha256: `811950519f69626faaf7c21befab17b2cabcea53abcfd7465e64e08af44c2f63`
+
+### `mountain/closeup/lowsun/rushmore-granite-pines-lowsun-01.jpg`
+- Source page: https://commons.wikimedia.org/wiki/File:Stepping_on_the_grounds_of_Mount_Rushmore_2_(15224390928).jpg
+- Download URL: https://upload.wikimedia.org/wikipedia/commons/5/5a/Stepping_on_the_grounds_of_Mount_Rushmore_2_%2815224390928%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+- Author: kj.labalan
+- Licence: CC BY 2.0
+- Date taken: 2014-04-24 07:53
+- Licence statement (verbatim): LicenseShortName: "CC BY 2.0"; UsageTerms: "Creative Commons Attribution 2.0"; LicenseUrl: "https://creativecommons.org/licenses/by/2.0"
+- sha256: `5443be213b6318ca732f322ebce7e1c1a15f01225cc9b9e81614395205c1bbad`
+
+### `chicago/route/lowsun/chicago-navy-pier-lowsun-01.jpg`
+- Source page: https://commons.wikimedia.org/wiki/File:Ame05086_10.jpg
+- Download URL: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Ame05086_10.jpg/3840px-Ame05086_10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail
+- Author: Gorup de Besanez
+- Licence: CC BY-SA 4.0
+- Date taken: 2017-05-12 19:10:22
+- Licence statement (verbatim): LicenseShortName: "CC BY-SA 4.0"; UsageTerms: "Creative Commons Attribution-Share Alike 4.0"; LicenseUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+- Processing: downloaded at 3840x2425, downscaled locally to long edge 2560 px (ImageMagick, JPEG quality 92); no other change
+- sha256: `158358847791481250631525ffb8a65a3265fd522307816cca29fe54875fd478`

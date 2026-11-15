@@ -35,3 +35,20 @@ One entry per round: what was tried, what failed, why. Read this first when resu
 - Upscaler/AA costs on the empty scene (GPU p50): bilinear 0.88 ms, +TAA 4.05, FSR1+TAA 4.92, FSR2 8.64, FSR1+SMAA 4.31, FSR1+FXAA 3.93, native+SMAA 2.59. `neo` now uses SMAA with non-temporal upscalers, MetalFX temporal first on the Neo. Empty-scene GPU p95 is 6.07–6.21 ms against the 6.68 ms proxy limit: a thin margin, and look-slice will press on it.
 - Godot's `JSON.parse_string` raises an engine error on bad input; Save uses `JSON.parse()`.
 - The memory leak flag first counted the heap settling over early cycles as growth. It now compares the last two unloads only (ARCHITECTURE.md, Measured events).
+
+## look-slice (started 2026-11-15) — where it stands
+
+- Records done: renderer, quality-profiles, asset-pipeline, lighting, landforms (all five the brief requires before look-slice).
+- Terrain source: USGS tile in `tools/cache/usgs/` (git-ignored; address and checksum in ASSETS.md). Python deps for the generator: `.local/venv` with `tools/requirements.txt` (tifffile, imagecodecs pinned to versions over two weeks old).
+- Plan:
+  1. `tools/gen/terrain.py`: crop the Sabino window, compress (h ×0.1, v ×0.18), resample to 1 m, add seeded slope-weighted detail, bake sky occlusion; write `game/look_slice/generated/` heights (raw float32) + AO PNG + backdrop heights.
+  2. `tools/gen/build_terrain.gd`: run headless; chunk meshes (64 m, LODs) + HeightMapShape3D.
+  3. CC0 materials and plants (Poly Haven / ambientCG), scatter rules, lighting per the record.
+  4. Presets: wide, route, closeup × midday and low sun, plus a benchmark path; critic round (one, scored as a look module).
+- Reference photos: a background agent was gathering `reference/`; check whether it finished and committed nothing (the builder commits).
+
+## reference set (gathered 2026-11-15 by a subagent)
+
+- 71 files: 61 place photos plus 10 athletes; all from Wikimedia Commons; licences PD, CC0, CC BY and CC BY-SA only; sha256 in the ledger, re-hashed by the agent.
+- Short: `mountain/closeup/lowsun` (1). Searched: Commons categories Custer State Park, Black Elk Wilderness, Needles Highway, Black Elk Peak, Sylvan Lake, Mount Rushmore, Black Hills National Forest, Wind Cave, Black Hills, Granite in South Dakota, Ponderosa pine in South Dakota (06–08 h and 17–21 h); text searches for Needles Eye, Harney Peak granite, ponderosa bark Black Hills, Sylvan Lake sunset, Needles Highway sunset, Black Hills golden hour, Custer State Park morning light. The candidates were foggy, in caves, shaded, over-processed or soft.
+- Rejected: the 2024 Javelina Rocks evening series (HDR-looking), a hazy Manhattan water-tower shot, an over-saturated Rushmore ridge, a Needles Eye shot the author says was brightened, overcast New York rooftops, a watermarked parkour jump, a motion-blurred wall climb, black-and-white images.
