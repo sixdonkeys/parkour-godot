@@ -1,0 +1,21 @@
+{
+  "void": true,
+  "reasons": [
+    "another app was in front: ['Amphetamine', 'App Store', 'Ridgeline', 'Safari', 'System Settings', 'Terminal', 'loginwindow']",
+    "a frame took 11254 ms: the display slept or the window was hidden"
+  ],
+  "unverifiable": [],
+  "display_awake_from_frames": false,
+  "max_frame_ms": 11254.288,
+  "refresh_hz_game": [
+    60.0
+  ],
+  "power": [
+    "AC Power"
+  ],
+  "low_power": [
+    "false"
+  ],
+  "samples": 45,
+  "note": "void runs are kept and count for nothing (BUILD-BRIEF item 2)"
+}
