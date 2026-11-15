@@ -118,25 +118,29 @@ run)
   if [ "$MODE" = bench ]; then set -- -- --bench "$OUT" --bench-fullscreen "$@"; else set -- "$@"; fi
   # Honesty samples every 5 s while the game runs: lock, idle, front app,
   # power, low power mode, display. Written beside the results.
+  # Detached from the SSH session: ignores hang-up and holds none of its pipes,
+  # so the call returns at once and the game outlives the connection.
   (
+    trap '' HUP
     if [ "$OS" = Darwin ]; then
-      caffeinate -d -i -w $$ 2>/dev/null &
-      open -n -W "$APP" --args "$@" >"$OUT/launch.txt" 2>&1
+      # caffeinate keeps the display and machine awake for exactly the run.
+      caffeinate -d -i open -n -W "$APP" --args "$@" >"$OUT/launch.txt" 2>&1
     else
       "$EXE" "$@" >"$OUT/launch.txt" 2>&1
     fi
     echo "$?" > "$OUT/EXIT"
-  ) &
+  ) </dev/null >/dev/null 2>&1 &
   GAME=$!
   echo "$GAME" > "$OUT/PID"
   (
+    trap '' HUP
     while kill -0 "$GAME" 2>/dev/null; do
       idle=$(idle_s); [ -n "$idle" ] || idle=null
       printf '{"time":"%s","locked":"%s","idle_s":%s,"front_app":"%s","power":"%s","low_power":"%s","display_awake":"%s"}\n' \
         "$(date -u +%Y-%m-%dT%H:%M:%SZ)" "$(locked)" "$idle" "$(jstr "$(front_app)")" "$(jstr "$(power_source)")" "$(low_power)" "$(display_awake)" >> "$OUT/honesty.jsonl"
       sleep 5
     done
-  ) >/dev/null 2>&1 &
+  ) </dev/null >/dev/null 2>&1 &
   printf '{"ok":true,"id":"%s","mode":"%s","results":"%s","refresh_hz":"%s"}\n' "$ID" "$MODE" "$(jstr "$OUT")" "$(jstr "$(refresh_hz)")"
   ;;
 status)
