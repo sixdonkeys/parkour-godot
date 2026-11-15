@@ -135,16 +135,9 @@ func _run_all() -> void:
 	quit_safely(0)
 
 
-## Quit without tripping Godot issue #123059 (Wayland: the main thread can wait
-## forever for the event thread at shutdown). Everything is flushed first; on
-## Wayland the process then ends itself instead of running the racy teardown.
-## core's quit path uses the same rule (decision windowing).
+## Quit through core's single exit path (works around Godot issue #123059).
 func quit_safely(code: int) -> void:
-	if DisplayServer.get_name() == "Wayland":
-		print("VERIFY exit: self-terminated after flush (godot#123059)")
-		await get_tree().process_frame
-		OS.kill(OS.get_process_id())
-	get_tree().quit(code)
+	AppExit.quit(get_tree(), code)
 
 
 ## Repo-relative paths in presets resolve against --repo-root (given by the
@@ -474,6 +467,15 @@ func _window_action(step: Dictionary, wlog: Array) -> void:
 			get_tree().root.propagate_notification(NOTIFICATION_WM_WINDOW_FOCUS_IN)
 			get_tree().root.propagate_notification(NOTIFICATION_APPLICATION_FOCUS_IN)
 			entry["synthetic"] = true
+		"game_call":
+			# Call a method on the Game autoload (e.g. load_level) and record the
+			# result and the run state afterwards.
+			var g := get_tree().root.get_node_or_null("/root/Game")
+			if g and g.has_method(step["method"]):
+				var r = await g.callv(step["method"], step.get("args", []))
+				entry["result"] = r
+			else:
+				push_error("verify: Game.%s not available" % step.get("method", "?"))
 		"mark":
 			# An external window manager acts here (tools/wm/drive_*.py); we observe.
 			entry["name"] = step.get("name", "")

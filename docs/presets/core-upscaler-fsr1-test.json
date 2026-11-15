@@ -1,0 +1,30 @@
+{
+  "id": "core-upscaler-fsr1-test",
+  "module": "core",
+  "kind": "still",
+  "showcase": false,
+  "bench": false,
+  "purpose": "Upscaler cost on the empty scene under test profile fsr1-test (never shipped), to price the upscaler the proxy stands in for MetalFX (decision neo-proxy).",
+  "scene": "res://verify/fixtures/empty.tscn",
+  "camera": {
+    "position": [
+      0,
+      1.7,
+      6
+    ],
+    "look_at": [
+      0,
+      1,
+      0
+    ],
+    "fov": 70
+  },
+  "profile": "fsr1-test",
+  "resolution": [
+    2408,
+    1506
+  ],
+  "warmup_frames": 60,
+  "frames": 600,
+  "still_frame": 300
+}

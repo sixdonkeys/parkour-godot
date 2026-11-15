@@ -76,3 +76,19 @@ mv templates 4.7.2.stable
 
 - The Claude Code sandbox hides the graphics chip (`/dev/dri` is absent inside it), so everything that draws (`tools/verify.py run`, `prove`, `window`) runs outside it. Exports (`build`) work inside it.
 - Window tests use niri and Umbriel nested in a window, with throwaway configs in `tools/wm/`; both are already installed on this laptop. Nick's own configs are never read or changed.
+
+## Test machines (the remote loop)
+
+The Neo is tested remotely over Tailscale and SSH: `python3 tools/verify.py remote neo check` (also `send`, `bench`, `play`, `fetch`). Nothing is installed on the Neo for this beyond Tailscale and Remote Login.
+
+One-time setup (Nick):
+1. On the Neo, follow the setup brief (Tailscale, Remote Login on for the son's own account, Nick's public keys in that account's `~/.ssh/authorized_keys`).
+2. On each development machine, open `~/.ssh/config` in an editor and add an entry named `neo`:
+   ```
+   Host neo
+       HostName <neo's Tailscale name>.<tailnet>.ts.net
+       User <the son's macOS username>
+   ```
+3. Check from the project folder: `python3 tools/verify.py remote neo check`. It should print the Neo's state as JSON, not an error line.
+
+The ThinkPad T14 is added the same way later: a `docs/targets/t14.json` and a `t14` entry in `~/.ssh/config`.

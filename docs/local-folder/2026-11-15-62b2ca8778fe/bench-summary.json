@@ -1,0 +1,41 @@
+{
+  "commit": "62b2ca8778fe8ed56e5e97a1c396a603fccfb481-dirty",
+  "presets": [
+    {
+      "preset": "core-stress-path",
+      "errors": 0,
+      "frame_pass": false
+    },
+    {
+      "preset": "verify-empty-path",
+      "errors": 0,
+      "frame_pass": false
+    },
+    {
+      "preset": "verify-empty-still",
+      "errors": 0,
+      "frame_pass": false
+    }
+  ],
+  "machine": {
+    "os": "Linux",
+    "os_version": "44 (Workstation Edition)",
+    "cpu_cores": 10,
+    "engine": "4.7.2-stable (official)",
+    "adapter": "Apple M1 Pro (G13S C0)",
+    "adapter_vendor": "Unknown",
+    "adapter_api_version": "1.4.354",
+    "adapter_driver": [
+      "",
+      ""
+    ],
+    "rendering_method": "forward_plus",
+    "rendering_driver": "vulkan",
+    "display_server": "Wayland",
+    "software_renderer": false,
+    "screen_size": "(3456, 2160)",
+    "screen_scale": 2.0,
+    "refresh_hz": 120.0,
+    "desktop": "GNOME"
+  }
+}

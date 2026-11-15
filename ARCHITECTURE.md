@@ -210,9 +210,9 @@ Each record lives at `docs/decisions/<problem>.md` with its excerpts in `docs/su
 | asset-pipeline | verify | decided — see `docs/decisions/asset-pipeline.md` |
 | sound | verify | decided — see `docs/decisions/sound.md` |
 | neo-proxy | verify | decided — see `docs/decisions/neo-proxy.md` |
-| renderer | core | undecided — core |
-| quality-profiles | core | undecided — core |
-| multiplayer-readiness | core | undecided — core |
+| renderer | core | decided — see `docs/decisions/renderer.md` |
+| quality-profiles | core | decided — see `docs/decisions/quality-profiles.md` |
+| multiplayer-readiness | core | decided — see `docs/decisions/multiplayer-readiness.md` |
 | lighting | look-slice | undecided — look-slice |
 | landforms | look-slice | undecided — look-slice |
 | player-body | movement | undecided — movement |
@@ -224,4 +224,4 @@ Each record lives at `docs/decisions/<problem>.md` with its excerpts in `docs/su
 | course-runs | kit | undecided — kit |
 | character-sourcing | interface | undecided — interface |
 | animation-contact | character | undecided — character |
-| remote-test | verify (reopened when the Neo returns) | not built while the Neo is out of the loop (harness addendum) |
+| remote-test | verify (reopened for the Neo, 2026-11-15) | decided — see `docs/decisions/remote-test.md` |

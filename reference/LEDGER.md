@@ -346,3 +346,109 @@ Every file under `reference/`, with its source, licence and checksum. Licence te
 - Licence statement (verbatim): LicenseShortName: "CC BY 2.0"; UsageTerms: "Creative Commons Attribution 2.0"; LicenseUrl: "https://creativecommons.org/licenses/by/2.0"
 - Processing: downloaded at 3840x2880, downscaled locally to long edge 2560 px (ImageMagick, JPEG quality 92); no other change
 - sha256: `b4726f78dd7b870bc0218391b32f32e68f789f123d8d96db04a02f123c5f94e4`
+
+### `chicago/closeup/midday/chicago-brick-wall-01.jpg`
+- Source page: https://commons.wikimedia.org/wiki/File:Parnell_Avenue,_Bridgeport,_Chicago,_IL_(54837666016).jpg
+- Download URL: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Parnell_Avenue%2C_Bridgeport%2C_Chicago%2C_IL_%2854837666016%29.jpg/1920px-Parnell_Avenue%2C_Bridgeport%2C_Chicago%2C_IL_%2854837666016%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail
+- Author: Warren LeMay from Chicago, IL, United States
+- Licence: CC BY-SA 4.0
+- Date taken: 2024-06-07 15:08
+- Licence statement (verbatim): LicenseShortName: "CC BY-SA 4.0"; UsageTerms: "Creative Commons Attribution-Share Alike 4.0"; LicenseUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+- sha256: `71251036833f26c71d3493ef1b185825b83b3e151fb32e8312de5ab417dab3ab`
+
+### `chicago/closeup/midday/chicago-greystone-facade-01.jpg`
+- Source page: https://commons.wikimedia.org/wiki/File:Emerald_Avenue,_Bridgeport,_Chicago,_IL_(54832901139).jpg
+- Download URL: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Emerald_Avenue%2C_Bridgeport%2C_Chicago%2C_IL_%2854832901139%29.jpg/3840px-Emerald_Avenue%2C_Bridgeport%2C_Chicago%2C_IL_%2854832901139%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail
+- Author: Warren LeMay from Chicago, IL, United States
+- Licence: CC BY-SA 4.0
+- Date taken: 2023-11-09 11:35
+- Licence statement (verbatim): LicenseShortName: "CC BY-SA 4.0"; UsageTerms: "Creative Commons Attribution-Share Alike 4.0"; LicenseUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+- Processing: downloaded at 3840x2880, downscaled locally to long edge 2560 px (ImageMagick, JPEG quality 92); no other change
+- sha256: `cc8aafbf4357a4375dbe1e4d82ec8e5138bb7d00dedcf54d22ab604df04a745a`
+
+### `mountain/closeup/midday/harney-granite-schist-closeup-01.jpg`
+- Source page: https://commons.wikimedia.org/wiki/File:Ductile_shear.jpg
+- Download URL: https://upload.wikimedia.org/wikipedia/commons/6/64/Ductile_shear.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+- Author: Kevin Walsh
+- Licence: CC BY 2.0
+- Date taken: 2005-05-20 20:35:18
+- Licence statement (verbatim): LicenseShortName: "CC BY 2.0"; UsageTerms: "Creative Commons Attribution 2.0"; LicenseUrl: "https://creativecommons.org/licenses/by/2.0"
+- sha256: `3cd1b72940e5b2c4d66c250d0284e9d6a0438977a66b7d0b560ff0d5f3fe070b`
+
+### `mountain/route/lowsun/black-hills-forest-road-evening-01.jpg`
+- Source page: https://commons.wikimedia.org/wiki/File:Black_Hills_in_June_2007_06.jpg
+- Download URL: https://upload.wikimedia.org/wikipedia/commons/5/58/Black_Hills_in_June_2007_06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+- Author: Runner1928
+- Licence: CC BY-SA 4.0
+- Date taken: 2007-06-18 18:57:03
+- Licence statement (verbatim): LicenseShortName: "CC BY-SA 4.0"; UsageTerms: "Creative Commons Attribution-Share Alike 4.0"; LicenseUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+- sha256: `6c330c33a3367e84b8d6215c79e698a52a1fb1478518b1fedfb9f7e6a93e0f9d`
+
+### `chicago/wide/lowsun/chicago-hancock-view-lowsun-01.jpg`
+- Source page: https://commons.wikimedia.org/wiki/File:Ame05086_01.jpg
+- Download URL: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Ame05086_01.jpg/3840px-Ame05086_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail
+- Author: Gorup de Besanez
+- Licence: CC BY-SA 4.0
+- Date taken: 2017-05-12 19:10:22
+- Licence statement (verbatim): LicenseShortName: "CC BY-SA 4.0"; UsageTerms: "Creative Commons Attribution-Share Alike 4.0"; LicenseUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+- Processing: downloaded at 3840x2560, downscaled locally to long edge 2560 px (ImageMagick, JPEG quality 92); no other change
+- sha256: `b90a3fc5197f568629a1af59c6bfafaeac16ce154dad6c68179fcc8c95a64db6`
+
+### `chicago/wide/lowsun/chicago-360-view-lowsun-01.jpg`
+- Source page: https://commons.wikimedia.org/wiki/File:Chicago_sunset_from_360_Chicago_observatory_(46963787675).jpg
+- Download URL: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Chicago_sunset_from_360_Chicago_observatory_%2846963787675%29.jpg/3840px-Chicago_sunset_from_360_Chicago_observatory_%2846963787675%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail
+- Author: Bex Walton from London, England
+- Licence: CC BY 2.0
+- Date taken: 2019-05-10 19:55
+- Licence statement (verbatim): LicenseShortName: "CC BY 2.0"; UsageTerms: "Creative Commons Attribution 2.0"; LicenseUrl: "https://creativecommons.org/licenses/by/2.0"
+- Processing: downloaded at 3840x2880, downscaled locally to long edge 2560 px (ImageMagick, JPEG quality 92); no other change
+- sha256: `1c273a7036dfe4bd46b304dd0ce2776e7fb6057c8691aa919ec5e5b63d6c5646`
+
+### `newyork/wide/midday/lower-manhattan-harbor-01.jpg`
+- Source page: https://commons.wikimedia.org/wiki/File:Manhattan_skyline_from_Upper_New_York_Bay,_20231001_1042_0894.jpg
+- Download URL: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Manhattan_skyline_from_Upper_New_York_Bay%2C_20231001_1042_0894.jpg/1920px-Manhattan_skyline_from_Upper_New_York_Bay%2C_20231001_1042_0894.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail
+- Author: Jakub Hałun
+- Licence: CC BY 4.0
+- Date taken: 2023-10-01 10:42:33
+- Licence statement (verbatim): LicenseShortName: "CC BY 4.0"; UsageTerms: "Creative Commons Attribution 4.0"; LicenseUrl: "https://creativecommons.org/licenses/by/4.0"
+- sha256: `78a6cfe33caf3b128a87e9d838e104cdb79b9a09e513fa16d3cbe42dcdaecd44`
+
+### `newyork/wide/midday/midtown-west-skyline-01.jpg`
+- Source page: https://commons.wikimedia.org/wiki/File:Intrepid_and_west_side_Manhattan_skyline_NY1.jpg
+- Download URL: https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Intrepid_and_west_side_Manhattan_skyline_NY1.jpg/3840px-Intrepid_and_west_side_Manhattan_skyline_NY1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail
+- Author: Acroterion
+- Licence: CC BY-SA 4.0
+- Date taken: 2017-07-21
+- Licence statement (verbatim): LicenseShortName: "CC BY-SA 4.0"; UsageTerms: "Creative Commons Attribution-Share Alike 4.0"; LicenseUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+- Processing: downloaded at 3840x2392, downscaled locally to long edge 2560 px (ImageMagick, JPEG quality 92); no other change
+- sha256: `f3c1cb7dabf2c9e40a2ad2ecc0b75e8bd985ef27aea69566e940c5c5dc56a595`
+
+### `newyork/wide/lowsun/lower-manhattan-lowsun-01.jpg`
+- Source page: https://commons.wikimedia.org/wiki/File:2024-02-20_-_Downtown_Manhattan_Skyline_-_02.jpg
+- Download URL: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/2024-02-20_-_Downtown_Manhattan_Skyline_-_02.jpg/3840px-2024-02-20_-_Downtown_Manhattan_Skyline_-_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail
+- Author: Oleg Yunakov
+- Licence: CC BY-SA 4.0
+- Date taken: 2024-02-20 17:25:00
+- Licence statement (verbatim): LicenseShortName: "CC BY-SA 4.0"; UsageTerms: "Creative Commons Attribution-Share Alike 4.0"; LicenseUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+- Processing: downloaded at 3840x2880, downscaled locally to long edge 2560 px (ImageMagick, JPEG quality 92); no other change
+- sha256: `5ea8193ceb0bfc9140aff5d1c7a2e97ffb0bb70ffa4573cf830965c5f0b507e1`
+
+### `newyork/wide/lowsun/lower-manhattan-lowsun-02.jpg`
+- Source page: https://commons.wikimedia.org/wiki/File:2024-02-20_-_Downtown_Manhattan_Skyline_-_04.jpg
+- Download URL: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/2024-02-20_-_Downtown_Manhattan_Skyline_-_04.jpg/3840px-2024-02-20_-_Downtown_Manhattan_Skyline_-_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail
+- Author: Oleg Yunakov
+- Licence: CC BY-SA 4.0
+- Date taken: 2024-02-20 17:25:26
+- Licence statement (verbatim): LicenseShortName: "CC BY-SA 4.0"; UsageTerms: "Creative Commons Attribution-Share Alike 4.0"; LicenseUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+- Processing: downloaded at 3840x2880, downscaled locally to long edge 2560 px (ImageMagick, JPEG quality 92); no other change
+- sha256: `af399253c45aa7cef9151a124101ecef20d65009cee7fab435c9ffb3893e80a6`
+
+### `newyork/wide/lowsun/lower-manhattan-lowsun-03.jpg`
+- Source page: https://commons.wikimedia.org/wiki/File:2024-02-20_-_Downtown_Manhattan_Skyline_-_03.jpg
+- Download URL: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/2024-02-20_-_Downtown_Manhattan_Skyline_-_03.jpg/3840px-2024-02-20_-_Downtown_Manhattan_Skyline_-_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail
+- Author: Oleg Yunakov
+- Licence: CC BY-SA 4.0
+- Date taken: 2024-02-20 17:25:18
+- Licence statement (verbatim): LicenseShortName: "CC BY-SA 4.0"; UsageTerms: "Creative Commons Attribution-Share Alike 4.0"; LicenseUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+- Processing: downloaded at 3840x2880, downscaled locally to long edge 2560 px (ImageMagick, JPEG quality 92); no other change
+- sha256: `10bf3436e99eacb00cb74b10448c8f01df1618a9e049572f6c6e975f373f9af8`

@@ -1,0 +1,18 @@
+{
+  "id": "core-failure-isolation",
+  "module": "core",
+  "kind": "failure_isolation",
+  "purpose": "A level that fails to load returns the player to the menu with the error logged, and the game keeps running: a missing scene, then a scene whose script errors on start, then a good level that must still load.",
+  "scene": "res://core/menu_placeholder.tscn",
+  "profile": "neo",
+  "resolution": [2408, 1506],
+  "still": false,
+  "warmup_frames": 10,
+  "frames": 120,
+  "expect_errors": ["level 'missing' failed", "level 'broken' failed", "Cannot call method 'queue_free' on a null value"],
+  "window_sequence": [
+    {"frame": 0, "action": "game_call", "method": "load_level", "args": ["res://core/fixtures/does_not_exist.tscn", "missing"], "settle_frames": 10},
+    {"frame": 30, "action": "game_call", "method": "load_level", "args": ["res://core/fixtures/broken_level.tscn", "broken"], "settle_frames": 10},
+    {"frame": 70, "action": "game_call", "method": "load_level", "args": ["res://core/fixtures/ok_level.tscn", "ok"], "settle_frames": 10}
+  ]
+}

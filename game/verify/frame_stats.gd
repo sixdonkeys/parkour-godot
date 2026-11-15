@@ -16,13 +16,23 @@ var _last_usec := -1
 var _vp_rid: RID
 var excluded_capture_frames := 0
 var capture_indices: PackedInt32Array = []
+## Per frame: time from frame_pre_draw to frame_post_draw (drawing + present),
+## and the rest (game loop, physics, scripts, waiting before the draw starts).
+var draw_ms: PackedFloat64Array = []
+var _pre_usec := -1
 var _skip_next := false
 
 
 func start(viewport: Viewport) -> void:
+	if not RenderingServer.frame_pre_draw.is_connected(_on_pre_draw):
+		RenderingServer.frame_pre_draw.connect(_on_pre_draw)
 	_vp_rid = viewport.get_viewport_rid()
 	RenderingServer.viewport_set_measure_render_time(_vp_rid, true)
 	_last_usec = -1
+
+
+func _on_pre_draw() -> void:
+	_pre_usec = Time.get_ticks_usec()
 
 
 ## The frame just sampled was followed by a capture (PNG save).
@@ -41,6 +51,7 @@ func sample() -> void:
 		excluded_capture_frames += 1
 	elif _last_usec >= 0:
 		frame_ms.append((now - _last_usec) / 1000.0)
+		draw_ms.append((now - _pre_usec) / 1000.0 if _pre_usec >= 0 else NAN)
 		gpu_ms.append(RenderingServer.viewport_get_measured_render_time_gpu(_vp_rid))
 		cpu_ms.append(RenderingServer.viewport_get_measured_render_time_cpu(_vp_rid))
 		draw_calls.append(int(Performance.get_monitor(Performance.RENDER_TOTAL_DRAW_CALLS_IN_FRAME)))
@@ -107,6 +118,8 @@ func report(proxy: bool) -> Dictionary:
 		"cpu_render_ms": {"p50": percentile(cpu_ms, 50), "p95": percentile(cpu_ms, 95)},
 		"histogram": histogram(frame_ms),
 		"series_ms": frame_ms,
+		"draw_series_ms": draw_ms,
+		"draw_ms": {"p50": percentile(draw_ms, 50), "p95": percentile(draw_ms, 95)},
 		"capture_after_index": capture_indices,
 		"draw_calls": {"mean": mean_dc / maxf(1, draw_calls.size()), "max": max_dc},
 		"primitives_max": max_prim,

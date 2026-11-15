@@ -1,0 +1,11 @@
+{
+  "name": "unreachable",
+  "transport": "ssh",
+  "ssh_host": "ridgeline-unreachable.invalid",
+  "os": "macos",
+  "display": [2408, 1506],
+  "folder": "~/RidgelineTest",
+  "build": "macOS",
+  "guard_idle_s": 300,
+  "note": "Proof target: a host that doesn't answer. `check` must fail in one plain line."
+}

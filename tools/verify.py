@@ -64,9 +64,10 @@ def git_commit() -> str:
 
 
 def ensure_imported() -> None:
-    if not (GAME / ".godot" / "imported").exists() or os.environ.get("VERIFY_REIMPORT"):
-        subprocess.run([GODOT, "--headless", "--path", str(GAME), "--import"], env=godot_env(),
-                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=900)
+    """Import every run: it registers new global class names and new assets,
+    and is quick when nothing changed."""
+    subprocess.run([GODOT, "--headless", "--path", str(GAME), "--import"], env=godot_env(),
+                   stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=900)
 
 
 def scan_output(text: str) -> dict:
@@ -105,7 +106,8 @@ def _json_default(o):
 
 def run_preset(preset: Path, out: Path, test_mode=True, baseline: Path | None = None,
                timeout=1800, extra_env: dict | None = None, wrap: list[str] | None = None,
-               join_wrapped=False, driver: str | None = None, fullscreen: bool | None = None) -> dict:
+               join_wrapped=False, driver: str | None = None, fullscreen: bool | None = None,
+               engine_args: list[str] | None = None) -> dict:
     preset = preset.resolve()
     out = out.resolve()
     if fullscreen is None:
@@ -114,7 +116,7 @@ def run_preset(preset: Path, out: Path, test_mode=True, baseline: Path | None = 
     out.mkdir(parents=True, exist_ok=True)
     ensure_imported()
     commit = git_commit()
-    cmd = [GODOT, "--path", str(GAME), "--disable-vsync"]
+    cmd = [GODOT, "--path", str(GAME), "--disable-vsync"] + (engine_args or [])
     if test_mode:
         cmd += ["--fixed-fps", "60"]
     cmd += ["--", "--preset", str(preset), "--out", str(out), "--commit", commit, "--repo-root", str(ROOT)]
@@ -133,12 +135,23 @@ def run_preset(preset: Path, out: Path, test_mode=True, baseline: Path | None = 
     log = json.loads(logp.read_text()) if logp.exists() else {"missing_log": True}
     scanned = scan_output(text)
     in_game_errors = log.get("engine", {}).get("errors", [])
+    expected = json.loads(preset.read_text()).get("expect_errors", [])
+    if expected:
+        def is_expected(msg: str) -> bool:
+            return any(e in msg for e in expected)
+        log["expected_errors_seen"] = [e for e in in_game_errors if is_expected(e.get("message", ""))]
+        in_game_errors = [e for e in in_game_errors if not is_expected(e.get("message", ""))]
+        scanned["expected"] = [e for e in scanned["errors"] if is_expected(e)]
+        scanned["errors"] = [e for e in scanned["errors"] if not is_expected(e)]
+        log["expected_errors_missing"] = [e for e in expected
+                                          if not any(e in x.get("message", "") for x in log["expected_errors_seen"])]
     log["orchestrator"] = {
         "command": cmd, "exit_code": rc, "started": t0.isoformat(), "shutdown_hang": hang,
         "self_terminated": "self-terminated after flush" in text,
         "seconds": (dt.datetime.now() - t0).total_seconds(),
         "output_errors": scanned["errors"], "output_warnings": scanned["warnings"],
-        "error_count": len(scanned["errors"]) + len(in_game_errors) + (1 if log.get("missing_log") else 0) + (1 if hang else 0),
+        "error_count": len(scanned["errors"]) + len(in_game_errors) + (1 if log.get("missing_log") else 0) + (1 if hang else 0)
+                       + len(log.get("expected_errors_missing", [])),
         "verify_tool_commit": commit,
     }
     m = log.get("machine", {})
@@ -551,7 +564,8 @@ def build(label: str, module: str, rnd: int, only: list[str] | None) -> dict:
     staged = stage_bench_presets()
     (GAME / "verify" / "build_info.json").write_text(json.dumps(
         {"commit": commit, "built_at": dt.datetime.now(dt.timezone.utc).isoformat(), "label": label}))
-    out = evidence_dir(module, rnd, "build")
+    out = evidence_dir(module, rnd, "build") if module != "remote" else (ROOT / ".local" / "remote-build")
+    out.mkdir(parents=True, exist_ok=True)
     rep = {"label": label, "commit": commit, "bench_presets": staged, "exports": []}
     for name, rel in PRESETS.items():
         if only and name not in only:
@@ -613,6 +627,8 @@ def main() -> int:
     r.add_argument("--normal", action="store_true", help="normal launch timing instead of test mode")
     r.add_argument("--out")
     r.add_argument("--baseline")
+    r.add_argument("--engine-arg", action="append", default=[], help="extra engine flag, e.g. --engine-arg=--rendering-method --engine-arg=mobile")
+    r.add_argument("--tag", default="", help="suffix for the evidence folder name")
     pr = sub.add_parser("prove")
     pr.add_argument("which", choices=list(PROOFS) + ["all"])
     pr.add_argument("--round", type=int, default=1)
@@ -624,6 +640,10 @@ def main() -> int:
     w = sub.add_parser("window")
     w.add_argument("--wm", default="niri", choices=list(WM_WRAP))
     w.add_argument("--round", type=int, default=1)
+    rm = sub.add_parser("remote", help="the remote loop: check, send, bench, play, fetch")
+    rm.add_argument("target")
+    rm.add_argument("verb", choices=["check", "send", "bench", "play", "fetch"])
+    rm.add_argument("--now", action="store_true", help="for a person only: skip the five-minute guard")
     sub.add_parser("setup-check")
     a = ap.parse_args()
 
@@ -631,9 +651,10 @@ def main() -> int:
         p = Path(a.preset)
         d = json.loads(p.read_text())
         module = a.module or d.get("module", "verify")
-        name = d.get("id", p.stem) + ("-normal" if a.normal else "")
+        name = d.get("id", p.stem) + ("-normal" if a.normal else "") + (f"-{a.tag}" if a.tag else "")
         out = Path(a.out) if a.out else evidence_dir(module, a.round, name)
-        log = run_preset(p, out, test_mode=not a.normal, baseline=Path(a.baseline) if a.baseline else None)
+        log = run_preset(p, out, test_mode=not a.normal, baseline=Path(a.baseline) if a.baseline else None,
+                         engine_args=a.engine_arg)
         o = log["orchestrator"]
         ft = log.get("frame_time", {})
         print(json.dumps({"out": str(out.relative_to(ROOT)), "errors": o["error_count"],
@@ -663,6 +684,29 @@ def main() -> int:
         write_json(evidence_dir("verify", a.round, f"window-{a.wm}") / "window-test.json", res)
         print(json.dumps(res, indent=1, default=_json_default))
         return 0 if res["pass"] else 1
+    if a.cmd == "remote":
+        import remote
+        try:
+            tgt = remote.load_target(a.target)
+            build_fn = lambda label, preset: build(label, "remote", 0, [preset])
+            if a.verb == "check":
+                res = remote.check(tgt)
+            elif a.verb == "send":
+                res = remote.send(tgt, build_fn, f"remote-{tgt['name']}")
+            elif a.verb == "bench":
+                res = remote.bench(tgt, build_fn, now=a.now)
+            elif a.verb == "play":
+                res = remote.play(tgt, build_fn, now=a.now)
+            else:
+                res = {"fetched": remote.fetch(tgt)}
+        except remote.RemoteError as e:
+            print(f"remote {a.target} {a.verb}: {e}")
+            return 1
+        except Exception as e:  # noqa: BLE001 - one plain line, never a traceback
+            print(f"remote {a.target} {a.verb}: failed: {e}")
+            return 1
+        print(json.dumps(res, indent=1, default=_json_default))
+        return 0
     if a.cmd == "setup-check":
         return setup_check()
     return 2

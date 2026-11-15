@@ -1,0 +1,19 @@
+{
+  "id": "core-stress-path-parity",
+  "module": "core",
+  "kind": "camera_path",
+  "bench": false,
+  "purpose": "Renderer comparison only: the stress path under a test profile (game/profiles/parity-test.tres, never shipped) with the same features on Forward+ and Mobile (no SSAO, no volumetric fog, no TAA, bilinear scaling), so the two renderers are compared like for like. Not a budget preset.",
+  "scene": "res://core/stress/stress.tscn",
+  "base_scene": "res://core/menu_placeholder.tscn",
+  "camera_path": "docs/fixtures/paths/stress-flight.json",
+  "profile": "parity-test",
+  "resolution": [
+    2408,
+    1506
+  ],
+  "warmup_frames": 60,
+  "frames": 1200,
+  "still_frame": 600,
+  "precycles": 1
+}

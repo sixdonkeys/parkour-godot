@@ -1,0 +1,568 @@
+{
+  "preset": {
+    "id": "core-failure-isolation",
+    "module": "core",
+    "kind": "failure_isolation",
+    "purpose": "A level that fails to load returns the player to the menu with the error logged, and the game keeps running: a missing scene, then a scene whose script errors on start, then a good level that must still load.",
+    "scene": "res://core/menu_placeholder.tscn",
+    "profile": "neo",
+    "resolution": [
+      2408.0,
+      1506.0
+    ],
+    "still": false,
+    "warmup_frames": 10.0,
+    "frames": 120.0,
+    "expect_errors": [
+      "level 'missing' failed",
+      "level 'broken' failed",
+      "Cannot call method 'queue_free' on a null value"
+    ],
+    "window_sequence": [
+      {
+        "frame": 0.0,
+        "action": "game_call",
+        "method": "load_level",
+        "args": [
+          "res://core/fixtures/does_not_exist.tscn",
+          "missing"
+        ],
+        "settle_frames": 10.0
+      },
+      {
+        "frame": 30.0,
+        "action": "game_call",
+        "method": "load_level",
+        "args": [
+          "res://core/fixtures/broken_level.tscn",
+          "broken"
+        ],
+        "settle_frames": 10.0
+      },
+      {
+        "frame": 70.0,
+        "action": "game_call",
+        "method": "load_level",
+        "args": [
+          "res://core/fixtures/ok_level.tscn",
+          "ok"
+        ],
+        "settle_frames": 10.0
+      }
+    ]
+  },
+  "commit": "62b2ca8778fe8ed56e5e97a1c396a603fccfb481-dirty",
+  "test_mode": true,
+  "timing": "fixed (--fixed-fps)",
+  "started": "2026-11-15T19:55:05",
+  "machine": {
+    "os": "Linux",
+    "os_version": "44 (Workstation Edition)",
+    "cpu_cores": 10,
+    "engine": "4.7.2-stable (fedora)",
+    "adapter": "Apple M1 Pro (G13S C0)",
+    "adapter_vendor": "Unknown",
+    "adapter_api_version": "1.4.354",
+    "adapter_driver": [
+      "",
+      ""
+    ],
+    "rendering_method": "forward_plus",
+    "rendering_driver": "vulkan",
+    "display_server": "Wayland",
+    "software_renderer": false,
+    "screen_size": "(3456, 2160)",
+    "screen_scale": 2.0,
+    "refresh_hz": 120.0,
+    "desktop": "GNOME"
+  },
+  "proxy": true,
+  "scene_loaded": true,
+  "profile": {
+    "name": "neo",
+    "path": "res://profiles/neo.tres",
+    "loaded": true,
+    "render_scale": 0.670000016689301,
+    "settings": {
+      "profile_name": "neo",
+      "render_scale": 0.67,
+      "upscalers": [
+        "metalfx_temporal",
+        "fsr2",
+        "bilinear"
+      ],
+      "msaa_3d": 0,
+      "use_taa": true,
+      "screen_space_aa": 0,
+      "mesh_lod_threshold": 1.0,
+      "scatter_density": 1.0,
+      "draw_distance": 1.0,
+      "directional_shadow_size": 4096,
+      "directional_shadow_splits": 2,
+      "directional_shadow_max_distance": 150.0,
+      "soft_shadow_quality": 2,
+      "positional_shadow_atlas_size": 2048,
+      "allow_sdfgi": false,
+      "sdfgi_ray_count": 2,
+      "gi_half_resolution": true,
+      "allow_ssao": true,
+      "ssao_quality": 1,
+      "allow_ssil": false,
+      "allow_ssr": false,
+      "ssr_max_steps": 32,
+      "allow_volumetric_fog": true,
+      "volumetric_fog_size": 64,
+      "volumetric_fog_depth": 64,
+      "allow_glow": true,
+      "texture_tier": "neo",
+      "chosen_upscaler": "fsr2"
+    }
+  },
+  "wall_seconds": 2.551733,
+  "frame_time": {
+    "frames": 119,
+    "excluded_capture_frames": 0,
+    "vsync_mode": "enabled",
+    "frame_ms": {
+      "p50": 18.163,
+      "p95": 24.378,
+      "p99": 64.303,
+      "max": 451.544,
+      "share_within_16_7": 0.478991596638655,
+      "share_within_22": 0.840336134453782
+    },
+    "gpu_ms": {
+      "p50": 9.94099998474121,
+      "p95": 11.2889995574951,
+      "p99": 11.4479999542236
+    },
+    "cpu_render_ms": {
+      "p50": 0.560999989509583,
+      "p95": 1.30799996852875
+    },
+    "histogram": {
+      "bucket_ms": 0.5,
+      "buckets": {
+        "20.0": 6,
+        "1.5": 11,
+        "22.0": 7,
+        "5.5": 2,
+        "1.0": 7,
+        "29.0": 2,
+        "18.5": 4,
+        "19.0": 7,
+        "19.5": 3,
+        "2.0": 7,
+        "2.5": 6,
+        "18.0": 4,
+        "21.5": 4,
+        "3.0": 13,
+        "20.5": 5,
+        "5.0": 1,
+        "3.5": 5,
+        "17.5": 1,
+        "17.0": 1,
+        "21.0": 8,
+        "23.0": 2,
+        "28.0": 1,
+        "8.0": 1,
+        "24.0": 1,
+        "6.0": 2,
+        "23.5": 2,
+        "22.5": 2,
+        "4.5": 2
+      },
+      "over_max": 2,
+      "max_ms": 50.0
+    },
+    "series_ms": [
+      20.191,
+      1.872,
+      20.452,
+      1.716,
+      22.268,
+      5.711,
+      20.216,
+      1.454,
+      20.252,
+      1.269,
+      29.306,
+      18.5,
+      1.174,
+      19.07,
+      1.43,
+      19.738,
+      2.023,
+      19.488,
+      1.73,
+      20.498,
+      2.784,
+      18.259,
+      2.846,
+      18.163,
+      2.923,
+      18.248,
+      2.197,
+      21.736,
+      3.13,
+      64.303,
+      1.982,
+      20.672,
+      5.458,
+      18.623,
+      1.986,
+      19.61,
+      1.378,
+      20.3,
+      1.795,
+      20.982,
+      29.016,
+      20.91,
+      1.555,
+      20.637,
+      2.186,
+      18.672,
+      1.935,
+      18.629,
+      2.019,
+      19.059,
+      1.875,
+      19.446,
+      2.126,
+      19.323,
+      3.72,
+      19.267,
+      2.24,
+      18.492,
+      3.147,
+      17.853,
+      1.832,
+      22.226,
+      3.24,
+      17.193,
+      3.239,
+      19.492,
+      1.257,
+      19.766,
+      1.463,
+      451.544,
+      3.615,
+      21.11,
+      2.957,
+      23.351,
+      3.582,
+      21.41,
+      3.099,
+      22.222,
+      3.038,
+      21.697,
+      28.144,
+      21.057,
+      2.15,
+      22.305,
+      2.862,
+      23.157,
+      3.144,
+      21.58,
+      3.205,
+      21.395,
+      3.144,
+      22.278,
+      3.0,
+      21.097,
+      8.031,
+      22.167,
+      3.799,
+      21.049,
+      3.349,
+      21.15,
+      1.729,
+      24.378,
+      6.112,
+      21.207,
+      5.591,
+      21.965,
+      2.955,
+      23.529,
+      3.458,
+      22.426,
+      3.171,
+      22.843,
+      4.595,
+      23.563,
+      3.694,
+      22.638,
+      4.591,
+      20.845,
+      6.199
+    ],
+    "capture_after_index": [],
+    "draw_calls": {
+      "mean": 5.36134453781513,
+      "max": 10
+    },
+    "primitives_max": 76,
+    "budget": {
+      "proxy": true,
+      "proxy_gpu_factor": 2.5,
+      "wall_clock_meets_budget": false,
+      "gpu_scaled_meets_budget": false,
+      "pass": false
+    }
+  },
+  "viewport_size": "(2408.0, 1506.0)",
+  "window_size": "(3456, 2160)",
+  "window_sequence": [
+    {
+      "frame": 0,
+      "action": "game_call",
+      "observe_at": 10,
+      "result": 1,
+      "observed": {
+        "root_size": "(3456, 2160)",
+        "content_scale_factor": 1.0,
+        "content_scale_size": "(2408, 1506)",
+        "screen_scale": 2.0,
+        "scaling_3d_scale": 0.670000016689301,
+        "window_size": "(3456, 2160)",
+        "window_mode": 3,
+        "viewport_size": "(2408.0, 1506.0)",
+        "mouse_mode": 0,
+        "pointer_released": true,
+        "paused": false,
+        "interface_outside": [],
+        "frame_pixels": "(2408, 1506)",
+        "render_3d_pixels": "(2315.52, 1447.2)",
+        "aspect_window": 1.6,
+        "aspect_visible": 1.59893758300133,
+        "fills_without_stretch": false,
+        "run_state": {
+          "run_state": "MENU",
+          "paused": false,
+          "focused": true,
+          "pointer_captured": false,
+          "level": "",
+          "players": 0,
+          "quality": "neo"
+        }
+      }
+    },
+    {
+      "frame": 30,
+      "action": "game_call",
+      "observe_at": 40,
+      "result": 1,
+      "observed": {
+        "root_size": "(3456, 2160)",
+        "content_scale_factor": 1.0,
+        "content_scale_size": "(2408, 1506)",
+        "screen_scale": 2.0,
+        "scaling_3d_scale": 0.670000016689301,
+        "window_size": "(3456, 2160)",
+        "window_mode": 3,
+        "viewport_size": "(2408.0, 1506.0)",
+        "mouse_mode": 0,
+        "pointer_released": true,
+        "paused": false,
+        "interface_outside": [],
+        "frame_pixels": "(2408, 1506)",
+        "render_3d_pixels": "(2315.52, 1447.2)",
+        "aspect_window": 1.6,
+        "aspect_visible": 1.59893758300133,
+        "fills_without_stretch": false,
+        "run_state": {
+          "run_state": "MENU",
+          "paused": false,
+          "focused": true,
+          "pointer_captured": false,
+          "level": "",
+          "players": 0,
+          "quality": "neo"
+        }
+      }
+    },
+    {
+      "frame": 70,
+      "action": "game_call",
+      "observe_at": 80,
+      "result": 0,
+      "observed": {
+        "root_size": "(3456, 2160)",
+        "content_scale_factor": 1.0,
+        "content_scale_size": "(2408, 1506)",
+        "screen_scale": 2.0,
+        "scaling_3d_scale": 0.670000016689301,
+        "window_size": "(3456, 2160)",
+        "window_mode": 3,
+        "viewport_size": "(2408.0, 1506.0)",
+        "mouse_mode": 0,
+        "pointer_released": true,
+        "paused": false,
+        "interface_outside": [],
+        "frame_pixels": "(2408, 1506)",
+        "render_3d_pixels": "(2315.52, 1447.2)",
+        "aspect_window": 1.6,
+        "aspect_visible": 1.59893758300133,
+        "fills_without_stretch": false,
+        "run_state": {
+          "run_state": "MENU",
+          "paused": false,
+          "focused": true,
+          "pointer_captured": false,
+          "level": "ok",
+          "players": 0,
+          "quality": "neo"
+        }
+      }
+    }
+  ],
+  "window_wm": "GNOME",
+  "interface_outside": [],
+  "focus_events": [
+    {
+      "event": "window_focus_in",
+      "frame": 0,
+      "usec": 403223
+    },
+    {
+      "event": "app_focus_in",
+      "frame": 0,
+      "usec": 403245
+    }
+  ],
+  "memory": {
+    "readings": [
+      {
+        "label": "before_load",
+        "process_rss_bytes": 263995392,
+        "video_bytes": 20855296,
+        "texture_bytes": 17605760,
+        "buffer_bytes": 1934476,
+        "static_bytes": 83223613,
+        "total_bytes": 284850688,
+        "usec": 476762
+      },
+      {
+        "label": "after_load",
+        "process_rss_bytes": 564101120,
+        "video_bytes": 384538224,
+        "texture_bytes": 351979520,
+        "buffer_bytes": 26000368,
+        "static_bytes": 91410797,
+        "total_bytes": 948639344,
+        "usec": 3190267
+      },
+      {
+        "label": "after_unload",
+        "process_rss_bytes": 564101120,
+        "video_bytes": 346969584,
+        "texture_bytes": 314411008,
+        "buffer_bytes": 26000256,
+        "static_bytes": 91149177,
+        "total_bytes": 911070704,
+        "usec": 3556860
+      }
+    ],
+    "loaded_total_bytes": 948639344,
+    "within_4gb": true,
+    "unload_return_ratio": 3.19841496749343,
+    "returns_within_5pct": false,
+    "video_delta_load_bytes": 363682928,
+    "texture_delta_load_bytes": 334373760
+  },
+  "engine": {
+    "errors": [
+      {
+        "type": "error",
+        "message": "core: level 'missing' failed: level scene not found: res://core/fixtures/does_not_exist.tscn",
+        "code": "core: level 'missing' failed: level scene not found: res://core/fixtures/does_not_exist.tscn",
+        "where": "core/variant/variant_utility.cpp:1023 (push_error)",
+        "usec": 1234044
+      },
+      {
+        "type": "script",
+        "message": "Cannot call method 'queue_free' on a null value.",
+        "code": "Cannot call method 'queue_free' on a null value.",
+        "where": "res://core/fixtures/broken_level.gd:6 (_ready)",
+        "usec": 1595490
+      },
+      {
+        "type": "error",
+        "message": "core: level 'broken' failed: errors while starting res://core/fixtures/broken_level.tscn: Cannot call method 'queue_free' on a null value. (res://core/fixtures/broken_level.gd:6)",
+        "code": "core: level 'broken' failed: errors while starting res://core/fixtures/broken_level.tscn: Cannot call method 'queue_free' on a null value. (res://core/fixtures/broken_level.gd:6)",
+        "where": "core/variant/variant_utility.cpp:1023 (push_error)",
+        "usec": 1621805
+      }
+    ],
+    "warnings": [
+      {
+        "type": "warning",
+        "message": "The requested V-Sync mode Disabled is not available. Falling back to V-Sync mode Enabled.",
+        "code": "The requested V-Sync mode Disabled is not available. Falling back to V-Sync mode Enabled.",
+        "where": "drivers/vulkan/rendering_device_driver_vulkan.cpp:3767 (swap_chain_resize)",
+        "usec": 412115
+      }
+    ]
+  },
+  "finished": "2026-11-15T19:55:08",
+  "expected_errors_seen": [
+    {
+      "type": "error",
+      "message": "core: level 'missing' failed: level scene not found: res://core/fixtures/does_not_exist.tscn",
+      "code": "core: level 'missing' failed: level scene not found: res://core/fixtures/does_not_exist.tscn",
+      "where": "core/variant/variant_utility.cpp:1023 (push_error)",
+      "usec": 1234044
+    },
+    {
+      "type": "script",
+      "message": "Cannot call method 'queue_free' on a null value.",
+      "code": "Cannot call method 'queue_free' on a null value.",
+      "where": "res://core/fixtures/broken_level.gd:6 (_ready)",
+      "usec": 1595490
+    },
+    {
+      "type": "error",
+      "message": "core: level 'broken' failed: errors while starting res://core/fixtures/broken_level.tscn: Cannot call method 'queue_free' on a null value. (res://core/fixtures/broken_level.gd:6)",
+      "code": "core: level 'broken' failed: errors while starting res://core/fixtures/broken_level.tscn: Cannot call method 'queue_free' on a null value. (res://core/fixtures/broken_level.gd:6)",
+      "where": "core/variant/variant_utility.cpp:1023 (push_error)",
+      "usec": 1621805
+    }
+  ],
+  "expected_errors_missing": [],
+  "orchestrator": {
+    "command": [
+      "godot",
+      "--path",
+      "/home/nick/src/parkour-godot/game",
+      "--disable-vsync",
+      "--fixed-fps",
+      "60",
+      "--",
+      "--preset",
+      "/home/nick/src/parkour-godot/docs/presets/core-failure-isolation.json",
+      "--out",
+      "/home/nick/src/parkour-godot/docs/evidence/core/round-1/core-failure-isolation",
+      "--commit",
+      "62b2ca8778fe8ed56e5e97a1c396a603fccfb481-dirty",
+      "--repo-root",
+      "/home/nick/src/parkour-godot",
+      "--test-mode",
+      "--bench-fullscreen"
+    ],
+    "exit_code": -9,
+    "started": "2026-11-15T13:55:04.989698",
+    "shutdown_hang": null,
+    "self_terminated": true,
+    "seconds": 4.011571,
+    "output_errors": [],
+    "output_warnings": [
+      "WARNING: Can't obtain the XDG decoration manager. Libdecor will be used for drawing CSDs, if available. | at: init (platform/linuxbsd/wayland/wayland_thread.cpp:5635)",
+      "WARNING: xdg-toplevel-icon protocol not found! Cannot set window icon. | at: init (platform/linuxbsd/wayland/wayland_thread.cpp:5642)",
+      "WARNING: The requested V-Sync mode Disabled is not available. Falling back to V-Sync mode Enabled. | at: swap_chain_resize (drivers/vulkan/rendering_device_driver_vulkan.cpp:3767)",
+      "WARNING: The requested V-Sync mode Disabled is not available. Falling back to V-Sync mode Enabled. | at: swap_chain_resize (drivers/vulkan/rendering_device_driver_vulkan.cpp:3767)"
+    ],
+    "error_count": 0,
+    "verify_tool_commit": "62b2ca8778fe8ed56e5e97a1c396a603fccfb481-dirty",
+    "frame_numbers_count": true
+  }
+}

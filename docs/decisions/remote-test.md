@@ -1,0 +1,21 @@
+# Decision: remote-test
+
+- **Options:**
+  1. SSH over Tailscale with a small POSIX shell agent piped in on every call (`ssh neo sh -s -- <verb> <folder> < agent.sh`). Nothing is installed on the target.
+  2. A GitHub Actions self-hosted runner on the Neo. Rejected for now: it installs an always-on service, jobs only start on a push (which this build can't make), a background service struggles to reach the logged-in screen, and it runs whatever the repository's workflows say. Nick raised it on 2026-11-15; kept as a possible later addition for checks on every push.
+  3. A small agent program installed on the Neo, listening for jobs. Rejected: it installs software and opens a listening port.
+- **Sources:** `docs/survey/remote-test.md` — Joel Bruner's lock-detection gist (quoted); two Apple Developer Forums threads on launching apps over SSH (consulted, not quotable, so tested instead); the brief; local probes.
+- **Choice:** option 1, as `python3 tools/verify.py remote <target> <verb>` (`tools/remote.py`, `tools/remote/agent.sh`).
+  - **Targets:** `docs/targets/<name>.json` holds the SSH alias, OS, display, the one folder the build may use, the export preset, and the idle guard. `neo` uses the alias `neo` and `~/RidgelineTest`. `local-folder` (a folder on this laptop) and `unreachable` / `unreachable-timeout` exist to prove the loop.
+  - **The five verbs:**
+    - `check`: the agent reports the user, the console user, idle seconds (`ioreg` HIDIdleTime), lock state (Bruner's `CGSSessionScreenIsLocked` method), display power, power source and low-power mode (`pmset`), the front app (`lsappinfo`) and the refresh rate (`system_profiler`). The target is free only if untouched for 300 s, unlocked, and the SSH user is the one at the screen.
+    - `send`: exports the target's preset, copies the zip as `<folder>/incoming.zip`, and the agent unpacks it to `<folder>/build`. The previous build is kept as `build.prev` until the next install, so builds don't pile up.
+    - `bench`: `check`, then refuse if not free (unless a person passes `--now`), then `send`. Then `open -n -W` the app with `-- --bench <folder>/results/<date>-<commit> --bench-fullscreen` under `caffeinate -d -i`, poll until it exits, and `fetch`.
+    - `play`: `check`, `send`, open the game for a person. Never waited on, never fetched.
+    - `fetch`: copies back every finished result folder that isn't here yet, into `docs/<target>/<date>-<commit>/`.
+  - **Honesty:** while the game runs, the agent samples lock, idle, front app, power, low-power mode and display state every 5 s into `honesty.jsonl`. The game's own log records whether its window lost focus. `HONESTY.json` marks a run void if the screen locked, the display slept, another app was in front, or the game lost focus. Void runs are kept and count for nothing. Probes that can't be read are listed as `unverifiable`, never guessed.
+  - **Never taking the screen from someone using it:** the 300 s idle guard is checked before anything is sent or started. The builder never passes `--now`.
+  - **Not yet verified, to settle on the Neo's first run:** that `open` from SSH reaches the logged-in GUI session on the Neo's macOS (the Apple forum threads report trouble on recent versions); that the `pmset -g powerstate` display probe works on Apple silicon; and that `lsappinfo` answers from an SSH session. If `open` fails, the fallback is `launchctl asuser <uid> open …`, which needs no extra install.
+  - **Sandbox:** `remote` runs outside the Claude Code sandbox, because Tailscale isn't reachable from inside it.
+- **Reason:** option 1 is the only route that meets "nothing installed on the Neo beyond Tailscale and Remote Login" and works without a push. Piping the agent in on every call keeps the Neo free of this project's files apart from one folder.
+- **Licence:** OpenSSH, Tailscale and the macOS tools are used as they are, not shipped. The lock check follows Joel Bruner's published method (a gist with no licence stated); the idea is used, and the code is our own one line.

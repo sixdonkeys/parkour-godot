@@ -20,3 +20,11 @@ One entry per round: what was tried, what failed, why. Read this first when resu
 - Benchmarks: in a GNOME window, compositor pacing put waves of 25–35 ms frames into an empty scene. The harness now makes pinned-resolution presets fullscreen (decision verification-rendering).
 - Even fullscreen, 5–8% of empty-scene frames take 16.7–23 ms. These are not clean multiples of the 8.33 ms refresh, and render CPU and GPU stay under 2 ms. The p95 sits around 15–17 ms, on the budget's edge. **For `core`:** find where that time goes (frame_pre_draw→post_draw against the swapchain wait; `Engine.max_fps` at the refresh rate; swapchain image count) before claiming the empty-scene frame budget.
 - Release builds buffer stdout. Self-termination dropped the last printed lines until `application/run/flush_stdout_on_print` was turned on.
+
+## remote loop (verify reopened, 2026-11-15)
+
+- Nick asked for remote testing on the Neo and is setting it up now. Built `tools/verify.py remote` (decision remote-test).
+- Proved: a full `bench` against `docs/targets/local-folder.json` (export → copy → install → run → honesty samples → fetch into `docs/local-folder/2026-11-15-62b2ca8778fe/`); `check` against an unresolvable host and a timing-out host, each one plain line in under 9 s.
+- Nick suggested a GitHub Actions runner; declined for now (it installs a service, needs pushes, and struggles to reach the GUI session). Reasons are in the decision record.
+- Open until the Neo answers: `open` over SSH on its macOS, the display-power probe on Apple silicon, and `lsappinfo` from SSH.
+- In this run's bench, every preset missed the frame budget: the build now applies the neo profile, and FSR2 costs ~7.7 ms of GPU per frame here even on an empty scene (empty scene: bilinear 0.9 ms, bilinear+TAA 4.1 ms, FSR1 4.9 ms, FSR2 8.6 ms). On the Neo the profile picks MetalFX instead. Its cost there is unmeasured, and a single forum report puts it near 10 ms on an M1 Pro. **Next in core:** decide the neo profile's upscaler from these numbers, and from the Neo's own once it answers.

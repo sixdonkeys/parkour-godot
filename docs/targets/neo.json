@@ -1,0 +1,11 @@
+{
+  "name": "neo",
+  "transport": "ssh",
+  "ssh_host": "neo",
+  "os": "macos",
+  "display": [2408, 1506],
+  "folder": "~/RidgelineTest",
+  "build": "macOS",
+  "guard_idle_s": 300,
+  "note": "MacBook Neo (Apple A18 Pro, 8 GB). Reached through the SSH host alias `neo` that Nick sets up on each development machine; the folder is the only place this build may use there."
+}

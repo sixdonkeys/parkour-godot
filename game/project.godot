@@ -16,6 +16,10 @@ run/flush_stdout_on_print=true
 [autoload]
 
 Verify="*res://verify/verify.gd"
+Save="*res://core/save.gd"
+Players="*res://core/players.gd"
+Assets="*res://core/assets.gd"
+Game="*res://core/game.gd"
 
 [debug]
 

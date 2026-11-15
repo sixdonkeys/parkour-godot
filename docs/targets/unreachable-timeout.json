@@ -1,0 +1,14 @@
+{
+  "name": "unreachable-timeout",
+  "transport": "ssh",
+  "ssh_host": "192.0.2.1",
+  "os": "macos",
+  "display": [
+    2408,
+    1506
+  ],
+  "folder": "~/RidgelineTest",
+  "build": "macOS",
+  "guard_idle_s": 300,
+  "note": "Proof target: an address reserved for documentation (TEST-NET-1, RFC 5737) that never answers, so SSH times out. check must fail in one plain line."
+}

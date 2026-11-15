@@ -1,0 +1,10 @@
+{
+  "name": "local-folder",
+  "transport": "local",
+  "os": "linux",
+  "display": [2408, 1506],
+  "folder": ".local/fake-target",
+  "build": "Linux arm64",
+  "guard_idle_s": 0,
+  "note": "Proof target for the remote loop: a folder on the development machine. Exercises copy, install, run and fetch exactly as on a real target. The idle guard is off because the builder itself is the one at this machine."
+}

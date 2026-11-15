@@ -1,0 +1,16 @@
+{
+  "id": "core-stress-path",
+  "module": "core",
+  "kind": "camera_path",
+  "bench": true,
+  "purpose": "Benchmark path over the stress scene (1 km noise terrain, 40k rocks, 12k alpha-tested plants, 3k trees, shadows, SSAO, volumetric fog, SDFGI requested and clamped by the profile) on the neo profile at the Neo's resolution. Feeds the renderer decision and the benchmark-only build.",
+  "scene": "res://core/stress/stress.tscn",
+  "base_scene": "res://core/menu_placeholder.tscn",
+  "camera_path": "docs/fixtures/paths/stress-flight.json",
+  "profile": "neo",
+  "resolution": [2408, 1506],
+  "warmup_frames": 60,
+  "frames": 1200,
+  "still_frame": 600,
+  "precycles": 1
+}

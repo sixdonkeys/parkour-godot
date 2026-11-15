@@ -18,3 +18,4 @@ docs/evidence/**/frames/
 /tools/cache/
 __pycache__/
 game/.local/
+docs/*/**/strip/

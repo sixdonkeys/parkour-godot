@@ -1,0 +1,16 @@
+{
+  "void": false,
+  "reasons": [],
+  "unverifiable": [
+    "front_app",
+    "display_awake"
+  ],
+  "power": [
+    "unknown"
+  ],
+  "low_power": [
+    "unknown"
+  ],
+  "samples": 11,
+  "note": "void runs are kept and count for nothing (BUILD-BRIEF item 2)"
+}
