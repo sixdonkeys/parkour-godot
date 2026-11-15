@@ -79,7 +79,9 @@ def put_file(t: dict, local: Path, remote_name: str) -> None:
         return
     with open(local, "rb") as f:
         data = f.read()
-    r = _ssh(t, ["sh", "-c", f'mkdir -p {folder} && cat > {folder}/{remote_name}'], stdin=data, timeout=1800)
+    # One string: ssh joins arguments with spaces, so a separate `sh -c` script
+    # argument would arrive split (the Neo's first copy failed that way).
+    r = _ssh(t, [f"mkdir -p {folder} && cat > {folder}/{remote_name}"], stdin=data, timeout=1800)
     if r.returncode != 0:
         raise RemoteError(f"{t['name']}: copy failed: {r.stderr.decode(errors='replace').strip()[:200]}")
 
