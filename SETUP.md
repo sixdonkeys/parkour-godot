@@ -21,6 +21,16 @@ It prints `all present`, or what's missing.
 | Python | 3.11 or later | Verification tool (`tools/`) |
 | numpy, Pillow | any recent | Image and sound numbers in the verification tool |
 | eu-stack (elfutils) | any | Optional: thread stacks when diagnosing a hang (Linux) |
+| ssh, rsync | any | The remote loop to test machines |
+| niri, Umbriel | any | Window tests nested in a window (Fedora laptop only; optional elsewhere) |
+| tifffile, imagecodecs | pinned in `tools/requirements.txt` | Reading USGS elevation tiles (terrain generator) |
+
+The terrain generator's Python packages go in a project-local virtual environment, never system-wide:
+
+```
+python3 -m venv .local/venv --system-site-packages
+.local/venv/bin/pip install -r tools/requirements.txt
+```
 
 ### Fedora Asahi Linux (aarch64)
 
@@ -82,7 +92,7 @@ mv templates 4.7.2.stable
 The Neo is tested remotely over Tailscale and SSH: `python3 tools/verify.py remote neo check` (also `send`, `bench`, `play`, `fetch`). Nothing is installed on the Neo for this beyond Tailscale and Remote Login.
 
 One-time setup (Nick):
-1. On the Neo, follow the setup brief (Tailscale, Remote Login on for the son's own account, Nick's public keys in that account's `~/.ssh/authorized_keys`).
+1. On the Neo: Tailscale signed in; System Settings → General → Sharing → Remote Login on, for the account logged in at the screen; each development machine's public key in that account's `~/.ssh/authorized_keys`; a folder `~/RidgelineTest`. Plugged in, Low Power Mode off, and the display kept awake (Amphetamine, or a long display-sleep time) for honest runs.
 2. On each development machine, open `~/.ssh/config` in an editor and add an entry named `neo`:
    ```
    Host neo

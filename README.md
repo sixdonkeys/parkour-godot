@@ -23,6 +23,8 @@ All commands are run from the project folder. On the Fedora laptop, anything tha
 | Prove the instruments on their known-answer fixtures | `python3 tools/verify.py prove all` |
 | Window test under a tiling window manager (nested) | `python3 tools/verify.py window --wm niri` (or `umbriel`) |
 | Export all four builds and check what's packed | `python3 tools/verify.py build --label <name>` |
+| Run on a test machine (the Neo) | `python3 tools/verify.py remote neo check` — also `send`, `bench`, `play`, `fetch` |
+| Fetch third-party assets (checked against `tools/assets.lock.json`) | `python3 tools/fetch_assets.py` |
 | Check this machine's tools | `python3 tools/verify.py setup-check` |
 
 Results land in `docs/evidence/<module>/round-<n>/<preset>/`: `log.json` (errors, adapter, frame times, memory, sound, window steps), `still.png`, and, git-ignored, `strip/` frames and `audio.wav`.

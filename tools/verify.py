@@ -608,10 +608,18 @@ def setup_check() -> int:
     for tool in ("git", "curl", "unzip"):
         if not shutil.which(tool):
             missing.append(tool)
-    try:
-        import PIL  # noqa: F401
-    except ImportError:
-        missing.append("Python Pillow")
+    for mod, name in (("PIL", "Python Pillow"), ("numpy", "Python numpy")):
+        try:
+            __import__(mod)
+        except ImportError:
+            missing.append(name)
+    venv_py = ROOT / ".local" / "venv" / "bin" / "python"
+    if not venv_py.exists() or subprocess.run([str(venv_py), "-c", "import tifffile, imagecodecs"],
+                                             capture_output=True).returncode != 0:
+        missing.append("terrain generator packages (see SETUP.md: .local/venv + tools/requirements.txt)")
+    for tool in ("ssh", "rsync"):
+        if not shutil.which(tool):
+            missing.append(tool)
     print("all present" if not missing else "missing:\n  " + "\n  ".join(missing))
     return 1 if missing else 0
 
