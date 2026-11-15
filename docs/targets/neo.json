@@ -11,7 +11,6 @@
   "build": "macOS",
   "guard_idle_s": 300,
   "note": "MacBook Neo (Apple A18 Pro, 8 GB). Reached through the SSH host alias `neo` that Nick sets up on each development machine; the folder is the only place this build may use there.",
-  "tailscale_name": "<the Neo's full Tailscale name>",
   "hardware": "MacBook Neo (Mac17,5): Apple A18 Pro, 2 performance + 4 efficiency CPU cores, 5-core GPU, Metal 4, 8 GB shared memory, 2408x1506 Liquid Retina, macOS 27.2.1 (2026-11-15)",
   "account": "the user logged in at the screen (set as User in the `neo` SSH alias), so a build started over SSH opens on the real display",
   "folders": {

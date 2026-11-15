@@ -86,7 +86,7 @@ One-time setup (Nick):
 2. On each development machine, open `~/.ssh/config` in an editor and add an entry named `neo`:
    ```
    Host neo
-       HostName <neo's Tailscale name>.<tailnet>.ts.net
+       HostName <the Neo's full Tailscale name, ending .ts.net>
        User <the son's macOS username>
    ```
 3. Check from the project folder: `python3 tools/verify.py remote neo check`. It should print the Neo's state as JSON, not an error line.

@@ -56,3 +56,4 @@ One entry per round: what was tried, what failed, why. Read this first when resu
 ## verify, round 2 (building)
 
 - Critic round 1: gate not passed (docs/critic/verify-round-1.md). Blocker 1: exports didn't use neo.tres. Mechanism, from the pack itself: the exported binary `neo.res` kept every property name but no string or array values, so `upscalers` fell back to the script default (FSR2). Fixed by `editor/export/convert_text_resources_to_binary=false`. A rebuilt Linux arm64 bench now reports upscalers [metalfx_temporal, fsr, bilinear], chosen fsr, and the three light presets pass (GPU p95 5.6–6.2 ms).
+- Nick decided (2026-11-15) the memory 5% is measured from after one earlier load and unload (warm cycle); recorded in ARCHITECTURE.md, Measured events. He also asked for the Neo's machine name and the tailnet ID to be removed from the repo, including from history (rewritten before the first push).

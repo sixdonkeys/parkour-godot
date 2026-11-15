@@ -356,12 +356,12 @@ func _run_preset(p: Dictionary, out_dir: String) -> Dictionary:
 		# upload staging buffer) is told apart from a leak that grows each time.
 		var warm: int = cycles[-1][1]["total_bytes"]
 		var after_t: int = mem[2]["total_bytes"]
-		# The budget is judged on the literal pre-load figure (returns_within_5pct
-		# from _memory_report). The warm-cycle figure is reported beside it for
-		# the case in docs/WAITING.md; it decides nothing.
+		# Nick's decision (2026-11-15, ARCHITECTURE.md): the 5% is judged against
+		# the warm cycle; the literal first-load return is reported and decides nothing.
+		m["literal_returns_within_5pct"] = m["returns_within_5pct"]
 		m["warm_baseline_bytes"] = warm
 		m["warm_return_ratio"] = (float(after_t) / warm) if warm > 0 else null
-		m["warm_returns_within_5pct"] = warm > 0 and absf(float(after_t) / warm - 1.0) <= 0.05
+		m["returns_within_5pct"] = warm > 0 and absf(float(after_t) / warm - 1.0) <= 0.05
 		# A leak keeps growing; a cache or heap settles. Compare the last two
 		# unloads (the last pre-cycle and the measured one): more than 1% up
 		# means still growing. The full series stays in the log.
