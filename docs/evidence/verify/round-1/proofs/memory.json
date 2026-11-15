@@ -4,44 +4,44 @@
   "expected_texture_delta_bytes": 67108864,
   "measured_texture_delta_bytes": 67633152,
   "video_delta_bytes": 134480128,
-  "unload_return_ratio_raw": 1.19437729744037,
-  "warm_return_ratio": 1.00754605210695,
+  "unload_return_ratio_raw": 1.17620000755316,
+  "warm_return_ratio": 1.00271299943121,
   "grows_each_cycle": false,
   "texture_returns_exactly": true,
   "readings": [
     {
       "label": "before_load",
-      "process_rss_bytes": 263929856,
-      "video_bytes": 115205120,
-      "texture_bytes": 66823552,
-      "buffer_bytes": 45624540,
-      "static_bytes": 83431123,
-      "total_bytes": 379134976,
-      "usec": 467981
+      "process_rss_bytes": 265388032,
+      "video_bytes": 141329408,
+      "texture_bytes": 116172160,
+      "buffer_bytes": 22400220,
+      "static_bytes": 83909188,
+      "total_bytes": 406717440,
+      "usec": 537113
     },
     {
       "label": "after_load",
-      "process_rss_bytes": 270778368,
-      "video_bytes": 249685248,
-      "texture_bytes": 134456704,
-      "buffer_bytes": 45624792,
-      "static_bytes": 86648484,
-      "total_bytes": 520463616,
-      "usec": 2238522
+      "process_rss_bytes": 270204928,
+      "video_bytes": 275809536,
+      "texture_bytes": 183805312,
+      "buffer_bytes": 22400472,
+      "static_bytes": 87131717,
+      "total_bytes": 546014464,
+      "usec": 2277932
     },
     {
       "label": "after_unload",
-      "process_rss_bytes": 270778368,
-      "video_bytes": 182051840,
-      "texture_bytes": 66823552,
-      "buffer_bytes": 45624540,
-      "static_bytes": 86517202,
-      "total_bytes": 452830208,
-      "usec": 2727827
+      "process_rss_bytes": 270204928,
+      "video_bytes": 208176128,
+      "texture_bytes": 116172160,
+      "buffer_bytes": 22400220,
+      "static_bytes": 87000435,
+      "total_bytes": 478381056,
+      "usec": 2759996
     }
   ],
   "pass": true,
   "log": "docs/evidence/verify/round-1/proofs/memory/log.json",
-  "commit": "d00885bd2b01a9df8904e273938b085e9b9ccac1",
-  "date": "2026-11-15T13:37:22"
+  "commit": "639dffa372bee30536a63e75e70d9f54be58942f-dirty",
+  "date": "2026-11-15T14:31:39"
 }

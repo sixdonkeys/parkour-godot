@@ -1,0 +1,22 @@
+{
+  "id": "core-window-rules",
+  "module": "core",
+  "kind": "window",
+  "purpose": "Window rules through core: a run starts (pointer captured), then resizes across the four shapes, a focus loss (the pointer must be released and the run paused at once), focus back (still paused; pointer stays free until the player resumes), and a fullscreen toggle on and off. Zero engine errors; no Super-key bindings. Harness-driven resize under GNOME; the same steps under niri and Umbriel use the -niri/-umbriel presets.",
+  "scene": "res://core/fixtures/ok_level.tscn",
+  "profile": "neo",
+  "resolution": "window",
+  "still": false,
+  "warmup_frames": 30,
+  "frames": 480,
+  "window_sequence": [
+    {"frame": 0, "action": "game_call", "method": "start_run", "settle_frames": 10},
+    {"frame": 20, "action": "resize_frac", "frac": [0.3333, 1.0]},
+    {"frame": 80, "action": "resize_frac", "frac": [0.5, 1.0]},
+    {"frame": 140, "action": "resize_frac", "frac": [1.0, 0.3333]},
+    {"frame": 200, "action": "fullscreen_toggle"},
+    {"frame": 260, "action": "focus_out", "settle_frames": 2},
+    {"frame": 320, "action": "focus_in", "settle_frames": 5},
+    {"frame": 380, "action": "fullscreen_toggle"}
+  ]
+}

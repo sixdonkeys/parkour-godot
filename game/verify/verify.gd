@@ -54,6 +54,8 @@ func _ready() -> void:
 
 
 var focus_events: Array[Dictionary] = []
+## A fixture scene may put its own verdict here; it goes into the log.
+var fixture_result: Dictionary = {}
 
 
 func _notification(what: int) -> void:
@@ -325,6 +327,9 @@ func _run_preset(p: Dictionary, out_dir: String) -> Dictionary:
 		log["window_sequence"] = window_log
 		log["window_wm"] = p.get("window_wm", OS.get_environment("XDG_CURRENT_DESKTOP"))
 	log["interface_outside"] = _controls_outside()
+	if not fixture_result.is_empty():
+		log["fixture_result"] = fixture_result.duplicate(true)
+		fixture_result.clear()
 	log["focus_events"] = focus_events.duplicate()
 	focus_events.clear()
 	mem.append(MemProbe.reading("after_load"))
@@ -355,11 +360,15 @@ func _run_preset(p: Dictionary, out_dir: String) -> Dictionary:
 		m["warm_baseline_bytes"] = warm
 		m["warm_return_ratio"] = (float(after_t) / warm) if warm > 0 else null
 		m["returns_within_5pct"] = warm > 0 and absf(float(after_t) / warm - 1.0) <= 0.05
-		var grows := false
-		for i in range(1, cycles.size()):
-			if cycles[i][1]["total_bytes"] > cycles[i - 1][1]["total_bytes"] * 1.01:
-				grows = true
-		m["grows_each_cycle"] = grows
+		# A leak keeps growing; a cache or heap settles. Compare the last two
+		# unloads (the last pre-cycle and the measured one): more than 1% up
+		# means still growing. The full series stays in the log.
+		var last_unloads: Array = []
+		for c in cycles:
+			last_unloads.append(c[1]["total_bytes"])
+		last_unloads.append(after_t)
+		m["unload_series_bytes"] = last_unloads
+		m["grows_each_cycle"] = last_unloads.size() >= 2 and last_unloads[-1] > last_unloads[-2] * 1.01
 	Engine.max_fps = 0
 	root.content_scale_mode = Window.CONTENT_SCALE_MODE_CANVAS_ITEMS
 	root.content_scale_aspect = Window.CONTENT_SCALE_ASPECT_EXPAND

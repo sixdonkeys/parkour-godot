@@ -1,0 +1,29 @@
+{
+  "module": "core",
+  "scene": "res://core/stress/stress.tscn",
+  "base_scene": "res://core/menu_placeholder.tscn",
+  "camera": {
+    "position": [
+      0,
+      90,
+      160
+    ],
+    "look_at": [
+      0,
+      20,
+      0
+    ],
+    "fov": 70
+  },
+  "resolution": [
+    2408,
+    1506
+  ],
+  "warmup_frames": 60,
+  "frames": 300,
+  "still_frame": 150,
+  "id": "core-profile-neo-stress-still",
+  "kind": "still",
+  "profile": "neo",
+  "purpose": "The stress scene from a fixed pose under the shipped neo profile; the pair to core-profile-throwaway-high-stress-still."
+}

@@ -1,0 +1,303 @@
+{
+  "preset": {
+    "id": "core-save-corrupt",
+    "module": "core",
+    "kind": "fixture",
+    "purpose": "Saved data: a value round-trips through user://save.json; a corrupt save file is moved aside and replaced by defaults, and the game keeps running.",
+    "scene": "res://core/fixtures/save_check.tscn",
+    "profile": "neo",
+    "resolution": [
+      2408.0,
+      1506.0
+    ],
+    "still": false,
+    "warmup_frames": 5.0,
+    "frames": 20.0,
+    "expect_errors": []
+  },
+  "commit": "639dffa372bee30536a63e75e70d9f54be58942f-dirty",
+  "test_mode": true,
+  "timing": "fixed (--fixed-fps)",
+  "started": "2026-11-15T20:30:31",
+  "machine": {
+    "os": "Linux",
+    "os_version": "44 (Workstation Edition)",
+    "cpu_cores": 10,
+    "engine": "4.7.2-stable (fedora)",
+    "adapter": "Apple M1 Pro (G13S C0)",
+    "adapter_vendor": "Unknown",
+    "adapter_api_version": "1.4.354",
+    "adapter_driver": [
+      "",
+      ""
+    ],
+    "rendering_method": "forward_plus",
+    "rendering_driver": "vulkan",
+    "display_server": "Wayland",
+    "software_renderer": false,
+    "screen_size": "(3456, 2160)",
+    "screen_scale": 2.0,
+    "refresh_hz": 120.0,
+    "desktop": "GNOME"
+  },
+  "proxy": true,
+  "scene_loaded": true,
+  "profile": {
+    "name": "neo",
+    "path": "res://profiles/neo.tres",
+    "loaded": true,
+    "render_scale": 0.670000016689301,
+    "settings": {
+      "profile_name": "neo",
+      "render_scale": 0.67,
+      "upscalers": [
+        "metalfx_temporal",
+        "fsr",
+        "bilinear"
+      ],
+      "msaa_3d": 0,
+      "use_taa": false,
+      "screen_space_aa": 2,
+      "mesh_lod_threshold": 1.0,
+      "scatter_density": 1.0,
+      "draw_distance": 1.0,
+      "directional_shadow_size": 4096,
+      "directional_shadow_splits": 2,
+      "directional_shadow_max_distance": 150.0,
+      "soft_shadow_quality": 2,
+      "positional_shadow_atlas_size": 2048,
+      "allow_sdfgi": false,
+      "sdfgi_ray_count": 2,
+      "gi_half_resolution": true,
+      "allow_ssao": true,
+      "ssao_quality": 1,
+      "allow_ssil": false,
+      "allow_ssr": false,
+      "ssr_max_steps": 32,
+      "allow_volumetric_fog": true,
+      "volumetric_fog_size": 64,
+      "volumetric_fog_depth": 64,
+      "allow_glow": true,
+      "texture_tier": "neo",
+      "chosen_upscaler": "fsr"
+    }
+  },
+  "wall_seconds": 0.354909,
+  "frame_time": {
+    "frames": 19,
+    "excluded_capture_frames": 0,
+    "vsync_mode": "enabled",
+    "frame_ms": {
+      "p50": 15.915,
+      "p95": 19.39,
+      "p99": 19.39,
+      "max": 19.39,
+      "share_within_16_7": 0.736842105263158,
+      "share_within_22": 1.0
+    },
+    "gpu_ms": {
+      "p50": 0.214000001549721,
+      "p95": 0.270000010728836,
+      "p99": 0.270000010728836
+    },
+    "cpu_render_ms": {
+      "p50": 0.0649999976158142,
+      "p95": 0.101999998092651
+    },
+    "histogram": {
+      "bucket_ms": 0.5,
+      "buckets": {
+        "17.0": 1,
+        "15.5": 1,
+        "17.5": 2,
+        "16.5": 2,
+        "14.5": 1,
+        "12.5": 4,
+        "4.0": 3,
+        "19.0": 1,
+        "16.0": 3,
+        "13.0": 1
+      },
+      "over_max": 0,
+      "max_ms": 50.0
+    },
+    "series_ms": [
+      17.24,
+      15.915,
+      17.642,
+      16.73,
+      14.638,
+      12.74,
+      4.111,
+      16.609,
+      12.705,
+      4.245,
+      19.39,
+      17.94,
+      16.453,
+      4.43,
+      16.352,
+      13.146,
+      16.135,
+      12.703,
+      12.559
+    ],
+    "draw_series_ms": [
+      17.111,
+      15.759,
+      17.517,
+      16.557,
+      14.465,
+      12.637,
+      4.007,
+      16.475,
+      12.561,
+      4.156,
+      19.272,
+      17.693,
+      16.252,
+      4.293,
+      16.243,
+      13.036,
+      15.984,
+      12.537,
+      12.443
+    ],
+    "draw_ms": {
+      "p50": 15.759,
+      "p95": 19.272
+    },
+    "capture_after_index": [],
+    "draw_calls": {
+      "mean": 0.0,
+      "max": 0
+    },
+    "primitives_max": 0,
+    "budget": {
+      "proxy": true,
+      "proxy_gpu_factor": 2.5,
+      "wall_clock_meets_budget": false,
+      "gpu_scaled_meets_budget": true,
+      "pass": false
+    }
+  },
+  "viewport_size": "(2408.0, 1506.0)",
+  "window_size": "(3456, 2160)",
+  "interface_outside": [],
+  "fixture_result": {
+    "flush": 0,
+    "round_trip": true,
+    "corrupt_handled": true,
+    "moved_aside": true,
+    "pass": true
+  },
+  "focus_events": [
+    {
+      "event": "window_focus_in",
+      "frame": 0,
+      "usec": 400207
+    },
+    {
+      "event": "app_focus_in",
+      "frame": 0,
+      "usec": 400213
+    }
+  ],
+  "memory": {
+    "readings": [
+      {
+        "label": "before_load",
+        "process_rss_bytes": 263929856,
+        "video_bytes": 20855296,
+        "texture_bytes": 17605760,
+        "buffer_bytes": 1934476,
+        "static_bytes": 83230786,
+        "total_bytes": 284785152,
+        "usec": 524245
+      },
+      {
+        "label": "after_load",
+        "process_rss_bytes": 264126464,
+        "video_bytes": 20855296,
+        "texture_bytes": 17605760,
+        "buffer_bytes": 1934476,
+        "static_bytes": 83271439,
+        "total_bytes": 284981760,
+        "usec": 884826
+      },
+      {
+        "label": "after_unload",
+        "process_rss_bytes": 264126464,
+        "video_bytes": 20855296,
+        "texture_bytes": 17605760,
+        "buffer_bytes": 1934476,
+        "static_bytes": 83270207,
+        "total_bytes": 284981760,
+        "usec": 1297044
+      }
+    ],
+    "loaded_total_bytes": 284981760,
+    "within_4gb": true,
+    "unload_return_ratio": 1.00069037307114,
+    "returns_within_5pct": true,
+    "video_delta_load_bytes": 0,
+    "texture_delta_load_bytes": 0
+  },
+  "engine": {
+    "errors": [],
+    "warnings": [
+      {
+        "type": "warning",
+        "message": "The requested V-Sync mode Disabled is not available. Falling back to V-Sync mode Enabled.",
+        "code": "The requested V-Sync mode Disabled is not available. Falling back to V-Sync mode Enabled.",
+        "where": "drivers/vulkan/rendering_device_driver_vulkan.cpp:3767 (swap_chain_resize)",
+        "usec": 408798
+      },
+      {
+        "type": "warning",
+        "message": "save file was corrupt; moved to user://save.json.corrupt-1794774631 and started from defaults",
+        "code": "save file was corrupt; moved to user://save.json.corrupt-1794774631 and started from defaults",
+        "where": "core/variant/variant_utility.cpp:1033 (push_warning)",
+        "usec": 527218
+      }
+    ]
+  },
+  "finished": "2026-11-15T20:30:32",
+  "orchestrator": {
+    "command": [
+      "godot",
+      "--path",
+      "/home/nick/src/parkour-godot/game",
+      "--disable-vsync",
+      "--fixed-fps",
+      "60",
+      "--",
+      "--preset",
+      "/home/nick/src/parkour-godot/docs/presets/core-save-corrupt.json",
+      "--out",
+      "/home/nick/src/parkour-godot/docs/evidence/core/round-1/core-save-corrupt",
+      "--commit",
+      "639dffa372bee30536a63e75e70d9f54be58942f-dirty",
+      "--repo-root",
+      "/home/nick/src/parkour-godot",
+      "--test-mode",
+      "--bench-fullscreen"
+    ],
+    "exit_code": -9,
+    "started": "2026-11-15T14:30:31.086976",
+    "shutdown_hang": null,
+    "self_terminated": true,
+    "seconds": 1.503788,
+    "output_errors": [],
+    "output_warnings": [
+      "WARNING: Can't obtain the XDG decoration manager. Libdecor will be used for drawing CSDs, if available. | at: init (platform/linuxbsd/wayland/wayland_thread.cpp:5635)",
+      "WARNING: xdg-toplevel-icon protocol not found! Cannot set window icon. | at: init (platform/linuxbsd/wayland/wayland_thread.cpp:5642)",
+      "WARNING: The requested V-Sync mode Disabled is not available. Falling back to V-Sync mode Enabled. | at: swap_chain_resize (drivers/vulkan/rendering_device_driver_vulkan.cpp:3767)",
+      "WARNING: The requested V-Sync mode Disabled is not available. Falling back to V-Sync mode Enabled. | at: swap_chain_resize (drivers/vulkan/rendering_device_driver_vulkan.cpp:3767)",
+      "WARNING: save file was corrupt; moved to user://save.json.corrupt-1794774631 and started from defaults | at: push_warning (core/variant/variant_utility.cpp:1033)"
+    ],
+    "error_count": 0,
+    "verify_tool_commit": "639dffa372bee30536a63e75e70d9f54be58942f-dirty",
+    "frame_numbers_count": true
+  }
+}

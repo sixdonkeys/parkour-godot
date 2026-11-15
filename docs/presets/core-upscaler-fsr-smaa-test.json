@@ -1,0 +1,30 @@
+{
+  "id": "core-upscaler-fsr-smaa-test",
+  "module": "core",
+  "kind": "still",
+  "showcase": false,
+  "bench": false,
+  "purpose": "Anti-aliasing and upscaler cost on the empty scene under test profile fsr-smaa-test (never shipped).",
+  "scene": "res://verify/fixtures/empty.tscn",
+  "camera": {
+    "position": [
+      0,
+      1.7,
+      6
+    ],
+    "look_at": [
+      0,
+      1,
+      0
+    ],
+    "fov": 70
+  },
+  "profile": "fsr-smaa-test",
+  "resolution": [
+    2408,
+    1506
+  ],
+  "warmup_frames": 60,
+  "frames": 600,
+  "still_frame": 300
+}

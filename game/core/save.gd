@@ -19,9 +19,11 @@ func _load() -> void:
 	if not FileAccess.file_exists(PATH):
 		return
 	var text := FileAccess.get_file_as_string(PATH)
-	var parsed = JSON.parse_string(text)
-	if parsed is Dictionary:
-		_data = parsed
+	# JSON.parse() returns an error code; JSON.parse_string() would also raise
+	# an engine error, which a corrupt save file must not do.
+	var json := JSON.new()
+	if json.parse(text) == OK and json.data is Dictionary:
+		_data = json.data
 		return
 	var aside := PATH + ".corrupt-%d" % int(Time.get_unix_time_from_system())
 	DirAccess.rename_absolute(ProjectSettings.globalize_path(PATH), ProjectSettings.globalize_path(aside))

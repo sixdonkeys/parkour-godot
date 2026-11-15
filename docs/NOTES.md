@@ -28,3 +28,10 @@ One entry per round: what was tried, what failed, why. Read this first when resu
 - Nick suggested a GitHub Actions runner; declined for now (it installs a service, needs pushes, and struggles to reach the GUI session). Reasons are in the decision record.
 - Open until the Neo answers: `open` over SSH on its macOS, the display-power probe on Apple silicon, and `lsappinfo` from SSH.
 - In this run's bench, every preset missed the frame budget: the build now applies the neo profile, and FSR2 costs ~7.7 ms of GPU per frame here even on an empty scene (empty scene: bilinear 0.9 ms, bilinear+TAA 4.1 ms, FSR1 4.9 ms, FSR2 8.6 ms). On the Neo the profile picks MetalFX instead. Its cost there is unmeasured, and a single forum report puts it near 10 ms on an M1 Pro. **Next in core:** decide the neo profile's upscaler from these numbers, and from the Neo's own once it answers.
+
+## core, round 1 (building)
+
+- Records: renderer (Forward+; Mobile measured 24% cheaper at matched features, kept as the measured fallback), quality-profiles, multiplayer-readiness.
+- Upscaler/AA costs on the empty scene (GPU p50): bilinear 0.88 ms, +TAA 4.05, FSR1+TAA 4.92, FSR2 8.64, FSR1+SMAA 4.31, FSR1+FXAA 3.93, native+SMAA 2.59. `neo` now uses SMAA with non-temporal upscalers, MetalFX temporal first on the Neo. Empty-scene GPU p95 is 6.07–6.21 ms against the 6.68 ms proxy limit: a thin margin, and look-slice will press on it.
+- Godot's `JSON.parse_string` raises an engine error on bad input; Save uses `JSON.parse()`.
+- The memory leak flag first counted the heap settling over early cycles as growth. It now compares the last two unloads only (ARCHITECTURE.md, Measured events).

@@ -452,3 +452,52 @@ Every file under `reference/`, with its source, licence and checksum. Licence te
 - Licence statement (verbatim): LicenseShortName: "CC BY-SA 4.0"; UsageTerms: "Creative Commons Attribution-Share Alike 4.0"; LicenseUrl: "https://creativecommons.org/licenses/by-sa/4.0"
 - Processing: downloaded at 3840x2880, downscaled locally to long edge 2560 px (ImageMagick, JPEG quality 92); no other change
 - sha256: `10bf3436e99eacb00cb74b10448c8f01df1618a9e049572f6c6e975f373f9af8`
+
+### `newyork/route/midday/nyc-water-towers-brick-01.jpg`
+- Source page: https://commons.wikimedia.org/wiki/File:Rooftop_water_towers_in_SoHo,_Manhattan.jpg
+- Download URL: https://upload.wikimedia.org/wikipedia/commons/2/2f/Rooftop_water_towers_in_SoHo%2C_Manhattan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled
+- Author: Frank Schulenburg
+- Licence: CC BY-SA 4.0
+- Date taken: Taken on 9 March 2016, 13:37:19
+- Licence statement (verbatim): LicenseShortName: "CC BY-SA 4.0"; UsageTerms: "Creative Commons Attribution-Share Alike 4.0"; LicenseUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+- Processing: downloaded at 3608x2550, downscaled locally to long edge 2560 px (ImageMagick, JPEG quality 92); no other change
+- sha256: `5df495b12cfade664dde9b0b0ef9fb1177e2b79bb3b42eb24d08e1921a60fead`
+
+### `newyork/route/midday/nyc-water-tower-skyline-01.jpg`
+- Source page: https://commons.wikimedia.org/wiki/File:Manhattan_-_view_SSE_from_the_Chelsean_01.jpg
+- Download URL: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Manhattan_-_view_SSE_from_the_Chelsean_01.jpg/3840px-Manhattan_-_view_SSE_from_the_Chelsean_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail
+- Author: Joe Mabel
+- Licence: CC BY-SA 4.0
+- Date taken: Taken on 30 May 2026
+- Licence statement (verbatim): LicenseShortName: "CC BY-SA 4.0"; UsageTerms: "Creative Commons Attribution-Share Alike 4.0"; LicenseUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+- Processing: downloaded at 3840x2560, downscaled locally to long edge 2560 px (ImageMagick, JPEG quality 92); no other change
+- sha256: `24a51eb281799e660d47852bbc26bed9600be1d3b7262fe16f7ad3fe2d279ca4`
+
+### `chicago/closeup/lowsun/chicago-parnell-brick-lowsun-01.jpg`
+- Source page: https://commons.wikimedia.org/wiki/File:Parnell_Avenue,_Bridgeport,_Chicago,_IL_(54517714860).jpg
+- Download URL: https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Parnell_Avenue%2C_Bridgeport%2C_Chicago%2C_IL_%2854517714860%29.jpg/1920px-Parnell_Avenue%2C_Bridgeport%2C_Chicago%2C_IL_%2854517714860%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail
+- Author: Warren LeMay from Chicago, IL, United States
+- Licence: CC BY-SA 2.0
+- Date taken: 2023-08-20 17:38
+- Licence statement (verbatim): LicenseShortName: "CC BY-SA 2.0"; UsageTerms: "Creative Commons Attribution-Share Alike 2.0"; LicenseUrl: "https://creativecommons.org/licenses/by-sa/2.0"
+- sha256: `3bce4ebd119797b1b92eac3eab0724080414830bc8da60893ac26bdf092cbddc`
+
+### `chicago/closeup/lowsun/chicago-morgan-st-brick-lowsun-01.jpg`
+- Source page: https://commons.wikimedia.org/wiki/File:Morgan_Street,_Bridgeport,_Chicago,_IL_(54834301337).jpg
+- Download URL: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Morgan_Street%2C_Bridgeport%2C_Chicago%2C_IL_%2854834301337%29.jpg/3840px-Morgan_Street%2C_Bridgeport%2C_Chicago%2C_IL_%2854834301337%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail
+- Author: Warren LeMay from Chicago, IL, United States
+- Licence: CC BY-SA 4.0
+- Date taken: 2023-10-15 15:26
+- Licence statement (verbatim): LicenseShortName: "CC BY-SA 4.0"; UsageTerms: "Creative Commons Attribution-Share Alike 4.0"; LicenseUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+- Processing: downloaded at 3840x2880, downscaled locally to long edge 2560 px (ImageMagick, JPEG quality 92); no other change
+- sha256: `94973123851d5f9873d11385f287a16fdaafa6ce3df9362370f183e4b3024f8a`
+
+### `chicago/route/lowsun/chicago-streeterville-roofs-lowsun-01.jpg`
+- Source page: https://commons.wikimedia.org/wiki/File:Ame05086_11.jpg
+- Download URL: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Ame05086_11.jpg/3840px-Ame05086_11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail
+- Author: Gorup de Besanez
+- Licence: CC BY-SA 4.0
+- Date taken: 2017-05-12 19:10:22
+- Licence statement (verbatim): LicenseShortName: "CC BY-SA 4.0"; UsageTerms: "Creative Commons Attribution-Share Alike 4.0"; LicenseUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+- Processing: downloaded at 3840x2560, downscaled locally to long edge 2560 px (ImageMagick, JPEG quality 92); no other change
+- sha256: `3bc6cc1b624e19a1da4760a3b947a40f1cd2dcf4a64bfe16f1074be6d01d24dc`

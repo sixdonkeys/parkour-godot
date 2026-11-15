@@ -1,0 +1,31 @@
+{
+  "id": "core-stress-memory",
+  "module": "core",
+  "kind": "camera_path",
+  "bench": false,
+  "purpose": "Memory on the stress scene: three load/unload cycles before the measured one, to tell a one-off engine cache (flat across cycles) from a leak (grows each cycle). Budget: at most 4 GB loaded; back within 5% of the warm pre-load figure.",
+  "scene": "res://core/stress/stress.tscn",
+  "base_scene": "res://core/menu_placeholder.tscn",
+  "profile": "neo",
+  "resolution": [
+    2408,
+    1506
+  ],
+  "warmup_frames": 30,
+  "frames": 120,
+  "still_frame": 60,
+  "precycles": 3,
+  "camera": {
+    "position": [
+      0,
+      90,
+      160
+    ],
+    "look_at": [
+      0,
+      20,
+      0
+    ],
+    "fov": 70
+  }
+}

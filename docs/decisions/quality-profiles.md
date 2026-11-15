@@ -19,5 +19,11 @@
   - **Textures:** source art stays at full resolution (`asset-pipeline`). A build-time tool writes reduced copies per tier under `game/assets/_tiers/<tier>/`, mirroring the source paths. Materials load textures through `Assets.texture(path)`, which returns the active tier's copy when one exists, else the source.
   - **Shipping:** the game ships one profile, `neo.tres`. A throwaway second profile (`game/profiles/throwaway-low.tres`) exists only for the preset that proves a tier is just a new file. It is excluded from exports.
   - A missing or broken profile falls back to built-in `neo` defaults and logs the error (ARCHITECTURE.md, Failure isolation).
+  - **Upscaler costs measured here** (empty scene, 2408×1506, render scale 0.67, GPU p50; `docs/evidence/core/round-1/core-upscaler-*`): bilinear without TAA 0.88 ms; bilinear with TAA 4.05 ms; FSR1 with TAA 4.92 ms; FSR2 8.64 ms.
+    - FSR2 alone would take half the proxy GPU budget (6.68 ms), so the neo profile's fallback on Vulkan is FSR1 with TAA. Its first choice on the Neo stays MetalFX temporal; its cost there is unmeasured and is settled by the Neo's first `bench`.
+    - Without TAA: FSR1 with SMAA 4.31 ms; FSR1 with FXAA 3.93 ms; native scale with SMAA 2.59 ms.
+    - So `neo` now uses SMAA, not TAA, with non-temporal upscalers (TAA alone cost about 3.2 ms here). Screen-space AA is switched off whenever a temporal upscaler is chosen, since it anti-aliases by itself.
+    - The final scale and upscaler are chosen on real content in `look-slice`, then corrected by the Neo's numbers.
+    - The list is data in `neo.tres`, so this choice moves without code changes.
 - **Reason:** only option 2 makes a new tier cost one file. Everything it touches can be changed at runtime through documented APIs, so the same level scene serves every tier. The upscaler preference list lets the Neo use Apple's own temporal upscaler, the largest single saving on its GPU, without tying the code to macOS.
 - **Licence:** Godot engine, MIT. MetalFX is part of macOS and reached through the engine; FSR2 ships inside the engine (MIT).

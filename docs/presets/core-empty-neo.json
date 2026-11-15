@@ -1,0 +1,32 @@
+{
+  "id": "core-empty-neo",
+  "module": "core",
+  "kind": "still",
+  "showcase": false,
+  "bench": true,
+  "purpose": "core's frame-time, memory and build-size budget preset on an empty scene: the neo profile (now applied by core) at the Neo's resolution, with the menu's 3D backdrop as the memory baseline.",
+  "scene": "res://verify/fixtures/empty.tscn",
+  "camera": {
+    "position": [
+      0,
+      1.7,
+      6
+    ],
+    "look_at": [
+      0,
+      1,
+      0
+    ],
+    "fov": 70
+  },
+  "profile": "neo",
+  "resolution": [
+    2408,
+    1506
+  ],
+  "warmup_frames": 60,
+  "frames": 600,
+  "still_frame": 300,
+  "base_scene": "res://core/menu_placeholder.tscn",
+  "precycles": 1
+}

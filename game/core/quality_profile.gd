@@ -87,7 +87,8 @@ func apply(viewport: Viewport, scene: Node = null) -> void:
 	var temporal_upscaler := chosen_upscaler in ["fsr2", "metalfx_temporal"]
 	viewport.use_taa = use_taa and not temporal_upscaler
 	viewport.msaa_3d = msaa_3d
-	viewport.screen_space_aa = screen_space_aa
+	# A temporal upscaler anti-aliases by itself; screen-space AA on top only blurs.
+	viewport.screen_space_aa = Viewport.SCREEN_SPACE_AA_DISABLED if temporal_upscaler else screen_space_aa
 	viewport.mesh_lod_threshold = mesh_lod_threshold
 	viewport.positional_shadow_atlas_size = positional_shadow_atlas_size
 	RenderingServer.directional_shadow_atlas_set_size(directional_shadow_size, true)

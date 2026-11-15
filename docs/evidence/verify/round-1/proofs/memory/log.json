@@ -15,10 +15,10 @@
     "base_scene": "res://verify/fixtures/empty.tscn",
     "precycles": 2.0
   },
-  "commit": "d00885bd2b01a9df8904e273938b085e9b9ccac1",
+  "commit": "639dffa372bee30536a63e75e70d9f54be58942f-dirty",
   "test_mode": true,
   "timing": "fixed (--fixed-fps)",
-  "started": "2026-11-15T19:37:19",
+  "started": "2026-11-15T20:31:36",
   "machine": {
     "os": "Linux",
     "os_version": "44 (Workstation Edition)",
@@ -45,49 +45,149 @@
   "profile": {
     "name": "neo",
     "path": "res://profiles/neo.tres",
-    "loaded": false,
-    "render_scale": 1.0
+    "loaded": true,
+    "render_scale": 0.670000016689301,
+    "settings": {
+      "profile_name": "neo",
+      "render_scale": 0.67,
+      "upscalers": [
+        "metalfx_temporal",
+        "fsr",
+        "bilinear"
+      ],
+      "msaa_3d": 0,
+      "use_taa": false,
+      "screen_space_aa": 2,
+      "mesh_lod_threshold": 1.0,
+      "scatter_density": 1.0,
+      "draw_distance": 1.0,
+      "directional_shadow_size": 4096,
+      "directional_shadow_splits": 2,
+      "directional_shadow_max_distance": 150.0,
+      "soft_shadow_quality": 2,
+      "positional_shadow_atlas_size": 2048,
+      "allow_sdfgi": false,
+      "sdfgi_ray_count": 2,
+      "gi_half_resolution": true,
+      "allow_ssao": true,
+      "ssao_quality": 1,
+      "allow_ssil": false,
+      "allow_ssr": false,
+      "ssr_max_steps": 32,
+      "allow_volumetric_fog": true,
+      "volumetric_fog_size": 64,
+      "volumetric_fog_depth": 64,
+      "allow_glow": true,
+      "texture_tier": "neo",
+      "chosen_upscaler": "fsr"
+    }
   },
-  "wall_seconds": 0.449647,
+  "wall_seconds": 0.44676,
   "frame_time": {
     "frames": 29,
     "excluded_capture_frames": 0,
     "vsync_mode": "enabled",
     "frame_ms": {
-      "p50": 8.264,
-      "p95": 15.458,
-      "p99": 15.956,
-      "max": 15.956,
+      "p50": 8.325,
+      "p95": 11.679,
+      "p99": 12.565,
+      "max": 12.565,
       "share_within_16_7": 1.0,
       "share_within_22": 1.0
     },
     "gpu_ms": {
-      "p50": 1.64300000667572,
-      "p95": 2.23200011253357,
-      "p99": 2.37100005149841
+      "p50": 4.38500022888184,
+      "p95": 5.80399990081787,
+      "p99": 10.1079998016357
     },
     "cpu_render_ms": {
-      "p50": 0.233999997377396,
-      "p95": 0.365000009536743
+      "p50": 0.305000007152557,
+      "p95": 0.375
     },
     "histogram": {
       "bucket_ms": 0.5,
       "buckets": {
-        "8.0": 13,
-        "9.0": 1,
-        "15.0": 1,
-        "8.5": 3,
-        "7.5": 4,
-        "9.5": 1,
-        "6.5": 1,
+        "8.0": 10,
+        "8.5": 9,
+        "9.0": 2,
+        "7.0": 2,
+        "7.5": 3,
         "12.5": 1,
-        "4.5": 2,
-        "15.5": 1,
-        "2.0": 1
+        "11.5": 1,
+        "1.5": 1
       },
       "over_max": 0,
       "max_ms": 50.0
     },
+    "series_ms": [
+      8.183,
+      8.748,
+      8.65,
+      8.154,
+      9.252,
+      7.106,
+      9.021,
+      8.778,
+      8.477,
+      7.812,
+      8.576,
+      8.682,
+      7.752,
+      8.052,
+      8.161,
+      8.965,
+      8.86,
+      7.846,
+      8.212,
+      8.151,
+      8.539,
+      8.325,
+      8.25,
+      8.552,
+      12.565,
+      11.679,
+      1.604,
+      7.395,
+      8.144
+    ],
+    "draw_series_ms": [
+      8.038,
+      8.635,
+      8.539,
+      8.015,
+      9.074,
+      6.95,
+      8.906,
+      8.642,
+      8.308,
+      7.663,
+      8.451,
+      8.513,
+      7.598,
+      7.905,
+      8.033,
+      8.843,
+      8.718,
+      7.692,
+      8.067,
+      7.982,
+      8.402,
+      8.145,
+      8.114,
+      8.418,
+      12.37,
+      11.486,
+      1.453,
+      7.342,
+      7.995
+    ],
+    "draw_ms": {
+      "p50": 8.145,
+      "p95": 11.486
+    },
+    "capture_after_index": [
+      29
+    ],
     "draw_calls": {
       "mean": 1.0,
       "max": 1
@@ -97,61 +197,61 @@
       "proxy": true,
       "proxy_gpu_factor": 2.5,
       "wall_clock_meets_budget": true,
-      "gpu_scaled_meets_budget": true,
-      "pass": true
+      "gpu_scaled_meets_budget": false,
+      "pass": false
     }
   },
   "viewport_size": "(2408.0, 1506.0)",
-  "window_size": "(2560, 1600)",
+  "window_size": "(3456, 2160)",
   "interface_outside": [],
   "focus_events": [
     {
       "event": "window_focus_in",
       "frame": 0,
-      "usec": 383094
+      "usec": 433784
     },
     {
       "event": "app_focus_in",
       "frame": 0,
-      "usec": 383102
+      "usec": 433791
     }
   ],
   "memory": {
     "readings": [
       {
         "label": "before_load",
-        "process_rss_bytes": 263929856,
-        "video_bytes": 115205120,
-        "texture_bytes": 66823552,
-        "buffer_bytes": 45624540,
-        "static_bytes": 83431123,
-        "total_bytes": 379134976,
-        "usec": 467981
+        "process_rss_bytes": 265388032,
+        "video_bytes": 141329408,
+        "texture_bytes": 116172160,
+        "buffer_bytes": 22400220,
+        "static_bytes": 83909188,
+        "total_bytes": 406717440,
+        "usec": 537113
       },
       {
         "label": "after_load",
-        "process_rss_bytes": 270778368,
-        "video_bytes": 249685248,
-        "texture_bytes": 134456704,
-        "buffer_bytes": 45624792,
-        "static_bytes": 86648484,
-        "total_bytes": 520463616,
-        "usec": 2238522
+        "process_rss_bytes": 270204928,
+        "video_bytes": 275809536,
+        "texture_bytes": 183805312,
+        "buffer_bytes": 22400472,
+        "static_bytes": 87131717,
+        "total_bytes": 546014464,
+        "usec": 2277932
       },
       {
         "label": "after_unload",
-        "process_rss_bytes": 270778368,
-        "video_bytes": 182051840,
-        "texture_bytes": 66823552,
-        "buffer_bytes": 45624540,
-        "static_bytes": 86517202,
-        "total_bytes": 452830208,
-        "usec": 2727827
+        "process_rss_bytes": 270204928,
+        "video_bytes": 208176128,
+        "texture_bytes": 116172160,
+        "buffer_bytes": 22400220,
+        "static_bytes": 87000435,
+        "total_bytes": 478381056,
+        "usec": 2759996
       }
     ],
-    "loaded_total_bytes": 520463616,
+    "loaded_total_bytes": 546014464,
     "within_4gb": true,
-    "unload_return_ratio": 1.19437729744037,
+    "unload_return_ratio": 1.17620000755316,
     "returns_within_5pct": true,
     "video_delta_load_bytes": 134480128,
     "texture_delta_load_bytes": 67633152,
@@ -159,51 +259,56 @@
       [
         {
           "label": "precycle_0_loaded",
-          "process_rss_bytes": 266534912,
-          "video_bytes": 249685248,
-          "texture_bytes": 134456704,
-          "buffer_bytes": 45624792,
-          "static_bytes": 86630876,
-          "total_bytes": 516220160,
-          "usec": 576436
+          "process_rss_bytes": 268369920,
+          "video_bytes": 275809536,
+          "texture_bytes": 183805312,
+          "buffer_bytes": 22400472,
+          "static_bytes": 87108901,
+          "total_bytes": 544179456,
+          "usec": 653147
         },
         {
           "label": "precycle_0_unloaded",
-          "process_rss_bytes": 266665984,
-          "video_bytes": 182051840,
-          "texture_bytes": 66823552,
-          "buffer_bytes": 45624540,
-          "static_bytes": 86500190,
-          "total_bytes": 448717824,
-          "usec": 1116189
+          "process_rss_bytes": 268500992,
+          "video_bytes": 208176128,
+          "texture_bytes": 116172160,
+          "buffer_bytes": 22400220,
+          "static_bytes": 86978215,
+          "total_bytes": 476677120,
+          "usec": 1160978
         }
       ],
       [
         {
           "label": "precycle_1_loaded",
-          "process_rss_bytes": 267386880,
-          "video_bytes": 249685248,
-          "texture_bytes": 134456704,
-          "buffer_bytes": 45624792,
-          "static_bytes": 86633880,
-          "total_bytes": 517072128,
-          "usec": 1226703
+          "process_rss_bytes": 268910592,
+          "video_bytes": 275809536,
+          "texture_bytes": 183805312,
+          "buffer_bytes": 22400472,
+          "static_bytes": 87111793,
+          "total_bytes": 544720128,
+          "usec": 1272744
         },
         {
           "label": "precycle_1_unloaded",
-          "process_rss_bytes": 267386880,
-          "video_bytes": 182051840,
-          "texture_bytes": 66823552,
-          "buffer_bytes": 45624540,
-          "static_bytes": 86502826,
-          "total_bytes": 449438720,
-          "usec": 1740343
+          "process_rss_bytes": 268910592,
+          "video_bytes": 208176128,
+          "texture_bytes": 116172160,
+          "buffer_bytes": 22400220,
+          "static_bytes": 86980739,
+          "total_bytes": 477086720,
+          "usec": 1773266
         }
       ]
     ],
     "raw_returns_within_5pct": false,
-    "warm_baseline_bytes": 449438720,
-    "warm_return_ratio": 1.00754605210695,
+    "warm_baseline_bytes": 477086720,
+    "warm_return_ratio": 1.00271299943121,
+    "unload_series_bytes": [
+      476677120,
+      477086720,
+      478381056
+    ],
     "grows_each_cycle": false
   },
   "engine": {
@@ -214,11 +319,11 @@
         "message": "The requested V-Sync mode Disabled is not available. Falling back to V-Sync mode Enabled.",
         "code": "The requested V-Sync mode Disabled is not available. Falling back to V-Sync mode Enabled.",
         "where": "drivers/vulkan/rendering_device_driver_vulkan.cpp:3767 (swap_chain_resize)",
-        "usec": 405937
+        "usec": 460309
       }
     ]
   },
-  "finished": "2026-11-15T19:37:22",
+  "finished": "2026-11-15T20:31:39",
   "orchestrator": {
     "command": [
       "godot",
@@ -233,14 +338,17 @@
       "--out",
       "/home/nick/src/parkour-godot/docs/evidence/verify/round-1/proofs/memory",
       "--commit",
-      "d00885bd2b01a9df8904e273938b085e9b9ccac1",
-      "--test-mode"
+      "639dffa372bee30536a63e75e70d9f54be58942f-dirty",
+      "--repo-root",
+      "/home/nick/src/parkour-godot",
+      "--test-mode",
+      "--bench-fullscreen"
     ],
     "exit_code": -9,
-    "started": "2026-11-15T13:37:19.264917",
+    "started": "2026-11-15T14:31:36.432089",
     "shutdown_hang": null,
     "self_terminated": true,
-    "seconds": 3.005486,
+    "seconds": 3.007872,
     "output_errors": [],
     "output_warnings": [
       "WARNING: Can't obtain the XDG decoration manager. Libdecor will be used for drawing CSDs, if available. | at: init (platform/linuxbsd/wayland/wayland_thread.cpp:5635)",
@@ -249,7 +357,7 @@
       "WARNING: The requested V-Sync mode Disabled is not available. Falling back to V-Sync mode Enabled. | at: swap_chain_resize (drivers/vulkan/rendering_device_driver_vulkan.cpp:3767)"
     ],
     "error_count": 0,
-    "verify_tool_commit": "d00885bd2b01a9df8904e273938b085e9b9ccac1",
+    "verify_tool_commit": "639dffa372bee30536a63e75e70d9f54be58942f-dirty",
     "frame_numbers_count": true
   },
   "image": {

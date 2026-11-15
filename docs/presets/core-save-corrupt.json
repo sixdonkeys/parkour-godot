@@ -1,0 +1,13 @@
+{
+  "id": "core-save-corrupt",
+  "module": "core",
+  "kind": "fixture",
+  "purpose": "Saved data: a value round-trips through user://save.json; a corrupt save file is moved aside and replaced by defaults, and the game keeps running.",
+  "scene": "res://core/fixtures/save_check.tscn",
+  "profile": "neo",
+  "resolution": [2408, 1506],
+  "still": false,
+  "warmup_frames": 5,
+  "frames": 20,
+  "expect_errors": []
+}

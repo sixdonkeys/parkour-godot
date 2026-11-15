@@ -1,0 +1,480 @@
+{
+  "pack_version": 4,
+  "engine": "4.7.2",
+  "files": [
+    {
+      "path": ".godot/exported/133200997/export-0172f79e09fa1711adbf9f7399f9d011-ui_outside.scn",
+      "size": 1142,
+      "source": "verify/fixtures/ui_outside.tscn"
+    },
+    {
+      "path": ".godot/exported/133200997/export-0185cca36e5a56cc1a1ca0f208312ade-tone.scn",
+      "size": 696,
+      "source": "verify/fixtures/tone.tscn"
+    },
+    {
+      "path": ".godot/exported/133200997/export-3830f157422a84c1c56502017a9acb51-neo.res",
+      "size": 903,
+      "source": ".godot/exported/133200997/export-3830f157422a84c1c56502017a9acb51-neo.res"
+    },
+    {
+      "path": ".godot/exported/133200997/export-3cedd7d8b24bca677c41d261bec41cc7-ok_level.scn",
+      "size": 1458,
+      "source": "core/fixtures/ok_level.tscn"
+    },
+    {
+      "path": ".godot/exported/133200997/export-7db604b9e565a8d3f3475ed37402480b-boot.scn",
+      "size": 672,
+      "source": "main/boot.tscn"
+    },
+    {
+      "path": ".godot/exported/133200997/export-b5d9436f9190df67bb93542184bb612f-save_check.scn",
+      "size": 692,
+      "source": "core/fixtures/save_check.tscn"
+    },
+    {
+      "path": ".godot/exported/133200997/export-ca924f20eab48584d36cbd4715ab1a53-known_texture.scn",
+      "size": 702,
+      "source": "verify/fixtures/known_texture.tscn"
+    },
+    {
+      "path": ".godot/exported/133200997/export-cb846ad81437caea09dd8b4f4701ee92-broken_level.scn",
+      "size": 698,
+      "source": "core/fixtures/broken_level.tscn"
+    },
+    {
+      "path": ".godot/exported/133200997/export-d1ff9310642c5e7b883e8e879433e398-stress.scn",
+      "size": 685,
+      "source": "core/stress/stress.tscn"
+    },
+    {
+      "path": ".godot/exported/133200997/export-dd94ef18c3ade3901eaec22eb944f1ff-empty.scn",
+      "size": 732,
+      "source": "verify/fixtures/empty.tscn"
+    },
+    {
+      "path": ".godot/exported/133200997/export-f12348e9d369542ad0a1b5b64b23ab0f-menu_placeholder.scn",
+      "size": 4309,
+      "source": "core/menu_placeholder.tscn"
+    },
+    {
+      "path": ".godot/global_script_class_cache.cfg",
+      "size": 1168,
+      "source": ".godot/global_script_class_cache.cfg"
+    },
+    {
+      "path": ".godot/uid_cache.bin",
+      "size": 875,
+      "source": ".godot/uid_cache.bin"
+    },
+    {
+      "path": "core/app_exit.gd.remap",
+      "size": 40,
+      "source": "core/app_exit.gd"
+    },
+    {
+      "path": "core/app_exit.gdc",
+      "size": 625,
+      "source": "core/app_exit.gdc"
+    },
+    {
+      "path": "core/assets.gd.remap",
+      "size": 38,
+      "source": "core/assets.gd"
+    },
+    {
+      "path": "core/assets.gdc",
+      "size": 555,
+      "source": "core/assets.gdc"
+    },
+    {
+      "path": "core/device_input.gd.remap",
+      "size": 44,
+      "source": "core/device_input.gd"
+    },
+    {
+      "path": "core/device_input.gdc",
+      "size": 574,
+      "source": "core/device_input.gdc"
+    },
+    {
+      "path": "core/error_watch.gd.remap",
+      "size": 43,
+      "source": "core/error_watch.gd"
+    },
+    {
+      "path": "core/error_watch.gdc",
+      "size": 895,
+      "source": "core/error_watch.gdc"
+    },
+    {
+      "path": "core/fixtures/broken_level.gd.remap",
+      "size": 53,
+      "source": "core/fixtures/broken_level.gd"
+    },
+    {
+      "path": "core/fixtures/broken_level.gdc",
+      "size": 259,
+      "source": "core/fixtures/broken_level.gdc"
+    },
+    {
+      "path": "core/fixtures/broken_level.tscn.remap",
+      "size": 105,
+      "source": "core/fixtures/broken_level.tscn"
+    },
+    {
+      "path": "core/fixtures/ok_level.tscn.remap",
+      "size": 101,
+      "source": "core/fixtures/ok_level.tscn"
+    },
+    {
+      "path": "core/fixtures/save_check.gd.remap",
+      "size": 51,
+      "source": "core/fixtures/save_check.gd"
+    },
+    {
+      "path": "core/fixtures/save_check.gdc",
+      "size": 959,
+      "source": "core/fixtures/save_check.gdc"
+    },
+    {
+      "path": "core/fixtures/save_check.tscn.remap",
+      "size": 103,
+      "source": "core/fixtures/save_check.tscn"
+    },
+    {
+      "path": "core/game.gd.remap",
+      "size": 36,
+      "source": "core/game.gd"
+    },
+    {
+      "path": "core/game.gdc",
+      "size": 6186,
+      "source": "core/game.gdc"
+    },
+    {
+      "path": "core/input_defaults.gd.remap",
+      "size": 46,
+      "source": "core/input_defaults.gd"
+    },
+    {
+      "path": "core/input_defaults.gdc",
+      "size": 1218,
+      "source": "core/input_defaults.gdc"
+    },
+    {
+      "path": "core/input_source.gd.remap",
+      "size": 44,
+      "source": "core/input_source.gd"
+    },
+    {
+      "path": "core/input_source.gdc",
+      "size": 219,
+      "source": "core/input_source.gdc"
+    },
+    {
+      "path": "core/menu_placeholder.gd.remap",
+      "size": 48,
+      "source": "core/menu_placeholder.gd"
+    },
+    {
+      "path": "core/menu_placeholder.gdc",
+      "size": 181,
+      "source": "core/menu_placeholder.gdc"
+    },
+    {
+      "path": "core/menu_placeholder.tscn.remap",
+      "size": 109,
+      "source": "core/menu_placeholder.tscn"
+    },
+    {
+      "path": "core/player_slot.gd.remap",
+      "size": 43,
+      "source": "core/player_slot.gd"
+    },
+    {
+      "path": "core/player_slot.gdc",
+      "size": 381,
+      "source": "core/player_slot.gdc"
+    },
+    {
+      "path": "core/players.gd.remap",
+      "size": 39,
+      "source": "core/players.gd"
+    },
+    {
+      "path": "core/players.gdc",
+      "size": 1054,
+      "source": "core/players.gdc"
+    },
+    {
+      "path": "core/quality_profile.gd.remap",
+      "size": 47,
+      "source": "core/quality_profile.gd"
+    },
+    {
+      "path": "core/quality_profile.gdc",
+      "size": 4088,
+      "source": "core/quality_profile.gdc"
+    },
+    {
+      "path": "core/save.gd.remap",
+      "size": 36,
+      "source": "core/save.gd"
+    },
+    {
+      "path": "core/save.gdc",
+      "size": 1808,
+      "source": "core/save.gdc"
+    },
+    {
+      "path": "core/stress/stress.gd.remap",
+      "size": 45,
+      "source": "core/stress/stress.gd"
+    },
+    {
+      "path": "core/stress/stress.gdc",
+      "size": 4112,
+      "source": "core/stress/stress.gdc"
+    },
+    {
+      "path": "core/stress/stress.tscn.remap",
+      "size": 99,
+      "source": "core/stress/stress.tscn"
+    },
+    {
+      "path": "main/boot.gd.remap",
+      "size": 36,
+      "source": "main/boot.gd"
+    },
+    {
+      "path": "main/boot.gdc",
+      "size": 265,
+      "source": "main/boot.gdc"
+    },
+    {
+      "path": "main/boot.tscn.remap",
+      "size": 97,
+      "source": "main/boot.tscn"
+    },
+    {
+      "path": "profiles/neo.tres.remap",
+      "size": 96,
+      "source": "profiles/neo.tres"
+    },
+    {
+      "path": "project.binary",
+      "size": 1429,
+      "source": "project.binary"
+    },
+    {
+      "path": "verify/audio_tap.gd.remap",
+      "size": 43,
+      "source": "verify/audio_tap.gd"
+    },
+    {
+      "path": "verify/audio_tap.gdc",
+      "size": 2733,
+      "source": "verify/audio_tap.gdc"
+    },
+    {
+      "path": "verify/bench_presets/core-empty-neo.json",
+      "size": 687,
+      "source": "verify/bench_presets/core-empty-neo.json"
+    },
+    {
+      "path": "verify/bench_presets/core-stress-path.json",
+      "size": 700,
+      "source": "verify/bench_presets/core-stress-path.json"
+    },
+    {
+      "path": "verify/bench_presets/empty-orbit.json",
+      "size": 456,
+      "source": "verify/bench_presets/empty-orbit.json"
+    },
+    {
+      "path": "verify/bench_presets/index.json",
+      "size": 138,
+      "source": "verify/bench_presets/index.json"
+    },
+    {
+      "path": "verify/bench_presets/paths/empty-orbit.json",
+      "size": 456,
+      "source": "verify/bench_presets/paths/empty-orbit.json"
+    },
+    {
+      "path": "verify/bench_presets/paths/stress-flight.json",
+      "size": 2286,
+      "source": "verify/bench_presets/paths/stress-flight.json"
+    },
+    {
+      "path": "verify/bench_presets/verify-empty-path.json",
+      "size": 450,
+      "source": "verify/bench_presets/verify-empty-path.json"
+    },
+    {
+      "path": "verify/bench_presets/verify-empty-still.json",
+      "size": 569,
+      "source": "verify/bench_presets/verify-empty-still.json"
+    },
+    {
+      "path": "verify/build_info.json",
+      "size": 131,
+      "source": "verify/build_info.json"
+    },
+    {
+      "path": "verify/error_logger.gd.remap",
+      "size": 46,
+      "source": "verify/error_logger.gd"
+    },
+    {
+      "path": "verify/error_logger.gdc",
+      "size": 1460,
+      "source": "verify/error_logger.gdc"
+    },
+    {
+      "path": "verify/fixtures/empty.tscn.remap",
+      "size": 98,
+      "source": "verify/fixtures/empty.tscn"
+    },
+    {
+      "path": "verify/fixtures/known_texture.gd.remap",
+      "size": 56,
+      "source": "verify/fixtures/known_texture.gd"
+    },
+    {
+      "path": "verify/fixtures/known_texture.gdc",
+      "size": 869,
+      "source": "verify/fixtures/known_texture.gdc"
+    },
+    {
+      "path": "verify/fixtures/known_texture.tscn.remap",
+      "size": 106,
+      "source": "verify/fixtures/known_texture.tscn"
+    },
+    {
+      "path": "verify/fixtures/tone.gd.remap",
+      "size": 47,
+      "source": "verify/fixtures/tone.gd"
+    },
+    {
+      "path": "verify/fixtures/tone.gdc",
+      "size": 1243,
+      "source": "verify/fixtures/tone.gdc"
+    },
+    {
+      "path": "verify/fixtures/tone.tscn.remap",
+      "size": 97,
+      "source": "verify/fixtures/tone.tscn"
+    },
+    {
+      "path": "verify/fixtures/ui_outside.tscn.remap",
+      "size": 103,
+      "source": "verify/fixtures/ui_outside.tscn"
+    },
+    {
+      "path": "verify/frame_stats.gd.remap",
+      "size": 45,
+      "source": "verify/frame_stats.gd"
+    },
+    {
+      "path": "verify/frame_stats.gdc",
+      "size": 3853,
+      "source": "verify/frame_stats.gdc"
+    },
+    {
+      "path": "verify/mem_probe.gd.remap",
+      "size": 43,
+      "source": "verify/mem_probe.gd"
+    },
+    {
+      "path": "verify/mem_probe.gdc",
+      "size": 1875,
+      "source": "verify/mem_probe.gdc"
+    },
+    {
+      "path": "verify/verify.gd.remap",
+      "size": 40,
+      "source": "verify/verify.gd"
+    },
+    {
+      "path": "verify/verify.gdc",
+      "size": 17958,
+      "source": "verify/verify.gdc"
+    }
+  ],
+  "own_work": [
+    ".godot/exported/133200997/export-3830f157422a84c1c56502017a9acb51-neo.res",
+    ".godot/global_script_class_cache.cfg",
+    ".godot/uid_cache.bin",
+    "core/app_exit.gd",
+    "core/app_exit.gdc",
+    "core/assets.gd",
+    "core/assets.gdc",
+    "core/device_input.gd",
+    "core/device_input.gdc",
+    "core/error_watch.gd",
+    "core/error_watch.gdc",
+    "core/fixtures/broken_level.gd",
+    "core/fixtures/broken_level.gdc",
+    "core/fixtures/broken_level.tscn",
+    "core/fixtures/ok_level.tscn",
+    "core/fixtures/save_check.gd",
+    "core/fixtures/save_check.gdc",
+    "core/fixtures/save_check.tscn",
+    "core/game.gd",
+    "core/game.gdc",
+    "core/input_defaults.gd",
+    "core/input_defaults.gdc",
+    "core/input_source.gd",
+    "core/input_source.gdc",
+    "core/menu_placeholder.gd",
+    "core/menu_placeholder.gdc",
+    "core/menu_placeholder.tscn",
+    "core/player_slot.gd",
+    "core/player_slot.gdc",
+    "core/players.gd",
+    "core/players.gdc",
+    "core/quality_profile.gd",
+    "core/quality_profile.gdc",
+    "core/save.gd",
+    "core/save.gdc",
+    "core/stress/stress.gd",
+    "core/stress/stress.gdc",
+    "core/stress/stress.tscn",
+    "main/boot.gd",
+    "main/boot.gdc",
+    "main/boot.tscn",
+    "profiles/neo.tres",
+    "project.binary",
+    "verify/audio_tap.gd",
+    "verify/audio_tap.gdc",
+    "verify/bench_presets/core-empty-neo.json",
+    "verify/bench_presets/core-stress-path.json",
+    "verify/bench_presets/empty-orbit.json",
+    "verify/bench_presets/index.json",
+    "verify/bench_presets/paths/empty-orbit.json",
+    "verify/bench_presets/paths/stress-flight.json",
+    "verify/bench_presets/verify-empty-path.json",
+    "verify/bench_presets/verify-empty-still.json",
+    "verify/build_info.json",
+    "verify/error_logger.gd",
+    "verify/error_logger.gdc",
+    "verify/fixtures/empty.tscn",
+    "verify/fixtures/known_texture.gd",
+    "verify/fixtures/known_texture.gdc",
+    "verify/fixtures/known_texture.tscn",
+    "verify/fixtures/tone.gd",
+    "verify/fixtures/tone.gdc",
+    "verify/fixtures/tone.tscn",
+    "verify/fixtures/ui_outside.tscn",
+    "verify/frame_stats.gd",
+    "verify/frame_stats.gdc",
+    "verify/mem_probe.gd",
+    "verify/mem_probe.gdc",
+    "verify/verify.gd",
+    "verify/verify.gdc"
+  ],
+  "listed_third_party": [],
+  "unlisted": []
+}

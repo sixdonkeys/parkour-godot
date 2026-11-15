@@ -6,10 +6,10 @@
 script = ExtResource("1")
 profile_name = "neo"
 render_scale = 0.67
-upscalers = PackedStringArray("metalfx_temporal", "fsr2", "bilinear")
+upscalers = PackedStringArray("metalfx_temporal", "fsr", "bilinear")
 msaa_3d = 0
-use_taa = true
-screen_space_aa = 0
+use_taa = false
+screen_space_aa = 2
 mesh_lod_threshold = 1.0
 scatter_density = 1.0
 draw_distance = 1.0

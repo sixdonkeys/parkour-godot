@@ -30,9 +30,13 @@ static func _joy(b: JoyButton) -> InputEventJoypadButton:
 
 
 ## Every event bound to the Meta (Super) key, for the window-rules check.
+## Actions with a ".macos" suffix are skipped: the engine applies them only on
+## macOS, where Meta is the Command key every app uses, not a window-manager key.
 static func super_bindings() -> Array:
 	var out := []
 	for a in InputMap.get_actions():
+		if String(a).ends_with(".macos"):
+			continue
 		for e in InputMap.action_get_events(a):
 			if e is InputEventKey and (e.meta_pressed or e.physical_keycode == KEY_META or e.keycode == KEY_META):
 				out.append({"action": a, "event": e.as_text()})

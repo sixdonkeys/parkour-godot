@@ -16,16 +16,26 @@
         "docs/evidence/verify/round-1/build/build.json (four exports, sizes, packed-file lists)",
         "docs/evidence/verify/round-1/bench-linux-arm64/ (benchmark mode of the exported Linux arm64 build)"
       ],
-      "notes": "Remote loop not built (harness addendum: Neo out of the loop). Reference set being gathered."
+      "notes": "Reopened for the remote loop (built 2026-11-15, proved on local-folder/unreachable targets). waiting: Neo one-time setup (docs/WAITING.md). Reference set still being gathered."
     },
     "core": {
-      "state": "not_started",
-      "round": 0,
+      "state": "building",
+      "round": 1,
       "gate": false,
       "score": null,
       "open_issues": [],
-      "evidence": [],
-      "notes": ""
+      "evidence": [
+        "docs/evidence/core/round-1/core-failure-isolation/ (missing and erroring levels return to the menu; a good level still loads)",
+        "docs/evidence/core/round-1/core-window-rules/ (pointer released and run paused on focus loss; four shapes; no Super bindings)",
+        "docs/evidence/core/round-1/core-save-corrupt/ (save round-trip; corrupt save moved aside, zero engine errors)",
+        "docs/evidence/core/round-1/core-empty-neo-run3/, -run4/ (empty-scene frame budget on neo: pass, GPU p95 6.07-6.21 ms vs 6.68 proxy limit)",
+        "docs/evidence/core/round-1/core-stress-memory/ (stress scene memory: 4 cycles, warm return 0.992, not growing)",
+        "docs/evidence/core/round-1/core-profile-neo-stress-still/ + core-profile-throwaway-high-stress-still/ (second tier is one new file)",
+        "docs/evidence/core/round-1/core-stress-path*/ (renderer comparison, Forward+ vs Mobile)",
+        "docs/evidence/core/round-1/core-upscaler-*/ (upscaler and AA costs)",
+        "docs/evidence/core/round-1/build/build.json (benchmark-only build core-bench: macOS 61.9 MB)"
+      ],
+      "notes": "Benchmark-only build exported to builds/core-bench/; goes to the Neo with `remote neo bench` once the Neo answers."
     },
     "look-slice": {
       "state": "not_started",
