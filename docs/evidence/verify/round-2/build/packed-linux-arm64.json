@@ -1,0 +1,971 @@
+{
+  "pack_version": 4,
+  "engine": "4.7.2",
+  "files": [
+    {
+      "path": ".godot/global_script_class_cache.cfg",
+      "size": 1168,
+      "source": ".godot/global_script_class_cache.cfg"
+    },
+    {
+      "path": ".godot/imported/cliff_side_ao_4k.jpg-afe5bf840a73579c80952397332272c7.s3tc.ctex",
+      "size": 11184876,
+      "source": "assets/polyhaven/cliff_side/cliff_side_ao_4k.jpg"
+    },
+    {
+      "path": ".godot/imported/cliff_side_diff_4k.jpg-99b1813b61a76e26129d6d1cc19aa8d1.s3tc.ctex",
+      "size": 11184876,
+      "source": "assets/polyhaven/cliff_side/cliff_side_diff_4k.jpg"
+    },
+    {
+      "path": ".godot/imported/cliff_side_nor_gl_4k.jpg-71b120f4989455160af46721ce9bb577.s3tc.ctex",
+      "size": 22369700,
+      "source": "assets/polyhaven/cliff_side/cliff_side_nor_gl_4k.jpg"
+    },
+    {
+      "path": ".godot/imported/cliff_side_rough_4k.jpg-7233d52af292f2b22bd0adfa5fcdbc5f.s3tc.ctex",
+      "size": 11184876,
+      "source": "assets/polyhaven/cliff_side/cliff_side_rough_4k.jpg"
+    },
+    {
+      "path": ".godot/imported/dry_ground_rocks_ao_4k.jpg-02fb5d195170470254d735e3af83fe4c.s3tc.ctex",
+      "size": 11184876,
+      "source": "assets/polyhaven/dry_ground_rocks/dry_ground_rocks_ao_4k.jpg"
+    },
+    {
+      "path": ".godot/imported/dry_ground_rocks_diff_4k.jpg-fa9c546282a57a0d9ff386824883b444.s3tc.ctex",
+      "size": 11184876,
+      "source": "assets/polyhaven/dry_ground_rocks/dry_ground_rocks_diff_4k.jpg"
+    },
+    {
+      "path": ".godot/imported/dry_ground_rocks_nor_gl_4k.jpg-fc147fbd140dac37f593812520b734b8.s3tc.ctex",
+      "size": 22369700,
+      "source": "assets/polyhaven/dry_ground_rocks/dry_ground_rocks_nor_gl_4k.jpg"
+    },
+    {
+      "path": ".godot/imported/dry_ground_rocks_rough_4k.jpg-085bb8e82332a33c4baf0f60ed1afd7c.s3tc.ctex",
+      "size": 11184876,
+      "source": "assets/polyhaven/dry_ground_rocks/dry_ground_rocks_rough_4k.jpg"
+    },
+    {
+      "path": ".godot/imported/gravelly_sand_ao_4k.jpg-91e174cca9cfa21f9b1d8600fd240b63.s3tc.ctex",
+      "size": 11184876,
+      "source": "assets/polyhaven/gravelly_sand/gravelly_sand_ao_4k.jpg"
+    },
+    {
+      "path": ".godot/imported/gravelly_sand_diff_4k.jpg-16166d91140f773812ba086554c560db.s3tc.ctex",
+      "size": 11184876,
+      "source": "assets/polyhaven/gravelly_sand/gravelly_sand_diff_4k.jpg"
+    },
+    {
+      "path": ".godot/imported/gravelly_sand_nor_gl_4k.jpg-41c1c02eae42f738229831e5e737ea2d.s3tc.ctex",
+      "size": 22369700,
+      "source": "assets/polyhaven/gravelly_sand/gravelly_sand_nor_gl_4k.jpg"
+    },
+    {
+      "path": ".godot/imported/gravelly_sand_rough_4k.jpg-fd9978aaf835d5bfa3d9c710b0aa876f.s3tc.ctex",
+      "size": 11184876,
+      "source": "assets/polyhaven/gravelly_sand/gravelly_sand_rough_4k.jpg"
+    },
+    {
+      "path": ".godot/imported/namaqualand_boulder_02_2k.gltf-ad100222ec9bd327e49156f154c827a5.scn",
+      "size": 2957549,
+      "source": "assets/polyhaven/namaqualand_boulder_02/namaqualand_boulder_02_2k.gltf"
+    },
+    {
+      "path": ".godot/imported/namaqualand_boulder_02_arm_2k.jpg-81b8450d6345f3d8fb697c217545e965.s3tc.ctex",
+      "size": 2796268,
+      "source": "assets/polyhaven/namaqualand_boulder_02/textures/namaqualand_boulder_02_arm_2k.jpg"
+    },
+    {
+      "path": ".godot/imported/namaqualand_boulder_02_diff_2k.jpg-0d86ec7568341d6397c7169e4f9cc3c7.s3tc.ctex",
+      "size": 2796268,
+      "source": "assets/polyhaven/namaqualand_boulder_02/textures/namaqualand_boulder_02_diff_2k.jpg"
+    },
+    {
+      "path": ".godot/imported/namaqualand_boulder_02_nor_gl_2k.jpg-51828b61fefb86633ef9daf3598949af.s3tc.ctex",
+      "size": 5592484,
+      "source": "assets/polyhaven/namaqualand_boulder_02/textures/namaqualand_boulder_02_nor_gl_2k.jpg"
+    },
+    {
+      "path": ".godot/imported/namaqualand_boulder_03_2k.gltf-507b9940558bd8d4f5ef33c6720b2295.scn",
+      "size": 1928986,
+      "source": "assets/polyhaven/namaqualand_boulder_03/namaqualand_boulder_03_2k.gltf"
+    },
+    {
+      "path": ".godot/imported/namaqualand_boulder_03_arm_2k.jpg-04f130d67f38d2e1e9729d8afbd92c8a.s3tc.ctex",
+      "size": 2796268,
+      "source": "assets/polyhaven/namaqualand_boulder_03/textures/namaqualand_boulder_03_arm_2k.jpg"
+    },
+    {
+      "path": ".godot/imported/namaqualand_boulder_03_diff_2k.jpg-57b415971a3c991c933c099c21e3d87e.s3tc.ctex",
+      "size": 2796268,
+      "source": "assets/polyhaven/namaqualand_boulder_03/textures/namaqualand_boulder_03_diff_2k.jpg"
+    },
+    {
+      "path": ".godot/imported/namaqualand_boulder_03_nor_gl_2k.jpg-ba4b908f8b696bcb754eb268e9885c09.s3tc.ctex",
+      "size": 5592484,
+      "source": "assets/polyhaven/namaqualand_boulder_03/textures/namaqualand_boulder_03_nor_gl_2k.jpg"
+    },
+    {
+      "path": ".godot/imported/namaqualand_boulder_04_2k.gltf-c948b30e05c2e875d69488e9adf8cb2c.scn",
+      "size": 1757360,
+      "source": "assets/polyhaven/namaqualand_boulder_04/namaqualand_boulder_04_2k.gltf"
+    },
+    {
+      "path": ".godot/imported/namaqualand_boulder_04_arm_2k.jpg-df1585bf8aa48e27f8a56efee141ca53.s3tc.ctex",
+      "size": 2796268,
+      "source": "assets/polyhaven/namaqualand_boulder_04/textures/namaqualand_boulder_04_arm_2k.jpg"
+    },
+    {
+      "path": ".godot/imported/namaqualand_boulder_04_diff_2k.jpg-bf8c20a9b8612f8fe8c5720d3bbde995.s3tc.ctex",
+      "size": 2796268,
+      "source": "assets/polyhaven/namaqualand_boulder_04/textures/namaqualand_boulder_04_diff_2k.jpg"
+    },
+    {
+      "path": ".godot/imported/namaqualand_boulder_04_nor_gl_2k.jpg-ffee4a1077892736d0fcbfea3f82e34c.s3tc.ctex",
+      "size": 5592484,
+      "source": "assets/polyhaven/namaqualand_boulder_04/textures/namaqualand_boulder_04_nor_gl_2k.jpg"
+    },
+    {
+      "path": ".godot/imported/namaqualand_boulder_05_2k.gltf-786d27ff2c723a3268c9c58c71f4662c.scn",
+      "size": 2669976,
+      "source": "assets/polyhaven/namaqualand_boulder_05/namaqualand_boulder_05_2k.gltf"
+    },
+    {
+      "path": ".godot/imported/namaqualand_boulder_05_arm_2k.jpg-41e8b1d3ad0067d442941fd7b91a0008.s3tc.ctex",
+      "size": 2796268,
+      "source": "assets/polyhaven/namaqualand_boulder_05/textures/namaqualand_boulder_05_arm_2k.jpg"
+    },
+    {
+      "path": ".godot/imported/namaqualand_boulder_05_diff_2k.jpg-cc9b2afcedc38bc7d1657455df82d8a6.s3tc.ctex",
+      "size": 2796268,
+      "source": "assets/polyhaven/namaqualand_boulder_05/textures/namaqualand_boulder_05_diff_2k.jpg"
+    },
+    {
+      "path": ".godot/imported/namaqualand_boulder_05_nor_gl_2k.jpg-f384d99aab79dc002258b98b184ea6a8.s3tc.ctex",
+      "size": 5592484,
+      "source": "assets/polyhaven/namaqualand_boulder_05/textures/namaqualand_boulder_05_nor_gl_2k.jpg"
+    },
+    {
+      "path": ".godot/imported/namaqualand_rocks_01_2k.gltf-21ed6001cbd2a9e88b7facd0d5348ebc.scn",
+      "size": 2544301,
+      "source": "assets/polyhaven/namaqualand_rocks_01/namaqualand_rocks_01_2k.gltf"
+    },
+    {
+      "path": ".godot/imported/namaqualand_rocks_01_arm_2k.jpg-3f1c4f6baf409847ea14ce1d462b4550.s3tc.ctex",
+      "size": 2796268,
+      "source": "assets/polyhaven/namaqualand_rocks_01/textures/namaqualand_rocks_01_arm_2k.jpg"
+    },
+    {
+      "path": ".godot/imported/namaqualand_rocks_01_diff_2k.jpg-37050b63bb2499c87e7647ea5b9ad954.s3tc.ctex",
+      "size": 2796268,
+      "source": "assets/polyhaven/namaqualand_rocks_01/textures/namaqualand_rocks_01_diff_2k.jpg"
+    },
+    {
+      "path": ".godot/imported/namaqualand_rocks_01_nor_gl_2k.jpg-8e045042fb08672c86a65c3c8f4577cf.s3tc.ctex",
+      "size": 5592484,
+      "source": "assets/polyhaven/namaqualand_rocks_01/textures/namaqualand_rocks_01_nor_gl_2k.jpg"
+    },
+    {
+      "path": ".godot/imported/namaqualand_stones_01_2k.gltf-25e3b3b33f924dcc7d197c66223ce1a5.scn",
+      "size": 2070922,
+      "source": "assets/polyhaven/namaqualand_stones_01/namaqualand_stones_01_2k.gltf"
+    },
+    {
+      "path": ".godot/imported/namaqualand_stones_01_arm_2k.jpg-d284a825974ea0a01031291ed40f7db3.s3tc.ctex",
+      "size": 2796268,
+      "source": "assets/polyhaven/namaqualand_stones_01/textures/namaqualand_stones_01_arm_2k.jpg"
+    },
+    {
+      "path": ".godot/imported/namaqualand_stones_01_diff_2k.jpg-a982a93f9bf1ca82caf83c57f8171112.s3tc.ctex",
+      "size": 2796268,
+      "source": "assets/polyhaven/namaqualand_stones_01/textures/namaqualand_stones_01_diff_2k.jpg"
+    },
+    {
+      "path": ".godot/imported/namaqualand_stones_01_nor_gl_2k.jpg-b50201b8903061ada5c423dc100677bd.s3tc.ctex",
+      "size": 5592484,
+      "source": "assets/polyhaven/namaqualand_stones_01/textures/namaqualand_stones_01_nor_gl_2k.jpg"
+    },
+    {
+      "path": ".godot/imported/red_laterite_soil_stones_ao_4k.jpg-3912a14732155dd68bb7a92bde469f1f.s3tc.ctex",
+      "size": 11184876,
+      "source": "assets/polyhaven/red_laterite_soil_stones/red_laterite_soil_stones_ao_4k.jpg"
+    },
+    {
+      "path": ".godot/imported/red_laterite_soil_stones_diff_4k.jpg-20002aeb8dd2eab4311edbae6026ca9e.s3tc.ctex",
+      "size": 11184876,
+      "source": "assets/polyhaven/red_laterite_soil_stones/red_laterite_soil_stones_diff_4k.jpg"
+    },
+    {
+      "path": ".godot/imported/red_laterite_soil_stones_nor_gl_4k.jpg-37d7610df509c8d2246782f6b6b8aadc.s3tc.ctex",
+      "size": 22369700,
+      "source": "assets/polyhaven/red_laterite_soil_stones/red_laterite_soil_stones_nor_gl_4k.jpg"
+    },
+    {
+      "path": ".godot/imported/red_laterite_soil_stones_rough_4k.jpg-c3ee4bbdf51f841c9a88513959fdd5ff.s3tc.ctex",
+      "size": 11184876,
+      "source": "assets/polyhaven/red_laterite_soil_stones/red_laterite_soil_stones_rough_4k.jpg"
+    },
+    {
+      "path": ".godot/imported/shrub_02_2k.gltf-9bd3ec89d21b9961952e62f93b83ad4b.scn",
+      "size": 1011713,
+      "source": "assets/polyhaven/shrub_02/shrub_02_2k.gltf"
+    },
+    {
+      "path": ".godot/imported/shrub_02_arm_2k.jpg-012b7526b5cf8920e7a56cb851891d7d.s3tc.ctex",
+      "size": 2796268,
+      "source": "assets/polyhaven/shrub_02/textures/shrub_02_arm_2k.jpg"
+    },
+    {
+      "path": ".godot/imported/shrub_02_diff_2k.jpg-5b554e72ca11701d39122a9ad6225d01.s3tc.ctex",
+      "size": 2796268,
+      "source": "assets/polyhaven/shrub_02/textures/shrub_02_diff_2k.jpg"
+    },
+    {
+      "path": ".godot/imported/shrub_02_nor_gl_2k.jpg-ecd0f8a85fbed7f5a5033c2226f22675.s3tc.ctex",
+      "size": 5592484,
+      "source": "assets/polyhaven/shrub_02/textures/shrub_02_nor_gl_2k.jpg"
+    },
+    {
+      "path": ".godot/imported/wild_rooibos_bush_2k.gltf-37d7730980707793f2749d7ebe9e4982.scn",
+      "size": 890014,
+      "source": "assets/polyhaven/wild_rooibos_bush/wild_rooibos_bush_2k.gltf"
+    },
+    {
+      "path": ".godot/imported/wild_rooibos_bush_arm_2k.jpg-e2f8956bd8a4614b634133549c02f9f1.s3tc.ctex",
+      "size": 2796268,
+      "source": "assets/polyhaven/wild_rooibos_bush/textures/wild_rooibos_bush_arm_2k.jpg"
+    },
+    {
+      "path": ".godot/imported/wild_rooibos_bush_diff_2k.jpg-3475809f7fe38b13af13175a3f40686f.s3tc.ctex",
+      "size": 2796268,
+      "source": "assets/polyhaven/wild_rooibos_bush/textures/wild_rooibos_bush_diff_2k.jpg"
+    },
+    {
+      "path": ".godot/imported/wild_rooibos_bush_nor_gl_2k.jpg-70488c727ac4d47e4c6406946855d413.s3tc.ctex",
+      "size": 5592484,
+      "source": "assets/polyhaven/wild_rooibos_bush/textures/wild_rooibos_bush_nor_gl_2k.jpg"
+    },
+    {
+      "path": ".godot/uid_cache.bin",
+      "size": 5167,
+      "source": ".godot/uid_cache.bin"
+    },
+    {
+      "path": "assets/polyhaven/cliff_side/cliff_side_ao_4k.jpg.import",
+      "size": 262,
+      "source": "assets/polyhaven/cliff_side/cliff_side_ao_4k.jpg"
+    },
+    {
+      "path": "assets/polyhaven/cliff_side/cliff_side_diff_4k.jpg.import",
+      "size": 264,
+      "source": "assets/polyhaven/cliff_side/cliff_side_diff_4k.jpg"
+    },
+    {
+      "path": "assets/polyhaven/cliff_side/cliff_side_nor_gl_4k.jpg.import",
+      "size": 265,
+      "source": "assets/polyhaven/cliff_side/cliff_side_nor_gl_4k.jpg"
+    },
+    {
+      "path": "assets/polyhaven/cliff_side/cliff_side_rough_4k.jpg.import",
+      "size": 265,
+      "source": "assets/polyhaven/cliff_side/cliff_side_rough_4k.jpg"
+    },
+    {
+      "path": "assets/polyhaven/dry_ground_rocks/dry_ground_rocks_ao_4k.jpg.import",
+      "size": 267,
+      "source": "assets/polyhaven/dry_ground_rocks/dry_ground_rocks_ao_4k.jpg"
+    },
+    {
+      "path": "assets/polyhaven/dry_ground_rocks/dry_ground_rocks_diff_4k.jpg.import",
+      "size": 269,
+      "source": "assets/polyhaven/dry_ground_rocks/dry_ground_rocks_diff_4k.jpg"
+    },
+    {
+      "path": "assets/polyhaven/dry_ground_rocks/dry_ground_rocks_nor_gl_4k.jpg.import",
+      "size": 272,
+      "source": "assets/polyhaven/dry_ground_rocks/dry_ground_rocks_nor_gl_4k.jpg"
+    },
+    {
+      "path": "assets/polyhaven/dry_ground_rocks/dry_ground_rocks_rough_4k.jpg.import",
+      "size": 270,
+      "source": "assets/polyhaven/dry_ground_rocks/dry_ground_rocks_rough_4k.jpg"
+    },
+    {
+      "path": "assets/polyhaven/gravelly_sand/gravelly_sand_ao_4k.jpg.import",
+      "size": 265,
+      "source": "assets/polyhaven/gravelly_sand/gravelly_sand_ao_4k.jpg"
+    },
+    {
+      "path": "assets/polyhaven/gravelly_sand/gravelly_sand_diff_4k.jpg.import",
+      "size": 266,
+      "source": "assets/polyhaven/gravelly_sand/gravelly_sand_diff_4k.jpg"
+    },
+    {
+      "path": "assets/polyhaven/gravelly_sand/gravelly_sand_nor_gl_4k.jpg.import",
+      "size": 269,
+      "source": "assets/polyhaven/gravelly_sand/gravelly_sand_nor_gl_4k.jpg"
+    },
+    {
+      "path": "assets/polyhaven/gravelly_sand/gravelly_sand_rough_4k.jpg.import",
+      "size": 268,
+      "source": "assets/polyhaven/gravelly_sand/gravelly_sand_rough_4k.jpg"
+    },
+    {
+      "path": "assets/polyhaven/namaqualand_boulder_02/namaqualand_boulder_02_2k.gltf.import",
+      "size": 187,
+      "source": "assets/polyhaven/namaqualand_boulder_02/namaqualand_boulder_02_2k.gltf"
+    },
+    {
+      "path": "assets/polyhaven/namaqualand_boulder_02/textures/namaqualand_boulder_02_arm_2k.jpg.import",
+      "size": 274,
+      "source": "assets/polyhaven/namaqualand_boulder_02/textures/namaqualand_boulder_02_arm_2k.jpg"
+    },
+    {
+      "path": "assets/polyhaven/namaqualand_boulder_02/textures/namaqualand_boulder_02_diff_2k.jpg.import",
+      "size": 276,
+      "source": "assets/polyhaven/namaqualand_boulder_02/textures/namaqualand_boulder_02_diff_2k.jpg"
+    },
+    {
+      "path": "assets/polyhaven/namaqualand_boulder_02/textures/namaqualand_boulder_02_nor_gl_2k.jpg.import",
+      "size": 278,
+      "source": "assets/polyhaven/namaqualand_boulder_02/textures/namaqualand_boulder_02_nor_gl_2k.jpg"
+    },
+    {
+      "path": "assets/polyhaven/namaqualand_boulder_03/namaqualand_boulder_03_2k.gltf.import",
+      "size": 188,
+      "source": "assets/polyhaven/namaqualand_boulder_03/namaqualand_boulder_03_2k.gltf"
+    },
+    {
+      "path": "assets/polyhaven/namaqualand_boulder_03/textures/namaqualand_boulder_03_arm_2k.jpg.import",
+      "size": 275,
+      "source": "assets/polyhaven/namaqualand_boulder_03/textures/namaqualand_boulder_03_arm_2k.jpg"
+    },
+    {
+      "path": "assets/polyhaven/namaqualand_boulder_03/textures/namaqualand_boulder_03_diff_2k.jpg.import",
+      "size": 276,
+      "source": "assets/polyhaven/namaqualand_boulder_03/textures/namaqualand_boulder_03_diff_2k.jpg"
+    },
+    {
+      "path": "assets/polyhaven/namaqualand_boulder_03/textures/namaqualand_boulder_03_nor_gl_2k.jpg.import",
+      "size": 278,
+      "source": "assets/polyhaven/namaqualand_boulder_03/textures/namaqualand_boulder_03_nor_gl_2k.jpg"
+    },
+    {
+      "path": "assets/polyhaven/namaqualand_boulder_04/namaqualand_boulder_04_2k.gltf.import",
+      "size": 188,
+      "source": "assets/polyhaven/namaqualand_boulder_04/namaqualand_boulder_04_2k.gltf"
+    },
+    {
+      "path": "assets/polyhaven/namaqualand_boulder_04/textures/namaqualand_boulder_04_arm_2k.jpg.import",
+      "size": 275,
+      "source": "assets/polyhaven/namaqualand_boulder_04/textures/namaqualand_boulder_04_arm_2k.jpg"
+    },
+    {
+      "path": "assets/polyhaven/namaqualand_boulder_04/textures/namaqualand_boulder_04_diff_2k.jpg.import",
+      "size": 275,
+      "source": "assets/polyhaven/namaqualand_boulder_04/textures/namaqualand_boulder_04_diff_2k.jpg"
+    },
+    {
+      "path": "assets/polyhaven/namaqualand_boulder_04/textures/namaqualand_boulder_04_nor_gl_2k.jpg.import",
+      "size": 278,
+      "source": "assets/polyhaven/namaqualand_boulder_04/textures/namaqualand_boulder_04_nor_gl_2k.jpg"
+    },
+    {
+      "path": "assets/polyhaven/namaqualand_boulder_05/namaqualand_boulder_05_2k.gltf.import",
+      "size": 188,
+      "source": "assets/polyhaven/namaqualand_boulder_05/namaqualand_boulder_05_2k.gltf"
+    },
+    {
+      "path": "assets/polyhaven/namaqualand_boulder_05/textures/namaqualand_boulder_05_arm_2k.jpg.import",
+      "size": 275,
+      "source": "assets/polyhaven/namaqualand_boulder_05/textures/namaqualand_boulder_05_arm_2k.jpg"
+    },
+    {
+      "path": "assets/polyhaven/namaqualand_boulder_05/textures/namaqualand_boulder_05_diff_2k.jpg.import",
+      "size": 275,
+      "source": "assets/polyhaven/namaqualand_boulder_05/textures/namaqualand_boulder_05_diff_2k.jpg"
+    },
+    {
+      "path": "assets/polyhaven/namaqualand_boulder_05/textures/namaqualand_boulder_05_nor_gl_2k.jpg.import",
+      "size": 278,
+      "source": "assets/polyhaven/namaqualand_boulder_05/textures/namaqualand_boulder_05_nor_gl_2k.jpg"
+    },
+    {
+      "path": "assets/polyhaven/namaqualand_rocks_01/namaqualand_rocks_01_2k.gltf.import",
+      "size": 185,
+      "source": "assets/polyhaven/namaqualand_rocks_01/namaqualand_rocks_01_2k.gltf"
+    },
+    {
+      "path": "assets/polyhaven/namaqualand_rocks_01/textures/namaqualand_rocks_01_arm_2k.jpg.import",
+      "size": 273,
+      "source": "assets/polyhaven/namaqualand_rocks_01/textures/namaqualand_rocks_01_arm_2k.jpg"
+    },
+    {
+      "path": "assets/polyhaven/namaqualand_rocks_01/textures/namaqualand_rocks_01_diff_2k.jpg.import",
+      "size": 274,
+      "source": "assets/polyhaven/namaqualand_rocks_01/textures/namaqualand_rocks_01_diff_2k.jpg"
+    },
+    {
+      "path": "assets/polyhaven/namaqualand_rocks_01/textures/namaqualand_rocks_01_nor_gl_2k.jpg.import",
+      "size": 276,
+      "source": "assets/polyhaven/namaqualand_rocks_01/textures/namaqualand_rocks_01_nor_gl_2k.jpg"
+    },
+    {
+      "path": "assets/polyhaven/namaqualand_stones_01/namaqualand_stones_01_2k.gltf.import",
+      "size": 186,
+      "source": "assets/polyhaven/namaqualand_stones_01/namaqualand_stones_01_2k.gltf"
+    },
+    {
+      "path": "assets/polyhaven/namaqualand_stones_01/textures/namaqualand_stones_01_arm_2k.jpg.import",
+      "size": 274,
+      "source": "assets/polyhaven/namaqualand_stones_01/textures/namaqualand_stones_01_arm_2k.jpg"
+    },
+    {
+      "path": "assets/polyhaven/namaqualand_stones_01/textures/namaqualand_stones_01_diff_2k.jpg.import",
+      "size": 275,
+      "source": "assets/polyhaven/namaqualand_stones_01/textures/namaqualand_stones_01_diff_2k.jpg"
+    },
+    {
+      "path": "assets/polyhaven/namaqualand_stones_01/textures/namaqualand_stones_01_nor_gl_2k.jpg.import",
+      "size": 276,
+      "source": "assets/polyhaven/namaqualand_stones_01/textures/namaqualand_stones_01_nor_gl_2k.jpg"
+    },
+    {
+      "path": "assets/polyhaven/red_laterite_soil_stones/red_laterite_soil_stones_ao_4k.jpg.import",
+      "size": 276,
+      "source": "assets/polyhaven/red_laterite_soil_stones/red_laterite_soil_stones_ao_4k.jpg"
+    },
+    {
+      "path": "assets/polyhaven/red_laterite_soil_stones/red_laterite_soil_stones_diff_4k.jpg.import",
+      "size": 278,
+      "source": "assets/polyhaven/red_laterite_soil_stones/red_laterite_soil_stones_diff_4k.jpg"
+    },
+    {
+      "path": "assets/polyhaven/red_laterite_soil_stones/red_laterite_soil_stones_nor_gl_4k.jpg.import",
+      "size": 279,
+      "source": "assets/polyhaven/red_laterite_soil_stones/red_laterite_soil_stones_nor_gl_4k.jpg"
+    },
+    {
+      "path": "assets/polyhaven/red_laterite_soil_stones/red_laterite_soil_stones_rough_4k.jpg.import",
+      "size": 279,
+      "source": "assets/polyhaven/red_laterite_soil_stones/red_laterite_soil_stones_rough_4k.jpg"
+    },
+    {
+      "path": "assets/polyhaven/shrub_02/shrub_02_2k.gltf.import",
+      "size": 174,
+      "source": "assets/polyhaven/shrub_02/shrub_02_2k.gltf"
+    },
+    {
+      "path": "assets/polyhaven/shrub_02/textures/shrub_02_arm_2k.jpg.import",
+      "size": 261,
+      "source": "assets/polyhaven/shrub_02/textures/shrub_02_arm_2k.jpg"
+    },
+    {
+      "path": "assets/polyhaven/shrub_02/textures/shrub_02_diff_2k.jpg.import",
+      "size": 262,
+      "source": "assets/polyhaven/shrub_02/textures/shrub_02_diff_2k.jpg"
+    },
+    {
+      "path": "assets/polyhaven/shrub_02/textures/shrub_02_nor_gl_2k.jpg.import",
+      "size": 263,
+      "source": "assets/polyhaven/shrub_02/textures/shrub_02_nor_gl_2k.jpg"
+    },
+    {
+      "path": "assets/polyhaven/wild_rooibos_bush/textures/wild_rooibos_bush_arm_2k.jpg.import",
+      "size": 269,
+      "source": "assets/polyhaven/wild_rooibos_bush/textures/wild_rooibos_bush_arm_2k.jpg"
+    },
+    {
+      "path": "assets/polyhaven/wild_rooibos_bush/textures/wild_rooibos_bush_diff_2k.jpg.import",
+      "size": 271,
+      "source": "assets/polyhaven/wild_rooibos_bush/textures/wild_rooibos_bush_diff_2k.jpg"
+    },
+    {
+      "path": "assets/polyhaven/wild_rooibos_bush/textures/wild_rooibos_bush_nor_gl_2k.jpg.import",
+      "size": 272,
+      "source": "assets/polyhaven/wild_rooibos_bush/textures/wild_rooibos_bush_nor_gl_2k.jpg"
+    },
+    {
+      "path": "assets/polyhaven/wild_rooibos_bush/wild_rooibos_bush_2k.gltf.import",
+      "size": 183,
+      "source": "assets/polyhaven/wild_rooibos_bush/wild_rooibos_bush_2k.gltf"
+    },
+    {
+      "path": "core/app_exit.gd.remap",
+      "size": 40,
+      "source": "core/app_exit.gd"
+    },
+    {
+      "path": "core/app_exit.gdc",
+      "size": 625,
+      "source": "core/app_exit.gdc"
+    },
+    {
+      "path": "core/assets.gd.remap",
+      "size": 38,
+      "source": "core/assets.gd"
+    },
+    {
+      "path": "core/assets.gdc",
+      "size": 555,
+      "source": "core/assets.gdc"
+    },
+    {
+      "path": "core/device_input.gd.remap",
+      "size": 44,
+      "source": "core/device_input.gd"
+    },
+    {
+      "path": "core/device_input.gdc",
+      "size": 574,
+      "source": "core/device_input.gdc"
+    },
+    {
+      "path": "core/error_watch.gd.remap",
+      "size": 43,
+      "source": "core/error_watch.gd"
+    },
+    {
+      "path": "core/error_watch.gdc",
+      "size": 895,
+      "source": "core/error_watch.gdc"
+    },
+    {
+      "path": "core/fixtures/broken_level.gd.remap",
+      "size": 53,
+      "source": "core/fixtures/broken_level.gd"
+    },
+    {
+      "path": "core/fixtures/broken_level.gdc",
+      "size": 259,
+      "source": "core/fixtures/broken_level.gdc"
+    },
+    {
+      "path": "core/fixtures/broken_level.tscn",
+      "size": 167,
+      "source": "core/fixtures/broken_level.tscn"
+    },
+    {
+      "path": "core/fixtures/ok_level.tscn",
+      "size": 697,
+      "source": "core/fixtures/ok_level.tscn"
+    },
+    {
+      "path": "core/fixtures/save_check.gd.remap",
+      "size": 51,
+      "source": "core/fixtures/save_check.gd"
+    },
+    {
+      "path": "core/fixtures/save_check.gdc",
+      "size": 959,
+      "source": "core/fixtures/save_check.gdc"
+    },
+    {
+      "path": "core/fixtures/save_check.tscn",
+      "size": 161,
+      "source": "core/fixtures/save_check.tscn"
+    },
+    {
+      "path": "core/game.gd.remap",
+      "size": 36,
+      "source": "core/game.gd"
+    },
+    {
+      "path": "core/game.gdc",
+      "size": 6186,
+      "source": "core/game.gdc"
+    },
+    {
+      "path": "core/input_defaults.gd.remap",
+      "size": 46,
+      "source": "core/input_defaults.gd"
+    },
+    {
+      "path": "core/input_defaults.gdc",
+      "size": 1218,
+      "source": "core/input_defaults.gdc"
+    },
+    {
+      "path": "core/input_source.gd.remap",
+      "size": 44,
+      "source": "core/input_source.gd"
+    },
+    {
+      "path": "core/input_source.gdc",
+      "size": 219,
+      "source": "core/input_source.gdc"
+    },
+    {
+      "path": "core/menu_placeholder.gd.remap",
+      "size": 48,
+      "source": "core/menu_placeholder.gd"
+    },
+    {
+      "path": "core/menu_placeholder.gdc",
+      "size": 181,
+      "source": "core/menu_placeholder.gdc"
+    },
+    {
+      "path": "core/menu_placeholder.tscn",
+      "size": 1125,
+      "source": "core/menu_placeholder.tscn"
+    },
+    {
+      "path": "core/player_slot.gd.remap",
+      "size": 43,
+      "source": "core/player_slot.gd"
+    },
+    {
+      "path": "core/player_slot.gdc",
+      "size": 381,
+      "source": "core/player_slot.gdc"
+    },
+    {
+      "path": "core/players.gd.remap",
+      "size": 39,
+      "source": "core/players.gd"
+    },
+    {
+      "path": "core/players.gdc",
+      "size": 1054,
+      "source": "core/players.gdc"
+    },
+    {
+      "path": "core/quality_profile.gd.remap",
+      "size": 47,
+      "source": "core/quality_profile.gd"
+    },
+    {
+      "path": "core/quality_profile.gdc",
+      "size": 4088,
+      "source": "core/quality_profile.gdc"
+    },
+    {
+      "path": "core/save.gd.remap",
+      "size": 36,
+      "source": "core/save.gd"
+    },
+    {
+      "path": "core/save.gdc",
+      "size": 1808,
+      "source": "core/save.gdc"
+    },
+    {
+      "path": "core/stress/stress.gd.remap",
+      "size": 45,
+      "source": "core/stress/stress.gd"
+    },
+    {
+      "path": "core/stress/stress.gdc",
+      "size": 4112,
+      "source": "core/stress/stress.gdc"
+    },
+    {
+      "path": "core/stress/stress.tscn",
+      "size": 154,
+      "source": "core/stress/stress.tscn"
+    },
+    {
+      "path": "main/boot.gd.remap",
+      "size": 36,
+      "source": "main/boot.gd"
+    },
+    {
+      "path": "main/boot.gdc",
+      "size": 265,
+      "source": "main/boot.gdc"
+    },
+    {
+      "path": "main/boot.tscn",
+      "size": 141,
+      "source": "main/boot.tscn"
+    },
+    {
+      "path": "profiles/neo.tres",
+      "size": 842,
+      "source": "profiles/neo.tres"
+    },
+    {
+      "path": "project.binary",
+      "size": 1491,
+      "source": "project.binary"
+    },
+    {
+      "path": "verify/audio_tap.gd.remap",
+      "size": 43,
+      "source": "verify/audio_tap.gd"
+    },
+    {
+      "path": "verify/audio_tap.gdc",
+      "size": 2733,
+      "source": "verify/audio_tap.gdc"
+    },
+    {
+      "path": "verify/bench_presets/core-empty-neo.json",
+      "size": 687,
+      "source": "verify/bench_presets/core-empty-neo.json"
+    },
+    {
+      "path": "verify/bench_presets/core-stress-path.json",
+      "size": 700,
+      "source": "verify/bench_presets/core-stress-path.json"
+    },
+    {
+      "path": "verify/bench_presets/empty-orbit.json",
+      "size": 456,
+      "source": "verify/bench_presets/empty-orbit.json"
+    },
+    {
+      "path": "verify/bench_presets/index.json",
+      "size": 138,
+      "source": "verify/bench_presets/index.json"
+    },
+    {
+      "path": "verify/bench_presets/paths/empty-orbit.json",
+      "size": 456,
+      "source": "verify/bench_presets/paths/empty-orbit.json"
+    },
+    {
+      "path": "verify/bench_presets/paths/stress-flight.json",
+      "size": 2286,
+      "source": "verify/bench_presets/paths/stress-flight.json"
+    },
+    {
+      "path": "verify/bench_presets/verify-empty-path.json",
+      "size": 450,
+      "source": "verify/bench_presets/verify-empty-path.json"
+    },
+    {
+      "path": "verify/bench_presets/verify-empty-still.json",
+      "size": 569,
+      "source": "verify/bench_presets/verify-empty-still.json"
+    },
+    {
+      "path": "verify/build_info.json",
+      "size": 130,
+      "source": "verify/build_info.json"
+    },
+    {
+      "path": "verify/error_logger.gd.remap",
+      "size": 46,
+      "source": "verify/error_logger.gd"
+    },
+    {
+      "path": "verify/error_logger.gdc",
+      "size": 1460,
+      "source": "verify/error_logger.gdc"
+    },
+    {
+      "path": "verify/fixtures/critic_texture_2048.gd.remap",
+      "size": 62,
+      "source": "verify/fixtures/critic_texture_2048.gd"
+    },
+    {
+      "path": "verify/fixtures/critic_texture_2048.gdc",
+      "size": 815,
+      "source": "verify/fixtures/critic_texture_2048.gdc"
+    },
+    {
+      "path": "verify/fixtures/critic_texture_2048.tscn",
+      "size": 182,
+      "source": "verify/fixtures/critic_texture_2048.tscn"
+    },
+    {
+      "path": "verify/fixtures/empty.tscn",
+      "size": 166,
+      "source": "verify/fixtures/empty.tscn"
+    },
+    {
+      "path": "verify/fixtures/known_texture.gd.remap",
+      "size": 56,
+      "source": "verify/fixtures/known_texture.gd"
+    },
+    {
+      "path": "verify/fixtures/known_texture.gdc",
+      "size": 869,
+      "source": "verify/fixtures/known_texture.gdc"
+    },
+    {
+      "path": "verify/fixtures/known_texture.tscn",
+      "size": 171,
+      "source": "verify/fixtures/known_texture.tscn"
+    },
+    {
+      "path": "verify/fixtures/tone.gd.remap",
+      "size": 47,
+      "source": "verify/fixtures/tone.gd"
+    },
+    {
+      "path": "verify/fixtures/tone.gdc",
+      "size": 1243,
+      "source": "verify/fixtures/tone.gdc"
+    },
+    {
+      "path": "verify/fixtures/tone.tscn",
+      "size": 165,
+      "source": "verify/fixtures/tone.tscn"
+    },
+    {
+      "path": "verify/fixtures/ui_outside.tscn",
+      "size": 454,
+      "source": "verify/fixtures/ui_outside.tscn"
+    },
+    {
+      "path": "verify/frame_stats.gd.remap",
+      "size": 45,
+      "source": "verify/frame_stats.gd"
+    },
+    {
+      "path": "verify/frame_stats.gdc",
+      "size": 3853,
+      "source": "verify/frame_stats.gdc"
+    },
+    {
+      "path": "verify/mem_probe.gd.remap",
+      "size": 43,
+      "source": "verify/mem_probe.gd"
+    },
+    {
+      "path": "verify/mem_probe.gdc",
+      "size": 1875,
+      "source": "verify/mem_probe.gdc"
+    },
+    {
+      "path": "verify/verify.gd.remap",
+      "size": 40,
+      "source": "verify/verify.gd"
+    },
+    {
+      "path": "verify/verify.gdc",
+      "size": 17934,
+      "source": "verify/verify.gdc"
+    }
+  ],
+  "own_work": [
+    ".godot/global_script_class_cache.cfg",
+    ".godot/uid_cache.bin",
+    "core/app_exit.gd",
+    "core/app_exit.gdc",
+    "core/assets.gd",
+    "core/assets.gdc",
+    "core/device_input.gd",
+    "core/device_input.gdc",
+    "core/error_watch.gd",
+    "core/error_watch.gdc",
+    "core/fixtures/broken_level.gd",
+    "core/fixtures/broken_level.gdc",
+    "core/fixtures/broken_level.tscn",
+    "core/fixtures/ok_level.tscn",
+    "core/fixtures/save_check.gd",
+    "core/fixtures/save_check.gdc",
+    "core/fixtures/save_check.tscn",
+    "core/game.gd",
+    "core/game.gdc",
+    "core/input_defaults.gd",
+    "core/input_defaults.gdc",
+    "core/input_source.gd",
+    "core/input_source.gdc",
+    "core/menu_placeholder.gd",
+    "core/menu_placeholder.gdc",
+    "core/menu_placeholder.tscn",
+    "core/player_slot.gd",
+    "core/player_slot.gdc",
+    "core/players.gd",
+    "core/players.gdc",
+    "core/quality_profile.gd",
+    "core/quality_profile.gdc",
+    "core/save.gd",
+    "core/save.gdc",
+    "core/stress/stress.gd",
+    "core/stress/stress.gdc",
+    "core/stress/stress.tscn",
+    "main/boot.gd",
+    "main/boot.gdc",
+    "main/boot.tscn",
+    "profiles/neo.tres",
+    "project.binary",
+    "verify/audio_tap.gd",
+    "verify/audio_tap.gdc",
+    "verify/bench_presets/core-empty-neo.json",
+    "verify/bench_presets/core-stress-path.json",
+    "verify/bench_presets/empty-orbit.json",
+    "verify/bench_presets/index.json",
+    "verify/bench_presets/paths/empty-orbit.json",
+    "verify/bench_presets/paths/stress-flight.json",
+    "verify/bench_presets/verify-empty-path.json",
+    "verify/bench_presets/verify-empty-still.json",
+    "verify/build_info.json",
+    "verify/error_logger.gd",
+    "verify/error_logger.gdc",
+    "verify/fixtures/critic_texture_2048.gd",
+    "verify/fixtures/critic_texture_2048.gdc",
+    "verify/fixtures/critic_texture_2048.tscn",
+    "verify/fixtures/empty.tscn",
+    "verify/fixtures/known_texture.gd",
+    "verify/fixtures/known_texture.gdc",
+    "verify/fixtures/known_texture.tscn",
+    "verify/fixtures/tone.gd",
+    "verify/fixtures/tone.gdc",
+    "verify/fixtures/tone.tscn",
+    "verify/fixtures/ui_outside.tscn",
+    "verify/frame_stats.gd",
+    "verify/frame_stats.gdc",
+    "verify/mem_probe.gd",
+    "verify/mem_probe.gdc",
+    "verify/verify.gd",
+    "verify/verify.gdc"
+  ],
+  "listed_third_party": [
+    "assets/polyhaven/cliff_side/cliff_side_ao_4k.jpg",
+    "assets/polyhaven/cliff_side/cliff_side_diff_4k.jpg",
+    "assets/polyhaven/cliff_side/cliff_side_nor_gl_4k.jpg",
+    "assets/polyhaven/cliff_side/cliff_side_rough_4k.jpg",
+    "assets/polyhaven/dry_ground_rocks/dry_ground_rocks_ao_4k.jpg",
+    "assets/polyhaven/dry_ground_rocks/dry_ground_rocks_diff_4k.jpg",
+    "assets/polyhaven/dry_ground_rocks/dry_ground_rocks_nor_gl_4k.jpg",
+    "assets/polyhaven/dry_ground_rocks/dry_ground_rocks_rough_4k.jpg",
+    "assets/polyhaven/gravelly_sand/gravelly_sand_ao_4k.jpg",
+    "assets/polyhaven/gravelly_sand/gravelly_sand_diff_4k.jpg",
+    "assets/polyhaven/gravelly_sand/gravelly_sand_nor_gl_4k.jpg",
+    "assets/polyhaven/gravelly_sand/gravelly_sand_rough_4k.jpg",
+    "assets/polyhaven/namaqualand_boulder_02/namaqualand_boulder_02_2k.gltf",
+    "assets/polyhaven/namaqualand_boulder_02/textures/namaqualand_boulder_02_arm_2k.jpg",
+    "assets/polyhaven/namaqualand_boulder_02/textures/namaqualand_boulder_02_diff_2k.jpg",
+    "assets/polyhaven/namaqualand_boulder_02/textures/namaqualand_boulder_02_nor_gl_2k.jpg",
+    "assets/polyhaven/namaqualand_boulder_03/namaqualand_boulder_03_2k.gltf",
+    "assets/polyhaven/namaqualand_boulder_03/textures/namaqualand_boulder_03_arm_2k.jpg",
+    "assets/polyhaven/namaqualand_boulder_03/textures/namaqualand_boulder_03_diff_2k.jpg",
+    "assets/polyhaven/namaqualand_boulder_03/textures/namaqualand_boulder_03_nor_gl_2k.jpg",
+    "assets/polyhaven/namaqualand_boulder_04/namaqualand_boulder_04_2k.gltf",
+    "assets/polyhaven/namaqualand_boulder_04/textures/namaqualand_boulder_04_arm_2k.jpg",
+    "assets/polyhaven/namaqualand_boulder_04/textures/namaqualand_boulder_04_diff_2k.jpg",
+    "assets/polyhaven/namaqualand_boulder_04/textures/namaqualand_boulder_04_nor_gl_2k.jpg",
+    "assets/polyhaven/namaqualand_boulder_05/namaqualand_boulder_05_2k.gltf",
+    "assets/polyhaven/namaqualand_boulder_05/textures/namaqualand_boulder_05_arm_2k.jpg",
+    "assets/polyhaven/namaqualand_boulder_05/textures/namaqualand_boulder_05_diff_2k.jpg",
+    "assets/polyhaven/namaqualand_boulder_05/textures/namaqualand_boulder_05_nor_gl_2k.jpg",
+    "assets/polyhaven/namaqualand_rocks_01/namaqualand_rocks_01_2k.gltf",
+    "assets/polyhaven/namaqualand_rocks_01/textures/namaqualand_rocks_01_arm_2k.jpg",
+    "assets/polyhaven/namaqualand_rocks_01/textures/namaqualand_rocks_01_diff_2k.jpg",
+    "assets/polyhaven/namaqualand_rocks_01/textures/namaqualand_rocks_01_nor_gl_2k.jpg",
+    "assets/polyhaven/namaqualand_stones_01/namaqualand_stones_01_2k.gltf",
+    "assets/polyhaven/namaqualand_stones_01/textures/namaqualand_stones_01_arm_2k.jpg",
+    "assets/polyhaven/namaqualand_stones_01/textures/namaqualand_stones_01_diff_2k.jpg",
+    "assets/polyhaven/namaqualand_stones_01/textures/namaqualand_stones_01_nor_gl_2k.jpg",
+    "assets/polyhaven/red_laterite_soil_stones/red_laterite_soil_stones_ao_4k.jpg",
+    "assets/polyhaven/red_laterite_soil_stones/red_laterite_soil_stones_diff_4k.jpg",
+    "assets/polyhaven/red_laterite_soil_stones/red_laterite_soil_stones_nor_gl_4k.jpg",
+    "assets/polyhaven/red_laterite_soil_stones/red_laterite_soil_stones_rough_4k.jpg",
+    "assets/polyhaven/shrub_02/shrub_02_2k.gltf",
+    "assets/polyhaven/shrub_02/textures/shrub_02_arm_2k.jpg",
+    "assets/polyhaven/shrub_02/textures/shrub_02_diff_2k.jpg",
+    "assets/polyhaven/shrub_02/textures/shrub_02_nor_gl_2k.jpg",
+    "assets/polyhaven/wild_rooibos_bush/textures/wild_rooibos_bush_arm_2k.jpg",
+    "assets/polyhaven/wild_rooibos_bush/textures/wild_rooibos_bush_diff_2k.jpg",
+    "assets/polyhaven/wild_rooibos_bush/textures/wild_rooibos_bush_nor_gl_2k.jpg",
+    "assets/polyhaven/wild_rooibos_bush/wild_rooibos_bush_2k.gltf"
+  ],
+  "unlisted": []
+}

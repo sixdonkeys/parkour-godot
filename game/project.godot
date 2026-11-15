@@ -47,3 +47,9 @@ common/physics_interpolation=true
 
 textures/vram_compression/import_s3tc_bptc=true
 textures/vram_compression/import_etc2_astc=true
+
+[editor]
+
+; Ship .tres as text: the binary conversion dropped QualityProfile values
+; (upscalers list) in 4.7.2 exports; see docs/NOTES.md, verify round 2.
+export/convert_text_resources_to_binary=false

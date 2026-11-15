@@ -1,0 +1,25 @@
+{
+  "label": "verify-r2",
+  "commit": "14332885707e7c38f24841b78a6aad3738d67f49-dirty",
+  "bench_presets": [
+    "core-empty-neo.json",
+    "core-stress-path.json",
+    "verify-empty-path.json",
+    "verify-empty-still.json"
+  ],
+  "exports": [
+    {
+      "preset": "Linux arm64",
+      "path": "builds/verify-r2/linux-arm64/Ridgeline.arm64",
+      "exit_code": 0,
+      "errors": [],
+      "warnings": [],
+      "exists": true,
+      "ok": true,
+      "size_bytes": 396191528,
+      "packed_files": 168,
+      "unlisted": []
+    }
+  ],
+  "pass": true
+}

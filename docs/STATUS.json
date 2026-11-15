@@ -1,8 +1,8 @@
 {
   "modules": {
     "verify": {
-      "state": "in_critic",
-      "round": 1,
+      "state": "building",
+      "round": 2,
       "gate": false,
       "score": null,
       "open_issues": [
@@ -229,5 +229,5 @@
     "final"
   ],
   "stage": 1,
-  "updated_by": "critic"
+  "updated_by": "builder"
 }
