@@ -1,0 +1,15 @@
+{
+  "id": "verify-showcase",
+  "module": "verify",
+  "kind": "still",
+  "showcase": true,
+  "bench": true,
+  "purpose": "verify's showcase (round 2): a scene with content (lit, shadowed, textured shapes and sky), so the still, its SSIM against later rounds and the test-mode/normal-launch pair can tell a change from none. Replaces verify-empty-still as the showcase; that preset stays as the empty-scene budget check (critic round 1, issue 4).",
+  "scene": "res://verify/fixtures/showcase.tscn",
+  "camera": {"position": [0, 2.2, 6], "look_at": [0, 0.6, -1.5], "fov": 60},
+  "profile": "neo",
+  "resolution": [2408, 1506],
+  "warmup_frames": 60,
+  "frames": 600,
+  "still_frame": 300
+}

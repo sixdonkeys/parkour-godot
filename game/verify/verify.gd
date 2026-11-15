@@ -179,6 +179,8 @@ func _machine_info() -> Dictionary:
 		"adapter_driver": OS.get_video_adapter_driver_info(),
 		"rendering_method": RenderingServer.get_current_rendering_method(),
 		"rendering_driver": RenderingServer.get_current_rendering_driver_name(),
+		"rendering_device_name": RenderingServer.get_rendering_device().get_device_name() if RenderingServer.get_rendering_device() else "",
+		"rendering_device_vendor": RenderingServer.get_rendering_device().get_device_vendor_name() if RenderingServer.get_rendering_device() else "",
 		"display_server": DisplayServer.get_name(),
 		"software_renderer": name.is_empty() or RegEx.create_from_string(SOFTWARE_RE).search(name.to_lower()) != null,
 		"screen_size": DisplayServer.screen_get_size(),

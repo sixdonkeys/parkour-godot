@@ -125,7 +125,9 @@ run)
   (
     trap '' HUP
     if [ "$OS" = Darwin ]; then
-      # caffeinate keeps the display and machine awake for exactly the run.
+      # Wake the display first (declares user activity for 2 s; no input is
+      # sent), then caffeinate keeps the display and machine awake for exactly the run.
+      caffeinate -u -t 2 >/dev/null 2>&1
       caffeinate -d -i open -n -W "$APP" --args "$@" >"$OUT/launch.txt" 2>&1
     else
       "$EXE" "$@" >"$OUT/launch.txt" 2>&1

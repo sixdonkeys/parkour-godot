@@ -156,6 +156,7 @@ def run_preset(preset: Path, out: Path, test_mode=True, baseline: Path | None = 
     }
     m = log.get("machine", {})
     log["orchestrator"]["frame_numbers_count"] = not m.get("software_renderer", True)
+    log["orchestrator"]["host_graphics_driver"] = host_driver()
     p = json.loads(preset.read_text())
     still = out / "still.png"
     if still.exists():
@@ -181,6 +182,34 @@ def run_preset(preset: Path, out: Path, test_mode=True, baseline: Path | None = 
         log["sound_file_check"] = wavmetrics.measure(wav)
     write_json(logp, log)
     return log
+
+
+_DRIVER_CACHE: dict | None = None
+
+
+def host_driver() -> dict:
+    """The graphics driver on this machine, for the log (the engine doesn't
+    report Mesa's version on Linux). Linux: vulkaninfo for the first GPU that
+    isn't a software rasteriser; macOS: the OS version (Metal ships with it)."""
+    global _DRIVER_CACHE
+    if _DRIVER_CACHE is not None:
+        return _DRIVER_CACHE
+    info: dict = {}
+    try:
+        if sys.platform.startswith("linux"):
+            out = subprocess.run(["vulkaninfo", "--summary"], capture_output=True, text=True, timeout=30).stdout
+            gpus = re.split(r"\nGPU\d+:", out)
+            for g in gpus[1:]:
+                f = dict(re.findall(r"^\s*(deviceName|driverName|driverInfo|apiVersion|deviceType)\s*=\s*(.+)$", g, re.M))
+                if "CPU" not in f.get("deviceType", ""):
+                    info = f
+                    break
+        elif sys.platform == "darwin":
+            info = {"macos": subprocess.run(["sw_vers", "-productVersion"], capture_output=True, text=True).stdout.strip(), "api": "Metal"}
+    except Exception as e:  # noqa: BLE001
+        info = {"error": str(e)}
+    _DRIVER_CACHE = info
+    return info
 
 
 def _thread_dump(pid: int) -> list[dict]:

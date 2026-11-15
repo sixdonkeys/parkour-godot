@@ -116,6 +116,8 @@ def _is_free(t: dict, p: dict) -> tuple[bool, str]:
         return False, "idle time unknown"
     if p.get("locked") == "true":
         return False, "screen is locked"
+    if p.get("low_power") == "true":
+        return False, "Low Power Mode is on (numbers would be throttled)"
     if t["transport"] == "ssh" and p.get("console_user") and p.get("console_user") != p.get("user"):
         return False, f"{p.get('console_user')} is at the screen, not {p.get('user')}"
     return True, ""

@@ -1,0 +1,10 @@
+{
+  "preset": "verify-showcase",
+  "test_mode": "docs/evidence/verify/round-2/verify-showcase/",
+  "normal_launch": "docs/evidence/verify/round-2/verify-showcase-normal/",
+  "ssim": 1.0,
+  "luma_tv": 0.0,
+  "rgb_tv": 0.0,
+  "match": true,
+  "content_std": 26.775336436415497
+}
