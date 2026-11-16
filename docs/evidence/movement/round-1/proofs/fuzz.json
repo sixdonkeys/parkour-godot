@@ -1,0 +1,174 @@
+{
+  "instrument": "fuzz",
+  "cases": [
+    {
+      "fixture": "docs/fixtures/movement-fuzz-hole.json",
+      "expect": {
+        "falls": true,
+        "stuck": false,
+        "nan": 0
+      },
+      "falls_through_world": 3,
+      "below_kill_plane": 3,
+      "embedded_in_static": 0,
+      "stuck_states": 0,
+      "non_finite": 0,
+      "seconds": 60.0833333333333,
+      "first_events": [
+        {
+          "kind": "below_kill_plane",
+          "tick": 2061,
+          "body": 0,
+          "pos": [
+            2.00745677947998,
+            -12.0021543502808,
+            0.183700069785118
+          ],
+          "region": "floor"
+        },
+        {
+          "kind": "below_kill_plane",
+          "tick": 2564,
+          "body": 0,
+          "pos": [
+            0.300868302583694,
+            -12.0090560913086,
+            2.06752371788025
+          ],
+          "region": "floor"
+        },
+        {
+          "kind": "below_kill_plane",
+          "tick": 3819,
+          "body": 0,
+          "pos": [
+            -2.14454460144043,
+            -12.0099697113037,
+            0.251198440790176
+          ],
+          "region": "floor"
+        }
+      ],
+      "errors": 0,
+      "pass": true,
+      "log": "docs/evidence/movement/round-1/proofs/movement-fuzz-hole/log.json"
+    },
+    {
+      "fixture": "docs/fixtures/movement-fuzz-solid.json",
+      "expect": {
+        "falls": false,
+        "stuck": false,
+        "nan": 0
+      },
+      "falls_through_world": 0,
+      "below_kill_plane": 0,
+      "embedded_in_static": 0,
+      "stuck_states": 0,
+      "non_finite": 0,
+      "seconds": 60.0833333333333,
+      "first_events": [],
+      "errors": 0,
+      "pass": true,
+      "log": "docs/evidence/movement/round-1/proofs/movement-fuzz-solid/log.json"
+    },
+    {
+      "fixture": "docs/fixtures/movement-fuzz-cell.json",
+      "expect": {
+        "falls": false,
+        "stuck": true,
+        "nan": 0
+      },
+      "falls_through_world": 0,
+      "below_kill_plane": 0,
+      "embedded_in_static": 0,
+      "stuck_states": 5,
+      "non_finite": 0,
+      "seconds": 60.0833333333333,
+      "first_events": [
+        {
+          "kind": "stuck",
+          "tick": 1939,
+          "body": 0,
+          "pos": [
+            0.00109278620220721,
+            0.00100003508850932,
+            -0.00106232613325119
+          ],
+          "region": "cell",
+          "state": "GROUNDED",
+          "wish": "(-0.240114, 0.0, -0.178238)",
+          "on_wall": true,
+          "on_floor": true
+        },
+        {
+          "kind": "stuck",
+          "tick": 2328,
+          "body": 0,
+          "pos": [
+            -0.00117997406050563,
+            0.00100006558932364,
+            0.000160974683240056
+          ],
+          "region": "cell",
+          "state": "GROUNDED",
+          "wish": "(-0.715982, 0.0, -0.698119)",
+          "on_wall": true,
+          "on_floor": true
+        },
+        {
+          "kind": "stuck",
+          "tick": 4248,
+          "body": 0,
+          "pos": [
+            0.00108385644853115,
+            0.00100014253985137,
+            0.00108294887468219
+          ],
+          "region": "cell",
+          "state": "GROUNDED",
+          "wish": "(-0.871127, 0.0, 0.491058)",
+          "on_wall": true,
+          "on_floor": true
+        }
+      ],
+      "errors": 0,
+      "pass": true,
+      "log": "docs/evidence/movement/round-1/proofs/movement-fuzz-cell/log.json"
+    },
+    {
+      "fixture": "docs/fixtures/movement-fuzz-nan.json",
+      "expect": {
+        "falls": false,
+        "stuck": false,
+        "nan": 1
+      },
+      "falls_through_world": 0,
+      "below_kill_plane": 0,
+      "embedded_in_static": 0,
+      "stuck_states": 0,
+      "non_finite": 1,
+      "seconds": 60.0833333333333,
+      "first_events": [
+        {
+          "kind": "non_finite",
+          "tick": 600,
+          "body": 0,
+          "pos": [
+            5.40564775466919,
+            0.001000149641186,
+            -5.29243421554565
+          ],
+          "velocity": "(nan, 0.0, 0.0)",
+          "position": "(5.38235, 0.001, -5.259578)",
+          "yaw": 2.52480158633832
+        }
+      ],
+      "errors": 0,
+      "pass": true,
+      "log": "docs/evidence/movement/round-1/proofs/movement-fuzz-nan/log.json"
+    }
+  ],
+  "pass": true,
+  "commit": "a8290d1684886fe9231389c7c3e47797a9e07880",
+  "date": "2026-11-15T20:21:27"
+}

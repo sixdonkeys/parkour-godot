@@ -1,0 +1,43 @@
+{
+ "id": "movement-fuzz-solid",
+ "module": "movement",
+ "kind": "fuzz",
+ "purpose": "Control for the fuzz instrument's proof: the same 60 s of the same input on the same floor with the hole filled. The instrument must report no fall through the world.",
+ "scene": "res://movement/fixtures/movement_fixture.tscn",
+ "profile": "neo",
+ "resolution": [
+  2408,
+  1506
+ ],
+ "warmup_frames": 10,
+ "frames": 9000,
+ "finish_frames": 5,
+ "camera": {
+  "position": [
+   0,
+   13,
+   9
+  ],
+  "look_at": [
+   0,
+   0,
+   0
+  ],
+  "fov": 60
+ },
+ "fixture": {
+  "course": "docs/fixtures/movement-fuzz-solid-course.json",
+  "mode": "fuzz",
+  "players": [
+   {
+    "input": "random",
+    "spawn": "corner-1",
+    "seed": 3
+   }
+  ],
+  "fuzz": {
+   "seed": 3,
+   "seconds": 60
+  }
+ }
+}

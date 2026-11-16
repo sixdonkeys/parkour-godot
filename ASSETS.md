@@ -62,3 +62,17 @@ Credits owed are shown on the in-game credits screen.
   > Our assets are all licensed as CC0 , which is effectively Public Domain even in jurisdictions that do not support the Public Domain.
   > You do not need to give credit or attribution when using them (although it is appreciated).
 - **Changes:** none to the files; import settings (VRAM compression, mipmaps) set by `tools/set_imports.py`. Credited on the credits screen anyway.
+
+## stairs-character (step-up and step-down for the player body)
+
+- **Path:** `game/thirdparty/stairs-character/`
+- **Source:** https://github.com/Andicraft/stairs-character at commit `5403d02f6b64b49a1d1bd7af11dd51a6edfc9e6c` (`addons/stairs-character/stairs_character.gd`, `LICENSE`, `README.md`)
+- **Author:** Andrea Jörgensen (Andicraft)
+- **Licence:** MIT
+- **Licence statement (from the repository's `LICENSE`):**
+  > Copyright © 2023 Andrea Jörgensen
+  >
+  > Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+  >
+  > The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+- **Use:** `PlayerBody` (`game/movement/player_body.gd`) extends its `StairsCharacter` class. Taken as fetched, then changed; each change is its own commit and is listed in `docs/upstream/stairs-character.md`. Code only, so no credit is owed on the credits screen beyond the license notice kept in the folder.

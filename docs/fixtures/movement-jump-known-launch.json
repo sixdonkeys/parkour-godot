@@ -1,0 +1,83 @@
+{
+ "id": "movement-jump-known-launch",
+ "module": "movement",
+ "kind": "jump_proof",
+ "purpose": "Known answer for the jump instrument: a body launched at four known velocities under a known gravity of 10 m/s^2 (jump height 1.25 m, 0.5 s up and 0.5 s down). Apex = vy^2/2g, air time = 2vy/g, distance = horizontal speed x air time; the instrument must measure those within 3 mm, one tick and one tick of travel.",
+ "scene": "res://movement/fixtures/movement_fixture.tscn",
+ "profile": "neo",
+ "resolution": [
+  2408,
+  1506
+ ],
+ "warmup_frames": 10,
+ "frames": 6000,
+ "finish_frames": 5,
+ "fixture": {
+  "course": "docs/fixtures/metrics-course.json",
+  "mode": "jump_proof",
+  "players": [
+   {
+    "input": "manual",
+    "spawn": "apron-runway"
+   }
+  ],
+  "tuning": {
+   "jump_height": 1.25,
+   "time_to_peak": 0.5,
+   "time_to_fall": 0.5
+  },
+  "jump_proof": {
+   "gravity_m_s2": 10.0,
+   "cases": [
+    {
+     "launch": [
+      0,
+      5,
+      -4
+     ],
+     "apex_m": 1.25,
+     "airtime_s": 1.0,
+     "distance_m": 4.0
+    },
+    {
+     "launch": [
+      0,
+      8,
+      -6
+     ],
+     "apex_m": 3.2,
+     "airtime_s": 1.6,
+     "distance_m": 9.6
+    },
+    {
+     "launch": [
+      3,
+      6,
+      0
+     ],
+     "apex_m": 1.8,
+     "airtime_s": 1.2,
+     "distance_m": 3.6
+    },
+    {
+     "launch": [
+      0,
+      3,
+      -10
+     ],
+     "apex_m": 0.45,
+     "airtime_s": 0.6,
+     "distance_m": 6.0
+    }
+   ]
+  },
+  "camera": {
+   "mode": "side",
+   "offset": [
+    9,
+    3,
+    0
+   ]
+  }
+ }
+}

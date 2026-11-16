@@ -1,0 +1,1365 @@
+{
+ "module": "movement",
+ "round": 1,
+ "note": "Collected from the logs beside this file; every number is a development-machine (proxy) number unless a docs/neo folder says otherwise.",
+ "proofs": {
+  "fuzz": {
+   "pass": true,
+   "commit": "a8290d1684886fe9231389c7c3e47797a9e07880",
+   "date": "2026-11-15T20:21:27",
+   "file": "docs/evidence/movement/round-1/proofs/fuzz.json"
+  },
+  "input-motion": {
+   "pass": true,
+   "commit": "a8290d1684886fe9231389c7c3e47797a9e07880",
+   "date": "2026-11-15T20:22:50",
+   "file": "docs/evidence/movement/round-1/proofs/input-motion.json"
+  },
+  "jump": {
+   "pass": true,
+   "commit": "a8290d1684886fe9231389c7c3e47797a9e07880",
+   "date": "2026-11-15T20:18:13",
+   "file": "docs/evidence/movement/round-1/proofs/jump.json"
+  }
+ },
+ "presets": {
+  "movement-eight-bodies": {
+   "log": "docs/evidence/movement/round-1/movement-eight-bodies/log.json",
+   "commit": "a8290d1684886fe9231389c7c3e47797a9e07880",
+   "test_mode": true,
+   "errors": 0,
+   "adapter": "Apple M1 Pro (G13S C0)",
+   "software_renderer": false,
+   "frames": 3557,
+   "frame_ms": {
+    "p50": 8.754,
+    "p95": 16.539,
+    "p99": 20.416
+   },
+   "gpu_ms": {
+    "p50": 5.81199979782104,
+    "p95": 6.92700004577637,
+    "p99": 8.60599994659424
+   },
+   "frame_budget_pass": true,
+   "strip": true,
+   "tick_cost_ms": {
+    "mean": 1.04136504854369,
+    "max": 5.131
+   },
+   "bodies_in_scene": 8,
+   "fuzz": {
+    "seed": 81,
+    "bodies": 8,
+    "seconds": 60.0833333333333,
+    "ticks": 7210,
+    "falls_through_world": 0,
+    "below_kill_plane": 0,
+    "embedded_in_static": 0,
+    "stuck_states": 0,
+    "non_finite": 0,
+    "three_zeros": true,
+    "expected_pit_falls": 24,
+    "respawns": 42,
+    "distance_m": 2858.49438965765,
+    "max_speed_m_s": 10.0658197402954,
+    "max_landing_speed_m_s": 14.4633816259879,
+    "regions_visited": 15,
+    "regions_total": 14,
+    "body_events": {
+     "jumped": 280,
+     "landed": 362,
+     "left_ground": 321
+    },
+    "input": [
+     {
+      "segments": 60,
+      "sprints": 12,
+      "sprints_cut_short": 0,
+      "jump_presses": 52
+     },
+     {
+      "segments": 58,
+      "sprints": 11,
+      "sprints_cut_short": 1,
+      "jump_presses": 38
+     },
+     {
+      "segments": 62,
+      "sprints": 14,
+      "sprints_cut_short": 3,
+      "jump_presses": 37
+     },
+     {
+      "segments": 67,
+      "sprints": 11,
+      "sprints_cut_short": 0,
+      "jump_presses": 48
+     },
+     {
+      "segments": 74,
+      "sprints": 13,
+      "sprints_cut_short": 4,
+      "jump_presses": 51
+     },
+     {
+      "segments": 54,
+      "sprints": 11,
+      "sprints_cut_short": 0,
+      "jump_presses": 39
+     },
+     {
+      "segments": 46,
+      "sprints": 16,
+      "sprints_cut_short": 0,
+      "jump_presses": 31
+     },
+     {
+      "segments": 56,
+      "sprints": 12,
+      "sprints_cut_short": 1,
+      "jump_presses": 40
+     }
+    ]
+   },
+   "ssim_vs_baseline": null
+  },
+  "movement-fuzz": {
+   "log": "docs/evidence/movement/round-1/movement-fuzz/log.json",
+   "commit": "a8290d1684886fe9231389c7c3e47797a9e07880",
+   "test_mode": true,
+   "errors": 0,
+   "adapter": "Apple M1 Pro (G13S C0)",
+   "software_renderer": false,
+   "frames": 35909,
+   "frame_ms": {
+    "p50": 8.482,
+    "p95": 16.617,
+    "p99": 18.481
+   },
+   "gpu_ms": {
+    "p50": 5.66900014877319,
+    "p95": 7.72200012207031,
+    "p99": 9.50599956512451
+   },
+   "frame_budget_pass": false,
+   "strip": true,
+   "tick_cost_ms": {
+    "mean": 0.305616636578253,
+    "max": 7.685
+   },
+   "bodies_in_scene": 1,
+   "fuzz": {
+    "seed": 20261115,
+    "bodies": 1,
+    "seconds": 600.083333333333,
+    "ticks": 72010,
+    "falls_through_world": 0,
+    "below_kill_plane": 0,
+    "embedded_in_static": 0,
+    "stuck_states": 0,
+    "non_finite": 0,
+    "three_zeros": true,
+    "expected_pit_falls": 39,
+    "respawns": 60,
+    "distance_m": 3299.09629400923,
+    "max_speed_m_s": 10.2931261062622,
+    "max_landing_speed_m_s": 14.4338577765006,
+    "regions_visited": 14,
+    "regions_total": 14,
+    "body_events": {
+     "jumped": 320,
+     "landed": 442,
+     "left_ground": 389
+    },
+    "input": [
+     {
+      "segments": 701,
+      "sprints": 125,
+      "sprints_cut_short": 15,
+      "jump_presses": 400
+     }
+    ]
+   },
+   "ssim_vs_baseline": null
+  },
+  "movement-input-motion-key": {
+   "log": "docs/evidence/movement/round-1/movement-input-motion-key/log.json",
+   "commit": "a8290d1684886fe9231389c7c3e47797a9e07880",
+   "test_mode": false,
+   "errors": 0,
+   "adapter": "Apple M1 Pro (G13S C0)",
+   "software_renderer": false,
+   "frames": 6357,
+   "frame_ms": {
+    "p50": 8.4,
+    "p95": 16.425,
+    "p99": 20.703
+   },
+   "gpu_ms": {
+    "p50": 5.6399998664856,
+    "p95": 7.42600011825562,
+    "p99": 9.31799983978271
+   },
+   "frame_budget_pass": false,
+   "strip": false,
+   "tick_cost_ms": {
+    "mean": 0.274683697294328,
+    "max": 4.121
+   },
+   "bodies_in_scene": 1,
+   "end_state_hash": "8d24f5a427ddcb4e73921d72bf318f06da13792e0eb0c1b66c65e54e771a697c",
+   "end_state_at_run_ticks": false,
+   "bodies": [
+    {
+     "position": [
+      53.0,
+      0.000999399344436824,
+      3.66860365867615
+     ],
+     "state": "GROUNDED",
+     "events": {
+      "jumped": 0,
+      "landed": 10,
+      "left_ground": 0
+     }
+    }
+   ],
+   "input_to_motion": {
+    "device": "key",
+    "trials": 200,
+    "failed_trials": 0,
+    "frame_ms": {
+     "p50": 8.398,
+     "p95": 16.369,
+     "p99": 20.68,
+     "max": 32.848
+    },
+    "refresh_hz": 120.0,
+    "vsync_mode": "enabled",
+    "max_fps": 0,
+    "budget": {
+     "limit_ms": 50.0,
+     "judged_on": "inject_to_first_motion_ms p95 (the longer of the two)",
+     "p95_ms": 24.457,
+     "defined_input_to_motion_p95_ms": 16.742,
+     "pass": true
+    },
+    "inject_to_first_motion_ms": {
+     "p50": 13.526,
+     "p95": 24.457,
+     "p99": 30.699,
+     "min": 4.821,
+     "max": 36.267
+    },
+    "input_to_first_motion_ms": {
+     "p50": 8.278,
+     "p95": 16.742,
+     "p99": 20.885,
+     "min": 2.331,
+     "max": 21.658
+    },
+    "inject_to_input_ms": {
+     "p50": 4.565,
+     "p95": 10.916,
+     "p99": 14.249,
+     "min": 0.17,
+     "max": 15.382
+    },
+    "input_to_tick_ms": {
+     "p50": 0.432,
+     "p95": 0.734,
+     "p99": 11.387,
+     "min": 0.067,
+     "max": 12.367
+    },
+    "input_to_1cm_ms": {
+     "p50": 16.243,
+     "p95": 22.875,
+     "p99": 25.655,
+     "min": 2.773,
+     "max": 26.179
+    },
+    "inject_to_1cm_ms": {
+     "p50": 19.608,
+     "p95": 30.111,
+     "p99": 35.096,
+     "min": 4.821,
+     "max": 37.801
+    }
+   }
+  },
+  "movement-input-motion-key-60hz": {
+   "log": "docs/evidence/movement/round-1/movement-input-motion-key-60hz/log.json",
+   "commit": "a8290d1684886fe9231389c7c3e47797a9e07880",
+   "test_mode": false,
+   "errors": 0,
+   "adapter": "Apple M1 Pro (G13S C0)",
+   "software_renderer": false,
+   "frames": 5630,
+   "frame_ms": {
+    "p50": 16.692,
+    "p95": 19.039,
+    "p99": 20.698
+   },
+   "gpu_ms": {
+    "p50": 7.68599987030029,
+    "p95": 11.2559995651245,
+    "p99": 11.8979997634888
+   },
+   "frame_budget_pass": false,
+   "strip": false,
+   "tick_cost_ms": {
+    "mean": 0.346159441909442,
+    "max": 4.225
+   },
+   "bodies_in_scene": 1,
+   "end_state_hash": "ed832568a1ca3fb44dd7e1f78c8b2ccdf5dae1a6f48f452045bd617efde085b5",
+   "end_state_at_run_ticks": false,
+   "bodies": [
+    {
+     "position": [
+      53.0,
+      0.000999399344436824,
+      3.03333830833435
+     ],
+     "state": "GROUNDED",
+     "events": {
+      "jumped": 0,
+      "landed": 10,
+      "left_ground": 0
+     }
+    }
+   ],
+   "input_to_motion": {
+    "device": "key",
+    "trials": 200,
+    "failed_trials": 0,
+    "frame_ms": {
+     "p50": 16.694,
+     "p95": 19.038,
+     "p99": 20.695,
+     "max": 28.117
+    },
+    "refresh_hz": 120.0,
+    "vsync_mode": "enabled",
+    "max_fps": 60,
+    "budget": {
+     "limit_ms": 50.0,
+     "judged_on": "inject_to_first_motion_ms p95 (the longer of the two)",
+     "p95_ms": 22.844,
+     "defined_input_to_motion_p95_ms": 8.236,
+     "pass": true
+    },
+    "inject_to_first_motion_ms": {
+     "p50": 14.57,
+     "p95": 22.844,
+     "p99": 23.488,
+     "min": 5.132,
+     "max": 24.436
+    },
+    "input_to_first_motion_ms": {
+     "p50": 6.523,
+     "p95": 8.236,
+     "p99": 9.594,
+     "min": 2.655,
+     "max": 12.396
+    },
+    "inject_to_input_ms": {
+     "p50": 8.167,
+     "p95": 16.04,
+     "p99": 16.733,
+     "min": 0.241,
+     "max": 16.953
+    },
+    "input_to_tick_ms": {
+     "p50": 0.611,
+     "p95": 0.76,
+     "p99": 0.999,
+     "min": 0.309,
+     "max": 2.794
+    },
+    "input_to_1cm_ms": {
+     "p50": 6.523,
+     "p95": 8.236,
+     "p99": 9.594,
+     "min": 2.655,
+     "max": 12.396
+    },
+    "inject_to_1cm_ms": {
+     "p50": 14.57,
+     "p95": 22.844,
+     "p99": 23.488,
+     "min": 5.132,
+     "max": 24.436
+    }
+   }
+  },
+  "movement-input-motion-pad": {
+   "log": "docs/evidence/movement/round-1/movement-input-motion-pad/log.json",
+   "commit": "a8290d1684886fe9231389c7c3e47797a9e07880",
+   "test_mode": false,
+   "errors": 0,
+   "adapter": "Apple M1 Pro (G13S C0)",
+   "software_renderer": false,
+   "frames": 6422,
+   "frame_ms": {
+    "p50": 8.382,
+    "p95": 14.907,
+    "p99": 17.365
+   },
+   "gpu_ms": {
+    "p50": 5.62200021743774,
+    "p95": 6.7480001449585,
+    "p99": 8.5
+   },
+   "frame_budget_pass": true,
+   "strip": false,
+   "tick_cost_ms": {
+    "mean": 0.290126585887384,
+    "max": 4.061
+   },
+   "bodies_in_scene": 1,
+   "end_state_hash": "cfbf7c1b0fd2a87e32ec553a94d2cb09eac9873800cd8b22529a886ee85fc1f8",
+   "end_state_at_run_ticks": false,
+   "bodies": [
+    {
+     "position": [
+      53.0,
+      0.000999399344436824,
+      3.71693801879883
+     ],
+     "state": "GROUNDED",
+     "events": {
+      "jumped": 0,
+      "landed": 10,
+      "left_ground": 0
+     }
+    }
+   ],
+   "input_to_motion": {
+    "device": "joy_axis",
+    "trials": 200,
+    "failed_trials": 0,
+    "frame_ms": {
+     "p50": 8.382,
+     "p95": 14.825,
+     "p99": 17.365,
+     "max": 37.951
+    },
+    "refresh_hz": 120.0,
+    "vsync_mode": "enabled",
+    "max_fps": 0,
+    "budget": {
+     "limit_ms": 50.0,
+     "judged_on": "inject_to_first_motion_ms p95 (the longer of the two)",
+     "p95_ms": 21.838,
+     "defined_input_to_motion_p95_ms": 15.508,
+     "pass": true
+    },
+    "inject_to_first_motion_ms": {
+     "p50": 13.188,
+     "p95": 21.838,
+     "p99": 25.4,
+     "min": 4.355,
+     "max": 30.172
+    },
+    "input_to_first_motion_ms": {
+     "p50": 8.204,
+     "p95": 15.508,
+     "p99": 20.079,
+     "min": 2.162,
+     "max": 24.29
+    },
+    "inject_to_input_ms": {
+     "p50": 4.422,
+     "p95": 10.54,
+     "p99": 13.087,
+     "min": 0.188,
+     "max": 17.14
+    },
+    "input_to_tick_ms": {
+     "p50": 0.433,
+     "p95": 1.019,
+     "p99": 11.688,
+     "min": 0.277,
+     "max": 16.446
+    },
+    "input_to_1cm_ms": {
+     "p50": 16.113,
+     "p95": 22.759,
+     "p99": 25.477,
+     "min": 2.162,
+     "max": 29.968
+    },
+    "inject_to_1cm_ms": {
+     "p50": 19.463,
+     "p95": 27.595,
+     "p99": 32.478,
+     "min": 4.355,
+     "max": 35.322
+    }
+   }
+  },
+  "movement-input-motion-pad-60hz": {
+   "log": "docs/evidence/movement/round-1/movement-input-motion-pad-60hz/log.json",
+   "commit": "a8290d1684886fe9231389c7c3e47797a9e07880",
+   "test_mode": false,
+   "errors": 0,
+   "adapter": "Apple M1 Pro (G13S C0)",
+   "software_renderer": false,
+   "frames": 5844,
+   "frame_ms": {
+    "p50": 16.693,
+    "p95": 19.156,
+    "p99": 21.246
+   },
+   "gpu_ms": {
+    "p50": 7.68499994277954,
+    "p95": 11.2620000839233,
+    "p99": 11.9259996414185
+   },
+   "frame_budget_pass": false,
+   "strip": false,
+   "tick_cost_ms": {
+    "mean": 0.329370580274065,
+    "max": 4.287
+   },
+   "bodies_in_scene": 1,
+   "end_state_hash": "d633b363578c8b304b15378a6c1436456b56a304c5a7a7904d063d0de50ff076",
+   "end_state_at_run_ticks": false,
+   "bodies": [
+    {
+     "position": [
+      53.0,
+      0.000999399344436824,
+      3.03333830833435
+     ],
+     "state": "GROUNDED",
+     "events": {
+      "jumped": 2,
+      "landed": 12,
+      "left_ground": 2
+     }
+    }
+   ],
+   "input_to_motion": {
+    "device": "joy_axis",
+    "trials": 200,
+    "failed_trials": 0,
+    "frame_ms": {
+     "p50": 16.694,
+     "p95": 19.157,
+     "p99": 21.218,
+     "max": 35.667
+    },
+    "refresh_hz": 120.0,
+    "vsync_mode": "enabled",
+    "max_fps": 60,
+    "budget": {
+     "limit_ms": 50.0,
+     "judged_on": "inject_to_first_motion_ms p95 (the longer of the two)",
+     "p95_ms": 22.766,
+     "defined_input_to_motion_p95_ms": 8.06,
+     "pass": true
+    },
+    "inject_to_first_motion_ms": {
+     "p50": 14.921,
+     "p95": 22.766,
+     "p99": 23.815,
+     "min": 4.546,
+     "max": 25.913
+    },
+    "input_to_first_motion_ms": {
+     "p50": 6.421,
+     "p95": 8.06,
+     "p99": 9.815,
+     "min": 2.054,
+     "max": 11.754
+    },
+    "inject_to_input_ms": {
+     "p50": 8.73,
+     "p95": 16.313,
+     "p99": 16.752,
+     "min": 0.316,
+     "max": 16.782
+    },
+    "input_to_tick_ms": {
+     "p50": 0.613,
+     "p95": 0.73,
+     "p99": 0.816,
+     "min": 0.205,
+     "max": 0.889
+    },
+    "input_to_1cm_ms": {
+     "p50": 6.421,
+     "p95": 8.06,
+     "p99": 9.815,
+     "min": 2.054,
+     "max": 11.754
+    },
+    "inject_to_1cm_ms": {
+     "p50": 14.921,
+     "p95": 22.766,
+     "p99": 23.815,
+     "min": 4.546,
+     "max": 25.913
+    }
+   }
+  },
+  "movement-metrics": {
+   "log": "docs/evidence/movement/round-1/movement-metrics/log.json",
+   "commit": "a8290d1684886fe9231389c7c3e47797a9e07880",
+   "test_mode": true,
+   "errors": 0,
+   "adapter": "Apple M1 Pro (G13S C0)",
+   "software_renderer": false,
+   "frames": 13286,
+   "frame_ms": {
+    "p50": 8.528,
+    "p95": 16.618,
+    "p99": 18.737
+   },
+   "gpu_ms": {
+    "p50": 5.66900014877319,
+    "p95": 7.1230001449585,
+    "p99": 8.67500019073486
+   },
+   "frame_budget_pass": true,
+   "strip": false,
+   "tick_cost_ms": {
+    "mean": 0.221647387779613,
+    "max": 9.304
+   },
+   "bodies_in_scene": 1,
+   "numbers": {
+    "top_speed_m_s": 10.0,
+    "time_to_top_speed_s": 2.15,
+    "longest_jump_at_full_sprint_m": 6.41656875610352,
+    "jump_height_m": 0.949976421892643,
+    "jump_airtime_s": 0.641666666666667,
+    "standing_jump_m": 2.21686387062073,
+    "note": "ledge reach and wall run are traversal's; docs/metrics.json is written when traversal closes"
+   },
+   "stepped": {
+    "gap": {
+     "largest_cleared": 6.5,
+     "first_failed": 7.0
+    },
+    "gap_late": {
+     "largest_cleared": 7.5,
+     "first_failed": 8.0
+    },
+    "ledge": {
+     "largest_cleared": 0.9,
+     "first_failed": 1.0
+    },
+    "step": {
+     "largest_cleared": 0.35,
+     "first_failed": 0.4
+    },
+    "slope": {
+     "largest_cleared": 45.0,
+     "first_failed": 50.0
+    }
+   },
+   "sprint": {
+    "top_speed_m_s": 10.0,
+    "first_tick_movement_m": 0.0138888359069824,
+    "time_to_run_speed_s": 0.225,
+    "time_to_70_percent_s": 0.65,
+    "time_to_top_speed_s": 2.15,
+    "distance_to_top_speed_m": 16.4229354858398,
+    "jump": {
+     "jumped": true,
+     "distance_m": 6.41656875610352,
+     "apex_m": 0.949976421892643,
+     "airtime_s": 0.641666666666667,
+     "airtime_ticks": 77,
+     "take_off": [
+      53.0,
+      0.000999234616756439,
+      -34.0063362121582
+     ],
+     "landing": [
+      53.0,
+      0.000932606868445873,
+      -40.4229049682617
+     ],
+     "speed_at_take_off_m_s": 10.0,
+     "landing_speed_m_s": 6.27276883301912,
+     "speed_after_landing_m_s": 10.0
+    },
+    "speed_kept_through_jump": 1.0,
+    "stop": {
+     "from_m_s": 10.0,
+     "seconds": 0.416666666666667,
+     "metres": 2.04167175292969
+    }
+   },
+   "standing_jump": {
+    "jumped": true,
+    "distance_m": 2.21686387062073,
+    "apex_m": 0.950633995234966,
+    "airtime_s": 0.641666666666667,
+    "airtime_ticks": 77,
+    "take_off": [
+     53.0,
+     0.000175781548023224,
+     0.0
+    ],
+    "landing": [
+     53.0,
+     0.000929852365516126,
+     -2.21686387062073
+    ],
+    "speed_at_take_off_m_s": 1.66666662693024,
+    "landing_speed_m_s": 6.27276883301912,
+    "speed_after_landing_m_s": 4.0
+   },
+   "standing_vertical": {
+    "jumped": true,
+    "distance_m": 0.0,
+    "apex_m": 0.950693897902966,
+    "airtime_s": 0.641666666666667,
+    "airtime_ticks": 77,
+    "take_off": [
+     53.0,
+     0.000175781548023224,
+     0.0
+    ],
+    "landing": [
+     53.0,
+     0.000818334519863129,
+     0.0
+    ],
+    "speed_at_take_off_m_s": 0.0,
+    "landing_speed_m_s": 6.27276883301912,
+    "speed_after_landing_m_s": 0.0
+   },
+   "tap_hop": {
+    "jumped": true,
+    "distance_m": 0.0,
+    "apex_m": 0.408306978642941,
+    "airtime_s": 0.341666666666667,
+    "airtime_ticks": 41,
+    "take_off": [
+     53.0,
+     0.000175781548023224,
+     0.0
+    ],
+    "landing": [
+     53.0,
+     0.000289496034383774,
+     0.0
+    ],
+    "speed_at_take_off_m_s": 0.0,
+    "landing_speed_m_s": 4.16165147004304,
+    "speed_after_landing_m_s": 0.0
+   },
+   "turn_90": {
+    "speed_before_m_s": 9.99999237060547,
+    "lowest_speed_m_s": 9.74999237060547,
+    "speed_kept": 0.974999980926499,
+    "seconds_to_new_heading": 0.325,
+    "overshoot_m": 1.62499237060547
+   },
+   "air_steer": {
+    "heading_change_deg": 27.8413263778327,
+    "sideways_m": 1.55885314941406,
+    "speed_at_take_off_m_s": 10.0,
+    "speed_at_landing_m_s": 10.0000019073486
+   },
+   "carry": {
+    "carry-slab": {
+     "horizontal_drift_m": 0.0483856201171875,
+     "vertical_gap_m": 0.0,
+     "stayed_grounded": true,
+     "cleared": true,
+     "cycle_s": 6.0,
+     "surface_speed_m_s": 5.23681592941284,
+     "jump_carried_m": 3.36029052734375,
+     "jump_carried_expected_m": 3.36029022137324,
+     "jump_apex_m": 0.950693577528
+    },
+    "carry-lift": {
+     "horizontal_drift_m": 0.0,
+     "vertical_gap_m": 0.015982985496521,
+     "stayed_grounded": true,
+     "cleared": true,
+     "cycle_s": 5.0,
+     "surface_speed_m_s": 1.69642913341522,
+     "jump_carried_m": 0.0,
+     "jump_carried_expected_m": 0.0,
+     "jump_apex_m": 1.61502957344055
+    }
+   },
+   "stairs": {
+    "cleared": true,
+    "seconds_on_piece": 0.408333333333333,
+    "speed_in_m_s": 7.80002021789551,
+    "lowest_speed_on_piece_m_s": 7.81677198410034,
+    "speed_out_m_s": 8.63334655761719
+   },
+   "ssim_vs_baseline": null
+  },
+  "movement-run-budget": {
+   "log": "docs/evidence/movement/round-1/movement-run-budget/log.json",
+   "commit": "a8290d1684886fe9231389c7c3e47797a9e07880",
+   "test_mode": true,
+   "errors": 0,
+   "adapter": "Apple M1 Pro (G13S C0)",
+   "software_renderer": false,
+   "frames": 1693,
+   "frame_ms": {
+    "p50": 8.357,
+    "p95": 13.141,
+    "p99": 17.232
+   },
+   "gpu_ms": {
+    "p50": 5.56500005722046,
+    "p95": 6.36499977111816,
+    "p99": 7.93900012969971
+   },
+   "frame_budget_pass": true,
+   "strip": false,
+   "tick_cost_ms": {
+    "mean": 0.218752595155709,
+    "max": 1.433
+   },
+   "bodies_in_scene": 1,
+   "end_state_hash": "fedc9f5d05f091fdc6e7c4431a2bf18da7bfa9ec42c1b907b832a71992533ede",
+   "end_state_at_run_ticks": true,
+   "bodies": [
+    {
+     "position": [
+      150.231552124023,
+      0.000999166746623814,
+      -46.8776016235352
+     ],
+     "state": "GROUNDED",
+     "events": {
+      "jumped": 3,
+      "landed": 11,
+      "left_ground": 5
+     }
+    }
+   ],
+   "input_harness": {
+    "format": "input-script/1",
+    "events": 30,
+    "delivered": 30,
+    "skipped": [],
+    "last_tick": 3267,
+    "ticks_run": 3468
+   },
+   "ssim_vs_baseline": null
+  },
+  "movement-run-budget-again-2": {
+   "log": "docs/evidence/movement/round-1/movement-run-budget-again-2/log.json",
+   "commit": "a8290d1684886fe9231389c7c3e47797a9e07880",
+   "test_mode": true,
+   "errors": 0,
+   "adapter": "Apple M1 Pro (G13S C0)",
+   "software_renderer": false,
+   "frames": 1693,
+   "frame_ms": {
+    "p50": 8.386,
+    "p95": 16.079,
+    "p99": 17.899
+   },
+   "gpu_ms": {
+    "p50": 5.56599998474121,
+    "p95": 7.16499996185303,
+    "p99": 9.01299953460693
+   },
+   "frame_budget_pass": true,
+   "strip": false,
+   "tick_cost_ms": {
+    "mean": 0.23021770472895,
+    "max": 8.154
+   },
+   "bodies_in_scene": 1,
+   "end_state_hash": "fedc9f5d05f091fdc6e7c4431a2bf18da7bfa9ec42c1b907b832a71992533ede",
+   "end_state_at_run_ticks": true,
+   "bodies": [
+    {
+     "position": [
+      150.231552124023,
+      0.000999166746623814,
+      -46.8776016235352
+     ],
+     "state": "GROUNDED",
+     "events": {
+      "jumped": 3,
+      "landed": 11,
+      "left_ground": 5
+     }
+    }
+   ],
+   "input_harness": {
+    "format": "input-script/1",
+    "events": 30,
+    "delivered": 30,
+    "skipped": [],
+    "last_tick": 3267,
+    "ticks_run": 3468
+   },
+   "ssim_vs_baseline": 1.0
+  },
+  "movement-run-budget-again-3": {
+   "log": "docs/evidence/movement/round-1/movement-run-budget-again-3/log.json",
+   "commit": "a8290d1684886fe9231389c7c3e47797a9e07880",
+   "test_mode": true,
+   "errors": 0,
+   "adapter": "Apple M1 Pro (G13S C0)",
+   "software_renderer": false,
+   "frames": 1693,
+   "frame_ms": {
+    "p50": 8.344,
+    "p95": 12.801,
+    "p99": 16.301
+   },
+   "gpu_ms": {
+    "p50": 5.57499980926514,
+    "p95": 6.22300004959106,
+    "p99": 6.96199989318848
+   },
+   "frame_budget_pass": true,
+   "strip": false,
+   "tick_cost_ms": {
+    "mean": 0.216664648212226,
+    "max": 4.357
+   },
+   "bodies_in_scene": 1,
+   "end_state_hash": "fedc9f5d05f091fdc6e7c4431a2bf18da7bfa9ec42c1b907b832a71992533ede",
+   "end_state_at_run_ticks": true,
+   "bodies": [
+    {
+     "position": [
+      150.231552124023,
+      0.000999166746623814,
+      -46.8776016235352
+     ],
+     "state": "GROUNDED",
+     "events": {
+      "jumped": 3,
+      "landed": 11,
+      "left_ground": 5
+     }
+    }
+   ],
+   "input_harness": {
+    "format": "input-script/1",
+    "events": 30,
+    "delivered": 30,
+    "skipped": [],
+    "last_tick": 3267,
+    "ticks_run": 3468
+   },
+   "ssim_vs_baseline": 1.0
+  },
+  "movement-run-budget-first-pass": {
+   "log": "docs/evidence/movement/round-1/movement-run-budget-first-pass/log.json",
+   "commit": "58869a0c9badd5dd99888642b2cc63404261d3f5",
+   "test_mode": true,
+   "errors": 0,
+   "adapter": "Apple M1 Pro (G13S C0)",
+   "software_renderer": false,
+   "frames": 1693,
+   "frame_ms": {
+    "p50": 8.813,
+    "p95": 16.795,
+    "p99": 18.599
+   },
+   "gpu_ms": {
+    "p50": 5.66599988937378,
+    "p95": 8.11200046539307,
+    "p99": 9.75399971008301
+   },
+   "frame_budget_pass": false,
+   "strip": false,
+   "end_state_hash": "fedc9f5d05f091fdc6e7c4431a2bf18da7bfa9ec42c1b907b832a71992533ede",
+   "end_state_at_run_ticks": true,
+   "bodies": [
+    {
+     "position": [
+      150.231552124023,
+      0.000999166746623814,
+      -46.8776016235352
+     ],
+     "state": "GROUNDED",
+     "events": {
+      "jumped": 3,
+      "landed": 11,
+      "left_ground": 5
+     }
+    }
+   ],
+   "input_harness": {
+    "format": "input-script/1",
+    "events": 30,
+    "delivered": 30,
+    "skipped": [],
+    "last_tick": 3267,
+    "ticks_run": 3468
+   },
+   "ssim_vs_baseline": null
+  },
+  "movement-run-budget-normal": {
+   "log": "docs/evidence/movement/round-1/movement-run-budget-normal/log.json",
+   "commit": "a8290d1684886fe9231389c7c3e47797a9e07880",
+   "test_mode": false,
+   "errors": 0,
+   "adapter": "Apple M1 Pro (G13S C0)",
+   "software_renderer": false,
+   "frames": 3087,
+   "frame_ms": {
+    "p50": 8.434,
+    "p95": 15.617,
+    "p99": 17.482
+   },
+   "gpu_ms": {
+    "p50": 5.57399988174438,
+    "p95": 7.18900012969971,
+    "p99": 8.77700042724609
+   },
+   "frame_budget_pass": true,
+   "strip": false,
+   "tick_cost_ms": {
+    "mean": 0.311795546558704,
+    "max": 3.572
+   },
+   "bodies_in_scene": 1,
+   "end_state_hash": "fedc9f5d05f091fdc6e7c4431a2bf18da7bfa9ec42c1b907b832a71992533ede",
+   "end_state_at_run_ticks": true,
+   "bodies": [
+    {
+     "position": [
+      150.231552124023,
+      0.000999166746623814,
+      -46.8776016235352
+     ],
+     "state": "GROUNDED",
+     "events": {
+      "jumped": 3,
+      "landed": 11,
+      "left_ground": 5
+     }
+    }
+   ],
+   "input_harness": {
+    "format": "input-script/1",
+    "events": 30,
+    "delivered": 30,
+    "skipped": [],
+    "last_tick": 3267,
+    "ticks_run": 3458
+   },
+   "ssim_vs_baseline": 1.0
+  },
+  "movement-showcase": {
+   "log": "docs/evidence/movement/round-1/movement-showcase/log.json",
+   "commit": "a8290d1684886fe9231389c7c3e47797a9e07880",
+   "test_mode": true,
+   "errors": 0,
+   "adapter": "Apple M1 Pro (G13S C0)",
+   "software_renderer": false,
+   "frames": 1580,
+   "frame_ms": {
+    "p50": 8.478,
+    "p95": 16.122,
+    "p99": 17.662
+   },
+   "gpu_ms": {
+    "p50": 5.57999992370605,
+    "p95": 7.66699981689453,
+    "p99": 9.96199989318848
+   },
+   "frame_budget_pass": false,
+   "strip": true,
+   "tick_cost_ms": {
+    "mean": 0.0817883506343714,
+    "max": 0.418
+   },
+   "bodies_in_scene": 1,
+   "end_state_hash": "fedc9f5d05f091fdc6e7c4431a2bf18da7bfa9ec42c1b907b832a71992533ede",
+   "end_state_at_run_ticks": true,
+   "bodies": [
+    {
+     "position": [
+      150.231552124023,
+      0.000999166746623814,
+      -46.8776016235352
+     ],
+     "state": "GROUNDED",
+     "events": {
+      "jumped": 3,
+      "landed": 11,
+      "left_ground": 5
+     }
+    }
+   ],
+   "input_harness": {
+    "format": "input-script/1",
+    "events": 30,
+    "delivered": 30,
+    "skipped": [],
+    "last_tick": 3267,
+    "ticks_run": 3468
+   },
+   "ssim_vs_baseline": null
+  },
+  "movement-showcase-first": {
+   "log": "docs/evidence/movement/round-1/movement-showcase-first/log.json",
+   "commit": "a8290d1684886fe9231389c7c3e47797a9e07880",
+   "test_mode": true,
+   "errors": 0,
+   "adapter": "Apple M1 Pro (G13S C0)",
+   "software_renderer": false,
+   "frames": 1580,
+   "frame_ms": {
+    "p50": 8.836,
+    "p95": 16.699,
+    "p99": 20.434
+   },
+   "gpu_ms": {
+    "p50": 5.1560001373291,
+    "p95": 7.92500019073486,
+    "p99": 9.8120002746582
+   },
+   "frame_budget_pass": false,
+   "strip": true,
+   "tick_cost_ms": {
+    "mean": 0.0813341983852365,
+    "max": 0.51
+   },
+   "bodies_in_scene": 1,
+   "end_state_hash": "fedc9f5d05f091fdc6e7c4431a2bf18da7bfa9ec42c1b907b832a71992533ede",
+   "end_state_at_run_ticks": true,
+   "bodies": [
+    {
+     "position": [
+      150.231552124023,
+      0.000999166746623814,
+      -46.8776016235352
+     ],
+     "state": "GROUNDED",
+     "events": {
+      "jumped": 3,
+      "landed": 11,
+      "left_ground": 5
+     }
+    }
+   ],
+   "input_harness": {
+    "format": "input-script/1",
+    "events": 30,
+    "delivered": 30,
+    "skipped": [],
+    "last_tick": 3267,
+    "ticks_run": 3468
+   },
+   "ssim_vs_baseline": null
+  },
+  "movement-showcase-normal": {
+   "log": "docs/evidence/movement/round-1/movement-showcase-normal/log.json",
+   "commit": "a8290d1684886fe9231389c7c3e47797a9e07880",
+   "test_mode": false,
+   "errors": 0,
+   "adapter": "Apple M1 Pro (G13S C0)",
+   "software_renderer": false,
+   "frames": 1549,
+   "frame_ms": {
+    "p50": 8.833,
+    "p95": 16.742,
+    "p99": 18.02
+   },
+   "gpu_ms": {
+    "p50": 5.38100004196167,
+    "p95": 8.04899978637695,
+    "p99": 9.89999961853027
+   },
+   "frame_budget_pass": false,
+   "strip": true,
+   "tick_cost_ms": {
+    "mean": 0.0701095692396646,
+    "max": 0.832
+   },
+   "bodies_in_scene": 1,
+   "end_state_hash": "fedc9f5d05f091fdc6e7c4431a2bf18da7bfa9ec42c1b907b832a71992533ede",
+   "end_state_at_run_ticks": true,
+   "bodies": [
+    {
+     "position": [
+      150.231552124023,
+      0.000999166746623814,
+      -46.8776016235352
+     ],
+     "state": "GROUNDED",
+     "events": {
+      "jumped": 3,
+      "landed": 11,
+      "left_ground": 5
+     }
+    }
+   ],
+   "input_harness": {
+    "format": "input-script/1",
+    "events": 30,
+    "delivered": 30,
+    "skipped": [],
+    "last_tick": 3267,
+    "ticks_run": 3459
+   },
+   "ssim_vs_baseline": 1.0
+  },
+  "movement-two-bodies": {
+   "log": "docs/evidence/movement/round-1/movement-two-bodies/log.json",
+   "commit": "a8290d1684886fe9231389c7c3e47797a9e07880",
+   "test_mode": true,
+   "errors": 0,
+   "adapter": "Apple M1 Pro (G13S C0)",
+   "software_renderer": false,
+   "frames": 438,
+   "frame_ms": {
+    "p50": 8.662,
+    "p95": 16.692,
+    "p99": 19.372
+   },
+   "gpu_ms": {
+    "p50": 5.59000015258789,
+    "p95": 8.06900024414062,
+    "p99": 10.2019996643066
+   },
+   "frame_budget_pass": false,
+   "strip": true,
+   "tick_cost_ms": {
+    "mean": 0.122248532289628,
+    "max": 0.532
+   },
+   "bodies_in_scene": 2,
+   "end_state_hash": "bf07e2519d5b5f4de19f6feadd8197d33e83dbe881eed258f621dbd3a2eb6b77",
+   "end_state_at_run_ticks": true,
+   "bodies": [
+    {
+     "position": [
+      12.5,
+      0.000999291427433491,
+      -46.7978439331055
+     ],
+     "state": "GROUNDED",
+     "events": {
+      "jumped": 1,
+      "landed": 2,
+      "left_ground": 1
+     }
+    },
+    {
+     "position": [
+      17.5,
+      0.000999291427433491,
+      -46.7978439331055
+     ],
+     "state": "GROUNDED",
+     "events": {
+      "jumped": 1,
+      "landed": 2,
+      "left_ground": 1
+     }
+    }
+   ],
+   "input_harness": {
+    "format": "input-script/1",
+    "events": 4,
+    "delivered": 4,
+    "skipped": [],
+    "last_tick": 820,
+    "ticks_run": 1022
+   },
+   "ssim_vs_baseline": null
+  },
+  "movement-two-bodies-normal": {
+   "log": "docs/evidence/movement/round-1/movement-two-bodies-normal/log.json",
+   "commit": "a8290d1684886fe9231389c7c3e47797a9e07880",
+   "test_mode": false,
+   "errors": 0,
+   "adapter": "Apple M1 Pro (G13S C0)",
+   "software_renderer": false,
+   "frames": 434,
+   "frame_ms": {
+    "p50": 8.454,
+    "p95": 16.906,
+    "p99": 17.968
+   },
+   "gpu_ms": {
+    "p50": 5.35200023651123,
+    "p95": 7.83099985122681,
+    "p99": 10.1040000915527
+   },
+   "frame_budget_pass": false,
+   "strip": true,
+   "tick_cost_ms": {
+    "mean": 0.0998256157635468,
+    "max": 1.555
+   },
+   "bodies_in_scene": 2,
+   "end_state_hash": "bf07e2519d5b5f4de19f6feadd8197d33e83dbe881eed258f621dbd3a2eb6b77",
+   "end_state_at_run_ticks": true,
+   "bodies": [
+    {
+     "position": [
+      12.5,
+      0.000999291427433491,
+      -46.7978439331055
+     ],
+     "state": "GROUNDED",
+     "events": {
+      "jumped": 1,
+      "landed": 2,
+      "left_ground": 1
+     }
+    },
+    {
+     "position": [
+      17.5,
+      0.000999291427433491,
+      -46.7978439331055
+     ],
+     "state": "GROUNDED",
+     "events": {
+      "jumped": 1,
+      "landed": 2,
+      "left_ground": 1
+     }
+    }
+   ],
+   "input_harness": {
+    "format": "input-script/1",
+    "events": 4,
+    "delivered": 4,
+    "skipped": [],
+    "last_tick": 820,
+    "ticks_run": 1015
+   },
+   "ssim_vs_baseline": 1.0
+  }
+ },
+ "test_mode_vs_normal_launch": {
+  "movement-run-budget": {
+   "test_mode_hash": "fedc9f5d05f091fdc6e7c4431a2bf18da7bfa9ec42c1b907b832a71992533ede",
+   "normal_launch_hash": "fedc9f5d05f091fdc6e7c4431a2bf18da7bfa9ec42c1b907b832a71992533ede",
+   "identical_end_state": true
+  },
+  "movement-showcase": {
+   "test_mode_hash": "fedc9f5d05f091fdc6e7c4431a2bf18da7bfa9ec42c1b907b832a71992533ede",
+   "normal_launch_hash": "fedc9f5d05f091fdc6e7c4431a2bf18da7bfa9ec42c1b907b832a71992533ede",
+   "identical_end_state": true
+  },
+  "movement-two-bodies": {
+   "test_mode_hash": "bf07e2519d5b5f4de19f6feadd8197d33e83dbe881eed258f621dbd3a2eb6b77",
+   "normal_launch_hash": "bf07e2519d5b5f4de19f6feadd8197d33e83dbe881eed258f621dbd3a2eb6b77",
+   "identical_end_state": true
+  }
+ }
+}

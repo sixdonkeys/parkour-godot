@@ -1,0 +1,18 @@
+{
+  "void": false,
+  "reasons": [],
+  "unverifiable": [],
+  "display_awake_from_frames": true,
+  "max_frame_ms": 53.035,
+  "refresh_hz_game": [
+    60.0
+  ],
+  "power": [
+    "AC Power"
+  ],
+  "low_power": [
+    "false"
+  ],
+  "samples": 172,
+  "note": "void runs are kept and count for nothing (BUILD-BRIEF item 2)"
+}

@@ -14,6 +14,8 @@ const ErrorLogger := preload("res://verify/error_logger.gd")
 const FrameStats := preload("res://verify/frame_stats.gd")
 const MemProbe := preload("res://verify/mem_probe.gd")
 const AudioTap := preload("res://verify/audio_tap.gd")
+const InputHarness := preload("res://verify/input_harness.gd")
+const InputLatency := preload("res://verify/input_latency.gd")
 const BENCH_DIR := "res://verify/bench_presets"
 const BUILD_INFO := "res://verify/build_info.json"
 const SOFTWARE_RE := "llvmpipe|lavapipe|softpipe|swiftshader|microsoft basic"
@@ -150,6 +152,11 @@ func _resolve(path: String) -> String:
 	return String(_args.get("repo-root", "")).path_join(path)
 
 
+## For fixture scenes: a preset's repo-relative path as one the engine can open.
+func resolve_path(path: String) -> String:
+	return _resolve(path)
+
+
 func _load_json(path: String) -> Dictionary:
 	if not FileAccess.file_exists(path):
 		return {}
@@ -279,6 +286,27 @@ func _run_preset(p: Dictionary, out_dir: String) -> Dictionary:
 	if p.get("sound", false):
 		_audio = AudioTap.new()
 		_audio.start()
+	# --- input harness and input-to-motion (added with `movement`) ---------
+	# "vsync": "enabled" runs the preset the way the game ships (latency presets).
+	if String(p.get("vsync", "")) == "enabled":
+		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ENABLED)
+	var harness: InputHarness = null
+	if p.has("input_script") and _scene_holder:
+		var script = p["input_script"]
+		if script is String:
+			script = _load_json(_resolve(script))
+		harness = InputHarness.new()
+		harness.name = "VerifyInputHarness"
+		if harness.setup(script):
+			_scene_holder.add_child(harness)
+	var latency: InputLatency = null
+	if p.has("input_latency") and scene:
+		latency = InputLatency.new()
+		latency.name = "VerifyInputLatency"
+		latency.setup(scene, p["input_latency"])
+		_scene_holder.add_child(latency)
+	var still_saved := false
+	# -------------------------------------------------------------------------
 	var stats := FrameStats.new()
 	stats.start(root)
 	var warmup := int(p.get("warmup_frames", 30))
@@ -309,6 +337,7 @@ func _run_preset(p: Dictionary, out_dir: String) -> Dictionary:
 			if _frame == still_frame and p.get("still", true):
 				_save_frame(out_dir.path_join("still.png"))
 				stats.mark_capture()
+				still_saved = true
 			if strip_every > 0 and _frame % strip_every == 0:
 				DirAccess.make_dir_recursive_absolute(out_dir.path_join("strip"))
 				_save_frame(out_dir.path_join("strip/%05d.png" % _frame))
@@ -319,6 +348,16 @@ func _run_preset(p: Dictionary, out_dir: String) -> Dictionary:
 			if w.get("observe_at", -999) == _frame:
 				w["observed"] = _window_state()
 		_frame += 1
+		# A run or an instrument that has finished ends the preset early; the
+		# still is then the last frame (added with `movement`).
+		if _frame > 0 and ((latency and latency.finished) or (latency == null and scene
+				and scene.has_method("verify_finished") and scene.verify_finished())):
+			for i in int(p.get("finish_frames", 0)):
+				await RenderingServer.frame_post_draw
+			if p.get("still", true) and not still_saved:
+				_save_frame(out_dir.path_join("still.png"))
+			log["finished_early_at_frame"] = _frame
+			break
 	log["wall_seconds"] = (Time.get_ticks_usec() - t0) / 1e6
 	log["frame_time"] = stats.report(true)
 	if Engine.max_fps > 0:
@@ -329,6 +368,14 @@ func _run_preset(p: Dictionary, out_dir: String) -> Dictionary:
 		log["window_sequence"] = window_log
 		log["window_wm"] = p.get("window_wm", OS.get_environment("XDG_CURRENT_DESKTOP"))
 	log["interface_outside"] = _controls_outside()
+	# Added with `movement`: what the input harness delivered, the
+	# input-to-motion histogram, and the fixture scene's own report.
+	if harness:
+		log["input_harness"] = harness.report()
+	if latency:
+		log["input_to_motion"] = latency.report()
+	if scene and scene.has_method("verify_report"):
+		fixture_result = scene.verify_report()
 	if not fixture_result.is_empty():
 		log["fixture_result"] = fixture_result.duplicate(true)
 		fixture_result.clear()
@@ -381,6 +428,10 @@ func _run_preset(p: Dictionary, out_dir: String) -> Dictionary:
 				grows = false
 		m["grows_each_cycle"] = grows
 	Engine.max_fps = 0
+	if String(p.get("vsync", "")) == "enabled":
+		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
+		if DisplayServer.window_get_vsync_mode() != DisplayServer.VSYNC_DISABLED:
+			DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_MAILBOX)
 	root.content_scale_mode = Window.CONTENT_SCALE_MODE_CANVAS_ITEMS
 	root.content_scale_aspect = Window.CONTENT_SCALE_ASPECT_EXPAND
 	root.content_scale_size = Vector2i(1280, 800)

@@ -1,0 +1,28 @@
+{
+ "id": "movement-metrics",
+ "module": "movement",
+ "kind": "metrics",
+ "purpose": "The movement-numbers instrument on the metrics course: top speed and time to reach it, the jump at a full sprint, standing jump, stop, turn and air steering, and for gaps, ledges, steps and slopes the largest stepped piece that succeeds and the first that fails. Feeds docs/metrics.json when traversal closes.",
+ "scene": "res://movement/fixtures/movement_fixture.tscn",
+ "profile": "neo",
+ "resolution": [
+  2408,
+  1506
+ ],
+ "warmup_frames": 30,
+ "frames": 40000,
+ "finish_frames": 5,
+ "fixture": {
+  "course": "docs/fixtures/metrics-course.json",
+  "mode": "metrics",
+  "players": [
+   {
+    "input": "manual",
+    "spawn": "apron-runway"
+   }
+  ],
+  "camera": {
+   "mode": "chase"
+  }
+ }
+}

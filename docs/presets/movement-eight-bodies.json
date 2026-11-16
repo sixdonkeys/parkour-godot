@@ -1,0 +1,80 @@
+{
+ "id": "movement-eight-bodies",
+ "module": "movement",
+ "kind": "fuzz",
+ "purpose": "Eight bodies in one scene (the number a level must hold; decision multiplayer-readiness), each with its own seeded random input source, for 60 s: six live players that collide with one another and two ghosts that collide with no player. Zero engine errors and the fuzz zeros with eight bodies simulating. (It saves a frame strip, so its frame times are not budget evidence.)",
+ "scene": "res://movement/fixtures/movement_fixture.tscn",
+ "profile": "neo",
+ "resolution": [
+  2408,
+  1506
+ ],
+ "warmup_frames": 30,
+ "frames": 9000,
+ "finish_frames": 5,
+ "strip_every": 300,
+ "fixture": {
+  "course": "docs/fixtures/metrics-course.json",
+  "mode": "fuzz",
+  "players": [
+   {
+    "input": "random",
+    "spawn": "apron-gaps",
+    "seed": 8100,
+    "ghost": false
+   },
+   {
+    "input": "random",
+    "spawn": "apron-runway",
+    "seed": 8101,
+    "ghost": false
+   },
+   {
+    "input": "random",
+    "spawn": "apron-field-b",
+    "seed": 8102,
+    "ghost": false
+   },
+   {
+    "input": "random",
+    "spawn": "apron-field-c",
+    "seed": 8103,
+    "ghost": false
+   },
+   {
+    "input": "random",
+    "spawn": "gap-edge",
+    "seed": 8104,
+    "ghost": false
+   },
+   {
+    "input": "random",
+    "spawn": "stairs-deck",
+    "seed": 8105,
+    "ghost": false
+   },
+   {
+    "input": "random",
+    "spawn": "tower-top",
+    "seed": 8106,
+    "ghost": true
+   },
+   {
+    "input": "random",
+    "spawn": "thin-deck",
+    "seed": 8107,
+    "ghost": true
+   }
+  ],
+  "fuzz": {
+   "seed": 81,
+   "respawn_every_s": 15,
+   "seconds": 60
+  },
+  "camera": {
+   "mode": "chase",
+   "distance": 9.0,
+   "height": 5.0
+  }
+ }
+}

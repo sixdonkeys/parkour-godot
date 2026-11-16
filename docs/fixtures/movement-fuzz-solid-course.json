@@ -1,0 +1,212 @@
+{
+ "format": "metrics-course/1",
+ "id": "movement-fuzz-solid-course",
+ "units": "meters; +Y up; floor top at y = 0",
+ "generator": "tools/gen/metrics_course.py",
+ "purpose": "Control for the fuzz instrument's proof: the hole fixture's floor with the hole filled. The instrument must report no fall through the world here.",
+ "kill_plane_y": -12.0,
+ "pit_floor_y": null,
+ "expected_fall_below_y": null,
+ "hole": null,
+ "bounds": {
+  "min": [
+   -7,
+   -12.0,
+   -7
+  ],
+  "max": [
+   7,
+   6.0,
+   7
+  ]
+ },
+ "pieces": [
+  {
+   "id": "floor-west",
+   "kind": "box",
+   "tag": "ground",
+   "center": [
+    -3.5,
+    -0.25,
+    0.0
+   ],
+   "size": [
+    5.0,
+    0.5,
+    12.0
+   ]
+  },
+  {
+   "id": "floor-east",
+   "kind": "box",
+   "tag": "ground",
+   "center": [
+    3.5,
+    -0.25,
+    0.0
+   ],
+   "size": [
+    5.0,
+    0.5,
+    12.0
+   ]
+  },
+  {
+   "id": "floor-north",
+   "kind": "box",
+   "tag": "ground",
+   "center": [
+    0.0,
+    -0.25,
+    3.5
+   ],
+   "size": [
+    2.0,
+    0.5,
+    5.0
+   ]
+  },
+  {
+   "id": "floor-south",
+   "kind": "box",
+   "tag": "ground",
+   "center": [
+    0.0,
+    -0.25,
+    -3.5
+   ],
+   "size": [
+    2.0,
+    0.5,
+    5.0
+   ]
+  },
+  {
+   "id": "wall-west",
+   "kind": "box",
+   "tag": "outer-wall",
+   "center": [
+    -6.5,
+    1.75,
+    0.0
+   ],
+   "size": [
+    1.0,
+    4.5,
+    14.0
+   ]
+  },
+  {
+   "id": "wall-east",
+   "kind": "box",
+   "tag": "outer-wall",
+   "center": [
+    6.5,
+    1.75,
+    0.0
+   ],
+   "size": [
+    1.0,
+    4.5,
+    14.0
+   ]
+  },
+  {
+   "id": "wall-north",
+   "kind": "box",
+   "tag": "outer-wall",
+   "center": [
+    0.0,
+    1.75,
+    6.5
+   ],
+   "size": [
+    12.0,
+    4.5,
+    1.0
+   ]
+  },
+  {
+   "id": "wall-south",
+   "kind": "box",
+   "tag": "outer-wall",
+   "center": [
+    0.0,
+    1.75,
+    -6.5
+   ],
+   "size": [
+    12.0,
+    4.5,
+    1.0
+   ]
+  },
+  {
+   "id": "floor-center",
+   "kind": "box",
+   "tag": "ground",
+   "center": [
+    0.0,
+    -0.25,
+    0.0
+   ],
+   "size": [
+    2.0,
+    0.5,
+    2.0
+   ]
+  }
+ ],
+ "lanes": [],
+ "spawns": [
+  {
+   "id": "corner-1",
+   "pos": [
+    -4.0,
+    0.0,
+    4.0
+   ],
+   "yaw_deg": 0.0
+  },
+  {
+   "id": "corner-2",
+   "pos": [
+    4.0,
+    0.0,
+    4.0
+   ],
+   "yaw_deg": 0.0
+  },
+  {
+   "id": "corner-3",
+   "pos": [
+    4.0,
+    0.0,
+    -4.0
+   ],
+   "yaw_deg": 0.0
+  },
+  {
+   "id": "corner-4",
+   "pos": [
+    -4.0,
+    0.0,
+    -4.0
+   ],
+   "yaw_deg": 0.0
+  }
+ ],
+ "regions": [
+  {
+   "id": "floor",
+   "x": [
+    -6.0,
+    6.0
+   ],
+   "z": [
+    -6.0,
+    6.0
+   ]
+  }
+ ]
+}

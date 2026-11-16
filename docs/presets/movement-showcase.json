@@ -1,0 +1,80 @@
+{
+ "id": "movement-showcase",
+ "module": "movement",
+ "kind": "run",
+ "purpose": "movement's showcase: only the body, on the metrics course, driven through the engine's input map by an input script (keys and pointer moves). Third-person harness camera, a frame strip every 15 frames. The still is the last frame, with the body at rest, so the test-mode and normal-launch pair can be compared; the end-state hash in the log must be identical in both. Saving the strip disturbs the frames around each save, so this preset's frame-time numbers are not the budget evidence: movement-run-budget is the same run without the strip.",
+ "scene": "res://movement/fixtures/movement_fixture.tscn",
+ "profile": "neo",
+ "resolution": [
+  2408,
+  1506
+ ],
+ "warmup_frames": 30,
+ "frames": 4200,
+ "finish_frames": 10,
+ "strip_every": 15,
+ "input_script": "docs/fixtures/inputs/movement-showcase.json",
+ "fixture": {
+  "course": "docs/fixtures/metrics-course.json",
+  "mode": "run",
+  "run_ticks": 3447,
+  "players": [
+   {
+    "input": "device",
+    "spawn": [
+     12.5,
+     0,
+     6
+    ]
+   }
+  ],
+  "cuts": [
+   {
+    "tick": 920,
+    "player": 0,
+    "spawn": [
+     92,
+     0,
+     -24
+    ]
+   },
+   {
+    "tick": 1350,
+    "player": 0,
+    "spawn": [
+     69,
+     0,
+     -38.5
+    ]
+   },
+   {
+    "tick": 1840,
+    "player": 0,
+    "spawn": [
+     69,
+     0,
+     -2
+    ]
+   },
+   {
+    "tick": 2227,
+    "player": 0,
+    "spawn": [
+     58,
+     0,
+     2
+    ],
+    "yaw_deg": -90.0
+   },
+   {
+    "tick": 2847,
+    "player": 0,
+    "spawn": "mover-slab-top"
+   }
+  ],
+  "camera": {
+   "mode": "chase"
+  }
+ },
+ "showcase": true
+}
