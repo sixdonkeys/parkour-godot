@@ -23,3 +23,7 @@ game/*/generated/chunks/
 game/*/generated/*.res
 game/*/generated/*.f32
 game/assets/polyhaven/
+# Amendment 1: raw engine output stays on disk; summaries and graded stills are committed
+docs/evidence/**/engine-output.txt
+docs/evidence/**/engine-hang.json
+docs/neo/**/launch.txt
