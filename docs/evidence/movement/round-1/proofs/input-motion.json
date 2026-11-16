@@ -1,0 +1,80 @@
+{
+  "instrument": "input to motion",
+  "known_answer": "a body that moves a fixed 104 ms / 37 ms after _input",
+  "cases": [
+    {
+      "fixture": "docs/fixtures/movement-latency-delay-104.json",
+      "synthetic_delay_ms": 104.0,
+      "trials": 100,
+      "allowed_ms": [
+        104.0,
+        163.8
+      ],
+      "measured_min_ms": 106.32,
+      "measured_median_ms": 116.6265,
+      "expected_median_ms": 116.91400000000002,
+      "allowed_median_ms": [
+        114.41,
+        119.42
+      ],
+      "measured_max_ms": 128.695,
+      "outside": 0,
+      "frame_ms": {
+        "p50": 8.351,
+        "p95": 13.659,
+        "p99": 16.652,
+        "max": 29.402
+      },
+      "inject_to_input_ms": {
+        "p50": 5.308,
+        "p95": 8.886,
+        "p99": 15.521,
+        "min": 0.291,
+        "max": 16.03
+      },
+      "errors": 0,
+      "pass": true,
+      "log": "docs/evidence/movement/round-1/proofs/movement-latency-delay-104/log.json"
+    },
+    {
+      "fixture": "docs/fixtures/movement-latency-delay-37.json",
+      "synthetic_delay_ms": 37.0,
+      "trials": 100,
+      "allowed_ms": [
+        37.0,
+        85.73
+      ],
+      "measured_min_ms": 39.437,
+      "measured_median_ms": 49.9845,
+      "expected_median_ms": 50.46,
+      "allowed_median_ms": [
+        47.94,
+        52.98
+      ],
+      "measured_max_ms": 66.376,
+      "outside": 0,
+      "frame_ms": {
+        "p50": 8.41,
+        "p95": 16.009,
+        "p99": 17.595,
+        "max": 23.866
+      },
+      "inject_to_input_ms": {
+        "p50": 4.354,
+        "p95": 11.095,
+        "p99": 14.622,
+        "min": 0.217,
+        "max": 15.607
+      },
+      "errors": 0,
+      "pass": true,
+      "log": "docs/evidence/movement/round-1/proofs/movement-latency-delay-37/log.json"
+    }
+  ],
+  "median_difference_ms": 66.642,
+  "expected_difference_ms": 66.45400000000001,
+  "difference_tolerance_ms": 4.205,
+  "pass": true,
+  "commit": "a8290d1684886fe9231389c7c3e47797a9e07880",
+  "date": "2026-11-15T20:22:50"
+}

@@ -1,0 +1,246 @@
+{
+  "instrument": "movement numbers: jump",
+  "cases": [
+    {
+      "fixture": "docs/fixtures/movement-jump-known-launch.json",
+      "expect_instrument_pass": true,
+      "instrument_pass": true,
+      "gravity_m_s2": 10.0,
+      "launches": [
+        {
+          "launch_m_s": [
+            0.0,
+            5.0,
+            -4.0
+          ],
+          "expected": {
+            "apex_m": 1.25,
+            "airtime_s": 1.0,
+            "distance_m": 4.0,
+            "landing_speed_m_s": 5.0
+          },
+          "measured": {
+            "apex_m": 1.25049825944006,
+            "airtime_s": 1.00833333333333,
+            "airtime_ticks": 121,
+            "distance_m": 4.03373241424561,
+            "landing_speed_m_s": 5.04166475931803
+          },
+          "tolerance": {
+            "apex_m": 0.003,
+            "airtime_s": 0.00841666666666667,
+            "distance_m": 0.0363333333333333,
+            "landing_speed_m_s": 0.0833333333333333
+          },
+          "pass": true
+        },
+        {
+          "launch_m_s": [
+            0.0,
+            8.0,
+            -6.0
+          ],
+          "expected": {
+            "apex_m": 3.2,
+            "airtime_s": 1.6,
+            "distance_m": 9.6,
+            "landing_speed_m_s": 8.0
+          },
+          "measured": {
+            "apex_m": 3.20046585053205,
+            "airtime_s": 1.60833333333333,
+            "airtime_ticks": 193,
+            "distance_m": 9.65036296844482,
+            "landing_speed_m_s": 8.0416423479716
+          },
+          "tolerance": {
+            "apex_m": 0.003,
+            "airtime_s": 0.00841666666666667,
+            "distance_m": 0.053,
+            "landing_speed_m_s": 0.0833333333333333
+          },
+          "pass": true
+        },
+        {
+          "launch_m_s": [
+            3.0,
+            6.0,
+            0.0
+          ],
+          "expected": {
+            "apex_m": 1.8,
+            "airtime_s": 1.2,
+            "distance_m": 3.6,
+            "landing_speed_m_s": 6.0
+          },
+          "measured": {
+            "apex_m": 1.80057518929243,
+            "airtime_s": 1.20833333333333,
+            "airtime_ticks": 145,
+            "distance_m": 3.62550354003906,
+            "landing_speed_m_s": 6.04165760676066
+          },
+          "tolerance": {
+            "apex_m": 0.003,
+            "airtime_s": 0.00841666666666667,
+            "distance_m": 0.028,
+            "landing_speed_m_s": 0.0833333333333333
+          },
+          "pass": true
+        },
+        {
+          "launch_m_s": [
+            0.0,
+            3.0,
+            -10.0
+          ],
+          "expected": {
+            "apex_m": 0.45,
+            "airtime_s": 0.6,
+            "distance_m": 6.0,
+            "landing_speed_m_s": 3.0
+          },
+          "measured": {
+            "apex_m": 0.450057469308376,
+            "airtime_s": 0.608333333333333,
+            "airtime_ticks": 73,
+            "distance_m": 6.08353090286255,
+            "landing_speed_m_s": 3.04166881243388
+          },
+          "tolerance": {
+            "apex_m": 0.003,
+            "airtime_s": 0.00841666666666667,
+            "distance_m": 0.0863333333333333,
+            "landing_speed_m_s": 0.0833333333333333
+          },
+          "pass": true
+        }
+      ],
+      "errors": 0,
+      "pass": true,
+      "log": "docs/evidence/movement/round-1/proofs/movement-jump-known-launch/log.json"
+    },
+    {
+      "fixture": "docs/fixtures/movement-jump-wrong-gravity.json",
+      "expect_instrument_pass": false,
+      "instrument_pass": false,
+      "gravity_m_s2": 10.0,
+      "launches": [
+        {
+          "launch_m_s": [
+            0.0,
+            5.0,
+            -4.0
+          ],
+          "expected": {
+            "apex_m": 1.25,
+            "airtime_s": 1.0,
+            "distance_m": 4.0,
+            "landing_speed_m_s": 5.0
+          },
+          "measured": {
+            "apex_m": 1.04196686111391,
+            "airtime_s": 0.841666666666667,
+            "airtime_ticks": 101,
+            "distance_m": 3.36690735816956,
+            "landing_speed_m_s": 5.05000190734863
+          },
+          "tolerance": {
+            "apex_m": 0.003,
+            "airtime_s": 0.00841666666666667,
+            "distance_m": 0.0363333333333333,
+            "landing_speed_m_s": 0.0833333333333333
+          },
+          "pass": false
+        },
+        {
+          "launch_m_s": [
+            0.0,
+            8.0,
+            -6.0
+          ],
+          "expected": {
+            "apex_m": 3.2,
+            "airtime_s": 1.6,
+            "distance_m": 9.6,
+            "landing_speed_m_s": 8.0
+          },
+          "measured": {
+            "apex_m": 2.66711609810591,
+            "airtime_s": 1.34166666666667,
+            "airtime_ticks": 161,
+            "distance_m": 8.05035781860352,
+            "landing_speed_m_s": 8.05002479553223
+          },
+          "tolerance": {
+            "apex_m": 0.003,
+            "airtime_s": 0.00841666666666667,
+            "distance_m": 0.053,
+            "landing_speed_m_s": 0.0833333333333333
+          },
+          "pass": false
+        },
+        {
+          "launch_m_s": [
+            3.0,
+            6.0,
+            0.0
+          ],
+          "expected": {
+            "apex_m": 1.8,
+            "airtime_s": 1.2,
+            "distance_m": 3.6,
+            "landing_speed_m_s": 6.0
+          },
+          "measured": {
+            "apex_m": 1.5005701109767,
+            "airtime_s": 1.00833333333333,
+            "airtime_ticks": 121,
+            "distance_m": 3.02546691894531,
+            "landing_speed_m_s": 6.05001001358032
+          },
+          "tolerance": {
+            "apex_m": 0.003,
+            "airtime_s": 0.00841666666666667,
+            "distance_m": 0.028,
+            "landing_speed_m_s": 0.0833333333333333
+          },
+          "pass": false
+        },
+        {
+          "launch_m_s": [
+            0.0,
+            3.0,
+            -10.0
+          ],
+          "expected": {
+            "apex_m": 0.45,
+            "airtime_s": 0.6,
+            "distance_m": 6.0,
+            "landing_speed_m_s": 3.0
+          },
+          "measured": {
+            "apex_m": 0.375057928264141,
+            "airtime_s": 0.508333333333333,
+            "airtime_ticks": 61,
+            "distance_m": 5.08352851867676,
+            "landing_speed_m_s": 3.04999666213989
+          },
+          "tolerance": {
+            "apex_m": 0.003,
+            "airtime_s": 0.00841666666666667,
+            "distance_m": 0.0863333333333333,
+            "landing_speed_m_s": 0.0833333333333333
+          },
+          "pass": false
+        }
+      ],
+      "errors": 0,
+      "pass": true,
+      "log": "docs/evidence/movement/round-1/proofs/movement-jump-wrong-gravity/log.json"
+    }
+  ],
+  "pass": true,
+  "commit": "a8290d1684886fe9231389c7c3e47797a9e07880",
+  "date": "2026-11-15T20:18:13"
+}

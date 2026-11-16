@@ -24,3 +24,18 @@ What adds delay, in order, between the engine being handed an input event and th
   - **Proof.** A fixture body that moves a fixed 100 ms after `_input`, by the wall clock: every reading must lie between 100 ms and 100 ms plus two frames, and a second run at 40 ms must read 60 ms lower at the median, within one frame.
 - **Reason:** the engine's path costs at most one frame of waiting, one tick and one frame of drawing: about 25 ms at 120 Hz and 42 ms at 60 Hz in the worst case, inside the 50 ms budget without giving up smooth motion (option 2) or determinism (option 3). The start speed is what makes the budget mean something to a player: the brief says "first movement on screen", and a movement under a pixel is not on screen. Judging on the injection stamp keeps the number honest about the wait in the buffer, which the `_input` stamp cannot see.
 - **Licence:** Godot engine, MIT. Godot docs, CC BY 3.0 (quoted for study only).
+
+## Measured (2026-11-15, development machine; `docs/evidence/movement/round-1/movement-input-motion-*/log.json`)
+
+Proxy numbers from the Fedora laptop (Apple M1 Pro, Honeykrisp), 200 trials each, at commit `a8290d1`. Milliseconds. "Handed to engine" is the stamp before `Input.parse_input_event`; the budget (50 ms at p95) is judged on the first column.
+
+| Case | Trials | Handed to engine → first motion drawn (p50 / p95 / max) | `_input` → first motion drawn (p50 / p95) | Wait in the engine's buffer (p50 / p95) | `_input` → tick (p50) | Handed to engine → 1 cm drawn (p95) | Within 50 ms at p95 |
+|---|---|---|---|---|---|---|---|
+| Key (W), this machine's 120 Hz display, v-sync on | 200 | 13.5 / 24.5 / 36.3 | 8.3 / 16.7 | 4.6 / 10.9 | 0.43 | 30.1 | yes |
+| Gamepad stick, 120 Hz display, v-sync on | 200 | 13.2 / 21.8 / 30.2 | 8.2 / 15.5 | 4.4 / 10.5 | 0.43 | 27.6 | yes |
+| Key (W), frame limiter at 60 fps | 200 | 14.6 / 22.8 / 24.4 | 6.5 / 8.2 | 8.2 / 16.0 | 0.61 | 22.8 | yes |
+| Gamepad stick, frame limiter at 60 fps | 200 | 14.9 / 22.8 / 25.9 | 6.4 / 8.1 | 8.7 / 16.3 | 0.61 | 22.8 | yes |
+
+- The tick follows `_input` by under a millisecond: the event is used by a tick in the same turn of the loop, as the source reading said.
+- The frame limiter is not the same thing as a 60 Hz display with v-sync: it sleeps before the loop turns, where v-sync blocks at the end of drawing. The 60 fps rows show the wait in the buffer doubling; the Neo's own number comes from the benchmark build (`movement-input-motion-key` and `-pad` are benchmark presets).
+- The instrument's proof: `docs/evidence/movement/round-1/proofs/input-motion.json`.
