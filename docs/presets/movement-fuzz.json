@@ -1,0 +1,36 @@
+{
+ "id": "movement-fuzz",
+ "module": "movement",
+ "kind": "fuzz",
+ "bench": true,
+ "purpose": "The fuzz budget: 10 minutes (72,000 ticks) of seeded random input on the metrics course, ending with zero falls through the world, zero stuck states and zero non-finite values. The body is put back at a seeded spawn point every 15 s and after each fall into a pit the course expects, so the whole course is covered.",
+ "scene": "res://movement/fixtures/movement_fixture.tscn",
+ "profile": "neo",
+ "resolution": [
+  2408,
+  1506
+ ],
+ "warmup_frames": 30,
+ "frames": 80000,
+ "finish_frames": 5,
+ "strip_every": 600,
+ "fixture": {
+  "course": "docs/fixtures/metrics-course.json",
+  "mode": "fuzz",
+  "players": [
+   {
+    "input": "random",
+    "spawn": "apron-gaps",
+    "seed": 20261115
+   }
+  ],
+  "fuzz": {
+   "seed": 20261115,
+   "respawn_every_s": 15,
+   "seconds": 600
+  },
+  "camera": {
+   "mode": "chase"
+  }
+ }
+}

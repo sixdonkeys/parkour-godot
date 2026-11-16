@@ -1,0 +1,26 @@
+{
+ "id": "movement-latency-delay-37",
+ "module": "movement",
+ "kind": "input_latency",
+ "purpose": "Known answer for the input-to-motion instrument: a block that moves a fixed 37 ms after the engine delivers the key press to _input, by the wall clock. The block moves in the first frame that starts 37 ms or more after the press and is on screen when that frame has been drawn, so with frames of P ms the reading is (ceil(37/P) + 1) x P. 37 ms is chosen to fall well inside a frame at both 120 Hz and 60 Hz.",
+ "scene": "res://verify/fixtures/latency_delay.tscn",
+ "profile": "neo",
+ "resolution": [
+  2408,
+  1506
+ ],
+ "real_time": true,
+ "warmup_frames": 60,
+ "frames": 60000,
+ "still": false,
+ "fixture": {
+  "delay_ms": 37,
+  "key": "W"
+ },
+ "input_latency": {
+  "device": "key",
+  "key": "W",
+  "trials": 100,
+  "seed": 7
+ }
+}

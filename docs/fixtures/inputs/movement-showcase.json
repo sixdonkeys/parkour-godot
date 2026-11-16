@@ -1,0 +1,181 @@
+{
+ "format": "input-script/1",
+ "id": "movement-showcase",
+ "note": "Keys and pointer moves for the movement showcase, by physics tick. Six vignettes: (A) sprint and jump the 5 m gap, (B) the staircase at a run and off its deck, (C) the 35 degree slope, (D) a jump up onto the 0.8 m ledge, (E) a 90 degree turn at full speed by pointer, (F) riding the moving slab and jumping off it. The cuts between vignettes are in the preset's fixture block.",
+ "events": [
+  {
+   "tick": 150,
+   "key": "W",
+   "pressed": true
+  },
+  {
+   "tick": 702,
+   "key": "Space",
+   "pressed": true
+  },
+  {
+   "tick": 760,
+   "key": "Space",
+   "pressed": false
+  },
+  {
+   "tick": 820,
+   "key": "W",
+   "pressed": false
+  },
+  {
+   "tick": 950,
+   "key": "W",
+   "pressed": true
+  },
+  {
+   "tick": 1260,
+   "key": "W",
+   "pressed": false
+  },
+  {
+   "tick": 1380,
+   "key": "W",
+   "pressed": true
+  },
+  {
+   "tick": 1665,
+   "key": "W",
+   "pressed": false
+  },
+  {
+   "tick": 1870,
+   "key": "W",
+   "pressed": true
+  },
+  {
+   "tick": 2027,
+   "key": "Space",
+   "pressed": true
+  },
+  {
+   "tick": 2067,
+   "key": "W",
+   "pressed": false
+  },
+  {
+   "tick": 2072,
+   "key": "Space",
+   "pressed": false
+  },
+  {
+   "tick": 2257,
+   "key": "W",
+   "pressed": true
+  },
+  {
+   "tick": 2587,
+   "mouse": [
+    -59.5,
+    0
+   ]
+  },
+  {
+   "tick": 2588,
+   "mouse": [
+    -59.5,
+    0
+   ]
+  },
+  {
+   "tick": 2589,
+   "mouse": [
+    -59.5,
+    0
+   ]
+  },
+  {
+   "tick": 2590,
+   "mouse": [
+    -59.5,
+    0
+   ]
+  },
+  {
+   "tick": 2591,
+   "mouse": [
+    -59.5,
+    0
+   ]
+  },
+  {
+   "tick": 2592,
+   "mouse": [
+    -59.5,
+    0
+   ]
+  },
+  {
+   "tick": 2593,
+   "mouse": [
+    -59.5,
+    0
+   ]
+  },
+  {
+   "tick": 2594,
+   "mouse": [
+    -59.5,
+    0
+   ]
+  },
+  {
+   "tick": 2595,
+   "mouse": [
+    -59.5,
+    0
+   ]
+  },
+  {
+   "tick": 2596,
+   "mouse": [
+    -59.5,
+    0
+   ]
+  },
+  {
+   "tick": 2597,
+   "mouse": [
+    -59.5,
+    0
+   ]
+  },
+  {
+   "tick": 2598,
+   "mouse": [
+    -59.5,
+    0
+   ]
+  },
+  {
+   "tick": 2737,
+   "key": "W",
+   "pressed": false
+  },
+  {
+   "tick": 3147,
+   "key": "W",
+   "pressed": true
+  },
+  {
+   "tick": 3147,
+   "key": "Space",
+   "pressed": true
+  },
+  {
+   "tick": 3187,
+   "key": "Space",
+   "pressed": false
+  },
+  {
+   "tick": 3267,
+   "key": "W",
+   "pressed": false
+  }
+ ]
+}

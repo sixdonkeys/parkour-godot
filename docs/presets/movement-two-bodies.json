@@ -1,0 +1,95 @@
+{
+ "id": "movement-two-bodies",
+ "module": "movement",
+ "kind": "run",
+ "purpose": "Two bodies in one scene, each driven by its own input source: player 1 by a device source fed through the input map (the input script), player 2 by a scripted source. Each sprints down its own lane and jumps its own gap (5.0 m and 5.5 m). Zero engine errors; the end-state hash must match between test mode and a normal launch.",
+ "scene": "res://movement/fixtures/movement_fixture.tscn",
+ "profile": "neo",
+ "resolution": [
+  2408,
+  1506
+ ],
+ "warmup_frames": 30,
+ "frames": 2400,
+ "finish_frames": 10,
+ "strip_every": 15,
+ "input_script": {
+  "format": "input-script/1",
+  "events": [
+   {
+    "tick": 150,
+    "key": "W",
+    "pressed": true
+   },
+   {
+    "tick": 702,
+    "key": "Space",
+    "pressed": true
+   },
+   {
+    "tick": 760,
+    "key": "Space",
+    "pressed": false
+   },
+   {
+    "tick": 820,
+    "key": "W",
+    "pressed": false
+   }
+  ]
+ },
+ "fixture": {
+  "course": "docs/fixtures/metrics-course.json",
+  "mode": "run",
+  "run_ticks": 1000,
+  "players": [
+   {
+    "input": "device",
+    "spawn": [
+     12.5,
+     0,
+     6
+    ]
+   },
+   {
+    "input": "script",
+    "spawn": [
+     17.5,
+     0,
+     6
+    ],
+    "events": [
+     {
+      "tick": 150,
+      "set": {
+       "move_forward": 1.0
+      }
+     },
+     {
+      "tick": 702,
+      "set": {
+       "jump": 1.0
+      }
+     },
+     {
+      "tick": 760,
+      "set": {
+       "jump": 0.0
+      }
+     },
+     {
+      "tick": 820,
+      "set": {
+       "move_forward": 0.0
+      }
+     }
+    ]
+   }
+  ],
+  "camera": {
+   "mode": "chase",
+   "distance": 7.0,
+   "height": 3.2
+  }
+ }
+}

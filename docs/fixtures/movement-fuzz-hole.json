@@ -1,0 +1,43 @@
+{
+ "id": "movement-fuzz-hole",
+ "module": "movement",
+ "kind": "fuzz",
+ "purpose": "Known answer for the fuzz instrument: 60 s of seeded random input on a 12 m floor with a 2 m square hole and nothing under it. The instrument must report at least one fall through the world.",
+ "scene": "res://movement/fixtures/movement_fixture.tscn",
+ "profile": "neo",
+ "resolution": [
+  2408,
+  1506
+ ],
+ "warmup_frames": 10,
+ "frames": 9000,
+ "finish_frames": 5,
+ "camera": {
+  "position": [
+   0,
+   13,
+   9
+  ],
+  "look_at": [
+   0,
+   0,
+   0
+  ],
+  "fov": 60
+ },
+ "fixture": {
+  "course": "docs/fixtures/movement-fuzz-hole-course.json",
+  "mode": "fuzz",
+  "players": [
+   {
+    "input": "random",
+    "spawn": "corner-1",
+    "seed": 3
+   }
+  ],
+  "fuzz": {
+   "seed": 3,
+   "seconds": 60
+  }
+ }
+}

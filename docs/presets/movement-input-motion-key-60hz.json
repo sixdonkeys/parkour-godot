@@ -1,0 +1,38 @@
+{
+ "id": "movement-input-motion-key-60hz",
+ "module": "movement",
+ "kind": "input_latency",
+ "purpose": "Input to motion with a keyboard event at 60 frames a second (frame limiter), standing in for the Neo's 60 Hz display on a development machine with a faster one.",
+ "scene": "res://movement/fixtures/movement_fixture.tscn",
+ "profile": "neo",
+ "resolution": [
+  2408,
+  1506
+ ],
+ "real_time": true,
+ "vsync": "enabled",
+ "warmup_frames": 60,
+ "frames": 60000,
+ "still": false,
+ "input_latency": {
+  "device": "key",
+  "key": "W",
+  "trials": 200,
+  "seed": 20261115,
+  "reset_every": 20
+ },
+ "fixture": {
+  "course": "docs/fixtures/metrics-course.json",
+  "mode": "run",
+  "players": [
+   {
+    "input": "device",
+    "spawn": "apron-runway"
+   }
+  ],
+  "camera": {
+   "mode": "chase"
+  }
+ },
+ "max_fps": 60
+}

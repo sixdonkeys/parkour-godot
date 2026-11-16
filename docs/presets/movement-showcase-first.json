@@ -1,0 +1,80 @@
+{
+ "id": "movement-showcase-first",
+ "module": "movement",
+ "kind": "run",
+ "purpose": "The movement showcase seen from the body's eye height (a harness camera, not the game's): the same input script and cuts as movement-showcase.",
+ "scene": "res://movement/fixtures/movement_fixture.tscn",
+ "profile": "neo",
+ "resolution": [
+  2408,
+  1506
+ ],
+ "warmup_frames": 30,
+ "frames": 4200,
+ "finish_frames": 10,
+ "strip_every": 15,
+ "input_script": "docs/fixtures/inputs/movement-showcase.json",
+ "fixture": {
+  "course": "docs/fixtures/metrics-course.json",
+  "mode": "run",
+  "run_ticks": 3447,
+  "players": [
+   {
+    "input": "device",
+    "spawn": [
+     12.5,
+     0,
+     6
+    ]
+   }
+  ],
+  "cuts": [
+   {
+    "tick": 920,
+    "player": 0,
+    "spawn": [
+     92,
+     0,
+     -24
+    ]
+   },
+   {
+    "tick": 1350,
+    "player": 0,
+    "spawn": [
+     69,
+     0,
+     -38.5
+    ]
+   },
+   {
+    "tick": 1840,
+    "player": 0,
+    "spawn": [
+     69,
+     0,
+     -2
+    ]
+   },
+   {
+    "tick": 2227,
+    "player": 0,
+    "spawn": [
+     58,
+     0,
+     2
+    ],
+    "yaw_deg": -90.0
+   },
+   {
+    "tick": 2847,
+    "player": 0,
+    "spawn": "mover-slab-top"
+   }
+  ],
+  "camera": {
+   "mode": "first",
+   "fov": 90
+  }
+ }
+}

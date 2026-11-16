@@ -1,0 +1,83 @@
+{
+ "id": "movement-jump-wrong-gravity",
+ "module": "movement",
+ "kind": "jump_proof",
+ "purpose": "Control for the jump instrument's proof: the same launches and the same expected answers (for 10 m/s^2), but the body is under 12 m/s^2 (jump height 1.5 m in 0.5 s). The instrument must report that the answers do not match.",
+ "scene": "res://movement/fixtures/movement_fixture.tscn",
+ "profile": "neo",
+ "resolution": [
+  2408,
+  1506
+ ],
+ "warmup_frames": 10,
+ "frames": 6000,
+ "finish_frames": 5,
+ "fixture": {
+  "course": "docs/fixtures/metrics-course.json",
+  "mode": "jump_proof",
+  "players": [
+   {
+    "input": "manual",
+    "spawn": "apron-runway"
+   }
+  ],
+  "tuning": {
+   "jump_height": 1.5,
+   "time_to_peak": 0.5,
+   "time_to_fall": 0.5
+  },
+  "jump_proof": {
+   "gravity_m_s2": 10.0,
+   "cases": [
+    {
+     "launch": [
+      0,
+      5,
+      -4
+     ],
+     "apex_m": 1.25,
+     "airtime_s": 1.0,
+     "distance_m": 4.0
+    },
+    {
+     "launch": [
+      0,
+      8,
+      -6
+     ],
+     "apex_m": 3.2,
+     "airtime_s": 1.6,
+     "distance_m": 9.6
+    },
+    {
+     "launch": [
+      3,
+      6,
+      0
+     ],
+     "apex_m": 1.8,
+     "airtime_s": 1.2,
+     "distance_m": 3.6
+    },
+    {
+     "launch": [
+      0,
+      3,
+      -10
+     ],
+     "apex_m": 0.45,
+     "airtime_s": 0.6,
+     "distance_m": 6.0
+    }
+   ]
+  },
+  "camera": {
+   "mode": "side",
+   "offset": [
+    9,
+    3,
+    0
+   ]
+  }
+ }
+}

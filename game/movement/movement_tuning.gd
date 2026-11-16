@@ -29,7 +29,9 @@ extends Resource
 @export var back_speed_factor := 0.7
 @export_range(0.0, 89.0) var max_slope_degrees := 46.0
 @export var step_height := 0.35
-@export var floor_snap := 0.3
+## How far down the body is kept on the ground: the step height, so a step
+## that can be climbed can be walked down without leaving the ground.
+@export var floor_snap := 0.35
 
 @export_group("Jump")
 @export var jump_height := 0.95

@@ -1,0 +1,43 @@
+{
+ "id": "movement-fuzz-cell",
+ "module": "movement",
+ "kind": "fuzz",
+ "purpose": "Known answer for the fuzz instrument's stuck detector: 60 s of seeded random input for a body shut in a cell it cannot move in. The instrument must report stuck states, and no fall and no non-finite value.",
+ "scene": "res://movement/fixtures/movement_fixture.tscn",
+ "profile": "neo",
+ "resolution": [
+  2408,
+  1506
+ ],
+ "warmup_frames": 10,
+ "frames": 9000,
+ "finish_frames": 5,
+ "camera": {
+  "position": [
+   2.2,
+   3.4,
+   3.2
+  ],
+  "look_at": [
+   0,
+   1.0,
+   0
+  ],
+  "fov": 60
+ },
+ "fixture": {
+  "course": "docs/fixtures/movement-fuzz-cell-course.json",
+  "mode": "fuzz",
+  "players": [
+   {
+    "input": "random",
+    "spawn": "cell",
+    "seed": 5
+   }
+  ],
+  "fuzz": {
+   "seed": 5,
+   "seconds": 60
+  }
+ }
+}

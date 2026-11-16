@@ -1,0 +1,38 @@
+{
+ "id": "movement-input-motion-key",
+ "module": "movement",
+ "kind": "input_latency",
+ "purpose": "Input to motion with a keyboard event: 200 trials of a real key press (W) handed to the engine from a thread at a random moment in a frame, timed to the first drawn frame in which the body has moved. V-sync on, as the game ships; real time only. Budget: 50 ms at the 95th percentile.",
+ "scene": "res://movement/fixtures/movement_fixture.tscn",
+ "profile": "neo",
+ "resolution": [
+  2408,
+  1506
+ ],
+ "real_time": true,
+ "vsync": "enabled",
+ "warmup_frames": 60,
+ "frames": 60000,
+ "still": false,
+ "input_latency": {
+  "device": "key",
+  "key": "W",
+  "trials": 200,
+  "seed": 20261115,
+  "reset_every": 20
+ },
+ "fixture": {
+  "course": "docs/fixtures/metrics-course.json",
+  "mode": "run",
+  "players": [
+   {
+    "input": "device",
+    "spawn": "apron-runway"
+   }
+  ],
+  "camera": {
+   "mode": "chase"
+  }
+ },
+ "bench": true
+}
