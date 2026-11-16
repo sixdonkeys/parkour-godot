@@ -40,7 +40,13 @@ Stage 1, day 1.
 ## What's next, in order (who decides)
 
 1. **Decided by Nick, 2026-11-15:** finish the desert fully first, then build the other three worlds ("we can build the other 3 worlds after the first is done"). An early playtest build of the movement is part of the same aim.
-2. **Builder:** review and merge `fable/desert-budget`. Its last commits are `b00edf6` and `354c469`. The agent was stopped by mistake at the close-out and resumed; wait for its final report. Its Neo stills in the worktree are untracked on purpose.
+2. **Builder:** merge `fable/desert-budget` (head `3c3dd86`; the agent finished 2026-11-15 late). Before merging:
+   - scrub the protected name from the branch's older commits (`docs/NOTES.md` line 81 on the branch carries it from the old base; the pre-commit hook refuses the merge otherwise);
+   - after merging, rerun `tools/gen/build_terrain.gd`, because `terrain.tscn` now points at git-ignored `chunks/far_*.res`.
+
+   The merge also touches shared files (verify.gd, frame_stats.gd with factor 2.7, verify.py `--bench-set`/`--bench-filter`, export_presets.cfg with two look-slice presets). The agent's report is summarized in the branch's `docs/NOTES.md` entry.
+
+   Result: the Neo's valid final run (`docs/neo/2026-11-15-9f203a256fc8/`) puts the benchmark path at p95 15.2 ms, down from 121 ms. The dressed patch is at the limit (16.2 ms). The cuts are all in `neo.tres`; `high.tres` keeps the full look.
 3. **Builder:** the early movement playtest build (movement plus a simple follow camera on the metrics course); then camera and traversal toward M1. The critic runs once at the end of M1, covering verify, core, look-slice, movement, camera and traversal.
 4. **Nick:** go or no-go on brief #7 (replay) as a Fable agent (`docs/briefs/fable-briefs.md` §7), then camera and traversal.
 
@@ -55,4 +61,4 @@ Stage 1, day 1.
 - Agent worktrees (git-ignored): `.claude/worktrees/agent-acc4588acba933c93` (branch `fable/desert-budget`, unmerged), `.claude/worktrees/agent-a2375daaea45fb462` (branch `fable/player-body`, merged).
 - Neo: `docs/targets/neo.json`; results in `docs/neo/<date>-<commit>/` with `HONESTY.json` and `CALIBRATION.md`. The Neo needs to be plugged in, with Low Power Mode off, Do Not Disturb on, Amphetamine running, and nobody touching it for 5 minutes before a run starts.
 - Git-ignored inputs on this laptop only: `.local/` (export templates, venv, the Neo setup brief), `tools/cache/usgs/`, `game/assets/polyhaven/` (remade with `python3 tools/fetch_assets.py`).
-- Long runs: the laptop sleeps when idle. Hold `systemd-inhibit` during agent work (held again from 2026-11-15 late evening for up to 12 h).
+- Long runs: the laptop sleeps when idle. Hold `systemd-inhibit` during agent work (released at the 2026-11-15 close; no agents running).
