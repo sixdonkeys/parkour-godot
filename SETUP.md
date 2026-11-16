@@ -102,3 +102,13 @@ One-time setup (Nick):
 3. Check from the project folder: `python3 tools/verify.py remote neo check`. It should print the Neo's state as JSON, not an error line.
 
 The ThinkPad T14 is added the same way later: a `docs/targets/t14.json` and a `t14` entry in `~/.ssh/config`.
+
+## Protected names (every machine, once)
+
+Commits that contain a protected personal name are refused by two git hooks kept in `tools/git-hooks/`. Git doesn't install hooks from a clone, so on each machine, from the project folder, run:
+
+```
+cp tools/git-hooks/pre-commit tools/git-hooks/commit-msg .git/hooks/
+```
+
+Only Nick can authorize an exception, by creating `~/.config/ridgeline/allow-protected-names`; delete that file again afterwards.
