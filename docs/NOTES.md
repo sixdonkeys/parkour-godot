@@ -118,3 +118,13 @@ Left for later:
 - The harness camera in `game/movement/fixtures/` is for strips only. The real rig (module `camera`) should smooth the 0.35 m step-up, which the body takes in one tick.
 - Whether live players should collide with each other (`PlayerBody.collide_with_players`, on by default) is a design call nobody has made.
 - `docs/metrics.json` is written when `traversal` closes; the measured numbers so far are in `docs/evidence/movement/round-1/movement-metrics/log.json`.
+
+## 2026-11-15 close-out (main builder)
+
+- Merged `fable/player-body` (movement round 1; report in the branch's NOTES entry above). The desert agent was stopped at wrap-up: its branch `fable/desert-budget` holds 10 commits, the last `354c469`, and is not merged. Latest valid Neo run on it is `9f7b38d`: views 11.4–14.2 ms p95, dense patch 15.6–18.3 ms; the `high` profile keeps full quality (68 ms on the Neo).
+- Sleep inhibitor released. No agents running.
+- **Nick's open question (his words):** "let's consider whether anything could be altered about development to get us to playable sooner. Like for instance what if we only build the first scene and get it good?" The builder's options, for Nick to choose:
+  1. **Playable test build now:** wire the merged movement to a simple follow camera on the metrics course and ship a playtest build in about a day, before replay, traversal or critic rounds. Nick and his son feel running and jumping early. Cost: little; the brief's playtest gate already expects it, only earlier.
+  2. **Vertical slice of the desert:** after traversal, build the desert all the way (course, rules, interface, dressing) to "good" before starting the mountain or the cities. The brief's stage order changes, not its contents. You get one finished level weeks sooner. The risk is that later shared pieces (character, interface) get redone; it's cheaper than it sounds, because the desert is the first course anyway.
+  3. **Lighter gates for now:** for stage 1, run the critic once per stage instead of once per module, and keep the instruments; this saves usage and time, at some risk of rework.
+  The builder recommends 1 plus 2.

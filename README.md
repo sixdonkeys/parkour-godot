@@ -2,7 +2,7 @@
 
 An original 3D parkour racing game for a father and son, built in Godot 4.7.2: timed runs through four invented courses dressed as real places (the Sonoran Desert around Tucson, the Black Hills, Chicago rooftops, New York rooftops).
 
-The build is driven by `BUILD-BRIEF.md`. The design is in `ARCHITECTURE.md`, and progress is in `docs/STATUS.json`. Status: stage 1. Only the verification tool exists so far; there is nothing to play yet.
+The build is driven by `BUILD-BRIEF.md`. Current state and next steps: `HANDOFF.md`. The design is in `ARCHITECTURE.md`, and progress is in `docs/STATUS.json`. Status: stage 1. The verification tool, the core and runner movement exist; there is nothing to play yet.
 
 ## Open the project
 

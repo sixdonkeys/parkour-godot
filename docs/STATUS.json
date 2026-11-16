@@ -51,25 +51,28 @@
         "docs/evidence/core/round-1/core-upscaler-*/ (upscaler and AA costs)",
         "docs/evidence/core/round-1/build/build.json (benchmark-only build core-bench: macOS 61.9 MB)"
       ],
-      "notes": "Benchmark-only build exported to builds/core-bench/; goes to the Neo with `remote neo bench` once the Neo answers."
+      "notes": "Benchmark-only build exported to builds/core-bench/; goes to the Neo with `remote neo bench` once the Neo answers. Changed since: World clock (game/core/world_clock.gd) added by movement."
     },
     "look-slice": {
-      "state": "not_started",
-      "round": 0,
+      "state": "building",
+      "round": 1,
       "gate": false,
       "score": null,
       "open_issues": [],
       "evidence": [],
-      "notes": ""
+      "notes": "Frame-budget work on branch fable/desert-budget (not merged yet; worktree .claude/worktrees/agent-acc4588acba933c93). Latest valid Neo run 9f7b38d: views 11.4-14.2 ms p95, dense patch 15.6-18.3 ms. Look not yet reworked; one critic round due after merge."
     },
     "movement": {
-      "state": "not_started",
-      "round": 0,
+      "state": "building",
+      "round": 1,
       "gate": false,
       "score": null,
       "open_issues": [],
-      "evidence": [],
-      "notes": ""
+      "evidence": [
+        "docs/evidence/movement/round-1/ (proofs, metrics, input to motion, fuzz, two/eight bodies)",
+        "docs/neo/2026-11-15-0a24599c3093/ (valid Neo run, CALIBRATION.md)"
+      ],
+      "notes": "Merged from fable/player-body (15e403e). Cannot close until replay (brief #7) exists. Camera to smooth the 0.35 m step-up."
     },
     "camera": {
       "state": "not_started",
