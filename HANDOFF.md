@@ -30,19 +30,18 @@ Stage 1, day 1.
   - American spelling in all new text.
 - **Not yet authorized:**
   - starting brief #7 (replay) — Nick said "wrap up for the night before starting 7";
-  - any change to the stage plan, such as a vertical slice (see "What's next").
+  - (Settled: desert-first order, see above.)
 - Usage: Nick is on a Max plan; warn him before any large agent fan-out.
 
 ## What's next, in order (who decides)
 
-1. **Nick:** decide whether to change the plan to reach "playable" sooner. He asked, in his words: "what if we only build the first scene and get it good?" The builder's options are in `docs/NOTES.md` (2026-11-15, last entry).
-2. **Builder:** review and merge `fable/desert-budget`. Its last commits are `b00edf6` and `354c469`. The agent was stopped before its final report; its Neo stills in the worktree are untracked on purpose.
+1. **Decided by Nick, 2026-11-15:** finish the desert fully first, then build the other three worlds ("we can build the other 3 worlds after the first is done"). An early playtest build of the movement is part of the same aim.
+2. **Builder:** review and merge `fable/desert-budget`. Its last commits are `b00edf6` and `354c469`. The agent was stopped by mistake at the close-out and resumed; wait for its final report. Its Neo stills in the worktree are untracked on purpose.
 3. **Builder:** run the verify critic round 2, then core.
 4. **Nick:** go or no-go on brief #7 (replay) as a Fable agent (`docs/briefs/fable-briefs.md` §7), then camera and traversal.
 
 ## Pending on Nick
 
-- The plan decision (item 1 above).
 - Push: 26+ commits on `main`, not pushed.
 - Delete when satisfied: the backup ref above, and the two agent worktrees once their branches are merged.
 
@@ -52,4 +51,4 @@ Stage 1, day 1.
 - Agent worktrees (git-ignored): `.claude/worktrees/agent-acc4588acba933c93` (branch `fable/desert-budget`, unmerged), `.claude/worktrees/agent-a2375daaea45fb462` (branch `fable/player-body`, merged).
 - Neo: `docs/targets/neo.json`; results in `docs/neo/<date>-<commit>/` with `HONESTY.json` and `CALIBRATION.md`. The Neo needs to be plugged in, with Low Power Mode off, Do Not Disturb on, Amphetamine running, and nobody touching it for 5 minutes before a run starts.
 - Git-ignored inputs on this laptop only: `.local/` (export templates, venv, the Neo setup brief), `tools/cache/usgs/`, `game/assets/polyhaven/` (remade with `python3 tools/fetch_assets.py`).
-- Long runs: the laptop sleeps when idle. Hold `systemd-inhibit` during agent work (it was released at close-out).
+- Long runs: the laptop sleeps when idle. Hold `systemd-inhibit` during agent work (held again from 2026-11-15 late evening for up to 12 h).
