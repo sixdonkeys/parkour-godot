@@ -271,6 +271,6 @@ func _make_sky(light: Dictionary) -> void:
 	var sun := DirectionalLight3D.new()
 	sun.rotation_degrees = Vector3(-48, 32, 0)
 	sun.shadow_enabled = bool(light.get("shadows", true))
-	# The course is watched from a few metres; shadows further off are not seen.
+	# The course is watched from a few meters; shadows further off are not seen.
 	sun.directional_shadow_max_distance = float(light.get("shadow_distance", 60.0))
 	add_child(sun)

@@ -12,7 +12,7 @@ Each is one commit that touches only `stairs_character.gd` and has nothing of th
 
 ### 1. Test at least a minimum depth onto the step — commit `1f4dd9d` (8 lines)
 
-**What it fixes.** `stair_step_up()` moves the collider forward by what is left of this frame's motion after the wall was touched, then sets it down to see whether it lands on something it can stand on. When the wall is touched at the very end of the frame's motion, what is left is a sliver (a millimetre). The collider is then set down overlapping the step by that sliver, the contact is with the step's edge, the edge's normal fails the `floor_max_angle` check, and the function gives up. `move_and_slide()` then hits the riser as a wall and the character stops dead in front of a step it can climb. With velocity zeroed, the next frame's motion is small again, so it can stay there.
+**What it fixes.** `stair_step_up()` moves the collider forward by what is left of this frame's motion after the wall was touched, then sets it down to see whether it lands on something it can stand on. When the wall is touched at the very end of the frame's motion, what is left is a sliver (a millimeter). The collider is then set down overlapping the step by that sliver, the contact is with the step's edge, the edge's normal fails the `floor_max_angle` check, and the function gives up. `move_and_slide()` then hits the riser as a wall and the character stops dead in front of a step it can climb. With velocity zeroed, the next frame's motion is small again, so it can stay there.
 
 **How it showed up here.** A cylinder 0.6 m across running at 6.4 m/s into a staircase with 0.18 m risers and 0.30 m treads (Godot 4.7.2, Jolt): stopped at the first riser and never climbed; single 0.2 m steps were climbed or not depending on the approach's phase. With the change the same staircase is climbed at full speed with no speed lost (`docs/evidence/movement/round-1/movement-metrics/log.json`, lane `stairs`).
 
@@ -30,7 +30,7 @@ Each is one commit that touches only `stairs_character.gd` and has nothing of th
 
 ### 2. Reuse the motion-test objects — commit `f424a6f` (8 lines)
 
-**What it fixes.** `stair_step_up()` and `stair_step_down()` each create a `PhysicsTestMotionResult3D` and a `PhysicsTestMotionParameters3D` on every call: four allocations per physics frame per character, at whatever the tick rate is (120 a second here, times up to 8 bodies). The change keeps one of each on the node. Every field the functions read is set before each test, so behaviour is unchanged.
+**What it fixes.** `stair_step_up()` and `stair_step_down()` each create a `PhysicsTestMotionResult3D` and a `PhysicsTestMotionParameters3D` on every call: four allocations per physics frame per character, at whatever the tick rate is (120 a second here, times up to 8 bodies). The change keeps one of each on the node. Every field the functions read is set before each test, so behavior is unchanged.
 
 **Issue text to open:** none needed; this is a small pull request on its own ("Reuse the PhysicsTestMotion objects instead of allocating them every frame").
 

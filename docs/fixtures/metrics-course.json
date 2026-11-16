@@ -1,7 +1,7 @@
 {
  "format": "metrics-course/1",
  "id": "metrics-course",
- "units": "metres; +Y up; ground top at y = 0; measurement lanes run toward -Z",
+ "units": "meters; +Y up; ground top at y = 0; measurement lanes run toward -Z",
  "generator": "tools/gen/metrics_course.py",
  "kill_plane_y": -12.0,
  "pit_floor_y": -4.0,

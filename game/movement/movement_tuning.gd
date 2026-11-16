@@ -1,6 +1,6 @@
 class_name MovementTuning
 extends Resource
-## Every movement number in the game (decision movement-numbers). Metres,
+## Every movement number in the game (decision movement-numbers). Meters,
 ## seconds, kilograms. Nothing else holds a movement number; the measured
 ## results are written to docs/metrics.json when `traversal` closes.
 
@@ -59,7 +59,7 @@ func jump_speed() -> float:
 	return 2.0 * jump_height / time_to_peak
 
 
-## Positive, metres per second squared.
+## Positive, meters per second squared.
 func rise_gravity() -> float:
 	return 2.0 * jump_height / (time_to_peak * time_to_peak)
 

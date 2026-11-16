@@ -14,7 +14,7 @@ extends InputSource
 ##   and the next push points the other way.
 ##
 ## So any three seconds of unbroken asking hold two opposite pushes. A body
-## that has still not moved a centimetre is stuck, not leaning on a wall;
+## that has still not moved a centimeter is stuck, not leaning on a wall;
 ## that is what makes the stuck count mean something.
 
 var rng := RandomNumberGenerator.new()

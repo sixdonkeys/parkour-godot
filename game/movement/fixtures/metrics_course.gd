@@ -23,7 +23,7 @@ var data: Dictionary = {}
 var clock: WorldClock
 var world: StaticBody3D
 var movers: Dictionary = {}
-## Draw the one-metre grid on the blocks. Its lines are edges the
+## Draw the one-meter grid on the blocks. Its lines are edges the
 ## anti-aliasing pass has to work on (about a quarter of a millisecond of GPU
 ## at the Neo's resolution), so a frame-budget run can turn it off.
 var grid := true
@@ -101,8 +101,8 @@ func _material(tag: String) -> StandardMaterial3D:
 		var m := StandardMaterial3D.new()
 		m.albedo_color = TAG_COLORS.get(tag, Color(0.6, 0.6, 0.6))
 		m.roughness = 0.85
-		# A one-metre grid, so a frame shows sizes and speed. The meshes carry
-		# texture coordinates in metres (cheaper to draw than triplanar mapping).
+		# A one-meter grid, so a frame shows sizes and speed. The meshes carry
+		# texture coordinates in meters (cheaper to draw than triplanar mapping).
 		if grid:
 			m.albedo_texture = _grid_texture()
 			m.uv1_scale = Vector3(0.5, 0.5, 0.5)
@@ -153,7 +153,7 @@ func _add_box(body: Node3D, p: Dictionary, local := false) -> void:
 	body.add_child(mi)
 
 
-## A box whose texture coordinates are metres along each face.
+## A box whose texture coordinates are meters along each face.
 func _box_mesh(size: Vector3, world_offset: Vector3) -> ArrayMesh:
 	var st := SurfaceTool.new()
 	st.begin(Mesh.PRIMITIVE_TRIANGLES)

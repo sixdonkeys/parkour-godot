@@ -1,6 +1,6 @@
 # Survey: player-body
 
-Everything here was fetched on 2026-11-15, in the session that wrote the record. Each excerpt is word for word from the address above it. Licences were read from each repository's own `LICENSE` file, not from a listing.
+Everything here was fetched on 2026-11-15, in the session that wrote the record. Each excerpt is word for word from the address above it. Licenses were read from each repository's own `LICENSE` file, not from a listing.
 
 ## Engine class reference 4.7.2: CharacterBody3D — https://raw.githubusercontent.com/godotengine/godot/4.7.2-stable/doc/classes/CharacterBody3D.xml
 
@@ -34,7 +34,7 @@ The whole member and method list was read (this is the builder's reading, not a 
 
 ## Andicraft, stairs-character (MIT) — https://github.com/Andicraft/stairs-character at commit 5403d02f6b64b49a1d1bd7af11dd51a6edfc9e6c
 
-Licence file (`LICENSE`), first line and grant:
+License file (`LICENSE`), first line and grant:
 
 > Copyright © 2023 Andrea Jörgensen
 
@@ -57,7 +57,7 @@ Licence file (`LICENSE`), first line and grant:
 
 ## Jeh3no, Godot-Advanced-State-Machine-First-Person-Controller (MIT) — https://github.com/Jeh3no/Godot-Advanced-State-Machine-First-Person-Controller at commit 7285087aa8eee52d2332083503147b91c88d943d
 
-Licence file: "MIT License", "Copyright (c) 2024 Jeh3no".
+License file: "MIT License", "Copyright (c) 2024 Jeh3no".
 
 `PlayerCharacter/StateMachine/player_character_script.gd`:
 
@@ -87,7 +87,7 @@ Licence file: "MIT License", "Copyright (c) 2024 Jeh3no".
 
 ## DeiranZ, godot-parkour-fps-controller (MIT) — https://github.com/DeiranZ/godot-parkour-fps-controller at commit 4e401a258a83ddabc1a02d66befac53657970eba
 
-Licence file: "MIT License", "Copyright (c) 2022 DeiranZ".
+License file: "MIT License", "Copyright (c) 2022 DeiranZ".
 
 `src/player/player.gd`:
 
@@ -99,7 +99,7 @@ Licence file: "MIT License", "Copyright (c) 2022 DeiranZ".
 
 ## theRealUnd3rdog, Godot_Noshot_Controller, the NOSHOT controller (MIT, C#) — https://github.com/theRealUnd3rdog/Godot_Noshot_Controller at commit 15ac57ce0b7f1ab94c264fecd14e87732c8264fb
 
-Licence file: "MIT License", "Copyright (c) 2023 theRealUnd3rdog".
+License file: "MIT License", "Copyright (c) 2023 theRealUnd3rdog".
 
 `Scripts/NewStepper.cs` (a ray ahead of the body finds the step and the body is placed on it):
 
@@ -145,6 +145,6 @@ Licence file: "MIT License", "Copyright (c) 2023 theRealUnd3rdog".
 
 > var target: Vector3 = $Rig/Head.get_global_transform_interpolated().origin
 
-## Other step-up projects looked up (licence check only, code not taken)
+## Other step-up projects looked up (license check only, code not taken)
 
 GitHub's repository API on 2026-11-15: `mrezai/GodotStairs` MIT (its `LICENSE` reads "Copyright (c) 2022 Mohammad Rezai."), `majikayogames/SimpleFPSController` CC0-1.0, `mrjshzk/StairsCharacter3D` Unlicense, `PantheraDigital/GodotCharacterStep` MIT.

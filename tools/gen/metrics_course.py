@@ -15,7 +15,7 @@ Output (format `metrics-course/1`, read by game/movement/fixtures/metrics_course
   docs/fixtures/movement-fuzz-cell-course.json a closed cell a body cannot move in
                                                (the stuck detector's known answer)
 
-Metres, +Y up. Ground top is y = 0. Measurement lanes run toward -Z.
+Meters, +Y up. Ground top is y = 0. Measurement lanes run toward -Z.
 Everything is arithmetic; no randomness.
 """
 from __future__ import annotations
@@ -227,7 +227,7 @@ spawn("apron-field-c", 150, 0, 6)
 course = {
     "format": "metrics-course/1",
     "id": "metrics-course",
-    "units": "metres; +Y up; ground top at y = 0; measurement lanes run toward -Z",
+    "units": "meters; +Y up; ground top at y = 0; measurement lanes run toward -Z",
     "generator": "tools/gen/metrics_course.py",
     "kill_plane_y": KILL_Y,
     "pit_floor_y": PIT_Y,
@@ -259,9 +259,9 @@ region("floor", -6, 6, 6, -6)
 hole = {
     "format": "metrics-course/1",
     "id": "movement-fuzz-hole-course",
-    "units": "metres; +Y up; floor top at y = 0",
+    "units": "meters; +Y up; floor top at y = 0",
     "generator": "tools/gen/metrics_course.py",
-    "purpose": "Known answer for the fuzz instrument: a 12 m floor with a 2 m square hole at its centre and nothing "
+    "purpose": "Known answer for the fuzz instrument: a 12 m floor with a 2 m square hole at its center and nothing "
                "below it. A body that walks into the hole falls past the kill plane; the instrument must report it.",
     "kill_plane_y": KILL_Y,
     "pit_floor_y": None,
@@ -275,7 +275,7 @@ out.write_text(json.dumps(hole, indent=1) + "\n")
 print(f"{out.relative_to(ROOT)}: {len(pieces)} pieces")
 
 # --- the control: the same floor with the hole filled ----------------------------
-box("floor-centre", -1, 1, -0.5, 0, 1, -1, "ground")
+box("floor-center", -1, 1, -0.5, 0, 1, -1, "ground")
 solid = dict(hole)
 solid["id"] = "movement-fuzz-solid-course"
 solid["purpose"] = ("Control for the fuzz instrument's proof: the hole fixture's floor with the hole filled. "
@@ -299,9 +299,9 @@ spawn("cell", 0, 0, 0, 0.0)
 region("cell", -1, 1, 1, -1)
 cell = {
     "format": "metrics-course/1", "id": "movement-fuzz-cell-course",
-    "units": "metres; +Y up; floor top at y = 0", "generator": "tools/gen/metrics_course.py",
+    "units": "meters; +Y up; floor top at y = 0", "generator": "tools/gen/metrics_course.py",
     "purpose": "Known answer for the fuzz instrument's stuck detector: a body 0.6 m across shut in a cell 0.604 m "
-               "across with a lid 6 cm above its head. Whatever the input asks, it cannot move a centimetre "
+               "across with a lid 6 cm above its head. Whatever the input asks, it cannot move a centimeter "
                "sideways; the instrument must report stuck states.",
     "kill_plane_y": KILL_Y, "pit_floor_y": None, "expected_fall_below_y": None,
     "cell": {"inside_width_m": 2 * INNER, "lid_y": 1.86},

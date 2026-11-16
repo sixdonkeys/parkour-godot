@@ -1,9 +1,9 @@
 {
  "format": "metrics-course/1",
  "id": "movement-fuzz-cell-course",
- "units": "metres; +Y up; floor top at y = 0",
+ "units": "meters; +Y up; floor top at y = 0",
  "generator": "tools/gen/metrics_course.py",
- "purpose": "Known answer for the fuzz instrument's stuck detector: a body 0.6 m across shut in a cell 0.604 m across with a lid 6 cm above its head. Whatever the input asks, it cannot move a centimetre sideways; the instrument must report stuck states.",
+ "purpose": "Known answer for the fuzz instrument's stuck detector: a body 0.6 m across shut in a cell 0.604 m across with a lid 6 cm above its head. Whatever the input asks, it cannot move a centimeter sideways; the instrument must report stuck states.",
  "kill_plane_y": -12.0,
  "pit_floor_y": null,
  "expected_fall_below_y": null,

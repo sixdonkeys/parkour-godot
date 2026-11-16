@@ -1,9 +1,9 @@
 {
  "format": "metrics-course/1",
  "id": "movement-fuzz-hole-course",
- "units": "metres; +Y up; floor top at y = 0",
+ "units": "meters; +Y up; floor top at y = 0",
  "generator": "tools/gen/metrics_course.py",
- "purpose": "Known answer for the fuzz instrument: a 12 m floor with a 2 m square hole at its centre and nothing below it. A body that walks into the hole falls past the kill plane; the instrument must report it.",
+ "purpose": "Known answer for the fuzz instrument: a 12 m floor with a 2 m square hole at its center and nothing below it. A body that walks into the hole falls past the kill plane; the instrument must report it.",
  "kill_plane_y": -12.0,
  "pit_floor_y": null,
  "expected_fall_below_y": null,

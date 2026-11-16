@@ -266,7 +266,7 @@ func _sprint_and_jump() -> Dictionary:
 		"distance_to_top_speed_m": marks.get("top_speed", {}).get("m"),
 		"jump": jump, "speed_kept_through_jump": jump.get("speed_after_landing_m_s", 0.0) / maxf(jump.get("speed_at_take_off_m_s", 1.0), 0.001),
 		"stop": {"from_m_s": speed_before_stop, "seconds": (body.tick - n0) * _dt,
-			"metres": _h(body.global_position - p0).length()}}
+			"meters": _h(body.global_position - p0).length()}}
 
 
 func _standing_jump(forward: bool, hold_ticks: int) -> Dictionary:
@@ -340,7 +340,7 @@ func _gap(l: Dictionary, late: bool) -> Dictionary:
 	var pressed := false
 	var take_off = null
 	var speed := 0.0
-	var out := {"cleared": false, "policy": "last tick the jump still works (coyote time)" if late else "jump as the body's centre reaches the edge"}
+	var out := {"cleared": false, "policy": "last tick the jump still works (coyote time)" if late else "jump as the body's center reaches the edge"}
 	while body.tick - n0 < 2400:
 		await _tick()
 		var p := body.global_position
