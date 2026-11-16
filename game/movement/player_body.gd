@@ -323,6 +323,11 @@ static func _round_dead_zone(v: Vector2, zone: float) -> Vector2:
 
 # --- placeholder looks (until `character` closes) -------------------------------
 
+## Show or hide the placeholder (a first-person view hides its own body).
+func set_placeholder_visible(shown: bool) -> void:
+	_visual.visible = shown
+
+
 func _make_placeholder() -> Node3D:
 	var root := Node3D.new()
 	root.name = "Visual"

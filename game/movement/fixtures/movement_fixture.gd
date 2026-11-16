@@ -38,6 +38,13 @@ var metrics: MetricsProbe
 var _end_state: Dictionary = {}
 var _cfg: Dictionary = {}
 var _event_counts: Array = []
+## What a tick of this scene costs the processor: wall time from the first
+## script to run in the tick to the last (every body's move and the
+## instruments that watch them), in microseconds.
+var _tick_usec_sum := 0
+var _tick_usec_max := 0
+var _tick_count := 0
+var _tick_started := 0
 
 
 func configure_fixture(cfg: Dictionary) -> void:
@@ -114,6 +121,18 @@ func configure_fixture(cfg: Dictionary) -> void:
 				metrics.setup(course, bodies[0], manual, mode)
 				add_child(metrics)
 				metrics.start()
+	var first := TickMark.new()
+	first.process_physics_priority = -999
+	first.hit = func(): _tick_started = Time.get_ticks_usec()
+	add_child(first)
+	var last := TickMark.new()
+	last.process_physics_priority = 4000
+	last.hit = func():
+		var took := Time.get_ticks_usec() - _tick_started
+		_tick_usec_sum += took
+		_tick_usec_max = maxi(_tick_usec_max, took)
+		_tick_count += 1
+	add_child(last)
 	var cam_cfg: Dictionary = cfg.get("camera", {})
 	if not cam_cfg.is_empty() and not bodies.is_empty():
 		var cam := HarnessCamera.new()
@@ -180,6 +199,8 @@ func verify_report() -> Dictionary:
 	var rep := {"fixture": "movement", "mode": mode, "course": course.data.get("id", "") if course else "",
 		"players": bodies.size(), "player_slots": Players.slots.size(),
 		"physics_ticks_per_second": Engine.physics_ticks_per_second,
+		"tick_cost_ms": {"mean": _tick_usec_sum / 1000.0 / maxi(_tick_count, 1), "max": _tick_usec_max / 1000.0,
+			"ticks": _tick_count, "what": "wall time of one tick's scripts: every body's move and the instruments watching them"},
 		"world_tick": course.clock.tick if course else 0}
 	if fuzz:
 		rep["fuzz"] = fuzz.report()
@@ -205,6 +226,14 @@ func _state() -> Dictionary:
 		raw.append([b.global_position, b.velocity, b.yaw, b.pitch, b.tick, b.state])
 	return {"world_tick": course.clock.tick, "bodies": list,
 		"hash": var_to_bytes(raw).hex_encode().sha256_text()}
+
+
+class TickMark:
+	extends Node
+	var hit: Callable
+
+	func _physics_process(_delta: float) -> void:
+		hit.call()
 
 
 class Poison:

@@ -15,6 +15,9 @@ var offset := Vector3(6, 3, 0)
 func _ready() -> void:
 	# The camera places itself every frame from interpolated transforms.
 	physics_interpolation_mode = Node.PHYSICS_INTERPOLATION_MODE_OFF
+	if mode == "first" and body:
+		# From inside the placeholder its own visor fills the view.
+		body.set_placeholder_visible(false)
 
 
 func _process(_delta: float) -> void:
