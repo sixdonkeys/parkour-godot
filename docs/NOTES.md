@@ -110,6 +110,8 @@ For the main builder, when merging:
 - The export packs `thirdparty/stairs-character/stairs_character.gd` but not its `LICENSE` file (the engine exports resources only). The MIT notice has to reach players some other way: the credits screen (`interface`), or the file added to the export filter.
 - Course files and input scripts that a benchmark preset points at are staged into `game/verify/bench_presets/paths/` beside the camera paths, because the export filter already covers that folder; `game/export_presets.cfg` was not touched.
 
+Stale, kept because nothing is deleted: `docs/evidence/movement/round-1/proofs/movement-latency-delay-100/` and `movement-latency-delay-40/` are logs from the input-to-motion proof's first version (fixtures that no longer exist under those names, commits `93a47f8` and before). The proof that counts is `proofs/input-motion.json` with `movement-latency-delay-104/` and `-37/`. They can go if Nick says so.
+
 Left for later:
 - `replay` (brief #7): the record, `RecordingInput`, the 20-replay hash check. `ScriptInput` and the input harness are not the recorded-run format.
 - The harness camera in `game/movement/fixtures/` is for strips only. The real rig (module `camera`) should smooth the 0.35 m step-up, which the body takes in one tick.
