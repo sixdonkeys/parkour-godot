@@ -91,6 +91,16 @@ What was tried, what failed, why:
 - **The frame budget with a body passes, but not every time on this machine.** `movement-run-budget` (the showcase's run, no strip, no grid) was run five times: four passed (GPU p95 × 2.3 = 14.3 to 16.5 ms against 16.7; p99 × 2.3 = 16.0 to 20.7 against 22) and the first failed (18.7 and 22.4 ms; wall p95 16.8 ms). The simulation was identical each time (same end-state hash), so the spread is the machine's: GPU p95 for the same frames ranged from 6.2 to 8.1 ms. The failed run was made while two of this agent's verification jobs were queued against each other and the load average stood at 2 to 3.5; that the load caused it is **not shown**, only that nothing in the game differed. The failed log is kept as `movement-run-budget-first-pass`. The body itself costs little: its tick's scripts take 0.2 to 0.3 ms (one body, in a window), and a scene with a standing body read 0.08 ms more GPU at p50 than the same scene with none.
 - **The course's one-meter grid costs about 0.25 ms of GPU** at the Neo's resolution, whether mapped triplanar or by texture coordinates: its lines are edges for SMAA. The budget run turns it off. The neo profile's fixed costs leave about 1 ms of GPU under the proxy limit on this machine, which is thin (already noted under core).
 
+The evidence was taken at commit `a8290d1`. One code commit follows it, `0a24599`, which changes spelling only (comments, the key `meters` in the instrument's report, one policy string, and the `units`, `purpose` and one piece name in the course files). Checked headless after it: the same end-state hashes, the same movement numbers, the same counts on the fuzz fixtures.
+
+**The Neo (valid run, `docs/neo/2026-11-15-0a24599c3093/`, `CALIBRATION.md` beside it).** The first two tries were refused (the Neo did not answer once, then had been touched within five minutes); the third ran, never with `--now`.
+- Frame budget with a body: `movement-run-budget` 11.2 ms at p95 and 11.4 ms at p99 (budget 16.7 and 22). Met.
+- Input to motion: key 32.1 ms, gamepad 32.5 ms at p95, judged from the moment the event is handed to the engine (budget 50). Met. From `_input` it is 16.9 and 17.0 ms.
+- Fuzz: 600 s, 72,007 ticks, three zeros.
+- The scripted run ended in the same state as on the laptop, bit for bit (same hash). The ten-minute fuzz run did not: same event counts, but the highest point reached differs in the eighth digit. Worth knowing for `replay`.
+- The laptop's frame-limiter run does not predict the Neo's input to motion (22.8 against 32.1 ms); two 60 Hz frames is the bound to use.
+- `docs/decisions/neo-proxy.md` was not changed: the ratio seen (1.87× and 2.06×) is inside the range the factor of 2.3 already covers.
+
 Checked without a window (`tools/dev_headless.py`, so not evidence): ten-minute fuzz runs over 29 more seeds, three of them with eight bodies, all three zeros after the lift fix; a ghost runs straight through a standing live body, and a live body is stopped by it.
 
 For the main builder, when merging:

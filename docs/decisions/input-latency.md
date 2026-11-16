@@ -39,3 +39,14 @@ Proxy numbers from the Fedora laptop (Apple M1 Pro, Honeykrisp), 200 trials each
 - The tick follows `_input` by under a millisecond: the event is used by a tick in the same turn of the loop, as the source reading said.
 - The frame limiter is not the same thing as a 60 Hz display with v-sync: it sleeps before the loop turns, where v-sync blocks at the end of drawing. The 60 fps rows show the wait in the buffer doubling; the Neo's own number comes from the benchmark build (`movement-input-motion-key` and `-pad` are benchmark presets).
 - The instrument's proof: `docs/evidence/movement/round-1/proofs/input-motion.json`.
+
+## Measured on the Neo (2026-11-15, `docs/neo/2026-11-15-0a24599c3093/`, a valid run)
+
+60 Hz, v-sync on, Metal, 200 trials each, zero engine errors. Milliseconds.
+
+| Case | Handed to engine → first motion drawn (p50 / p95 / max) | `_input` → first motion drawn (p50 / p95) | Wait in the engine's buffer (p50 / p95) | `_input` → tick (p50) | Within 50 ms at p95 |
+|---|---|---|---|---|---|
+| Key (W) | 25.3 / 32.1 / 33.2 | 16.4 / 16.9 | 8.8 / 15.9 | 0.5 | yes |
+| Gamepad stick | 25.1 / 32.5 / 33.5 | 16.5 / 17.0 | 8.4 / 16.1 | 0.4 | yes |
+
+This is the chain the record describes: up to one frame in the buffer, then one frame to draw; the worst trial is two frames. The 1.5 m/s start means the first drawn movement is already more than a centimeter, so "first motion" and "visible motion" are the same frame at 60 Hz. The comparison with the laptop's numbers is in `CALIBRATION.md` beside the result folder.
