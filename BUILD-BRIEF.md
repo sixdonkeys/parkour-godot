@@ -4,6 +4,26 @@ You are the sole engineer on this build, for a father and son who want a parkour
 
 The game must look and feel like a AAA title, within the boundaries this brief sets on performance and hardware (Nick, 2026-11-15). That raises no budget number and loosens none: where a choice trades effort for polish (animation, camera feel, sound, materials, lighting, interface), the default is the AAA option that fits the budget, not the first one that works, and the critic scores against that bar.
 
+## Amendment 1 — a lighter process (Nick, 2026-11-15)
+
+Nick's words: "Fix all this shit about our process." Where this amendment and the text below disagree, this amendment wins. It applies to the builder and the critic alike. Everything not named here stands, including the budgets, the course and window rules, the asset policy, the Neo testing and the playtests.
+
+1. **Desert first, by milestones.** The work runs to milestones, not module by module:
+   - **M1, first playable:** movement, camera, traversal, plus an early movement-only playtest build as soon as a camera follows the body.
+   - **M2, the desert course playable start to finish:** kit, rules, interface, desert-course.
+   - **M3, the desert complete:** character, desert-dress.
+   - **M4–M6:** mountain, Chicago and New York, each course then dress.
+   - **M7:** final.
+
+   The other three worlds start only after M3 ("we can build the other 3 worlds after the first is done"). The build stops at the end of each milestone for Nick's playtest, and Nick starts the next milestone. Item 7's stages map to these milestones.
+2. **Parallel builders.** The main builder may hand independent modules to Fable agents working in their own git worktrees. They share a GPU lock (`.local/gpu.lock`) for anything that draws or measures, and a Neo lock (`.local/neo.lock`). The main builder merges their branches, keeps the docs current, and warns Nick before running more than two agents at once. Item 3's "one agent builds" no longer holds.
+3. **Reviews at milestones, not per module.** A fresh critic grades once per milestone, covering every module in it, with up to 3 rounds per milestone (not 4 per module). Look and feel modules (movement, camera, traversal, character, every -course and -dress) are scored as item 4 says and close at 8.5. Tool modules (verify, core, kit instruments, rules plumbing, interface plumbing) are pass/fail: they work, their instruments are trusted, their budgets hold. `look-slice` gets its single round inside M1. Between milestones, the automatic checks run before each merge: the presets that touch what changed, plus the frame, memory and fuzz budgets.
+4. **Lighter decision records.** A record needs Options, Choice, Reason and Licence, plus its Sources as links. Quote word for word only the line or lines the choice rests on, inline in the record. Separate `docs/survey/` files are optional. Records already written stand as they are.
+5. **Prove an instrument once.** Each instrument is proved on its known-answer fixture when it is built and whenever it changes. At a milestone the critic re-proves only instruments that changed since the last milestone, plus one spot check of its own choosing.
+6. **Window tests twice.** The full window sequence under GNOME, niri and Umbriel runs at M1 and at the final gate. The GNOME window check stays in the automatic checks.
+7. **Leaner evidence in git.** Commit each run's `log.json` summary and the stills a critic grades. Raw engine output, frame strips and WAVs stay on disk (git-ignored), named by preset and commit so they can be made again. Evidence folders are per milestone (`docs/evidence/<module>/<milestone>/`).
+8. **Neo runs** at each milestone, and whenever a change aimed at performance lands, not for every commit.
+
 This brief is the contract, and it lives at `BUILD-BRIEF.md` in the project root. If you were handed it as text, save it there word for word before anything else. The builder never edits it. If the folder holds anything else when you start (hidden tool folders such as `.git` and `.claude` aside) and there is no `docs/STATUS.json`, stop and tell Nick: this build starts from an empty folder. If the folder isn't a git repository yet, make it one, on a branch named `main`, before writing the first file.
 
 # How to work

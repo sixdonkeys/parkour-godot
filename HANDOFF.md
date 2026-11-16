@@ -2,6 +2,10 @@
 
 Written 2026-11-15 (late evening) by the main builder session on the Fedora laptop (`macbook-m1-pro`). A fresh session reads, in order: `BUILD-BRIEF.md` (the contract), this file, `docs/STATUS.json`, `docs/NOTES.md`, `docs/WAITING.md`.
 
+## Process
+
+BUILD-BRIEF.md Amendment 1 (Nick, 2026-11-15) governs: desert first, milestones M1–M7, parallel Fable builders, one critic per milestone, lighter records and evidence. Current milestone: M1 (first playable).
+
 ## Where are we?
 
 Stage 1, day 1.
@@ -37,7 +41,7 @@ Stage 1, day 1.
 
 1. **Decided by Nick, 2026-11-15:** finish the desert fully first, then build the other three worlds ("we can build the other 3 worlds after the first is done"). An early playtest build of the movement is part of the same aim.
 2. **Builder:** review and merge `fable/desert-budget`. Its last commits are `b00edf6` and `354c469`. The agent was stopped by mistake at the close-out and resumed; wait for its final report. Its Neo stills in the worktree are untracked on purpose.
-3. **Builder:** run the verify critic round 2, then core.
+3. **Builder:** the early movement playtest build (movement plus a simple follow camera on the metrics course); then camera and traversal toward M1. The critic runs once at the end of M1, covering verify, core, look-slice, movement, camera and traversal.
 4. **Nick:** go or no-go on brief #7 (replay) as a Fable agent (`docs/briefs/fable-briefs.md` §7), then camera and traversal.
 
 ## Pending on Nick

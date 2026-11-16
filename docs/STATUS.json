@@ -222,15 +222,51 @@
     "interface",
     "desert-course",
     "character",
-    "mountain-course",
-    "chicago-course",
-    "newyork-course",
     "desert-dress",
+    "mountain-course",
     "mountain-dress",
+    "chicago-course",
     "chicago-dress",
+    "newyork-course",
     "newyork-dress",
     "final"
   ],
   "stage": 1,
-  "updated_by": "builder"
+  "updated_by": "builder",
+  "milestones": {
+    "M1": [
+      "verify",
+      "core",
+      "look-slice",
+      "movement",
+      "camera",
+      "traversal"
+    ],
+    "M2": [
+      "kit",
+      "rules",
+      "interface",
+      "desert-course"
+    ],
+    "M3": [
+      "character",
+      "desert-dress"
+    ],
+    "M4": [
+      "mountain-course",
+      "mountain-dress"
+    ],
+    "M5": [
+      "chicago-course",
+      "chicago-dress"
+    ],
+    "M6": [
+      "newyork-course",
+      "newyork-dress"
+    ],
+    "M7": [
+      "final"
+    ]
+  },
+  "current_milestone": "M1"
 }

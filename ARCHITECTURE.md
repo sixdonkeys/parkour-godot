@@ -59,6 +59,8 @@ builds/             exported builds (git-ignored)
 
 Godot folder names use underscores (`desert_course`) because hyphens are awkward in GDScript class paths; the module names stay as the brief gives them.
 
+**Process: BUILD-BRIEF.md Amendment 1 (Nick, 2026-11-15)** — milestones M1–M7, parallel Fable builders, critic per milestone, lighter decision records and evidence.
+
 **Order changed by Nick, 2026-11-15:** the desert is finished end to end (desert-course, then character, then desert-dress) before mountain-course, chicago-course and newyork-course start; their dress modules follow. The modules themselves are unchanged.
 
 Build order (item 3, as originally written): (1) verify; (2) core; (3) look-slice; (4) movement, camera; (5) traversal; (6) kit; (7) rules; (8) interface; (9) desert-course; (10) character; (11) mountain-course, chicago-course, newyork-course; (12) desert-dress, mountain-dress, chicago-dress, newyork-dress. Until `character` closes, a plain placeholder body stands in.
